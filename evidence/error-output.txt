@@ -1,0 +1,3 @@
+usage: image-info [-h] image
+image-info: error: 文件不存在：samples/not-found.png
+exit_code=2
