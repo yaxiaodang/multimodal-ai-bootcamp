@@ -116,3 +116,4 @@ python src/image_info.py samples/not-found.png
 - 测试输出：`evidence/test-output.txt`
 - 复现记录：`docs/reproducibility_notes.md`
 - Pull Request：[Week 1 Pull Request](https://github.com/yaxiaodang/multimodal-ai-bootcamp/pull/1)
+- 自主探索：`docs/reproducibility_concepts.md`
