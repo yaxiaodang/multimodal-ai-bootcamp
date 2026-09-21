@@ -115,4 +115,4 @@ python src/image_info.py samples/not-found.png
 - 错误输出：`evidence/error-output.txt`
 - 测试输出：`evidence/test-output.txt`
 - 复现记录：`docs/reproducibility_notes.md`
-- Pull Request：创建后填写
+- Pull Request：[Week 1 Pull Request](https://github.com/yaxiaodang/multimodal-ai-bootcamp/pull/1)
