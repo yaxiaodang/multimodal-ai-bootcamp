@@ -18,8 +18,3 @@
 - CPU 即可
 - 不需要 GPU
 
-## 1. 克隆仓库
-
-```bash
-git clone https://github.com/你的用户名/multimodal-ai-bootcamp.git
-cd multimodal-ai-bootcamp
