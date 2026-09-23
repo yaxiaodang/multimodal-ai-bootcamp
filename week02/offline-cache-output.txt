@@ -1,0 +1,5 @@
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights:  45%|████▌     | 47/104 [00:00<00:00, 435.94it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 645.49it/s]
+model: distilbert/distilbert-base-uncased-finetuned-sst-2-english
+revision: 714eb0fa89d2f80546fda750413ed43d93601a13
+input: The documentation is clear and easy to follow.
+output: [{'label': 'POSITIVE', 'score': 0.9996985197067261}]

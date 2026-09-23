@@ -1,0 +1,29 @@
+experiment:
+  name: week02-distilbert-cpu-inference
+  task: text-classification
+
+model:
+  id: distilbert/distilbert-base-uncased-finetuned-sst-2-english
+  revision: 714eb0fa89d2f80546fda750413ed43d93601a13
+  license: apache-2.0
+
+runtime:
+  python: "3.10.12"
+  torch: "2.14.0+cpu"
+  transformers: "5.17.0"
+  huggingface_hub: "1.32.0"
+  device: cpu
+  cuda_available: false
+
+inference:
+  interface: transformers.pipeline
+  task: text-classification
+  device_argument: -1
+  generation: not_applicable
+
+results:
+  normal_examples: 3
+  sarcasm_examples: 1
+  invalid_inputs: 1
+  raw_output_file: week02/predictions.jsonl
+  initial_model_load_seconds: 28.75
