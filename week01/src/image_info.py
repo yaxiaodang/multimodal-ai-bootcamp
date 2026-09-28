@@ -16,11 +16,17 @@ def get_image_info(file_path: str) -> dict:
 
     try:
         with Image.open(path) as image:
+            image_format = image.format
+            if image_format not in {"PNG", "JPEG"}:
+                raise ValueError(
+                    f"不支持的图片格式：{image_format or '未知'}（仅支持 PNG 和 JPEG）：{path}"
+                )
+
             return {
                 "file": str(path),
                 "width": image.width,
                 "height": image.height,
-                "format": image.format or "unknown",
+                "format": image_format or "unknown",
             }
     except (UnidentifiedImageError, OSError) as exc:
         raise ValueError(f"无法识别该图片：{path}") from exc
