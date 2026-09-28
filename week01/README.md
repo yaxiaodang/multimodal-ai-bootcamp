@@ -13,9 +13,8 @@
 
 ## 支持环境
 
-- Ubuntu Linux
-- Python 3.10–3.12
-- CPU 即可
+- 已验证：Ubuntu Linux、Python 3.10.12、CPU
+- Python 3.11 和 3.12：尚未在本仓库留下验证记录
 - 不需要 GPU
 
 ## 1. 克隆仓库
@@ -25,11 +24,7 @@ git clone https://github.com/yaxiaodang/multimodal-ai-bootcamp.git
 cd multimodal-ai-bootcamp
 ```
 
-在 Week 1 Pull Request 合并之前，复现对应分支：
-
-```bash
-git switch week01-research-workflow
-```
+以下步骤使用当前 `main` 版本。Week 1 当时的改动与审查记录见 [PR #1](https://github.com/yaxiaodang/multimodal-ai-bootcamp/pull/1)。
 
 ## 2. 创建并激活虚拟环境
 
@@ -40,13 +35,18 @@ source .venv/bin/activate
 
 ## 3. 安装依赖
 
+在仓库根目录执行，因为 `requirements.txt` 位于根目录：
+
 ```bash
 python -m pip install -r requirements.txt
 ```
 
 ## 4. 唯一开始命令
 
+先进入 `week01/`，再生成样例并检查图片：
+
 ```bash
+cd week01
 python scripts/create_sample.py && python src/image_info.py samples/demo.png
 ```
 
@@ -71,11 +71,7 @@ python src/image_info.py --help
 python -m pytest -q
 ```
 
-预期结果：
-
-```text
-3 passed
-```
+当前 `main` 版本预期有 **9 项测试通过**；测试耗时可能因环境而异。Week 1 当时只有 3 项测试，其原始输出保存在 `evidence/test-output.txt`。Week 3 扩充了同一工具的测试，因此当前结果与历史记录不同。
 
 ## 验证错误输入
 
@@ -109,7 +105,8 @@ python src/image_info.py samples/not-found.png
 ## Week 1 证据
 
 - 项目计划：`docs/project_plan.md`
-- 学习记录：`learning-log.md`
+- 学习记录：[根目录 learning-log.md](../learning-log.md)
+- 依赖版本：[根目录 requirements.txt](../requirements.txt)
 - 环境信息：`evidence/environment-output.txt`
 - 成功输出：`evidence/success-output.txt`
 - 错误输出：`evidence/error-output.txt`
