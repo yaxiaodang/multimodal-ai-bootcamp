@@ -1,0 +1,54 @@
+.....FFF.                                                                [100%]
+=================================== FAILURES ===================================
+___________ test_real_bmp_raises_value_error_for_unsupported_format ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-yaxiaodang/pytest-2/test_real_bmp_raises_value_err0')
+
+    def test_real_bmp_raises_value_error_for_unsupported_format(tmp_path):
+        image_path = tmp_path / "unsupported.bmp"
+        Image.new("RGB", (8, 8), color="blue").save(image_path, format="BMP")
+    
+>       with pytest.raises(ValueError, match="不支持"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_image_info.py:63: Failed
+____ test_cli_bmp_exit_code_non_zero_and_error_output_mentions_unsupported _____
+
+tmp_path = PosixPath('/tmp/pytest-of-yaxiaodang/pytest-2/test_cli_bmp_exit_code_non_zer0')
+
+    def test_cli_bmp_exit_code_non_zero_and_error_output_mentions_unsupported(tmp_path):
+        image_path = tmp_path / "unsupported.bmp"
+        Image.new("RGB", (8, 8), color="blue").save(image_path, format="BMP")
+    
+        project_root = Path(__file__).resolve().parents[1]
+        completed = subprocess.run(
+            [sys.executable, "src/image_info.py", str(image_path)],
+            cwd=str(project_root),
+            capture_output=True,
+            text=True,
+        )
+    
+>       assert completed.returncode != 0
+E       AssertionError: assert 0 != 0
+E        +  where 0 = CompletedProcess(args=['/home/yaxiaodang/multimodal-ai-bootcamp/.venv/bin/python', 'src/image_info.py', '/tmp/pytest-o...of-yaxiaodang/pytest-2/test_cli_bmp_exit_code_non_zer0/unsupported.bmp\nwidth: 8\nheight: 8\nformat: BMP\n', stderr='').returncode
+
+tests/test_image_info.py:79: AssertionError
+_______________ test_bmp_content_with_png_extension_is_rejected ________________
+
+tmp_path = PosixPath('/tmp/pytest-of-yaxiaodang/pytest-2/test_bmp_content_with_png_exte0')
+
+    def test_bmp_content_with_png_extension_is_rejected(tmp_path):
+        image_path = tmp_path / "disguised.png"
+    
+        # 文件名看起来是 PNG，但明确将实际内容保存为 BMP。
+        Image.new("RGB", (8, 8), color="blue").save(image_path, format="BMP")
+    
+>       with pytest.raises(ValueError, match="不支持"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_image_info.py:93: Failed
+=========================== short test summary info ============================
+FAILED tests/test_image_info.py::test_real_bmp_raises_value_error_for_unsupported_format
+FAILED tests/test_image_info.py::test_cli_bmp_exit_code_non_zero_and_error_output_mentions_unsupported
+FAILED tests/test_image_info.py::test_bmp_content_with_png_extension_is_rejected
+3 failed, 6 passed in 0.30s
