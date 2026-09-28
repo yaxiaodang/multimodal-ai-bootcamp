@@ -4,21 +4,49 @@
 
 ## Week 01：环境与可复现性基础
 
-### 已完成
+### 核心问题与路径
 
-- 建立 `multimodal-ai-bootcamp` 仓库和 Python 虚拟环境。
-- 编写环境检查、测试图片生成和图片信息读取代码。
-- 使用 Pillow 读取测试图片的宽度、高度和格式。
-- 编写自动化测试；在 `week01/` 目录运行 `python -m pytest -q`，结果为 `3 passed`。
-- 将第一周文件整理进 `week01/`，并保留项目根目录的总览文件和依赖文件。
+- 核心问题：另一位同学能否只根据仓库说明，重建环境并运行图片信息工具？
+- 选择标准路径：完成工具、正常与异常输入测试、PR，以及全新 clone 和虚拟环境复现；自主探索选择比较“能运行、可复现、可审计”。
 
-### 遇到的问题与解决
+### 主线成果与运行入口
 
-文件移动到 `week01/` 后，直接运行 `pytest -q` 曾出现 `ModuleNotFoundError: No module named 'src'`。调整测试运行方式后，在 `week01/` 目录使用 `python -m pytest -q` 验证通过。
+- 建立仓库和 Python 虚拟环境，编写环境检查、样例图片生成及单张图片信息读取工具；项目范围和成功标准见 [项目计划](week01/docs/project_plan.md)。
+- 当前版本从仓库根目录创建虚拟环境、安装 [依赖](requirements.txt) 后，执行 `cd week01 && python scripts/create_sample.py && python src/image_info.py samples/demo.png`；完整步骤见 [Week 1 README](week01/README.md)。
+- Week 1 当时的三个测试均通过；Week 3 后扩充为九个测试。这两个结果属于不同阶段，不应混作同一次实验。
 
-### 本周收获
+### 环境与证据索引
 
-理解了虚拟环境、项目目录、依赖记录和自动化测试的作用。周文件夹用于整理学习产物；Git 分支用于隔离一段尚未合并的工作，两者解决的是不同问题。
+| 证据 | 位置与实际记录 |
+| --- | --- |
+| 版本 | [Week 1 PR #1](https://github.com/yaxiaodang/multimodal-ai-bootcamp/pull/1)，合并提交 `1fd5128`；随后按周整理目录的提交见 [PR #2](https://github.com/yaxiaodang/multimodal-ai-bootcamp/pull/2) |
+| 环境与依赖 | [环境原始输出](week01/evidence/environment-output.txt)：Ubuntu、Python 3.10.12、CPU；[requirements.txt](requirements.txt) 固定 Pillow 11.3.0 和 pytest 8.4.1 |
+| 输入与来源 | [生成脚本](week01/scripts/create_sample.py) 自制 640×480 PNG；不含个人信息或第三方素材；未使用外部数据集，license 和 split 不适用 |
+| 配置 | 固定图片尺寸与颜色；没有模型、Prompt 或随机过程，revision、seed 和受控单变量比较不适用 |
+| 正常结果 | [原始输出](week01/evidence/success-output.txt)：宽 640、高 480、格式 PNG |
+| 错误与测试 | [错误原始输出](week01/evidence/error-output.txt)：文件不存在，退出码 2；[当时测试原始输出](week01/evidence/test-output.txt)：3 passed。这是功能测试结果，不是模型准确率 |
+| 独立复现 | [复现记录](week01/docs/reproducibility_notes.md)：2026-09-21 全新 clone 和 venv，以及同伴在 Ubuntu 的运行反馈 |
+
+### 耗时、资源与 AI 使用
+
+- 课程建议标准路径约 24 小时；本人当时的预计/实际耗时及费用没有留下可核对记录，不补写估计值。运行设备为 Ubuntu 虚拟机的 CPU，本周任务不需要 GPU 或云端算力。
+- Week 1 当时没有留下完整的 AI 使用与人工核验记录，因此不追溯断言具体参与范围。Week 3 对同一工具的 AI 辅助改动另见 [Week 3 记录](week03/ai-use-log.md)。
+
+### 探索、失败与当前判断
+
+- 自主探索：比较“能运行、可复现、可审计”，说明和证据见 [专题记录](week01/docs/reproducibility_concepts.md)。
+- 遇到的问题：文件移动到 `week01/` 后，直接运行 `pytest -q` 曾出现 `ModuleNotFoundError: No module named 'src'`；在 `week01/` 目录改用 `python -m pytest -q` 后通过。
+- 自主阶段：就 Week 1 的历史成果而言，依据全新环境和同伴复现记录，判断为 **可复现**；这不表示已经完成跨操作系统验证。
+- 结论：虚拟环境、依赖、输入、运行命令、测试及错误输出共同支持复现；周目录用于整理产物，Git 分支用于隔离待合并的修改。
+- 限制与未知：工具只处理单张图片，不支持 PDF、OCR 和批量处理；跨操作系统的复现情况仍未知。下一步最小验证是在另一种操作系统上按 README 运行，并记录差异。
+- 后续补充：Week 3 扩充测试后，2026-09-28 从 [PR #6](https://github.com/yaxiaodang/multimodal-ai-bootcamp/pull/6) 的分支新建本地克隆和虚拟环境，得到 9 passed、正常图片输出及错误退出码 2；此次是后续核验，不改写 Week 1 的原始记录。
+
+### 例会前准备
+
+- 展示：图片检查命令与 640×480 PNG 的原始输出。
+- 证据：全新环境与同伴复现记录、正常与错误输出、Week 1 PR。
+- 最大意外：目录迁移后 `pytest -q` 找不到 `src`；说明运行目录和命令也是复现条件。
+- 下一步：检查其他操作系统能否按 README 重建环境，并继续记录失败原因。
 
 ## Week 02：Hugging Face 与 CPU 推理
 
