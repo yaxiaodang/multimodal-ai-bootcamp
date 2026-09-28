@@ -114,4 +114,4 @@ VS Code 中的 GitHub Copilot参与了需求审查、测试建议和最小实现
 
 根据目前保存的测试输出、实现 diff 和手动命令行检查，本轮 Task Card 中关于 PNG/JPEG 支持、不支持格式报错及保留原有成功行为的目标已达到。
 
-提交 Git 之前仍需检查测试文件的最终 diff、确认工作区没有无关改动，并把本审查记录、README 和 AI 使用记录一起纳入提交。Git 提交和 Pull Request 尚未在本记录中标记为完成。
+最终测试文件 diff 和工作区已在提交前检查。本轮代码与证据经 [Week 3 PR #4](https://github.com/yaxiaodang/multimodal-ai-bootcamp/pull/4) 合并到 `main`；合并后的主分支测试结果以本地复验记录为准。

@@ -95,6 +95,7 @@ AI 给出的代码和测试只是待验证的建议。测试不仅要覆盖正�
 
 当前工具只处理单张本地 PNG 或 JPEG，不进行 OCR、完整像素解码或任意不可信图片的资源限制检查。
 
+
 ### Git 与 PR
 
-Week 3 工作分支：`feat/week03-ai-validation`。提交及 PR 信息在完成后补充。
+Week 3 工作分支：`feat/week03-ai-validation`。[Week 3 PR #4](https://github.com/yaxiaodang/multimodal-ai-bootcamp/pull/4) 已于 2026-09-28 合并到 `main`，合并提交为 `0b95ec6`。
