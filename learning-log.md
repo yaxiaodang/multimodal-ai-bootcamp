@@ -101,7 +101,7 @@
 | 反讽探针 | 输入含反讽的文本，不改模型 | 同主线配置 | POSITIVE，score 0.9925507307052612，与人工语境判断不符 | [原始输出](week02/predictions.jsonl)：limitation_01；[失败分析](week02/failure-case.md) |
 | 输入类型检查 | 把文本输入改为整数 12345 | 同主线配置 | ValueError；这是接口错误，不是模型误分类 | [原始输出](week02/predictions.jsonl)：invalid_01 |
 | 离线缓存检查 | 验证已有缓存能否在离线模式下加载 | 固定 revision、CPU，单独脚本 | 成功加载并输出 POSITIVE | [脚本](week02/offline-cache-check.py)、[原始日志](week02/offline-cache-output.txt) |
-| 第二遍主线重跑 | 计划保持模型、配置和五条输入不变，验证顺序执行与记录一致性 | 当前环境待核对 | 本轮成功 [本轮输出](week02/evidence/review-20261007/predictions.jsonl)| 待本轮执行后记录；耗时变化不直接视为模型性能变化 |
+| 第二遍主线重跑 | 计划保持模型、配置和五条输入不变，验证顺序执行与记录一致性 | 已确认终端与 Notebook 使用项目 .venv，依赖版本与历史记录一致 | 本轮成功 [本轮输出](week02/evidence/review-20261007/predictions.jsonl)| 待本轮执行后记录；耗时变化不直接视为模型性能变化 |
 
 补充证据：[结果摘要](week02/result.md)、[模型比较](week02/model-comparison.md)、[Hub 基础笔记](week02/huggingface-basics.md)。模型比较表已存在，但参数规模仍有待记录项，资源判断尚需区分资料信息与实测结果。
 
@@ -174,6 +174,20 @@
   独立脚本可以在 Hub 离线模式下完成推理。
 - 限制：未验证其他版本或模型；完整 Notebook 含在线连接检查，
   本次结果不能证明整个 Notebook 可离线运行。
+
+#### 归档与组会准备
+
+- 主线复盘已通过
+  [PR #9](https://github.com/yaxiaodang/multimodal-ai-bootcamp/pull/9)
+  合并，合并提交为 `2d0bfb8`。
+- 模型对比表已补充 DistilBERT 参数规模、模型选择理由，
+  并明确 Qwen 的本机运行情况尚未验证。
+- 组会展示主线：
+  模型选择 → 固定版本与 CPU 配置 → 正常输出 →
+  反讽误判 → 离线缓存结果 → 当前限制。
+- 当前已验证：现有环境重启内核后的顺序运行，
+  以及固定版本模型的 Hub 离线缓存加载。
+- 尚待验证：全新环境重建；更多样例或统一测试集上的效果。
 
 ## Week 03：AI 辅助编程与人工验证
 
