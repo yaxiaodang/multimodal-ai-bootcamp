@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.1, pluggy-1.6.0 -- /home/yaxiaodang/multimodal-ai-bootcamp/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/yaxiaodang/multimodal-ai-bootcamp/week01
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.15.1
+collecting ... collected 9 items
+
+tests/test_image_info.py::test_valid_png_returns_correct_dimensions PASSED [ 11%]
+tests/test_image_info.py::test_missing_file_raises_clear_error PASSED    [ 22%]
+tests/test_image_info.py::test_non_image_file_raises_clear_error PASSED  [ 33%]
+tests/test_image_info.py::test_valid_jpeg_returns_correct_dimensions PASSED [ 44%]
+tests/test_image_info.py::test_minimum_size_png_returns_one_by_one PASSED [ 55%]
+tests/test_image_info.py::test_real_bmp_raises_value_error_for_unsupported_format PASSED [ 66%]
+tests/test_image_info.py::test_cli_bmp_exit_code_non_zero_and_error_output_mentions_unsupported PASSED [ 77%]
+tests/test_image_info.py::test_bmp_content_with_png_extension_is_rejected PASSED [ 88%]
+tests/test_image_info.py::test_text_content_with_png_extension_is_unrecognized PASSED [100%]
+
+============================== 9 passed in 0.82s ===============================

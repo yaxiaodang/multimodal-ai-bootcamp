@@ -1,0 +1,9 @@
+usage: image-info [-h] image
+
+读取一张图片并输出宽度、高度和文件格式。
+
+positional arguments:
+  image       待检查图片的路径
+
+options:
+  -h, --help  show this help message and exit
