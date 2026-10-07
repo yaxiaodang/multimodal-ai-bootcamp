@@ -1,0 +1,4 @@
+Python: 3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]
+Interpreter: /home/yaxiaodang/multimodal-ai-bootcamp/.venv/bin/python
+Pillow: 11.3.0
+pytest: 8.4.1

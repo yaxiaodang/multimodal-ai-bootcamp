@@ -1,0 +1,4 @@
+file: samples/demo.png
+width: 640
+height: 480
+format: PNG
