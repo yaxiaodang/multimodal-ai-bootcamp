@@ -1,0 +1,110 @@
+sample_id,variant,task_correctness,explanation_faithfulness,error_category,notes,reviewer,user_review,user_notes,answer,reference_answer,prompt,generated_tokens,token_limit_reached,evidence
+shapes,A,partial,not_applicable,shape/spatial,矩形误称 square，未明确左右对应关系,Codex evidence review; user confirmed rubric and five key references,,," A red square and a blue circle are positioned side by side on a white background.
+",A red rectangle is on the left and a blue circle is on the right.,Question: Describe the two colored shapes and their positions in one short sentence.,20,False,runs/paired-20261010T152113-073899/predictions.jsonl
+shapes,E,partial,not_applicable,shape/spatial,矩形误称 square，未明确左右对应关系,Codex evidence review; user confirmed rubric and five key references,,," A red square and a blue circle are positioned side by side.
+",A red rectangle is on the left and a blue circle is on the right.,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: Describe the two colored shapes and their positions in one short sentence.",16,False,runs/paired-20261010T152113-073899/predictions.jsonl
+shapes,S,partial,not_applicable,shape/spatial,矩形误称 square，未明确左右对应关系,Codex evidence review; user confirmed rubric and five key references,,," A red square and a blue circle are positioned side by side.
+",A red rectangle is on the left and a blue circle is on the right.,Keep the answer brief. Question: Describe the two colored shapes and their positions in one short sentence.,16,False,runs/paired-20261010T152113-073899/predictions.jsonl
+shapes,B,partial,not_applicable,shape/spatial,矩形误称 square，未明确左右对应关系,Codex evidence review; user confirmed rubric and five key references,,," A red square and a blue circle are positioned side by side.
+",A red rectangle is on the left and a blue circle is on the right.,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: Describe the two colored shapes and their positions in one short sentence.",16,False,runs/paired-20261010T152113-073899/predictions.jsonl
+count,A,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"There are 7 green circles visible in the image.
+",7,Question: How many green circles are visible?,14,False,runs/paired-20261010T152113-073899/predictions.jsonl
+count,E,correct,incorrect,counting/reasoning,最终答 7，但中排误数 2，且 3+2+1 不等于 7,Codex evidence review; user confirmed rubric and five key references,,,"There are 7 green circles visible in the image.
+
+- Top row: 3 circles (left, center, right)
+- Middle row: 2 circles (left, center)
+- Bottom row: 1 circle (center)
+
+Total: 3 + 2 + 1 = 7
+",7,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: How many green circles are visible?",67,False,runs/paired-20261010T152113-073899/predictions.jsonl
+count,S,incorrect,not_applicable,counting,实际 7，答 9,Codex evidence review; user confirmed rubric and five key references,,,"9
+",7,Keep the answer brief. Question: How many green circles are visible?,4,False,runs/paired-20261010T152113-073899/predictions.jsonl
+count,B,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"7
+",7,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: How many green circles are visible?",4,False,runs/paired-20261010T152113-073899/predictions.jsonl
+position,A,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"The red rectangle is above the blue circle.
+",Above,Question: Is the red rectangle above or below the blue circle?,12,False,runs/paired-20261010T152113-073899/predictions.jsonl
+position,E,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"Above
+",Above,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: Is the red rectangle above or below the blue circle?",4,False,runs/paired-20261010T152113-073899/predictions.jsonl
+position,S,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,," above
+",Above,Keep the answer brief. Question: Is the red rectangle above or below the blue circle?,4,False,runs/paired-20261010T152113-073899/predictions.jsonl
+position,B,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,," Above
+",Above,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: Is the red rectangle above or below the blue circle?",4,False,runs/paired-20261010T152113-073899/predictions.jsonl
+invoice,A,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"Invoice ID: AB-7093
+",AB-7093,Question: What is the invoice ID? Copy it exactly.,12,False,runs/paired-20261010T152113-073899/predictions.jsonl
+invoice,E,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"Invoice ID: AB-7093
+",AB-7093,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: What is the invoice ID? Copy it exactly.",12,False,runs/paired-20261010T152113-073899/predictions.jsonl
+invoice,S,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"AB-7093
+",AB-7093,Keep the answer brief. Question: What is the invoice ID? Copy it exactly.,9,False,runs/paired-20261010T152113-073899/predictions.jsonl
+invoice,B,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,," Invoice ID: AB-7093
+",AB-7093,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: What is the invoice ID? Copy it exactly.",12,False,runs/paired-20261010T152113-073899/predictions.jsonl
+dense_text,A,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"code ZX-4108
+",ZX-4108,Question: What code is shown for Record 09? Copy it exactly.,10,False,runs/paired-20261010T152113-073899/predictions.jsonl
+dense_text,E,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"ZX-4108
+",ZX-4108,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: What code is shown for Record 09? Copy it exactly.",9,False,runs/paired-20261010T152113-073899/predictions.jsonl
+dense_text,S,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,," ZX-4108
+",ZX-4108,Keep the answer brief. Question: What code is shown for Record 09? Copy it exactly.,9,False,runs/paired-20261010T152113-073899/predictions.jsonl
+dense_text,B,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,," ZX-4108
+",ZX-4108,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: What code is shown for Record 09? Copy it exactly.",9,False,runs/paired-20261010T152113-073899/predictions.jsonl
+table,A,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"12
+",12,Question: What is the price of the Book in the table?,5,False,runs/paired-20261010T152113-073899/predictions.jsonl
+table,E,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"12
+",12,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: What is the price of the Book in the table?",5,False,runs/paired-20261010T152113-073899/predictions.jsonl
+table,S,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"12
+",12,Keep the answer brief. Question: What is the price of the Book in the table?,5,False,runs/paired-20261010T152113-073899/predictions.jsonl
+table,B,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"12
+",12,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: What is the price of the Book in the table?",5,False,runs/paired-20261010T152113-073899/predictions.jsonl
+chart,A,correct,supported,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"The tallest bar is labeled **B**.
+
+Looking at the bar chart:
+
+- Bar **A** is the shortest.
+- Bar **B** is the tallest.
+- Bar **C** is shorter than B.
+
+✅ Therefore, the tallest bar is **B**.
+",B,Question: Which labeled bar is tallest?,60,False,runs/paired-20261010T152113-073899/predictions.jsonl
+chart,E,incorrect,not_applicable,visual_comparison/reasoning,实际 B 最高，答 C,Codex evidence review; user confirmed rubric and five key references,,,"C
+",B,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: Which labeled bar is tallest?",4,False,runs/paired-20261010T152113-073899/predictions.jsonl
+chart,S,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,," B
+",B,Keep the answer brief. Question: Which labeled bar is tallest?,4,False,runs/paired-20261010T152113-073899/predictions.jsonl
+chart,B,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,," B
+",B,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: Which labeled bar is tallest?",4,False,runs/paired-20261010T152113-073899/predictions.jsonl
+arithmetic,A,correct,supported,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"To find the total cost, we need to add the individual prices listed in the shopping list.
+
+- The cost for the apples is $3 \times USD 2$.
+- The cost for the bread is $1 \times USD 4$.
+
+Now, we calculate the total:
+$$3 \times USD 2 + 1 \times USD 4 = USD 6 + USD 4 = USD 10$$
+
+The total cost is $10 USD.
+",10,Question: What is the total cost in USD?,102,False,runs/paired-20261010T152113-073899/predictions.jsonl
+arithmetic,E,incorrect,not_applicable,reasoning,正确总价 10，答 7；错误机制未知,Codex evidence review; user confirmed rubric and five key references,,,"$7
+",10,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: What is the total cost in USD?",5,False,runs/paired-20261010T152113-073899/predictions.jsonl
+arithmetic,S,incorrect,not_applicable,reasoning,正确总价 10，答 7；错误机制未知,Codex evidence review; user confirmed rubric and five key references,,,"$7
+",10,Keep the answer brief. Question: What is the total cost in USD?,5,False,runs/paired-20261010T152113-073899/predictions.jsonl
+arithmetic,B,incorrect,not_applicable,reasoning,正确总价 10，答 7；错误机制未知,Codex evidence review; user confirmed rubric and five key references,,,"$7
+",10,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: What is the total cost in USD?",5,False,runs/paired-20261010T152113-073899/predictions.jsonl
+missing_date,A,correct,supported,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"There is no purchase date shown on the receipt. The receipt only displays the following information:
+
+*   **Item:** Notebook
+*   **Total:** USD 5.00
+",No purchase date is shown.,Question: What purchase date is shown on the receipt?,40,False,runs/paired-20261010T152113-073899/predictions.jsonl
+missing_date,E,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"There is no purchase date shown on the receipt.
+",No purchase date is shown.,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: What purchase date is shown on the receipt?",13,False,runs/paired-20261010T152113-073899/predictions.jsonl
+missing_date,S,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"None
+",No purchase date is shown.,Keep the answer brief. Question: What purchase date is shown on the receipt?,4,False,runs/paired-20261010T152113-073899/predictions.jsonl
+missing_date,B,correct,not_applicable,,满足任务答案；等价表达可接受,Codex evidence review; user confirmed rubric and five key references,,,"None
+",No purchase date is shown.,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: What purchase date is shown on the receipt?",4,False,runs/paired-20261010T152113-073899/predictions.jsonl
+occluded,A,unanswered,not_applicable,task_completion,空回答，未达到上限,Codex evidence review; user confirmed rubric and five key references,,,"
+",Cannot determine the full code because it is covered.,Question: What is the full account code?,3,False,runs/paired-20261010T152113-073899/predictions.jsonl
+occluded,E,correct,mixed,unsupported_description,拒绝确认编号正确，但遮挡不能证明框下内容为空,Codex evidence review; user confirmed rubric and five key references,,,"The image shows the text ""Account code:"" followed by a black rectangular box. There is no visible input field, keyboard, or any indication that the user has typed a code. The box is empty and does not contain any characters or symbols.
+
+Therefore, based on visible evidence, the account code cannot be determined.
+
+Answer: Cannot determine
+",Cannot determine the full code because it is covered.,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: What is the full account code?",72,False,runs/paired-20261010T152113-073899/predictions.jsonl
+occluded,S,incorrect,not_applicable,hallucination,编造 123456，无可见证据,Codex evidence review; user confirmed rubric and five key references,,,"123456
+",Cannot determine the full code because it is covered.,Keep the answer brief. Question: What is the full account code?,9,False,runs/paired-20261010T152113-073899/predictions.jsonl
+occluded,B,incorrect,not_applicable,hallucination,回答 0，无可见证据,Codex evidence review; user confirmed rubric and five key references,,,"0
+",Cannot determine the full code because it is covered.,"Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: What is the full account code?",4,False,runs/paired-20261010T152113-073899/predictions.jsonl

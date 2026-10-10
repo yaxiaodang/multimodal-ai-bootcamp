@@ -1,0 +1,8 @@
+paired-20261010T115534-329139: 2/2 records; recorded status=completed
+paired-20261010T143219-962222: 20/20 records; recorded status=completed
+paired-20261010T144254-776758: 20/20 records; recorded status=completed
+paired-20261010T150722-371103: 4/4 records; recorded status=completed
+paired-20261010T152113-073899: 40/40 records; recorded status=completed
+paired-20261010T163407-260138: 0/4 records; recorded status=running
+paired-20261010T164102-444704: 4/4 records; recorded status=completed
+Verified 90 saved predictions. Evidence consistency is not fresh-environment reproducibility.

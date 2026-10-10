@@ -1,0 +1,32 @@
+{
+  "run": "paired-20261010T152113-073899",
+  "scope": "10 fixed teaching images; not population accuracy",
+  "rubric": "task correctness and explanation faithfulness separately",
+  "task_counts": {
+    "A": {
+      "partial": 1,
+      "correct": 8,
+      "unanswered": 1
+    },
+    "E": {
+      "partial": 1,
+      "correct": 7,
+      "incorrect": 2
+    },
+    "S": {
+      "partial": 1,
+      "incorrect": 3,
+      "correct": 6
+    },
+    "B": {
+      "partial": 1,
+      "correct": 7,
+      "incorrect": 2
+    }
+  },
+  "explanation_issues": [
+    "count/E",
+    "occluded/E"
+  ],
+  "review_provenance": "Codex evidence review under user-confirmed rubric; not user approval of every row"
+}

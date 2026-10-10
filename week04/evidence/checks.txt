@@ -1,0 +1,61 @@
+===== model-import-check.txt =====
+Qwen3.5 imports OK
+
+
+===== model-access-check.txt =====
+python: can't open file '/home/yaxiaodang/multimodal-ai-bootcamp/week04/check_model_access.py': [Errno 2] No such file or directory
+
+
+===== pip-check.txt =====
+No broken requirements found.
+
+
+===== processor-fix-check.txt =====
+torch: 2.14.0+cpu
+torchvision: 0.29.1+cpu
+processor: Qwen3VLProcessor
+input_ids: (1, 127)
+pixel_values: (400, 1536)
+Processor load and image/text preprocessing: OK; model inference not run
+
+
+===== paired-input-check.txt =====
+shapes A tokens: 127 pixels: (400, 1536)
+shapes B tokens: 159 pixels: (400, 1536)
+count A tokens: 277 pixels: (1024, 1536)
+count B tokens: 309 pixels: (1024, 1536)
+position A tokens: 281 pixels: (1024, 1536)
+position B tokens: 313 pixels: (1024, 1536)
+invoice A tokens: 280 pixels: (1024, 1536)
+invoice B tokens: 312 pixels: (1024, 1536)
+dense_text A tokens: 284 pixels: (1024, 1536)
+dense_text B tokens: 316 pixels: (1024, 1536)
+table A tokens: 281 pixels: (1024, 1536)
+table B tokens: 313 pixels: (1024, 1536)
+chart A tokens: 276 pixels: (1024, 1536)
+chart B tokens: 308 pixels: (1024, 1536)
+arithmetic A tokens: 278 pixels: (1024, 1536)
+arithmetic B tokens: 310 pixels: (1024, 1536)
+missing_date A tokens: 279 pixels: (1024, 1536)
+missing_date B tokens: 311 pixels: (1024, 1536)
+occluded A tokens: 277 pixels: (1024, 1536)
+occluded B tokens: 309 pixels: (1024, 1536)
+Input validation OK; no model inference performed.
+
+
+===== prompt-factor-input-check.txt =====
+arithmetic A tokens: 280 pixels: (1024, 1536)
+arithmetic E tokens: 305 pixels: (1024, 1536)
+arithmetic S tokens: 285 pixels: (1024, 1536)
+arithmetic B tokens: 310 pixels: (1024, 1536)
+Input validation OK; no model inference performed.
+
+
+===== evidence-consistency-check.txt =====
+paired-20261010T115534-329139: 2 records consistent
+paired-20261010T143219-962222: 20 records consistent
+paired-20261010T144254-776758: 20 records consistent
+paired-20261010T150722-371103: 4 records consistent
+paired-20261010T152113-073899: 40 records consistent
+Total: 86 paired records verified. This checks evidence consistency, not inference reproducibility.
+

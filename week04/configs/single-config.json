@@ -1,0 +1,12 @@
+{
+  "image": "samples/shapes.png",
+  "prompt": "Describe the two colored shapes and their positions in one short sentence.",
+  "reference_answer": "A red rectangle is on the left and a blue circle is on the right.",
+  "device": "cpu",
+  "dtype": "float32",
+  "attention": "sdpa",
+  "cpu_threads": 4,
+  "seed": 42,
+  "do_sample": false,
+  "max_new_tokens": 32
+}

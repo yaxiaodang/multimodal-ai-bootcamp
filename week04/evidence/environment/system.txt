@@ -1,0 +1,75 @@
+===== check-time.txt =====
+2026-10-10T11:00:45+08:00
+
+
+===== system.txt =====
+Linux ubuntu-vm 6.8.0-138-generic #138~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug  7 13:43:15 UTC  x86_64 x86_64 x86_64 GNU/Linux
+
+
+===== cpu.txt =====
+架构：                                   x86_64
+CPU 运行模式：                           32-bit, 64-bit
+Address sizes:                           45 bits physical, 48 bits virtual
+字节序：                                 Little Endian
+CPU:                                     4
+在线 CPU 列表：                          0-3
+厂商 ID：                                GenuineIntel
+型号名称：                               12th Gen Intel(R) Core(TM) i5-1240P
+CPU 系列：                               6
+型号：                                   154
+每个核的线程数：                         1
+每个座的核数：                           1
+座：                                     4
+步进：                                   3
+BogoMIPS：                               4224.01
+标记：                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves arat umip gfni vaes vpclmulqdq rdpid fsrm md_clear flush_l1d arch_capabilities
+超管理器厂商：                           VMware
+虚拟化类型：                             完全
+L1d 缓存：                               192 KiB (4 instances)
+L1i 缓存：                               128 KiB (4 instances)
+L2 缓存：                                5 MiB (4 instances)
+L3 缓存：                                48 MiB (4 instances)
+NUMA 节点：                              1
+NUMA 节点0 CPU：                         0-3
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Indirect target selection: Mitigation; Aligned branch/return thunks
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Mitigation; PTE Inversion
+Vulnerability Mds:                       Mitigation; Clear CPU buffers; SMT Host state unknown
+Vulnerability Meltdown:                  Mitigation; PTI
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Reg file data sampling:    Vulnerable: No microcode
+Vulnerability Retbleed:                  Mitigation; IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; IBRS; IBPB conditional; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI SW loop, KVM SW loop
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+
+
+===== memory.txt =====
+               total        used        free      shared  buff/cache   available
+内存：      7.7Gi       2.8Gi       3.2Gi        31Mi       1.8Gi       4.6Gi
+交换：      2.1Gi          0B       2.1Gi
+
+
+===== disk.txt =====
+文件系统        大小  已用  可用 已用% 挂载点
+/dev/sda3        59G   27G   30G   48% /
+
+
+===== python-environment.txt =====
+Python: 3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]
+Executable: /home/yaxiaodang/multimodal-ai-bootcamp/.venv/bin/python
+torch: 2.14.0+cpu
+transformers: 5.17.0
+huggingface-hub: 1.32.0
+Pillow: 11.3.0
+accelerate: NOT INSTALLED
+CUDA build: None
+CUDA available: False
+GPU count: 0
+

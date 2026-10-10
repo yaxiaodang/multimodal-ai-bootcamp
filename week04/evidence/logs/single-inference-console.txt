@@ -1,0 +1,26 @@
+Run directory: /home/yaxiaodang/multimodal-ai-bootcamp/week04/outputs/single-20261010T111744-512895
+[1/3] Loading processor and model (first run downloads weights)...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Saved: /home/yaxiaodang/multimodal-ai-bootcamp/week04/outputs/single-20261010T111744-512895/result.json
+Traceback (most recent call last):
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/week04/run_single.py", line 98, in <module>
+    main()
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/week04/run_single.py", line 52, in main
+    processor = AutoProcessor.from_pretrained(record["model_id"], revision=record["revision"])
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv/lib/python3.10/site-packages/transformers/models/auto/processing_auto.py", line 330, in from_pretrained
+    return processor_class.from_pretrained(
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv/lib/python3.10/site-packages/transformers/processing_utils.py", line 1736, in from_pretrained
+    args = cls._get_arguments_from_pretrained(pretrained_model_name_or_path, processor_dict, **kwargs)
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv/lib/python3.10/site-packages/transformers/processing_utils.py", line 1876, in _get_arguments_from_pretrained
+    sub_processor = auto_processor_class.from_pretrained(
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv/lib/python3.10/site-packages/transformers/models/auto/video_processing_auto.py", line 384, in from_pretrained
+    return video_processor_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv/lib/python3.10/site-packages/transformers/utils/import_utils.py", line 2388, in __getattribute__
+    requires_backends(cls, cls._backends)
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv/lib/python3.10/site-packages/transformers/utils/import_utils.py", line 2374, in requires_backends
+    raise ImportError("".join(failed))
+ImportError: 
+Qwen3VLVideoProcessor requires the Torchvision library but it was not found in your environment. Check out the instructions on the
+installation page: https://pytorch.org/get-started/locally/ and follow the ones that match your environment.
+Please note that you may need to restart your runtime after installation.
+

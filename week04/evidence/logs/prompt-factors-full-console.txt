@@ -1,0 +1,195 @@
+Run directory: /home/yaxiaodang/multimodal-ai-bootcamp/week04/outputs/paired-20261010T152113-073899
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 1/473 [00:08<1:08:58,  8.77s/it]Loading weights:   3%|▎         | 16/473 [00:08<03:01,  2.52it/s] Loading weights:  58%|█████▊    | 273/473 [00:09<00:03, 59.23it/s]Loading weights:  75%|███████▍  | 353/473 [00:09<00:01, 73.88it/s]Loading weights:  86%|████████▋ | 409/473 [00:09<00:00, 90.04it/s]Loading weights:  97%|█████████▋| 457/473 [00:09<00:00, 104.47it/s]Loading weights: 100%|██████████| 473/473 [00:09<00:00, 47.43it/s] 
+Running shapes / A
+Full prompt [A]: Question: Describe the two colored shapes and their positions in one short sentence.
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+Answer:  A red square and a blue circle are positioned side by side on a white background.
+
+Running shapes / E
+Full prompt [E]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: Describe the two colored shapes and their positions in one short sentence.
+Answer:  A red square and a blue circle are positioned side by side.
+
+Running shapes / S
+Full prompt [S]: Keep the answer brief. Question: Describe the two colored shapes and their positions in one short sentence.
+Answer:  A red square and a blue circle are positioned side by side.
+
+Running shapes / B
+Full prompt [B]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: Describe the two colored shapes and their positions in one short sentence.
+Answer:  A red square and a blue circle are positioned side by side.
+
+Running count / A
+Full prompt [A]: Question: How many green circles are visible?
+Answer: There are 7 green circles visible in the image.
+
+Running count / E
+Full prompt [E]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: How many green circles are visible?
+Answer: There are 7 green circles visible in the image.
+
+- Top row: 3 circles (left, center, right)
+- Middle row: 2 circles (left, center)
+- Bottom row: 1 circle (center)
+
+Total: 3 + 2 + 1 = 7
+
+Running count / S
+Full prompt [S]: Keep the answer brief. Question: How many green circles are visible?
+Answer: 9
+
+Running count / B
+Full prompt [B]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: How many green circles are visible?
+Answer: 7
+
+Running position / A
+Full prompt [A]: Question: Is the red rectangle above or below the blue circle?
+Answer: The red rectangle is above the blue circle.
+
+Running position / E
+Full prompt [E]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: Is the red rectangle above or below the blue circle?
+Answer: Above
+
+Running position / S
+Full prompt [S]: Keep the answer brief. Question: Is the red rectangle above or below the blue circle?
+Answer:  above
+
+Running position / B
+Full prompt [B]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: Is the red rectangle above or below the blue circle?
+Answer:  Above
+
+Running invoice / A
+Full prompt [A]: Question: What is the invoice ID? Copy it exactly.
+Answer: Invoice ID: AB-7093
+
+Running invoice / E
+Full prompt [E]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: What is the invoice ID? Copy it exactly.
+Answer: Invoice ID: AB-7093
+
+Running invoice / S
+Full prompt [S]: Keep the answer brief. Question: What is the invoice ID? Copy it exactly.
+Answer: AB-7093
+
+Running invoice / B
+Full prompt [B]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: What is the invoice ID? Copy it exactly.
+Answer:  Invoice ID: AB-7093
+
+Running dense_text / A
+Full prompt [A]: Question: What code is shown for Record 09? Copy it exactly.
+Answer: code ZX-4108
+
+Running dense_text / E
+Full prompt [E]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: What code is shown for Record 09? Copy it exactly.
+Answer: ZX-4108
+
+Running dense_text / S
+Full prompt [S]: Keep the answer brief. Question: What code is shown for Record 09? Copy it exactly.
+Answer:  ZX-4108
+
+Running dense_text / B
+Full prompt [B]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: What code is shown for Record 09? Copy it exactly.
+Answer:  ZX-4108
+
+Running table / A
+Full prompt [A]: Question: What is the price of the Book in the table?
+Answer: 12
+
+Running table / E
+Full prompt [E]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: What is the price of the Book in the table?
+Answer: 12
+
+Running table / S
+Full prompt [S]: Keep the answer brief. Question: What is the price of the Book in the table?
+Answer: 12
+
+Running table / B
+Full prompt [B]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: What is the price of the Book in the table?
+Answer: 12
+
+Running chart / A
+Full prompt [A]: Question: Which labeled bar is tallest?
+Answer: The tallest bar is labeled **B**.
+
+Looking at the bar chart:
+
+- Bar **A** is the shortest.
+- Bar **B** is the tallest.
+- Bar **C** is shorter than B.
+
+✅ Therefore, the tallest bar is **B**.
+
+Running chart / E
+Full prompt [E]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: Which labeled bar is tallest?
+Answer: C
+
+Running chart / S
+Full prompt [S]: Keep the answer brief. Question: Which labeled bar is tallest?
+Answer:  B
+
+Running chart / B
+Full prompt [B]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: Which labeled bar is tallest?
+Answer:  B
+
+Running arithmetic / A
+Full prompt [A]: Question: What is the total cost in USD?
+Answer: To find the total cost, we need to add the individual prices listed in the shopping list.
+
+- The cost for the apples is $3 \times USD 2$.
+- The cost for the bread is $1 \times USD 4$.
+
+Now, we calculate the total:
+$$3 \times USD 2 + 1 \times USD 4 = USD 6 + USD 4 = USD 10$$
+
+The total cost is $10 USD.
+
+Running arithmetic / E
+Full prompt [E]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: What is the total cost in USD?
+Answer: $7
+
+Running arithmetic / S
+Full prompt [S]: Keep the answer brief. Question: What is the total cost in USD?
+Answer: $7
+
+Running arithmetic / B
+Full prompt [B]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: What is the total cost in USD?
+Answer: $7
+
+Running missing_date / A
+Full prompt [A]: Question: What purchase date is shown on the receipt?
+Answer: There is no purchase date shown on the receipt. The receipt only displays the following information:
+
+*   **Item:** Notebook
+*   **Total:** USD 5.00
+
+Running missing_date / E
+Full prompt [E]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: What purchase date is shown on the receipt?
+Answer: There is no purchase date shown on the receipt.
+
+Running missing_date / S
+Full prompt [S]: Keep the answer brief. Question: What purchase date is shown on the receipt?
+Answer: None
+
+Running missing_date / B
+Full prompt [B]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: What purchase date is shown on the receipt?
+Answer: None
+
+Running occluded / A
+Full prompt [A]: Question: What is the full account code?
+Answer: 
+
+Running occluded / E
+Full prompt [E]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: What is the full account code?
+Answer: The image shows the text "Account code:" followed by a black rectangular box. There is no visible input field, keyboard, or any indication that the user has typed a code. The box is empty and does not contain any characters or symbols.
+
+Therefore, based on visible evidence, the account code cannot be determined.
+
+Answer: Cannot determine
+
+Running occluded / S
+Full prompt [S]: Keep the answer brief. Question: What is the full account code?
+Answer: 123456
+
+Running occluded / B
+Full prompt [B]: Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: What is the full account code?
+Answer: 0
+
