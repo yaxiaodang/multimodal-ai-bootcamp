@@ -344,7 +344,7 @@
 - 预期文件 / 实际文件：程序、十张样例、清单、完整配置、所有原始回答、环境及终端日志、运行表、双维度评价、五个代表失败案例、本周报告及缓存复现日志已保存；GitHub 提交信息待补。
 
 ### 环境与复现信息
-- Git commit：Week 4 尚未提交，后续记录。
+- Git commit：实验与报告提交 `e5e0652092fa862c34cb605246ab87b0d040cd9e`，分支 `codex/week04-vlm`；后续保存状态的文档提交见分支历史。推送等待 GitHub 认证。
 - Python / CUDA / GPU：Python 3.10.12，torch 2.14.0+cpu，CUDA 不可用；Transformers 5.17.0。检查输出见 [环境记录](week04/evidence/environment/system.txt)。
 - 模型与 revision：`Qwen/Qwen3.5-0.8B`，`2fc06364715b967f1860aea9cf38778875588b17`；访问检查成功，许可 apache-2.0，任务 image-text-to-text；这不代表推理已经成功。
 - 数据集与 version / split：自制形状图，非外部数据集；来源见 [样例说明](week04/samples/README.md)。
@@ -468,3 +468,9 @@
 - week04 整理为 scripts/configs/samples/runs/evidence/reports；历史单条 JSON 无损合并为每轮 predictions.jsonl，共九十条原始配对回答逐条一致；原模型运行元数据未改写。
 - 重复阶段说明合并到 reports/history.md，硬件与检查日志合并，删除空白评价副本及已合并的重复文件。新入口见 [README](week04/README.md)。
 - 调整后已核验脚本语法和四组算术输入预处理；完整模型推理未因目录整理再次执行。GitHub 保存仍待完成。
+
+### 本地提交与 GitHub 推送状态｜2026-10-10
+- 已创建 codex/week04-vlm 分支，实验、配置、原始结果、评价与报告保存为提交 e5e0652092fa862c34cb605246ab87b0d040cd9e。
+- 核验：九十条配对记录一致、文档链接有效、文件体积适合 Git 保存；未发现常见凭据格式。终端原始日志的换行和尾随空格保留，不改变历史输出。
+- HTTPS 推送失败：当前非交互终端无法读取 GitHub 用户名，未配置可用认证。SSH 替代访问检查因没有受信任的 GitHub 主机密钥而停止，不将其解释为私钥已被拒绝。
+- 当前成果已在本地 Git 保存，尚未上传 GitHub；需要用户在自己的终端完成 GitHub 认证后执行 git push -u origin codex/week04-vlm。不在学习记录或聊天中保存令牌。
