@@ -1,0 +1,57 @@
+{
+  "started_at": "2026-10-10T16:34:07.260535+08:00",
+  "status": "running",
+  "model": {
+    "checked_at": "2026-10-10T11:07:12.310071+08:00",
+    "model_id": "Qwen/Qwen3.5-0.8B",
+    "requested_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "resolved_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "license": "apache-2.0",
+    "pipeline_tag": "image-text-to-text",
+    "planned_device": "cpu",
+    "status": "metadata_access_verified; inference_not_run"
+  },
+  "config_file": "experiment-config-factors.json",
+  "config": {
+    "device": "cpu",
+    "dtype": "float32",
+    "attention": "sdpa",
+    "cpu_threads": 4,
+    "seed": 42,
+    "do_sample": false,
+    "max_new_tokens": 128,
+    "enable_thinking": false,
+    "variants": {
+      "A": "Question: {question}",
+      "E": "Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: {question}",
+      "S": "Keep the answer brief. Question: {question}",
+      "B": "Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: {question}"
+    }
+  },
+  "samples": [
+    {
+      "id": "arithmetic",
+      "category": "reasoning",
+      "image": "samples/arithmetic.png",
+      "question": "What is the total cost in USD?",
+      "reference_answer": "10",
+      "criteria": "3*2+1*4 = 10.",
+      "source": "self-generated with Pillow; no third-party image or private data",
+      "license": "CC0-1.0 (generated image)",
+      "split": "teaching_probe"
+    }
+  ],
+  "python": "3.10.12",
+  "packages": {
+    "torch": "2.14.0+cpu",
+    "torchvision": "0.29.1+cpu",
+    "transformers": "5.17.0",
+    "Pillow": "11.3.0",
+    "huggingface-hub": "1.32.0"
+  },
+  "git_commit": "b92b1375ea5eb7bb72ac4b088cd0b2724a6d09fe",
+  "git_status": " M ../.gitignore\n M ../learning-log.md\n?? ./\n",
+  "comparison": "A/B paired by sample; fixed A then B order; elapsed times are not a rigorous speed benchmark",
+  "load_seconds": 8.20225088100051,
+  "total_seconds": 388.20465851800054
+}

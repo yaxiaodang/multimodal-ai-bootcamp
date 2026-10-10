@@ -1,0 +1,14 @@
+{
+  "device": "cpu",
+  "dtype": "float32",
+  "attention": "sdpa",
+  "cpu_threads": 4,
+  "seed": 42,
+  "do_sample": false,
+  "max_new_tokens": 128,
+  "enable_thinking": false,
+  "variants": {
+    "A": "{question}",
+    "B": "Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: {question}"
+  }
+}

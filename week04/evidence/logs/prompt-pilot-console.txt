@@ -1,0 +1,12 @@
+Run directory: /home/yaxiaodang/multimodal-ai-bootcamp/week04/outputs/paired-20261010T115534-329139
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 1/473 [00:13<1:47:47, 13.70s/it]Loading weights:   0%|          | 2/473 [00:13<44:47,  5.71s/it]  Loading weights:  13%|█▎        | 60/473 [00:13<00:48,  8.59it/s]Loading weights:  31%|███       | 146/473 [00:14<00:12, 25.88it/s]Loading weights:  49%|████▉     | 233/473 [00:14<00:04, 49.60it/s]Loading weights:  64%|██████▎   | 301/473 [00:14<00:02, 72.69it/s]Loading weights:  77%|███████▋  | 362/473 [00:14<00:01, 93.96it/s]Loading weights:  92%|█████████▏| 434/473 [00:14<00:00, 132.05it/s]Loading weights: 100%|██████████| 473/473 [00:14<00:00, 31.88it/s] 
+Running shapes / A
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+Answer: A red square and a blue circle are positioned side by side on a white background.
+
+Running shapes / B
+Answer:  A red square and a blue circle are positioned side by side.
+

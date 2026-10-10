@@ -17,7 +17,7 @@
 | `week01/` | 可复现研究工程 |
 | `week02/` | Hugging Face 与模型推理 |
 | `week03/` | AI 辅助编程与人工验证 |
-| `week04/` | 视觉语言模型 |
+| [week04/](week04/README.md) | 视觉语言模型：受控实验、双维度评价、五个失败案例与缓存复现 |
 | `week05/` | Document AI 任务地图 |
 | `week06/` | Docling 文档解析 Pipeline |
 | `week07/` | Dataset、Benchmark 与负责任使用 |
@@ -36,3 +36,6 @@
 cd ~/multimodal-ai-bootcamp
 source .venv/bin/activate
 python -m pip install -r requirements.txt
+```
+
+根目录依赖清单用于基础工具；第四周 CPU 推理依赖与完整实验入口见 [Week 4 README](week04/README.md)，结果与限制见 [实验报告](week04/reports/report.md)。

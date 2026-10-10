@@ -1,0 +1,156 @@
+{
+  "started_at": "2026-10-10T15:21:13.074117+08:00",
+  "status": "completed",
+  "model": {
+    "checked_at": "2026-10-10T11:07:12.310071+08:00",
+    "model_id": "Qwen/Qwen3.5-0.8B",
+    "requested_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "resolved_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "license": "apache-2.0",
+    "pipeline_tag": "image-text-to-text",
+    "planned_device": "cpu",
+    "status": "metadata_access_verified; inference_not_run"
+  },
+  "config_file": "experiment-config-factors.json",
+  "config": {
+    "device": "cpu",
+    "dtype": "float32",
+    "attention": "sdpa",
+    "cpu_threads": 4,
+    "seed": 42,
+    "do_sample": false,
+    "max_new_tokens": 128,
+    "enable_thinking": false,
+    "variants": {
+      "A": "Question: {question}",
+      "E": "Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Question: {question}",
+      "S": "Keep the answer brief. Question: {question}",
+      "B": "Answer only from visible evidence in the image. If the answer is absent or unreadable, say that you cannot determine it. Keep the answer brief. Question: {question}"
+    }
+  },
+  "samples": [
+    {
+      "id": "shapes",
+      "category": "spatial",
+      "image": "samples/shapes.png",
+      "question": "Describe the two colored shapes and their positions in one short sentence.",
+      "reference_answer": "A red rectangle is on the left and a blue circle is on the right.",
+      "criteria": "Must name both colors, rectangle/circle, and left/right; square is inaccurate.",
+      "source": "self-generated with Pillow; no third-party image or private data",
+      "license": "CC0-1.0 (generated image)",
+      "split": "teaching_probe"
+    },
+    {
+      "id": "count",
+      "category": "counting",
+      "image": "samples/count.png",
+      "question": "How many green circles are visible?",
+      "reference_answer": "7",
+      "criteria": "Exactly seven circles.",
+      "source": "self-generated with Pillow; no third-party image or private data",
+      "license": "CC0-1.0 (generated image)",
+      "split": "teaching_probe"
+    },
+    {
+      "id": "position",
+      "category": "spatial",
+      "image": "samples/position.png",
+      "question": "Is the red rectangle above or below the blue circle?",
+      "reference_answer": "Above",
+      "criteria": "Red is above blue.",
+      "source": "self-generated with Pillow; no third-party image or private data",
+      "license": "CC0-1.0 (generated image)",
+      "split": "teaching_probe"
+    },
+    {
+      "id": "invoice",
+      "category": "ocr",
+      "image": "samples/invoice.png",
+      "question": "What is the invoice ID? Copy it exactly.",
+      "reference_answer": "AB-7093",
+      "criteria": "Exact ID including hyphen and digits.",
+      "source": "self-generated with Pillow; no third-party image or private data",
+      "license": "CC0-1.0 (generated image)",
+      "split": "teaching_probe"
+    },
+    {
+      "id": "dense_text",
+      "category": "ocr",
+      "image": "samples/dense_text.png",
+      "question": "What code is shown for Record 09? Copy it exactly.",
+      "reference_answer": "ZX-4108",
+      "criteria": "Exact code from row 09.",
+      "source": "self-generated with Pillow; no third-party image or private data",
+      "license": "CC0-1.0 (generated image)",
+      "split": "teaching_probe"
+    },
+    {
+      "id": "table",
+      "category": "ocr",
+      "image": "samples/table.png",
+      "question": "What is the price of the Book in the table?",
+      "reference_answer": "12",
+      "criteria": "Read Book row, Price column.",
+      "source": "self-generated with Pillow; no third-party image or private data",
+      "license": "CC0-1.0 (generated image)",
+      "split": "teaching_probe"
+    },
+    {
+      "id": "chart",
+      "category": "reasoning",
+      "image": "samples/chart.png",
+      "question": "Which labeled bar is tallest?",
+      "reference_answer": "B",
+      "criteria": "Identify bar B, not arbitrary numerical values.",
+      "source": "self-generated with Pillow; no third-party image or private data",
+      "license": "CC0-1.0 (generated image)",
+      "split": "teaching_probe"
+    },
+    {
+      "id": "arithmetic",
+      "category": "reasoning",
+      "image": "samples/arithmetic.png",
+      "question": "What is the total cost in USD?",
+      "reference_answer": "10",
+      "criteria": "3*2+1*4 = 10.",
+      "source": "self-generated with Pillow; no third-party image or private data",
+      "license": "CC0-1.0 (generated image)",
+      "split": "teaching_probe"
+    },
+    {
+      "id": "missing_date",
+      "category": "hallucination",
+      "image": "samples/missing_date.png",
+      "question": "What purchase date is shown on the receipt?",
+      "reference_answer": "No purchase date is shown.",
+      "criteria": "Must say date is absent; invented date fails.",
+      "source": "self-generated with Pillow; no third-party image or private data",
+      "license": "CC0-1.0 (generated image)",
+      "split": "teaching_probe"
+    },
+    {
+      "id": "occluded",
+      "category": "hallucination",
+      "image": "samples/occluded.png",
+      "question": "What is the full account code?",
+      "reference_answer": "Cannot determine the full code because it is covered.",
+      "criteria": "Must not invent the covered digits; source text is not visible evidence.",
+      "source": "self-generated with Pillow; no third-party image or private data",
+      "license": "CC0-1.0 (generated image)",
+      "split": "teaching_probe"
+    }
+  ],
+  "python": "3.10.12",
+  "packages": {
+    "torch": "2.14.0+cpu",
+    "torchvision": "0.29.1+cpu",
+    "transformers": "5.17.0",
+    "Pillow": "11.3.0",
+    "huggingface-hub": "1.32.0"
+  },
+  "git_commit": "b92b1375ea5eb7bb72ac4b088cd0b2724a6d09fe",
+  "git_status": " M ../learning-log.md\n?? ./\n",
+  "comparison": "A/B paired by sample; fixed A then B order; elapsed times are not a rigorous speed benchmark",
+  "load_seconds": 11.229722249000133,
+  "total_seconds": 477.6753037090002
+}

@@ -1,0 +1,35 @@
+{
+  "run_id": "single-20261010T112736-684304",
+  "started_at": "2026-10-10T11:27:36.684457+08:00",
+  "status": "completed",
+  "model_id": "Qwen/Qwen3.5-0.8B",
+  "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "config": {
+    "image": "samples/shapes.png",
+    "prompt": "Describe the two colored shapes and their positions in one short sentence.",
+    "reference_answer": "A red rectangle is on the left and a blue circle is on the right.",
+    "device": "cpu",
+    "dtype": "float32",
+    "attention": "sdpa",
+    "cpu_threads": 4,
+    "seed": 42,
+    "do_sample": false,
+    "max_new_tokens": 32
+  },
+  "input_sha256": "8e6a61e851de66043c5fcddc96e77c4d599d1449593732addcd9ee8ec8232852",
+  "python": "3.10.12",
+  "packages": {
+    "torch": "2.14.0+cpu",
+    "transformers": "5.17.0",
+    "Pillow": "11.3.0",
+    "huggingface-hub": "1.32.0"
+  },
+  "manual_review": "pending",
+  "load_seconds": 132.55390128499994,
+  "input_tokens": 127,
+  "answer": "A red square and a blue circle are positioned side by side on a white background.\n",
+  "generation_seconds": 10.689519116999918,
+  "generated_tokens": 20,
+  "token_limit_reached": false,
+  "total_seconds": 143.7674987329999
+}
