@@ -337,14 +337,14 @@
 
 ### 本周主线成果
 - 完成了：资源与模型访问检查、依赖错误修复、单图推理、十张图的 A/B 受控比较、32/128 token 排查、A/E/S/B 自主探索、两个评价维度及五个不同输入案例整理。用户确认五张关键图片的参考事实。
-- 尚未完成：GitHub 保存与最终口头解释；全新环境复现和跨机器复现未验证。当前环境缓存复现已通过。四十条评价由 Codex 基于证据整理，用户已确认评价维度，不冒充其逐条签署标签。
+- 尚未完成：Pull Request、合并与最终口头解释；实验成果已推送 GitHub 分支。全新环境复现和跨机器复现未验证，当前环境缓存复现已通过。四十条评价由 Codex 基于证据整理，用户已确认评价维度，不冒充其逐条签署标签。
 - 唯一完整实验入口：仓库根目录执行 `python -u week04/scripts/run_experiment.py --config configs/experiment-config-factors.json`，先按 README 安装依赖并填充缓存；单图程序是前置最小验证，见 [Week 4 README](week04/README.md)。
 - 预计 / 实际耗时：标准路径计划 24 小时 / 待记录。
 - 算力与成本：Ubuntu CPU，4 线程；Windows 宿主机仅有集成显卡；当前不使用云端或付费模型 API，实际成本未单独统计。
 - 预期文件 / 实际文件：程序、十张样例、清单、完整配置、所有原始回答、环境及终端日志、运行表、双维度评价、五个代表失败案例、本周报告及缓存复现日志已保存；GitHub 提交信息待补。
 
 ### 环境与复现信息
-- Git commit：实验与报告提交 `e5e0652092fa862c34cb605246ab87b0d040cd9e`，分支 `codex/week04-vlm`；后续保存状态的文档提交见分支历史。推送等待 GitHub 认证。
+- Git commit：实验与报告提交 `e5e0652092fa862c34cb605246ab87b0d040cd9e`，分支 `codex/week04-vlm`；用户已推送包含该提交与 `8ef41a5` 的分支。后续保存状态的文档提交见分支历史。
 - Python / CUDA / GPU：Python 3.10.12，torch 2.14.0+cpu，CUDA 不可用；Transformers 5.17.0。检查输出见 [环境记录](week04/evidence/environment/system.txt)。
 - 模型与 revision：`Qwen/Qwen3.5-0.8B`，`2fc06364715b967f1860aea9cf38778875588b17`；访问检查成功，许可 apache-2.0，任务 image-text-to-text；这不代表推理已经成功。
 - 数据集与 version / split：自制形状图，非外部数据集；来源见 [样例说明](week04/samples/README.md)。
@@ -474,3 +474,8 @@
 - 核验：九十条配对记录一致、文档链接有效、文件体积适合 Git 保存；未发现常见凭据格式。终端原始日志的换行和尾随空格保留，不改变历史输出。
 - HTTPS 推送失败：当前非交互终端无法读取 GitHub 用户名，未配置可用认证。SSH 替代访问检查因没有受信任的 GitHub 主机密钥而停止，不将其解释为私钥已被拒绝。
 - 当前成果已在本地 Git 保存，尚未上传 GitHub；需要用户在自己的终端完成 GitHub 认证后执行 git push -u origin codex/week04-vlm。不在学习记录或聊天中保存令牌。
+
+### GitHub 分支保存成功｜2026-10-10
+- 用户执行 git push -u origin codex/week04-vlm 成功，远程创建分支并建立跟踪；本地 HEAD 与 origin/codex/week04-vlm 当时均为 8ef41a5c69354c144b7e513a10f924e3629cf623。
+- 成果位置：[GitHub Week 4](https://github.com/yaxiaodang/multimodal-ai-bootcamp/tree/codex/week04-vlm/week04)。
+- PR 创建与合并待完成；不将推送分支写成已经合入 main。

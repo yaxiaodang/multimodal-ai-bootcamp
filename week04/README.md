@@ -1,6 +1,6 @@
 # Week 04｜视觉语言模型
 
-本周主线与自主探索已运行完成，当前 CPU 缓存复现成功。最终报告见 [report.md](reports/report.md)，评价采用“任务答案正确性”和“解释忠实性”两个维度。已保存到本地 Git 分支 codex/week04-vlm，GitHub 推送等待认证；全新环境复现未验证。
+本周主线与自主探索已运行完成，当前 CPU 缓存复现成功。最终报告见 [report.md](reports/report.md)，评价采用“任务答案正确性”和“解释忠实性”两个维度。实验成果已推送至 GitHub 分支 codex/week04-vlm，Pull Request 与合并待完成；全新环境复现未验证。
 
 ## 目录与文件
 
