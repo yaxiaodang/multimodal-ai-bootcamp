@@ -1,6 +1,6 @@
 # Week 05｜Document AI 任务地图
 
-当前阶段：第三份已确认标题、7 行 6 列、合并例子、纸张第二季度数量 12 和金额 60，并区分零值与数量不合计。下一步补齐其整体阅读顺序与公式有无，再统一核对三份文档的细项与检查规则；工具实验尚未开始。
+当前阶段：三份文档的核心人工观察已记录，第三份已补充主要区域顺序与没有公式。文本提取入口、固定配置和 11 项人工检查项已准备，版本与输入校验通过；下一步由本人运行基线，再对照原始输出评价。
 
 Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub 同步因当前环境缺少可用认证而未成功，当前成果仅本地保存。
 
@@ -17,7 +17,7 @@ Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub
 | 4. 运行和对照 | 运行命令，检查工具输出，解释与预期的差异 | 准备命令或脚本、配置、日志位置 | runs/、reports/comparison.md |
 | 5. 分析与选题 | 归纳至少三类实际错误，选择一个探索方向 | 整理证据与学习记录 | reports/error-analysis.md、docs/research-direction.md、../learning-log.md |
 
-人工预期须先于工具输出形成。后续若发现标注错误，应记录修订理由并保留原版本；不能照着工具答案倒写预期。
+人工预期须先于工具输出形成。本轮只评价本人已确认的核心事实；Codex 补充但本人未单独确认的区域与字段保持独立说明，不宣称全页完整标注。每次运行保存人工预期和检查项的快照与哈希。后续若发现标注错误，应记录修订理由并保留原版本；不能照着工具答案倒写预期。
 
 ## 目录与用途
 
@@ -28,11 +28,14 @@ Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub
 | docs/task-map.md | 根据对话整理的任务地图概念草稿，实际工具与判定规则待本人确认 |
 | docs/manual-expectations.md | 人工预期结构，独立于工具输出 |
 | docs/research-direction.md | 待本人选择的探索方向、研究问题和成功标准 |
-| runs/ | 未来运行的原始输出、日志与配置，当前只有说明 |
+| runs/ | 每次实际提取的原始文本、日志、配置与参考快照；当前尚无基线运行 |
 | reports/ | 对照、真实错误分析模板 |
 | evidence/environment.txt | 本次实际检查到的环境信息 |
 | evidence/material-preparation.txt | 输入制作检查与同环境重复生成的原始记录，非工具实验输出 |
 | scripts/prepare_documents.py | 生成三份教学文档与预览，不运行 OCR / 文本提取，不填写人工预期 |
+| scripts/run_baseline.py | 核对输入后调用 pdftotext，保存原始输出与证据，不自动评分 |
+| configs/baseline.json | 固定工具版本、页码、编码、超时与参考文件路径 |
+| configs/evaluation-plan.json | 根据已确认核心事实整理的 11 项人工检查；未确认的补充不纳入 |
 | requirements.txt | 材料生成依赖，与根目录基础依赖分开保存 |
 
 ## 环境与建议的初始工具
@@ -41,13 +44,13 @@ Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub
 
 中文和数字分别使用已有的 DroidSansFallbackFull.ttf 与 DejaVuSans.ttf。生成程序嵌入字体子集，扫描 PDF 则只保存整页图像。系统准备依赖是 poppler-utils、fonts-droid-fallback、fonts-dejavu-core，本机均已具备。
 
-建议先使用 `pdftotext` 建立 CPU 文本提取基线，再用实际缺失的结构提出问题。它读取 PDF 已有文字内容，不执行扫描图像 OCR；纯文本也不显式表示标题层级、单元格合并等结构。扫描 PDF 可能已有 OCR 文字层，不能仅凭文件扩展名或能否选中文字判定来源。最终工具和参数在材料确定后记录。
+本轮使用 `pdftotext` 建立 CPU 文本提取基线，再用实际缺失的结构提出问题。它读取 PDF 已有文字内容，不执行扫描图像 OCR；纯文本也不显式表示标题层级、单元格合并等结构。扫描 PDF 可能已有 OCR 文字层，不能仅凭文件扩展名或能否选中文字判定来源。当前这份自制扫描 PDF 未添加文字层，实际提取结果仍需观察。
 
 参考：[Ubuntu pdftotext 手册](https://manpages.ubuntu.com/manpages/jammy/man1/pdftotext.1.html)。课程列出的进一步工具入口：[PaddleOCR](https://www.paddleocr.ai/main/en/index.html)、[Hugging Face 文档问答](https://huggingface.co/docs/transformers/tasks/document_question_answering)。
 
 ## 当前唯一开始入口
 
-概念辨析记录见 [任务地图](docs/task-map.md)。三份文档已确认的观察保存在 [人工预期](docs/manual-expectations.md)，尚未完整冻结。继续查看 [复杂表格预览](samples/previews/complex_table.png)，按区域写出整体阅读顺序，并判断是否包含公式；随后统一核对检查规则，准备本人运行工具的步骤。
+概念辨析记录见 [任务地图](docs/task-map.md)，运行前事实见 [人工预期](docs/manual-expectations.md)，检查范围见 [evaluation-plan.json](configs/evaluation-plan.json)。从三类维度分别观察：文字是否出现、阅读顺序是否符合原页、结构关系是否得到表达。不把程序结束当成任务正确，也不把纯文本中出现数字当成表格关系完整。
 
 如需在 VS Code 中切换到本仓库，在 **Remote SSH 连接 Ubuntu 后的终端**运行：
 
@@ -63,7 +66,27 @@ source .venv/bin/activate
 
 作用：让当前终端的 `python` 和 `pip` 使用已有项目虚拟环境。它不安装依赖，也不影响系统 PDF 命令。
 
-实际实验命令、参数作用与输出位置将在材料和人工预期确定后补充；本阶段没有完整实验运行入口。
+由本人在上述目录运行：
+
+```bash
+python week05/scripts/run_baseline.py
+```
+
+作用：按 configs/baseline.json 调用系统 pdftotext，依次处理三份 PDF，创建新的 runs/baseline-日期时间-标识/ 目录。目录时间按 Asia/Shanghai 记录；完整命令、版本、输入哈希、代码版本、每份输入的耗时与退出码、原始文本、参考快照和空白 review.csv 自动保存。无需 GPU、联网或模型下载。
+
+实际提取参数为 `-f 1 -l 1 -enc UTF-8`，分别指定起始页、结束页和输出编码。本轮不传 -layout，使用工具默认阅读顺序策略；未来若做对照，可仅改变布局选项。本轮不是两个模型或两种方法的对照实验。
+
+程序只保存结果，不改写原始 txt，不自动填评价。即使输出只有空白且工具退出码为 0，也会按实保存；需要本人判断这是工具范围、内容缺失还是其他问题。某份提取失败时保留日志并继续其他输入，最后返回非零状态。
+
+准备核对入口（Codex 已执行）：
+
+```bash
+python week05/scripts/run_baseline.py --prepare-only
+```
+
+作用：检查版本、输入哈希、人工预期和检查项文件是否可用，不提取正文，也不创建实际运行目录。新增源码语法、帮助、正常准备及错误哈希拒绝检查已通过，见 [准备记录](evidence/baseline-preparation.txt)；真实提取与质量尚未验证。
+
+运行后先打开新目录的 digital_pdf.txt，对照原页检查左右两栏的段落顺序，再检查 scanned_pdf.txt 与 complex_table.txt。每一项填写原始文件定位、本人判定及理由，可先在对话中表达，由 Codex 归档。
 
 ## 材料生成程序的作用与复现
 

@@ -1,0 +1,32 @@
+Week 05 基线程序准备检查
+时间（Asia/Shanghai）：2026-10-24T22:08:54.855719+08:00
+范围：语法、帮助、输入校验与错误处理；不运行三份文档的正文提取。
+语法检查：通过
+
+命令：/home/yaxiaodang/multimodal-ai-bootcamp/.venv/bin/python /home/yaxiaodang/multimodal-ai-bootcamp/week05/scripts/run_baseline.py --help
+作用：查看帮助，不读取 PDF 正文
+usage: run_baseline.py [-h] [--config CONFIG] [--prepare-only]
+
+运行三份 PDF 的 pdftotext 基线，保留原始文本与证据，不执行 OCR 或自动评分。
+
+options:
+  -h, --help       show this help message and exit
+  --config CONFIG  基线配置路径
+  --prepare-only   只核对版本、输入哈希与参考文件，不提取正文、不创建运行目录
+
+退出码：0
+
+命令：/home/yaxiaodang/multimodal-ai-bootcamp/.venv/bin/python /home/yaxiaodang/multimodal-ai-bootcamp/week05/scripts/run_baseline.py --prepare-only
+作用：核对工具版本、输入哈希、参考与检查项，不提取正文
+准备检查通过：3 份 PDF，11 项待人工评价；未提取正文，未创建运行目录。
+
+退出码：0
+
+命令：/home/yaxiaodang/multimodal-ai-bootcamp/.venv/bin/python /home/yaxiaodang/multimodal-ai-bootcamp/week05/scripts/run_baseline.py --config /tmp/week05-bad-hash-mhrs27ei/baseline.json --prepare-only
+作用：模拟输入校验和不匹配，确认在提取前拒绝错误输入
+
+准备检查失败：输入 SHA-256 不一致：digital_pdf，请先核对材料。
+退出码：2
+
+通过：未创建实验运行目录；三份实际 PDF 未交给 pdftotext 提取。
+限制：本轮未测试真实提取结果与运行后质量；待用户执行基线并人工评价。
