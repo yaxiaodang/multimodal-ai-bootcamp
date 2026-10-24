@@ -1,6 +1,6 @@
 # Week 05｜Document AI 任务地图
 
-当前阶段：本人已选择 A 路线，三份自制中文单页文档与预览已准备。下一步由本人先观察数字 PDF 并标注标题，随后补齐三份文档的人工预期；工具实验尚未开始。
+当前阶段：三份自制中文单页文档与预览已准备；本人已确认数字 PDF 的一级标题和三个二级标题。下一步继续观察该页的阅读顺序与其他元素，逐步补齐三份文档的人工预期；工具实验尚未开始。
 
 Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub 同步因当前环境缺少可用认证而未成功，当前成果仅本地保存。
 
@@ -47,7 +47,7 @@ Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub
 
 ## 当前唯一开始入口
 
-概念辨析记录见 [任务地图](docs/task-map.md)。从 [第一份文档预览](samples/previews/digital_pdf.png) 开始，在原页上找出一级标题与所有二级标题，并说明判断依据；本人回答后，Codex 整理进 [人工预期](docs/manual-expectations.md)。后续再观察段落、公式、阅读顺序和另外两份文档。
+概念辨析记录见 [任务地图](docs/task-map.md)。第一份文档的标题已记录在 [人工预期](docs/manual-expectations.md)。继续查看 [原页预览](samples/previews/digital_pdf.png)，从页首到页末说明主要区域的阅读顺序，特别说明双栏中段落如何归属。后续再补齐表格、公式、检查规则和另外两份文档的标注。
 
 如需在 VS Code 中切换到本仓库，在 **Remote SSH 连接 Ubuntu 后的终端**运行：
 
