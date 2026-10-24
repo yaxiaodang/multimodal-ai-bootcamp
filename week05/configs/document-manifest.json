@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "awaiting_user_selection",
+  "page_numbering": "PDF physical pages, 1-based",
+  "documents": [
+    {"id": "digital_pdf", "category": "digital_pdf", "path": null, "source": null, "accessed_on": null, "license_or_permission": null, "redistribution_allowed": null, "privacy_review": null, "version": null, "pages": null, "sha256": null},
+    {"id": "scanned_pdf", "category": "scanned_document", "path": null, "source": null, "accessed_on": null, "license_or_permission": null, "redistribution_allowed": null, "privacy_review": null, "version": null, "pages": null, "sha256": null},
+    {"id": "complex_table", "category": "complex_table_document", "path": null, "source": null, "accessed_on": null, "license_or_permission": null, "redistribution_allowed": null, "privacy_review": null, "version": null, "pages": null, "sha256": null}
+  ]
+}
