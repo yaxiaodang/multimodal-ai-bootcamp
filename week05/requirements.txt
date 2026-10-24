@@ -1,0 +1,4 @@
+# 仅用于生成自制 PDF 材料，不安装 OCR / 文档解析模型。
+Pillow==11.3.0
+reportlab==4.4.10
+charset-normalizer==3.5.1

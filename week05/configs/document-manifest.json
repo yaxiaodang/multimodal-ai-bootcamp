@@ -1,10 +1,94 @@
 {
   "schema_version": 1,
-  "status": "awaiting_user_selection",
+  "status": "prepared_awaiting_user_observation",
   "page_numbering": "PDF physical pages, 1-based",
+  "version": "1.0",
+  "generation": {
+    "script": "scripts/prepare_documents.py",
+    "python": "3.10.12",
+    "packages": {
+      "reportlab": "4.4.10",
+      "Pillow": "11.3.0",
+      "charset-normalizer": "3.5.1"
+    },
+    "pdftoppm": "pdftoppm version 22.02.0",
+    "fonts": [
+      {
+        "file": "DroidSansFallbackFull.ttf",
+        "sha256": "acb6440a713d880a13a21b468ba7cd43f5a2b2934972e51be791c880730777b8"
+      },
+      {
+        "file": "DejaVuSans.ttf",
+        "sha256": "690243adfefe0ce154b547db6205794bd30ac4277275179517a90994f4980648"
+      }
+    ],
+    "render_dpi": 150,
+    "random_seed": null,
+    "randomness": "No random noise or sampling; fixed geometry and PDF invariant metadata"
+  },
   "documents": [
-    {"id": "digital_pdf", "category": "digital_pdf", "path": null, "source": null, "accessed_on": null, "license_or_permission": null, "redistribution_allowed": null, "privacy_review": null, "version": null, "pages": null, "sha256": null},
-    {"id": "scanned_pdf", "category": "scanned_document", "path": null, "source": null, "accessed_on": null, "license_or_permission": null, "redistribution_allowed": null, "privacy_review": null, "version": null, "pages": null, "sha256": null},
-    {"id": "complex_table", "category": "complex_table_document", "path": null, "source": null, "accessed_on": null, "license_or_permission": null, "redistribution_allowed": null, "privacy_review": null, "version": null, "pages": null, "sha256": null}
+    {
+      "id": "digital_pdf",
+      "category": "digital_pdf",
+      "path": "samples/digital_pdf.pdf",
+      "preview": "samples/previews/digital_pdf.png",
+      "source": "Self-generated, AI-assisted fictional teaching material; user selected route A",
+      "created_on": "2026-10-24",
+      "accessed_on": null,
+      "license_or_permission": "CC0-1.0 for generated teaching content; embedded fonts retain their licenses (Droid Apache-2.0, DejaVu font license; see samples/licenses)",
+      "redistribution_allowed": true,
+      "privacy_review": "Synthetic content only; no real personal or business records",
+      "version": "1.0",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "sha256": "ea2d689402fb39152060cca87eac4174bae732826bd0de3677c64b07a645be6c",
+      "preview_sha256": "c4b8d6a4362147ffb08628d7c690de3c9d3e2ebfa17c8790d2abb85fcb097a00",
+      "generation_method": "ReportLab text objects and vector drawing; embedded Chinese font; no OCR",
+      "role": "teaching_probe; not a benchmark or model evaluation result"
+    },
+    {
+      "id": "scanned_pdf",
+      "category": "scanned_document",
+      "path": "samples/scanned_pdf.pdf",
+      "preview": "samples/previews/scanned_pdf.png",
+      "source": "Self-generated, AI-assisted fictional teaching material; user selected route A",
+      "created_on": "2026-10-24",
+      "accessed_on": null,
+      "license_or_permission": "CC0-1.0 for generated teaching content; embedded fonts retain their licenses (Droid Apache-2.0, DejaVu font license; see samples/licenses)",
+      "redistribution_allowed": true,
+      "privacy_review": "Synthetic content only; no real personal or business records",
+      "version": "1.0",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "sha256": "0d5f5897edbedc71aa2156648e949d8183badf63a6f5340872bbb2228877d5f6",
+      "preview_sha256": "ea0e3fbeb236e16013af4f54076e360d4f2d1617009f638a00dd145a41793b2d",
+      "generation_method": "Synthetic source rasterized at 150 DPI; grayscale, contrast adjustment, 0.6 degree rotation; image-only PDF; no OCR",
+      "role": "teaching_probe; not a benchmark or model evaluation result"
+    },
+    {
+      "id": "complex_table",
+      "category": "complex_table_document",
+      "path": "samples/complex_table.pdf",
+      "preview": "samples/previews/complex_table.png",
+      "source": "Self-generated, AI-assisted fictional teaching material; user selected route A",
+      "created_on": "2026-10-24",
+      "accessed_on": null,
+      "license_or_permission": "CC0-1.0 for generated teaching content; embedded fonts retain their licenses (Droid Apache-2.0, DejaVu font license; see samples/licenses)",
+      "redistribution_allowed": true,
+      "privacy_review": "Synthetic content only; no real personal or business records",
+      "version": "1.0",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "sha256": "9e3511d999cf970561ab547977fde011e456bf99861a71d37817a9e660f78af2",
+      "preview_sha256": "f36559cefc4cb051b3cac01bdd2a37962392b51ad8a7c9c24ac8e79e8dff0347",
+      "generation_method": "ReportLab vector table with merged cells and text objects; embedded Chinese font; no OCR",
+      "role": "teaching_probe; not a benchmark or model evaluation result"
+    }
   ]
 }

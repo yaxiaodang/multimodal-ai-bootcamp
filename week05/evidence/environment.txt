@@ -50,3 +50,11 @@ Copyright 1996-2011 Glyph & Cog, LLC
 
 本阶段无新增依赖；未安装 OCR 或 Docling；未下载模型。
 项目解释器使用已有 .venv；不使用系统默认 Python 替换项目环境。
+
+材料准备阶段补充｜2026-10-24
+项目解释器：/home/yaxiaodang/multimodal-ai-bootcamp/.venv/bin/python
+reportlab==4.4.10
+Pillow==11.3.0
+charset-normalizer==3.5.1
+只新增安装 reportlab==4.4.10；其余两项沿用现有版本。
+已有系统字体 DroidSansFallbackFull.ttf 与 DejaVuSans.ttf，字体文件哈希见输入清单；许可说明随材料保留。

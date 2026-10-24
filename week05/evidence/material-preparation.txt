@@ -1,0 +1,137 @@
+Week 05 自制材料准备检查
+时间（Asia/Shanghai）：2026-10-24T20:45:39.510317+08:00
+性质：输入制作与复现检查；没有运行 OCR、pdftotext 或文档解析实验。
+
+命令：pdfinfo /home/yaxiaodang/multimodal-ai-bootcamp/week05/samples/digital_pdf.pdf
+作用：检查 PDF 是否可读取、页数和页面尺寸，不提取正文
+Title:           文档处理实验说明
+Subject:         Fictional teaching material; not a real business document
+Keywords:        
+Author:          multimodal-ai-bootcamp / AI-assisted teaching materials
+Creator:         anonymous
+Producer:        ReportLab PDF Library - (opensource)
+CreationDate:    Sat Jan  1 08:00:00 2000 CST
+ModDate:         Sat Jan  1 08:00:00 2000 CST
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           1
+Encrypted:       no
+Page size:       595.276 x 841.89 pts (A4)
+Page rot:        0
+File size:       47836 bytes
+Optimized:       no
+PDF version:     1.4
+
+退出码：0
+
+命令：pdffonts /home/yaxiaodang/multimodal-ai-bootcamp/week05/samples/digital_pdf.pdf
+作用：检查 PDF 字体资源，辅助确认数字文档与扫描文档的制作方式
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+AAAAAA+DroidSansFallback             TrueType          WinAnsi          yes yes yes      7  0
+AAAAAB+DroidSansFallback             TrueType          WinAnsi          yes yes yes     11  0
+AAAAAA+DejaVuSans                    TrueType          WinAnsi          yes yes yes     15  0
+Helvetica                            Type 1            WinAnsi          no  no  no       2  0
+
+退出码：0
+
+命令：pdfinfo /home/yaxiaodang/multimodal-ai-bootcamp/week05/samples/scanned_pdf.pdf
+作用：检查 PDF 是否可读取、页数和页面尺寸，不提取正文
+Title:           设备借用记录（模拟扫描件）
+Subject:         Fictional teaching material; not a real business document
+Keywords:        
+Author:          multimodal-ai-bootcamp / AI-assisted teaching materials
+Creator:         anonymous
+Producer:        ReportLab PDF Library - (opensource)
+CreationDate:    Sat Jan  1 08:00:00 2000 CST
+ModDate:         Sat Jan  1 08:00:00 2000 CST
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           1
+Encrypted:       no
+Page size:       595.276 x 841.89 pts (A4)
+Page rot:        0
+File size:       136508 bytes
+Optimized:       no
+PDF version:     1.3
+
+退出码：0
+
+命令：pdffonts /home/yaxiaodang/multimodal-ai-bootcamp/week05/samples/scanned_pdf.pdf
+作用：检查 PDF 字体资源，辅助确认数字文档与扫描文档的制作方式
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+
+退出码：0
+
+命令：pdfimages -list /home/yaxiaodang/multimodal-ai-bootcamp/week05/samples/scanned_pdf.pdf
+作用：列出嵌入图像，核对最终扫描 PDF 包含整页图像
+page   num  type   width height color comp bpc  enc interp  object ID x-ppi y-ppi size ratio
+--------------------------------------------------------------------------------------------
+   1     0 image    1241  1754  gray    1   8  image  no         2  0   150   150  132K 6.2%
+
+退出码：0
+
+命令：pdfinfo /home/yaxiaodang/multimodal-ai-bootcamp/week05/samples/complex_table.pdf
+作用：检查 PDF 是否可读取、页数和页面尺寸，不提取正文
+Title:           教学项目季度费用表
+Subject:         Fictional teaching material; not a real business document
+Keywords:        
+Author:          multimodal-ai-bootcamp / AI-assisted teaching materials
+Creator:         anonymous
+Producer:        ReportLab PDF Library - (opensource)
+CreationDate:    Sat Jan  1 08:00:00 2000 CST
+ModDate:         Sat Jan  1 08:00:00 2000 CST
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           1
+Encrypted:       no
+Page size:       595.276 x 841.89 pts (A4)
+Page rot:        0
+File size:       38111 bytes
+Optimized:       no
+PDF version:     1.4
+
+退出码：0
+
+命令：pdffonts /home/yaxiaodang/multimodal-ai-bootcamp/week05/samples/complex_table.pdf
+作用：检查 PDF 字体资源，辅助确认数字文档与扫描文档的制作方式
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+AAAAAA+DroidSansFallback             TrueType          WinAnsi          yes yes yes      6  0
+AAAAAA+DejaVuSans                    TrueType          WinAnsi          yes yes yes     10  0
+
+退出码：0
+
+通过：3 份 PDF 均为 1 页，哈希与预览哈希匹配；数字页嵌入中英文字体；扫描页只有 1 张图像，无字体资源。
+命令：/home/yaxiaodang/multimodal-ai-bootcamp/.venv/bin/python /home/yaxiaodang/multimodal-ai-bootcamp/week05/scripts/prepare_documents.py --output-dir /tmp/week05-reproduce-9h672mdm
+作用：在临时目录重新制作材料，检查同环境可重复性，不覆盖原材料
+Prepared samples/digital_pdf.pdf (47836 bytes)
+Prepared samples/scanned_pdf.pdf (136508 bytes)
+Prepared samples/complex_table.pdf (38111 bytes)
+Saved 3 PDFs, 3 rendered previews and input manifest. No OCR/text extraction experiment was run.
+
+退出码：0
+
+通过：另一次独立生成的 3 份 PDF 与 3 张预览均逐字节一致；仅限当前环境与版本，不宣称跨机器一致。
+
+已有材料保护检查：默认重复生成被拒绝，退出码 2，清单未改变。
+作用：防止生成操作覆盖后续人工观察所依据的输入。
+
+人工状态：用户尚未观察或标注三份实际文档。Codex 已检查页面渲染，修正中文备用字体不含 ASCII 数字/字母的问题。
+模拟扫描方式：150 DPI 栅格化、灰度与亮度调整、固定旋转 0.6 度；不含随机噪声，不构成控制单一变量的扫描退化实验。

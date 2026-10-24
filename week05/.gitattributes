@@ -1,0 +1,5 @@
+# PDF 作为二进制保存，避免把扫描 PDF 的 ASCII 编码流当作普通文本处理。
+samples/*.pdf binary
+# 原始终端输出及第三方许可保留原有空格。
+evidence/material-preparation.txt -whitespace
+samples/licenses/*.txt -whitespace
