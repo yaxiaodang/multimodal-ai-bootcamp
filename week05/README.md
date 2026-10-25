@@ -1,6 +1,6 @@
 # Week 05｜Document AI 任务地图
 
-当前阶段：首次基线与 11 项人工检查已完成，见 [阶段报告](reports/report.md)。本人已执行 A 方向布局对照，当前 10/11 项已记录；P1/P2 可读性改善，标题层级和公式结构未改善，扫描页仍无 OCR。T3 符号含义和 T4 主要区域顺序仍正确，仅 T1 待完整核对，详见 [布局对照](reports/layout-comparison.md)；本周尚未整体结束。
+当前阶段：本人完成首次基线和 A 方向布局对照，两轮各 11 项检查均已归档。-layout 改善双栏与表格的人工可读性，纸张第二季度字段归属更清楚；线性阅读顺序、独立标题级别、公式上下标、显式表格结构及扫描 OCR 的问题仍在，见 [布局对照报告](reports/layout-comparison.md)。本人独立复盘、最终自评与例会准备待完成，本周尚未整体结束。
 
 Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972d2`；GitHub 同步因当前环境缺少可用认证而未成功，当前成果仅本地保存。
 
@@ -28,10 +28,11 @@ Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972
 | docs/task-map.md | 根据对话整理的任务地图概念草稿，实际工具与判定规则待本人确认 |
 | docs/manual-expectations.md | 人工预期结构，独立于工具输出 |
 | docs/research-direction.md | 本人选择 A；Codex 整理的运行前问题、假设和判断规则 |
-| configs/layout.json / reports/layout-comparison.md | 只追加 -layout 的配置与待本人评价的对照表 |
+| configs/layout.json / reports/layout-comparison.md | 只追加 -layout 的配置与已完成的 11 项评价、P1/P2 对照 |
 | runs/ | 首次基线已归档；后续运行各自保留原始文本、日志、配置与参考快照 |
 | reports/ | 阶段报告、逐项评价、类别计数与有原始证据的问题分析 |
 | reports/report.md / metrics.json | 首次基线阶段报告与人工类别计数，不是总体准确率 |
+| reports/layout-comparison.md / layout-metrics.json | 布局对照的 11 项评价、补充观察及假设对照，不是总体准确率 |
 | docs/annotation-history.md | 从学习日志归档的分步作答与历史状态，当前状态以阶段报告为准 |
 | evidence/environment.txt | 本次实际检查到的环境信息 |
 | evidence/material-preparation.txt | 输入制作检查与同环境重复生成的原始记录，非工具实验输出 |
@@ -57,7 +58,7 @@ Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972
 
 本人已选择 A，运行前问题与规则见 [方向记录](docs/research-direction.md)。本轮流程：同样的三份输入 → 只追加 `-layout` → 新建目录保存结果 → 先看物理排版，再按原 11 项检查逻辑顺序与结构。配置包含运行前假设，随本轮配置快照保存；提取程序不需要改动。
 
-本人已执行以下命令，完成 [布局对照运行](runs/baseline-20261025T113919-b11603/)，无需重复运行。当前检查新目录 complex_table.txt 的逻辑行列数，以及合并关系是依靠位置推断还是有独立范围记录，完成最后的 T1。命令保留供复现：
+本人已执行以下命令，完成 [布局对照运行](runs/baseline-20261025T113919-b11603/)，无需重复运行。两轮的实际提取与 11 项评价均已完成，当前由本人阅读对照报告，用自己的话总结改动的收益与能力边界，再选择 Week 6 首要问题。命令保留供复现：
 
 ```bash
 .venv/bin/python week05/scripts/run_baseline.py --config week05/configs/layout.json
@@ -143,7 +144,8 @@ python week05/scripts/prepare_documents.py --output-dir /tmp/week05-materials-re
 - [x] 本人执行工具，保留未修改的输出、配置、终端日志和退出状态。
 - [x] 11 项已对照，记录多类有原始证据的问题，分清顺序错误、表示局限与不支持，不把同因检查虚增为独立模型故障。
 - [x] 本人选择 A：版面/表格；Codex 整理运行前研究问题与假设。
-- [ ] 本人运行布局对照，完成观察、解释与最终自评。
+- [x] 本人运行布局对照并完成逐项观察，Codex 依据原规则整理 11 项评价与证据。
+- [ ] 本人独立解释改动效果与能力边界，完成最终自评与例会准备。
 - [x] 更新根目录 learning-log.md，记录当前基线的 AI 使用与人工核验来源；整周最终自评待研究方向与探索完成。
 - [ ] 将本周阶段成果同步 GitHub，最终状态以提交记录为准。
 

@@ -1,0 +1,37 @@
+{
+  "run_id": "baseline-20261025T113919-b11603",
+  "baseline_run": "baseline-20261025T105130-507b20",
+  "reviewed_on": "2026-10-25",
+  "measurement": "manual_checklist_counts_not_accuracy",
+  "scope": "same 3 synthetic one-page PDFs; only append -layout",
+  "total_checks": 11,
+  "reviewed_checks": 11,
+  "pending_checks": 0,
+  "judgment_counts": {
+    "正确": 4,
+    "结构未表达": 3,
+    "错误": 1,
+    "工具不支持": 3
+  },
+  "supplementary_observations": {
+    "P1": "改善",
+    "P2": "改善"
+  },
+  "changed_check_judgments": {
+    "T2": {
+      "baseline": "部分正确",
+      "layout": "正确"
+    }
+  },
+  "provenance": "本人运行、观察并说明；Codex按运行前规则补充行号、术语和类别，D3确定性归类依据实际行序，保留本人“大概率”表述；T1保留本人从空格位置推断合并的观察。非自动评分。",
+  "dependency_note": "S1-S3同属无OCR的上游缺口；T1/T2相关；标题、公式及表格显式结构项共同受输出表示限制。",
+  "limits": [
+    "非独立检查项，不计算总体准确率",
+    "无全文逐字参考，不计算CER",
+    "未运行OCR模型、完整解析系统或VQA模型",
+    "P1/P2不并入11项分母",
+    "单次耗时和输出大小不证明性能改善",
+    "本人独立复盘、最终自评与例会准备待完成；GitHub同步待认证"
+  ],
+  "review_csv": "../runs/baseline-20261025T113919-b11603/review.csv"
+}
