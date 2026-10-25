@@ -1,0 +1,138 @@
+{
+  "status": "completed",
+  "started_at": "2026-10-25T10:51:30.650473+08:00",
+  "timezone": "Asia/Shanghai",
+  "python": "3.10.12",
+  "git_commit": "c01792664a360c5e4aedad89c15f73bf824c8e92",
+  "git_status": [
+    " M week01/README.md",
+    " M week02/README.md",
+    " M week03/README.md",
+    " M week04/README.md",
+    "?? week01/reports/",
+    "?? week02/reports/",
+    "?? week03/reports/",
+    "?? week04/reports/meeting-demo.ipynb",
+    "?? week04/reports/meeting-notes.md",
+    "?? week05/runs/baseline-20261025T105130-507b20/"
+  ],
+  "tool_version": "pdftotext version 22.02.0\nCopyright 2005-2022 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011 Glyph & Cog, LLC\n",
+  "config": {
+    "schema_version": 1,
+    "name": "pdftotext-default-v1",
+    "tool": "pdftotext",
+    "expected_version": "22.02.0",
+    "arguments": [
+      "-f",
+      "1",
+      "-l",
+      "1",
+      "-enc",
+      "UTF-8"
+    ],
+    "output_mode": "plain_text_default_reading_order",
+    "manifest": "configs/document-manifest.json",
+    "manual_expectations": "docs/manual-expectations.md",
+    "evaluation_plan": "configs/evaluation-plan.json",
+    "timeout_seconds_per_document": 30,
+    "note": "首次文字提取基线，不执行 OCR，不输出结构化表格或标题标签；不自动评价。"
+  },
+  "snapshots": [
+    {
+      "file": "baseline.json",
+      "sha256": "edb973513e829ee19a0647c50ef9dcb13d201e05633ce03f25811d0ba8e7314c"
+    },
+    {
+      "file": "document-manifest.json",
+      "sha256": "737688401a7c7561e006ea51d1ad57be4c0dfec6ae2bbb3f11cbba4cad244525"
+    },
+    {
+      "file": "manual-expectations.md",
+      "sha256": "125bc8c723f107dfffeda3ac22e17b308ef9deaae0ae098dc0990552d2a17200"
+    },
+    {
+      "file": "evaluation-plan.json",
+      "sha256": "ea52f171dfc497cfb5935cdd913bdbe421645162bf72b399a2a47aa34defe123"
+    },
+    {
+      "file": "run_baseline.py",
+      "sha256": "649abb042f29fecfb729eb40b30c7496ae069e64ac7d10ef93e51e925cc6d6be"
+    }
+  ],
+  "documents": [
+    {
+      "id": "digital_pdf",
+      "input": "samples/digital_pdf.pdf",
+      "input_sha256": "ea2d689402fb39152060cca87eac4174bae732826bd0de3677c64b07a645be6c",
+      "command": [
+        "/usr/bin/pdftotext",
+        "-f",
+        "1",
+        "-l",
+        "1",
+        "-enc",
+        "UTF-8",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week05/samples/digital_pdf.pdf",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week05/runs/baseline-20261025T105130-507b20/digital_pdf.txt"
+      ],
+      "started_at": "2026-10-25T10:51:30.666683+08:00",
+      "status": "completed",
+      "finished_at": "2026-10-25T10:51:30.700166+08:00",
+      "elapsed_seconds": 0.033053,
+      "exit_code": 0,
+      "output": "digital_pdf.txt",
+      "output_bytes": 1144,
+      "output_sha256": "da287b80cdf6b1af3065ebb5cce6fb2a7e3e20b832ab37a88030647b2bb27531"
+    },
+    {
+      "id": "scanned_pdf",
+      "input": "samples/scanned_pdf.pdf",
+      "input_sha256": "0d5f5897edbedc71aa2156648e949d8183badf63a6f5340872bbb2228877d5f6",
+      "command": [
+        "/usr/bin/pdftotext",
+        "-f",
+        "1",
+        "-l",
+        "1",
+        "-enc",
+        "UTF-8",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week05/samples/scanned_pdf.pdf",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week05/runs/baseline-20261025T105130-507b20/scanned_pdf.txt"
+      ],
+      "started_at": "2026-10-25T10:51:30.701268+08:00",
+      "status": "completed",
+      "finished_at": "2026-10-25T10:51:30.716552+08:00",
+      "elapsed_seconds": 0.014736,
+      "exit_code": 0,
+      "output": "scanned_pdf.txt",
+      "output_bytes": 1,
+      "output_sha256": "ef6cbd2161eaea7943ce8693b9824d23d1793ffb1c0fca05b600d3899b44c977"
+    },
+    {
+      "id": "complex_table",
+      "input": "samples/complex_table.pdf",
+      "input_sha256": "9e3511d999cf970561ab547977fde011e456bf99861a71d37817a9e660f78af2",
+      "command": [
+        "/usr/bin/pdftotext",
+        "-f",
+        "1",
+        "-l",
+        "1",
+        "-enc",
+        "UTF-8",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week05/samples/complex_table.pdf",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week05/runs/baseline-20261025T105130-507b20/complex_table.txt"
+      ],
+      "started_at": "2026-10-25T10:51:30.717659+08:00",
+      "status": "completed",
+      "finished_at": "2026-10-25T10:51:30.743563+08:00",
+      "elapsed_seconds": 0.025202,
+      "exit_code": 0,
+      "output": "complex_table.txt",
+      "output_bytes": 817,
+      "output_sha256": "11baf4a1a9d51490e1b3b8d8fe49a804eafa4b41853a73a6808f064db936960e"
+    }
+  ],
+  "evaluation": "pending_user_review; no automatic score",
+  "finished_at": "2026-10-25T10:51:30.744980+08:00"
+}

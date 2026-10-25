@@ -1,0 +1,46 @@
+{
+  "audited_at": "2026-10-25T17:41:41.253723+08:00",
+  "sources": [
+    "https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/",
+    "https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/07_Doc_AI/",
+    "https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/11_Learning_Log_Template/"
+  ],
+  "topic_scope": "Week5-7; only Week5 requirements closed here",
+  "inventory_rows": 3,
+  "prediction_rows": 6,
+  "original_runs_and_snapshots": "preserved; no new learning experiment",
+  "user_metric_choice": {
+    "choice": "物理可读性",
+    "reason": "加上排版后，就不只是孤零零的文字，更方便阅读",
+    "timing": "user closeout reflection; original P1/P2 and 11-check rules unchanged"
+  },
+  "user_time": "未统计",
+  "user_self_assessment": "维持已跑通、可解释，未验证全新环境复现",
+  "delegated_choices": {
+    "authorized_by_user": true,
+    "selected_by": "Codex based on actual progress",
+    "hardest_document": "complex_table",
+    "week06_priority": "explicit table grid/merged-cell ranges and project-quarter-quantity-amount associations",
+    "plan": "docs/week06-handoff.md"
+  },
+  "cross_week_pending": [
+    "Docling pipeline in Week6",
+    "fixed benchmark in Week7",
+    "actual modular vs end-to-end VLM comparison across Week5-7"
+  ],
+  "pr": {
+    "url": "https://github.com/yaxiaodang/multimodal-ai-bootcamp/pull/13",
+    "observed_head": "fd73a3b06a546f8287de747fe74771aee4de2e44",
+    "draft": true,
+    "merged": false,
+    "local_base_ancestor_at_review": true,
+    "supplement_state": "prepared for same PR publication; final receipt and PR reflect later state"
+  },
+  "not_claimed": [
+    "actual meeting presentation or peer review",
+    "cross-environment reproduction",
+    "full-page reference annotations",
+    "overall accuracy or CER/TEDS scores",
+    "new OCR or VQA model evaluation"
+  ]
+}

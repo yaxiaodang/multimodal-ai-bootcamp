@@ -1,0 +1,51 @@
+{
+  "verified_at": "2026-10-25T11:44:49.527894+08:00",
+  "verified_by": "Codex; integrity and controlled-parameter checks only; no experiment rerun or quality judgments",
+  "baseline_run": "baseline-20261025T105130-507b20",
+  "layout_run": "baseline-20261025T113919-b11603",
+  "python": "3.10.12",
+  "tool_version_equal": true,
+  "input_hashes_equal": true,
+  "reference_and_runner_snapshots_byte_identical": true,
+  "only_extraction_argument_change": "append -layout; output paths differ because runs are saved separately",
+  "snapshot_hashes_match_metadata": true,
+  "output_hashes_match_metadata": true,
+  "scan_actual_bytes_hex": "0c",
+  "reviewed_checks": 0,
+  "pending_checks": 11,
+  "supplementary_observations": "P1/P2 pending user review",
+  "documents": [
+    {
+      "id": "digital_pdf",
+      "baseline_bytes": 1144,
+      "layout_bytes": 1305,
+      "layout_sha256": "1c82b7047b162789f1f81c36abb01c61a50d28d09bc703bf7392523217becfe2",
+      "elapsed_seconds": 0.007269,
+      "exit_code": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "id": "scanned_pdf",
+      "baseline_bytes": 1,
+      "layout_bytes": 1,
+      "layout_sha256": "ef6cbd2161eaea7943ce8693b9824d23d1793ffb1c0fca05b600d3899b44c977",
+      "elapsed_seconds": 0.005734,
+      "exit_code": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "id": "complex_table",
+      "baseline_bytes": 817,
+      "layout_bytes": 1227,
+      "layout_sha256": "f439cc70407ec085d557951943a30e171d42be278581f87160d991873c603c30",
+      "elapsed_seconds": 0.006904,
+      "exit_code": 0,
+      "stderr_bytes": 0
+    }
+  ],
+  "limitations": [
+    "Output bytes do not measure quality.",
+    "Single-run timing differences do not establish speed improvement.",
+    "Preregistered pending status in the snapshotted config describes its preparation time; current run status is in run-metadata.json."
+  ]
+}

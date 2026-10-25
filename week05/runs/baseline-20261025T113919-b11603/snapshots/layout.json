@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "name": "pdftotext-layout-v1",
+  "tool": "pdftotext",
+  "expected_version": "22.02.0",
+  "arguments": [
+    "-f",
+    "1",
+    "-l",
+    "1",
+    "-enc",
+    "UTF-8",
+    "-layout"
+  ],
+  "output_mode": "plain_text_physical_layout",
+  "manifest": "configs/document-manifest.json",
+  "manual_expectations": "docs/manual-expectations.md",
+  "evaluation_plan": "configs/evaluation-plan.json",
+  "timeout_seconds_per_document": 30,
+  "note": "探索 A：只追加 -layout；物理排版、逻辑顺序和显式结构分别由本人判断，不执行 OCR 或自动评分。",
+  "exploration": {
+    "status": "preregistered_pending_user_run",
+    "selected_by": "user",
+    "question_and_rules_by": "Codex draft based on baseline evidence; not user-authored conclusions",
+    "baseline_run": "baseline-20261025T105130-507b20",
+    "only_extraction_argument_change": "append -layout",
+    "question": "只增加 -layout，物理排版和表格数值归属是否更清楚？逻辑阅读顺序及显式结构是否也符合原检查？",
+    "hypotheses": [
+      {
+        "id": "H1",
+        "claim": "双栏位置与表格对齐可能更清楚，帮助人工对应纸张第二季度数量 12、金额 60；可能无改善或变差。",
+        "observations": [
+          "P1",
+          "P2",
+          "T2"
+        ]
+      },
+      {
+        "id": "H2",
+        "claim": "物理布局更清楚未必满足先读完左栏再读右栏的线性顺序；D3 不更改原规则。",
+        "observations": [
+          "D3",
+          "P1"
+        ]
+      },
+      {
+        "id": "H3",
+        "claim": "新增布局选项未引入 OCR 或显式标题、公式、合并单元格表示；仍按实际输出检查。",
+        "observations": [
+          "D2",
+          "D4",
+          "S1",
+          "S2",
+          "S3",
+          "T1"
+        ]
+      }
+    ],
+    "supplementary_observations": [
+      {
+        "id": "P1",
+        "criterion": "比较新旧输出，是否更容易借助空格区分左右栏与各栏正文；记录改善/无改善/变差及行号。"
+      },
+      {
+        "id": "P2",
+        "criterion": "比较新旧输出，是否能借同一行和上下表头可靠对应纸张第二季度 12/60；记录改善/无改善/变差及行号。"
+      }
+    ],
+    "rules": [
+      "原 11 项规则不变；P1/P2 另记，不并入分母。",
+      "D3 判断实际文本的线性顺序，不能仅凭空格分隔判为通过。",
+      "T1 显式结构与 T2 数据归属分开，人工可读不等于合并单元格已表达。",
+      "不自动评分，不计算总体准确率；实际提取、观察和解释由本人完成。"
+    ],
+    "resource_scope": "existing CPU; one pass over three one-page PDFs; 30 seconds per PDF; no new dependencies or paid services; learning time pending user record"
+  }
+}

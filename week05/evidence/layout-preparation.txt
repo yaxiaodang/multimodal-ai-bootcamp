@@ -1,0 +1,17 @@
+Prepared at: 2026-10-25T11:37:24.747203+08:00
+Python: 3.10.12
+Baseline: baseline-20261025T105130-507b20
+Only extraction argument change: append -layout
+Descriptive config changes: name/output_mode/note; exploration stores preregistered rules.
+UNCHANGED configs/document-manifest.json: sha256=737688401a7c7561e006ea51d1ad57be4c0dfec6ae2bbb3f11cbba4cad244525
+UNCHANGED docs/manual-expectations.md: sha256=125bc8c723f107dfffeda3ac22e17b308ef9deaae0ae098dc0990552d2a17200
+UNCHANGED configs/evaluation-plan.json: sha256=ea52f171dfc497cfb5935cdd913bdbe421645162bf72b399a2a47aa34defe123
+UNCHANGED scripts/run_baseline.py: sha256=649abb042f29fecfb729eb40b30c7496ae069e64ac7d10ef93e51e925cc6d6be
+UNCHANGED samples/digital_pdf.pdf: sha256=ea2d689402fb39152060cca87eac4174bae732826bd0de3677c64b07a645be6c
+UNCHANGED samples/scanned_pdf.pdf: sha256=0d5f5897edbedc71aa2156648e949d8183badf63a6f5340872bbb2228877d5f6
+UNCHANGED samples/complex_table.pdf: sha256=9e3511d999cf970561ab547977fde011e456bf99861a71d37817a9e660f78af2
+Command: .venv/bin/python week05/scripts/run_baseline.py --config week05/configs/layout.json --prepare-only
+Purpose: verify installed version, input hashes and references; no text extraction.
+准备检查通过：3 份 PDF，11 项待人工评价；未提取正文，未创建运行目录。
+Run directories unchanged. No new experiment output created.
+Actual extraction, quality review and hypothesis interpretation remain pending user work.

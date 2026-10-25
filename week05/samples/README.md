@@ -1,0 +1,33 @@
+# 文档来源登记
+
+状态：本人已选择 A 路线（自制教学材料）。Codex 制作以下三份中文单页文档；本人已完成核心页面观察、运行前预期和两轮逐项评价。内容与数据均为虚构。
+
+| ID | 类型 | 原始文件/公开链接 | 使用许可与允许上传的依据 | 隐私状态 | 选定页码及理由 |
+| --- | --- | --- | --- | --- | --- |
+| digital_pdf | 数字 PDF | [文档处理实验说明](digital_pdf.pdf) / [预览](previews/digital_pdf.png) | 自制教学内容 CC0-1.0；字体许可单列 | 无真实个人或业务数据 | 第 1 页，全文共 1 页 |
+| scanned_pdf | 模拟扫描 PDF | [设备借用记录](scanned_pdf.pdf) / [预览](previews/scanned_pdf.png) | 自制教学内容 CC0-1.0；字体许可单列 | 无真实个人或业务数据 | 第 1 页，全文共 1 页 |
+| complex_table | 复杂表格 PDF | [季度费用表](complex_table.pdf) / [预览](previews/complex_table.png) | 自制教学内容 CC0-1.0；字体许可单列 | 无真实个人或业务数据 | 第 1 页，全文共 1 页 |
+
+## 制作与来源
+
+三份文档由 Codex 使用本仓库的 [生成程序](../scripts/prepare_documents.py) 编排，制作日期 2026-10-24，版本 1.0。本人选择材料来源路线，未声称本人手工编写内容或已确认全部页面。
+
+- digital_pdf：ReportLab 绘制文字对象、双栏区域及上下标公式；嵌入中文与拉丁字体，未执行 OCR。
+- scanned_pdf：先制作虚构设备记录，再以 150 DPI 渲染为图像，做固定灰度/亮度调整与 0.6 度旋转，最后将整页图像放入 PDF。没有添加文字层。这是模拟扫描，不是真实扫描，也不是仅改变一个因素的退化对照实验。
+- complex_table：ReportLab 绘制含跨行、跨列表头及分组单元格的数字表格。它同时属于数字 PDF；本周单独用于观察表格关系。
+
+原 PDF 是后续工具实验的输入；previews 中 PNG 是从最终 PDF 渲染出的观察辅助文件。数字 PDF 的 PNG 预览不能代替原 PDF 做文本提取实验。
+
+生成内容采用 [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/)，可随本仓库保存和再分发；该说明不改变所用字体的独立许可。Droid 字体版权与 Apache-2.0 正文、DejaVu 字体版权与许可见 [licenses/](licenses/)。字体文件本体未单独复制到仓库，数字 PDF 包含所需字体子集。
+
+数字/扫描描述文档的来源或表示方式，复杂表格描述内容结构，因此这些类型可能重叠。本周选择三份各有侧重的文档，并说明选择依据。
+
+实际路径、制作方法、文件与预览 SHA-256、库版本及字体哈希已记录于 [输入清单](../configs/document-manifest.json)。自制材料没有外部下载访问日期，accessed_on 为 null，使用 created_on 标记制作日期。页码统一使用 PDF 从 1 开始的物理页码。第六周沿用相同输入。
+
+## 本轮制作检查与限制
+
+Codex 已查看三张渲染图，修正中文备用字体不显示 ASCII 数字和字母的问题，并检查三份 PDF 均为单页、数字页包含字体资源、扫描页只有整页图像且无字体资源。另一轮同环境生成的 PDF 和 PNG 均逐字节一致；这不代表跨机器复现。原始检查见 [制作记录](../evidence/material-preparation.txt)。
+
+这些制作检查本身没有运行 OCR、文本提取或文档解析实验，也不作为任务错误。随后本人完成的两轮文字提取与评价见 [布局对照](../reports/layout-comparison.md)。自制材料结构简化，不能代表真实长文档、真实扫描或正式 Benchmark 的难度。
+
+本周提交目录的完整登记另见 [document-inventory.csv](../document-inventory.csv)，包括语言、物理页、分辨率、任务单位、风险与指标。输入 JSON 清单保持制作时原样，其 prepared 状态为历史元数据，不代表当前未观察。

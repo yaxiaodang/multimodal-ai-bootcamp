@@ -1,0 +1,25 @@
+{
+  "run_id": "baseline-20261025T105130-507b20",
+  "reviewed_on": "2026-10-25",
+  "measurement": "manual_checklist_counts_not_accuracy",
+  "scope": "3 synthetic one-page PDFs; user-confirmed core facts only",
+  "total_checks": 11,
+  "reviewed_checks": 11,
+  "pending_checks": 0,
+  "judgment_counts": {
+    "正确": 3,
+    "结构未表达": 3,
+    "错误": 1,
+    "工具不支持": 3,
+    "部分正确": 1
+  },
+  "provenance": "用户逐步观察与解释，Codex 按检查定义整理类别、补充行号和术语澄清；非自动评分，不声称用户逐条签署类别。",
+  "dependency_note": "S1–S3 同属无 OCR 的上游能力缺口；T1/T2 为相关维度；标题、公式和表格的结构项共享输出形式限制。",
+  "limits": [
+    "不计算总体准确率或错误率",
+    "无全文参考转录，不计算 CER",
+    "不是 OCR 模型、完整解析系统或文档问答能力的 benchmark",
+    "本人维持已跑通/可解释，时长未统计；跨环境复现与实际例会演练未验证；PR13已创建，课程补充通过同一PR发布；Week6-7实际路线比较未执行"
+  ],
+  "review_csv": "../runs/baseline-20261025T105130-507b20/review.csv"
+}

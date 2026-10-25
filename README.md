@@ -18,7 +18,7 @@
 | `week02/` | Hugging Face 与模型推理 |
 | `week03/` | AI 辅助编程与人工验证 |
 | [week04/](week04/README.md) | 视觉语言模型：受控实验、双维度评价、五个失败案例与缓存复现 |
-| `week05/` | Document AI 任务地图 |
+| [week05/](week05/README.md) | Document AI 任务地图：分步学习入口与实验准备（实验待执行） |
 | `week06/` | Docling 文档解析 Pipeline |
 | `week07/` | Dataset、Benchmark 与负责任使用 |
 | `week08/` | LoRA/PEFT 小规模微调 |
