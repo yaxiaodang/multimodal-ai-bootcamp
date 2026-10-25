@@ -2,7 +2,7 @@
 
 当前阶段：本人完成首次基线和 A 方向布局对照，两轮各 11 项检查均已归档。-layout 改善双栏与表格的人工可读性，纸张第二季度字段归属更清楚；线性阅读顺序、独立标题级别、公式上下标、显式表格结构及扫描 OCR 的问题仍在，见 [布局对照报告](reports/layout-comparison.md)。本人已完成实验收益与限制的独立总结，后续优先问题、最终自评与例会准备待完成，本周尚未整体结束。
 
-Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972d2`；GitHub 主机信任已修复，推送地址已改 SSH；现有公钥认证仍被服务器拒绝，待本人在账号中添加或核对公钥，详见 [同步修复](docs/github-sync.md)。当前成果仅本地保存。
+Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972d2`；GitHub 主机信任已修复，推送地址已改 SSH；本人添加后 GitHub 已接受公钥，现有私钥有口令加密，专用代理和仓库配置已准备，待本人在终端解锁，详见 [同步修复](docs/github-sync.md)。当前成果仅本地保存。
 
 课程入口：[第五周要求](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/#week-5document-ai)。
 本周目标：理解不同文档任务的边界，依据三类文档的实际结果选择一个研究问题。材料将在第六周继续用于 Docling Pipeline。
