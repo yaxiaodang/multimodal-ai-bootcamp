@@ -1,8 +1,8 @@
 # Week 05｜Document AI 任务地图
 
-当前阶段：首次基线与 11 项人工检查已完成，阶段结论见 [报告](reports/report.md)。复杂表格的符号说明和主要区域顺序保留，但内部结构与数据归属不明确；不能把整页都判错。下一步由本人选择研究问题和一次自主探索，本周尚未整体结束。
+当前阶段：首次基线与 11 项人工检查已完成，阶段结论见 [报告](reports/report.md)。复杂表格的符号说明和主要区域顺序保留，但内部结构与数据归属不明确；不能把整页都判错。本人已选择自主探索 A：只增加 `-layout` 的版面/表格对照；配置已准备，实际运行和评价待本人完成，本周尚未整体结束。
 
-Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub 同步因当前环境缺少可用认证而未成功，当前成果仅本地保存。
+Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972d2`；GitHub 同步因当前环境缺少可用认证而未成功，当前成果仅本地保存。
 
 课程入口：[第五周要求](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/#week-5document-ai)。
 本周目标：理解不同文档任务的边界，依据三类文档的实际结果选择一个研究问题。材料将在第六周继续用于 Docling Pipeline。
@@ -27,8 +27,9 @@ Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub
 | configs/document-manifest.json | 输入路径、制作方法、版本、页码、文件与预览哈希、依赖与字体信息 |
 | docs/task-map.md | 根据对话整理的任务地图概念草稿，实际工具与判定规则待本人确认 |
 | docs/manual-expectations.md | 人工预期结构，独立于工具输出 |
-| docs/research-direction.md | 待本人选择的探索方向、研究问题和成功标准 |
-| runs/ | 每次实际提取的原始文本、日志、配置与参考快照；当前尚无基线运行 |
+| docs/research-direction.md | 本人选择 A；Codex 整理的运行前问题、假设和判断规则 |
+| configs/layout.json / reports/layout-comparison.md | 只追加 -layout 的配置与待本人评价的对照表 |
+| runs/ | 首次基线已归档；后续运行各自保留原始文本、日志、配置与参考快照 |
 | reports/ | 阶段报告、逐项评价、类别计数与有原始证据的问题分析 |
 | reports/report.md / metrics.json | 首次基线阶段报告与人工类别计数，不是总体准确率 |
 | docs/annotation-history.md | 从学习日志归档的分步作答与历史状态，当前状态以阶段报告为准 |
@@ -46,7 +47,7 @@ Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub
 
 中文和数字分别使用已有的 DroidSansFallbackFull.ttf 与 DejaVuSans.ttf。生成程序嵌入字体子集，扫描 PDF 则只保存整页图像。系统准备依赖是 poppler-utils、fonts-droid-fallback、fonts-dejavu-core，本机均已具备。
 
-本轮使用 `pdftotext` 建立 CPU 文本提取基线，再用实际缺失的结构提出问题。它读取 PDF 已有文字内容，不执行扫描图像 OCR；纯文本也不显式表示标题层级、单元格合并等结构。扫描 PDF 可能已有 OCR 文字层，不能仅凭文件扩展名或能否选中文字判定来源。当前这份自制扫描 PDF 未添加文字层，实际提取结果仍需观察。
+本轮使用 `pdftotext` 建立 CPU 文本提取基线，再用实际缺失的结构提出问题。它读取 PDF 已有文字内容，不执行扫描图像 OCR；纯文本也不显式表示标题层级、单元格合并等结构。扫描 PDF 可能已有 OCR 文字层，不能仅凭文件扩展名或能否选中文字判定来源。当前这份自制扫描 PDF 未添加文字层，实际结果只有换页符，没有正文。
 
 参考：[Ubuntu pdftotext 手册](https://manpages.ubuntu.com/manpages/jammy/man1/pdftotext.1.html)。课程列出的进一步工具入口：[PaddleOCR](https://www.paddleocr.ai/main/en/index.html)、[Hugging Face 文档问答](https://huggingface.co/docs/transformers/tasks/document_question_answering)。
 
@@ -54,7 +55,19 @@ Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub
 
 概念辨析记录见 [任务地图](docs/task-map.md)，运行前事实见 [人工预期](docs/manual-expectations.md)，检查范围见 [evaluation-plan.json](configs/evaluation-plan.json)。从三类维度分别观察：文字是否出现、阅读顺序是否符合原页、结构关系是否得到表达。不把程序结束当成任务正确，也不把纯文本中出现数字当成表格关系完整。
 
-当前阅读 [阶段报告](reports/report.md) 与 [方向记录](docs/research-direction.md)，从 OCR、版面/表格、问答中选择一个研究问题，再预先定义假设、验证范围和判断方式。11 项已完成的记录见 [逐项对照](reports/comparison.md)；在本人选题前不开展额外实验，也不代写已选择的方向。
+本人已选择 A，运行前问题与规则见 [方向记录](docs/research-direction.md)。本轮流程：同样的三份输入 → 只追加 `-layout` → 新建目录保存结果 → 先看物理排版，再按原 11 项检查逻辑顺序与结构。配置包含运行前假设，随本轮配置快照保存；提取程序不需要改动。
+
+由本人在仓库根目录执行当前实验：
+
+```bash
+.venv/bin/python week05/scripts/run_baseline.py --config week05/configs/layout.json
+```
+
+作用：使用项目 Python 和布局对照配置，仍由同一程序调用 pdftotext，只多传 `-layout`，尝试保留页面物理排版。输出到新的 `runs/baseline-时间-标识/`，不覆盖首次基线；元数据中的 `config.name` 为 `pdftotext-layout-v1`。它不新增 OCR 或自动评分。请先把输出目录和三份状态发回，再逐项观察。
+
+Codex 已完成只核对版本与输入的准备检查，见 [准备证据](evidence/layout-preparation.txt)。对照记录表见 [layout-comparison.md](reports/layout-comparison.md)。查看布局时用等宽字体并关闭自动换行；物理对齐与逐行文本顺序分开判断。
+
+以下为已完成的首次基线操作说明，供复现查阅，当前无需重复运行。
 
 本人本次直接执行 `.venv/bin/python week05/scripts/run_baseline.py`，作用是明确使用项目解释器调用基线入口；即使提示符不显示 `(.venv)` 也不影响该命令。下方激活环境的方式同样可用，不需要为提示符再跑一遍实验。
 
@@ -90,7 +103,7 @@ python week05/scripts/run_baseline.py
 python week05/scripts/run_baseline.py --prepare-only
 ```
 
-作用：检查版本、输入哈希、人工预期和检查项文件是否可用，不提取正文，也不创建实际运行目录。新增源码语法、帮助、正常准备及错误哈希拒绝检查已通过，见 [准备记录](evidence/baseline-preparation.txt)；真实提取与质量尚未验证。
+作用：检查版本、输入哈希、人工预期和检查项文件是否可用，不提取正文，也不创建实际运行目录。新增源码语法、帮助、正常准备及错误哈希拒绝检查已通过，见 [准备记录](evidence/baseline-preparation.txt)；以上是运行前准备证据；首次实际提取及评价现已完成。
 
 运行后先打开新目录的 digital_pdf.txt，对照原页检查左右两栏的段落顺序，再检查 scanned_pdf.txt 与 complex_table.txt。每一项填写原始文件定位、本人判定及理由，可先在对话中表达，由 Codex 归档。
 
@@ -124,12 +137,13 @@ python week05/scripts/prepare_documents.py --output-dir /tmp/week05-materials-re
 
 ## 完成标准
 
-- [x] 三份文档的来源、许可、页码、版本、文件哈希已登记；本人观察待完成。
+- [x] 三份文档的来源、许可、页码、版本、文件哈希已登记；本人核心事实观察已完成。
 - [x] 在运行前写出有限核心人工预期，未确认的补充范围单独注明；不存在的表格/公式明确写“无”。
 - [x] 任务地图已结合实际结果整理，区分文字提取、OCR、结构解析与问答；本人已解释扫描件的工具范围问题。
 - [x] 本人执行工具，保留未修改的输出、配置、终端日志和退出状态。
 - [x] 11 项已对照，记录多类有原始证据的问题，分清顺序错误、表示局限与不支持，不把同因检查虚增为独立模型故障。
-- [ ] 选择一个探索方向，提出可验证的研究问题。
+- [x] 本人选择 A：版面/表格；Codex 整理运行前研究问题与假设。
+- [ ] 本人运行布局对照，完成观察、解释与最终自评。
 - [x] 更新根目录 learning-log.md，记录当前基线的 AI 使用与人工核验来源；整周最终自评待研究方向与探索完成。
 - [ ] 将本周阶段成果同步 GitHub，最终状态以提交记录为准。
 
