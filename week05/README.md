@@ -2,7 +2,7 @@
 
 当前阶段：本人完成首次基线和 A 方向布局对照，两轮各 11 项检查均已归档。-layout 改善双栏与表格的人工可读性，纸张第二季度字段归属更清楚；线性阅读顺序、独立标题级别、公式上下标、显式表格结构及扫描 OCR 的问题仍在，见 [布局对照报告](reports/layout-comparison.md)。本人已完成实验收益与限制的独立总结，后续优先问题、最终自评与例会准备待完成，本周尚未整体结束。
 
-Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972d2`；GitHub 主机信任已修复，推送地址已改 SSH；本人添加后 GitHub 已接受公钥，现有私钥有口令加密，专用代理和仓库配置已准备，待本人在终端解锁，详见 [同步修复](docs/github-sync.md)。当前成果仅本地保存。
+Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972d2`；SSH 主机信任和账号公钥已修复，但本人忘记私钥口令；已按本人要求恢复 HTTPS 推送，待 VS Code 终端交互登录并推送，详见 [同步修复](docs/github-sync.md)。当前成果仅本地保存。
 
 课程入口：[第五周要求](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/#week-5document-ai)。
 本周目标：理解不同文档任务的边界，依据三类文档的实际结果选择一个研究问题。材料将在第六周继续用于 Docling Pipeline。
@@ -58,7 +58,7 @@ Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972
 
 本人已选择 A，运行前问题与规则见 [方向记录](docs/research-direction.md)。本轮流程：同样的三份输入 → 只追加 `-layout` → 新建目录保存结果 → 先看物理排版，再按原 11 项检查逻辑顺序与结构。配置包含运行前假设，随本轮配置快照保存；提取程序不需要改动。
 
-本人已执行以下命令，完成 [布局对照运行](runs/baseline-20261025T113919-b11603/)，无需重复运行。两轮的实际提取与 11 项评价均已完成，本人已给出独立总结，当前先完成账号公钥认证和同步，再选择 Week 6 首要问题。命令保留供复现：
+本人已执行以下命令，完成 [布局对照运行](runs/baseline-20261025T113919-b11603/)，无需重复运行。两轮的实际提取与 11 项评价均已完成，本人已给出独立总结，当前先通过 VS Code 的 HTTPS 登录完成同步，再选择 Week 6 首要问题。命令保留供复现：
 
 ```bash
 .venv/bin/python week05/scripts/run_baseline.py --config week05/configs/layout.json

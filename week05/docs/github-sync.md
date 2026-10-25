@@ -1,62 +1,48 @@
-# GitHub 同步修复｜公钥已接受，待本机解锁
+# GitHub 同步｜改用 VS Code 的 HTTPS 登录
 
-2026-10-25，本人明确要求解决同步。Codex 已检查当前分支和远程地址，核对并追加 GitHub 官方 Ed25519 主机密钥，保留 known_hosts 原记录；只将本仓库推送地址切换为 SSH，拉取地址仍为 HTTPS。未生成或覆盖个人密钥。
+当前采用本人要求的 VS Code 终端方案。Codex 已恢复 HTTPS 推送地址，并移除本次添加的仓库专用 SSH 代理配置；原有私钥、公钥、GitHub 账号公钥和已核对的主机信任均保留。
 
 - 分支：`codex/week05-document-ai`。
-- Fetch：`https://github.com/yaxiaodang/multimodal-ai-bootcamp.git`。
-- Push：`git@github.com:yaxiaodang/multimodal-ai-bootcamp.git`。
-- 主机信任：已修复；严格检查通过。
-- 账号公钥：本人已添加，后续 SSH 日志出现 Server accepts key，表明 GitHub 已接受现有公钥。最初的拒绝状态已解决。
-- 本机签名：现有私钥有口令加密，不能在无交互模式下自行解锁。Codex 已启动专用代理 `~/.ssh/bootcamp-github-agent.sock`，并仅为当前仓库设置 core.sshCommand 使用该代理与现有密钥；未更改全局 Git 配置。
-- 推送状态：尚未成功；现在仅需本人在自己的终端解锁私钥，然后由 Codex 完成认证与推送。
+- Fetch / Push：`https://github.com/yaxiaodang/multimodal-ai-bootcamp.git`。
+- 文件与学习记录均已本地提交，无需再执行 git add 或 git commit。
+- 当前尚未确认上传成功；待本人在 VS Code 交互登录并推送，再由 Codex 核对远程提交。
 
-## 当前唯一操作：本人解锁现有私钥
+## 当前操作
 
-```bash
-SSH_AUTH_SOCK=/home/yaxiaodang/.ssh/bootcamp-github-agent.sock ssh-add ~/.ssh/id_ed25519
-```
+如果旧终端仍停留在 Bad passphrase 提示，按 Ctrl+C 结束 ssh-add。本人的现有私钥有口令加密，已经表示忘记口令，不再重复尝试。
 
-作用：连接已准备的专用代理，按终端提示输入现有私钥口令，把密钥加入代理供当前仓库签名认证。该命令前的变量只用于此次 ssh-add；当前仓库已另行指定相同代理。看到 Identity added 后告知 Codex。口令只在本人终端输入，不写入文档或聊天。
-
-代理没有跨虚拟机重启持久保存解锁状态；重启后如需同步，应重新启动代理并解锁。
-
-
-## 已完成的账号公钥添加（历史排查步骤）
-
-在 Ubuntu Remote SSH 终端执行：
+在 VS Code 通过 Remote SSH 连接 Ubuntu，打开本仓库，使用 VS Code 内置终端执行：
 
 ```bash
-cat ~/.ssh/id_ed25519.pub
+cd /home/yaxiaodang/multimodal-ai-bootcamp
 ```
 
-作用：显示现有公钥，便于复制到 GitHub；无需生成新密钥。仅复制 `.pub` 文件输出的完整一行。
-
-登录有仓库写权限的账号，打开 [New SSH key](https://github.com/settings/ssh/new)，Title 可填 ubuntu-vm，Key type 选择 Authentication Key，Key 粘贴完整公钥并保存。若该公钥已添加，应核对账号及用途；如提示 Key already in use，保留提示并告知 Codex，不覆盖现有密钥。
-
-本人已告知添加完成，服务器随后接受公钥；当前无需重复添加。下面保留步骤供排查查阅。
-
-## 后续验证与推送（由 Codex 执行）
-
-```bash
-ssh -o BatchMode=yes -o StrictHostKeyChecking=yes -o IdentityAgent=/home/yaxiaodang/.ssh/bootcamp-github-agent.sock -o IdentitiesOnly=yes -i /home/yaxiaodang/.ssh/id_ed25519 -T git@github.com
-```
-
-作用：验证主机信任与 GitHub SSH 账号身份；成功会显示 Hi 用户名。GitHub 不提供交互 Shell，成功认证时命令退出码通常为 1，应结合消息判定。
+作用：将工作目录从 Desktop 等其他位置切换到本仓库，确保推送正确项目。
 
 ```bash
 git push -u origin codex/week05-document-ai
 ```
 
-作用：上传该分支的现有提交并建立远程跟踪；不强制推送，不合并 main，不包含工作区未提交的其他周文件。
+作用：通过 HTTPS 上传已经提交的第五周分支，并建立远程跟踪。此操作不依赖 Python 或 Conda 环境，不使用 SSH 私钥，不强制推送，不合并 main。其他周未提交的文件不会被此次推送自动加入提交。
+
+如果 VS Code 提示登录 GitHub，允许打开浏览器并用有仓库写权限的账号完成授权，再回到 VS Code。基础 GitHub 登录与 Git 操作由 VS Code 内置支持，无需为此次推送安装额外的 PR 扩展。若终端只显示 Username/Password 或其他错误，保留提示文本供继续排查，不在聊天中发送凭据。
+
+本人将推送终端结果发回后，Codex 再核对远程分支与本地 HEAD 是否一致。可用只读命令：
 
 ```bash
 git ls-remote --heads origin refs/heads/codex/week05-document-ai
 ```
 
-作用：读取远程分支提交号，与本地 HEAD 比较，确认同步结果；这是只读检查。
+作用：读取远程分支提交号，供与本地提交比较，不修改仓库。
 
-## 信任依据与证据
+## 已完成的排查
 
-GitHub 官方 Ed25519 主机指纹为 `SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU`，用于核对服务器身份，不是本人的认证公钥。证据见 [同步诊断](../evidence/github-sync.json)。
+1. HTTPS：Codex 非交互进程没有可用凭据；VS Code 的交互认证是另一执行环境，本轮需实际验证。
+2. SSH 主机信任：已根据 GitHub 官方 Ed25519 指纹核对并追加主机密钥，严格校验通过。
+3. SSH 账号公钥：本人添加后服务器已接受公钥。
+4. SSH 本机签名：现有私钥有口令加密；本人多次输入得到 Bad passphrase，表示忘记口令，故改用 HTTPS。没有覆盖旧密钥或生成替代密钥。
+5. 仓库配置：之前的 SSH 推送和专用代理设置已撤回，当前推送明确使用 HTTPS。
 
-官方说明：[主机密钥指纹](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)、[添加账号 SSH 公钥](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)。
+这里不把换到 VS Code 终端本身当作认证成功；需要浏览器授权及实际推送结果作为证据。诊断见 [github-sync.json](../evidence/github-sync.json)。
+
+官方说明：[VS Code GitHub 登录](https://code.visualstudio.com/docs/sourcecontrol/github#_sign-in-to-github-for-git-operations)、[GitHub 主机指纹](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)。
