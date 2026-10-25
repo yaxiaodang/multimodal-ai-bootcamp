@@ -517,7 +517,7 @@
 | --- | --- | --- | --- | --- |
 | 材料与程序准备（非学习实验） | 不适用 | 固定依赖/字体；生成检查；基线语法、帮助、输入校验与错误输入拒绝 | 通过；未代替本人运行实际提取 | [材料制作检查](week05/evidence/material-preparation.txt)、[入口准备检查](week05/evidence/baseline-preparation.txt) |
 | baseline-20261025T105130-507b20（本人执行） | 首次基线，无对照 | Python 3.10.12；pdftotext 22.02.0；默认文本策略 | 三份均 exit=0；11 项已记录：正确 3、部分正确 1、错误 1、结构未表达 3、工具不支持 3 | [运行目录](week05/runs/baseline-20261025T105130-507b20/)、[逐项评价](week05/reports/comparison.md) |
-| baseline-20261025T113919-b11603（本人执行） | 只追加 -layout | 同输入/版本/入口/原 11 项检查 | 三份均 exit=0；1305 / 1 / 1227 字节；P1/P2 改善，T2 正确，D3 按原规则与原文由 Codex 归类错误，D4 上下标表达未改善，结构未表达；其余 8 项待评价 | [运行目录](week05/runs/baseline-20261025T113919-b11603/)、[对照记录](week05/reports/layout-comparison.md)、[完整性核对](week05/evidence/layout-run-verification.json) |
+| baseline-20261025T113919-b11603（本人执行） | 只追加 -layout | 同输入/版本/入口/原 11 项检查 | 三份均 exit=0；1305 / 1 / 1227 字节；P1/P2 改善，T2 正确，D3 按原规则与原文由 Codex 归类错误，D4 上下标表达未改善，结构未表达；D1 标题文字正确、D2 层级结构未表达；其余 6 项待评价 | [运行目录](week05/runs/baseline-20261025T113919-b11603/)、[对照记录](week05/reports/layout-comparison.md)、[完整性核对](week05/evidence/layout-run-verification.json) |
 
 ### AI 使用披露
 - 使用的工具与版本：Codex，具体模型版本未单独记录。
@@ -529,7 +529,7 @@
 - 我选择的方向：本人明确选择 A：版面/表格布局对照。
 - 为什么与当前项目相关：Codex 据 E01 双栏交替与 E05 表格归属不清整理依据；本人独立理由与预测待表达。
 - 我只改变或验证什么：只追加 -layout，其余输入、版本与 11 项检查不变；物理排版、逻辑顺序、显式结构分别观察。问题、假设和补充规则由 Codex 在运行前整理，未冒充本人论证。
-- 结果与证据：本人确认 P1/P2 改善、纸张第二季度 12/60 归属明确（T2 正确）、公式上下标仍不明确（D4 结构未表达）；D3 由 Codex 据原规则和原文行序归为错误。T1 保留表头位置线索但完整合并结构待核对，其余共 8 项待评价。详见 [对照表](week05/reports/layout-comparison.md)、[原始运行](week05/runs/baseline-20261025T113919-b11603/)；来源差异见 [过程记录](week05/docs/annotation-history.md)。
+- 结果与证据：本人确认 P1/P2 改善、纸张第二季度 12/60 归属明确（T2 正确）、公式上下标仍不明确（D4 结构未表达）；D3 由 Codex 据原规则和原文行序归为错误。本人确认标题文字齐全（D1 正确）但无新增独立级别标记（D2 结构未表达）。T1 保留表头位置线索但完整合并结构待核对，其余共 6 项待评价。详见 [对照表](week05/reports/layout-comparison.md)、[原始运行](week05/runs/baseline-20261025T113919-b11603/)；来源差异见 [过程记录](week05/docs/annotation-history.md)。
 
 ### 自主阶段
 - [ ] 未形成

@@ -23,4 +23,4 @@
 
 本人于 2026-10-25 11:39:19（Asia/Shanghai）运行 [baseline-20261025T113919-b11603](baseline-20261025T113919-b11603/)，命令为 `.venv/bin/python week05/scripts/run_baseline.py --config week05/configs/layout.json`，作用是使用同一入口和输入，只追加 -layout，并独立保存本轮输出。运行代码 fd5b5b6；三份均 exit=0，输出 1305 / 1 / 1227 字节。输入、版本、参考与程序快照相同，输出/快照哈希匹配，见 [核对记录](../evidence/layout-run-verification.json)。
 
-当前 review.csv 已记录 D3（Codex 据原规则与原文归类为错误；本人表述“大概率”），另已记录 T2 正确（本人据项目与季度/数量/金额表头确定 12/60），另已记录 D4 结构未表达（本人确认上下标仍无法区分），其余 8 项待本人观察；[对照记录](../reports/layout-comparison.md) 单列物理排版 P1/P2。原始 txt、元数据与快照按运行时内容保存，运行前配置中的 pending 状态不代表当前未执行。
+当前 review.csv 已记录 5/11 项：D1/T2 正确、D2/D4 结构未表达、D3 错误；类别据本人观察和原规则整理，D3 的确定归类依据由 Codex 补充，其余 6 项待观察。[对照记录](../reports/layout-comparison.md) 单列 P1/P2 改善。原始 txt、元数据与快照保持运行时内容，准备配置中的 pending 描述历史计划。
