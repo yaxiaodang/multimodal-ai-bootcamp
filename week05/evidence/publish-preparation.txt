@@ -1,5 +1,6 @@
-Scope: publication helper preparation checks only. No actual push, credential lookup or GitHub API request was performed; PR #123 is a synthetic test value, not a created artifact.
-PASS: Git diagnostic retains cause and redacts credential-shaped data (mocked).
-PASS: mismatched remote commit stops before PR write (mocked, no network).
-PASS: reuses existing PR without POST; receipt and console exclude authorization (mocked).
-Real independently verified publication: a87d468297d737e306a30db1246672e1a3f9ea95. Actual PR creation remains pending VS Code execution.
+Scope: mocked preparation checks, no live push, credential lookup or GitHub API write. PR #987654321 and a...a commit are synthetic values, not real artifacts.
+PASS: diagnostic cause is visible; credential-shaped content is redacted (mocked).
+PASS: remote mismatch prevents all PR write requests (mocked).
+PASS: existing unchanged PR is reused without write; changed body uses PATCH; new PR uses draft POST (mocked).
+PASS: HTTP request preserves explicit PATCH method; receipts/console exclude authorization (mocked).
+Actual known PR: #13, created by user-executed helper; receipt verifies fd73a3b06a546f8287de747fe74771aee4de2e44. Course-alignment supplement and PR body update remain pending publication.

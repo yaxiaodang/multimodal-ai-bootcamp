@@ -60,7 +60,7 @@ def github_credential():
     return fields['password']
 
 
-def github_api(token, path, payload=None):
+def github_api(token, path, payload=None, method=None):
     request = Request(
         'https://api.github.com' + path,
         data=json.dumps(payload).encode('utf-8') if payload is not None else None,
@@ -68,6 +68,7 @@ def github_api(token, path, payload=None):
                  'Accept': 'application/vnd.github+json',
                  'Content-Type': 'application/json',
                  'User-Agent': 'multimodal-ai-bootcamp-week05'},
+        method=method,
     )
     try:
         with urlopen(request, timeout=30) as response:
@@ -113,10 +114,15 @@ def main():
         print('远程提交核对一致。准备创建或复用草稿 PR……', flush=True)
         query = urlencode({'state': 'open', 'head': 'yaxiaodang:' + BRANCH, 'base': 'main'})
         existing = github_api(token, f'/repos/{REPO}/pulls?' + query)
-        pr = existing[0] if existing else github_api(
-            token, f'/repos/{REPO}/pulls',
-            {'title': TITLE, 'head': BRANCH, 'base': 'main', 'body': body, 'draft': True},
-        )
+        if existing:
+            pr = existing[0]
+            if pr.get('title') != TITLE or pr.get('body') != body:
+                pr = github_api(token, f'/repos/{REPO}/pulls/{pr["number"]}',
+                                {'title': TITLE, 'body': body}, method='PATCH')
+        else:
+            pr = github_api(token, f'/repos/{REPO}/pulls',
+                            {'title': TITLE, 'head': BRANCH, 'base': 'main',
+                             'body': body, 'draft': True})
         url = pr.get('html_url', '')
         if not url.startswith(f'https://github.com/{REPO}/pull/'):
             raise RuntimeError('GitHub 返回的 PR 地址不符合预期，停止。')

@@ -1,11 +1,11 @@
 # Week 05｜Document AI 任务地图
 
-当前阶段：本人完成首次基线和 A 方向布局对照，两轮各 11 项检查均已归档。-layout 改善双栏与表格的人工可读性，纸张第二季度字段归属更清楚；线性阅读顺序、独立标题级别、公式上下标、显式表格结构及扫描 OCR 的问题仍在，见 [布局对照报告](reports/layout-comparison.md)。本人已完成实验收益与限制的独立总结，后续优先问题、最终个人自评与例会演练待完成，本周尚未整体结束。
+当前阶段：第五周三文档主线、两轮各 11 项评价、A 方向探索与本人复盘已完成。对照 [Document AI 专题](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/07_Doc_AI/) 补齐文档清单、指标理由、原始预测入口和例会交接，见 [路线核对](reports/course-audit.md)。本人学习时长未统计，自评维持已跑通/可解释，未验证全新环境复现；实际例会演练未记录。
 
-Git 保存：首次 HTTPS 推送成功，收尾提交也已上传并独立核验 GitHub 与当时本地提交 `a87d468` 一致。[远程 Week 5](https://github.com/yaxiaodang/multimodal-ai-bootcamp/tree/codex/week05-document-ai/week05) 已可查看；收尾文档已上传，发布入口修复及草稿 PR 待发布，尚未合入 main，见 [同步记录](docs/github-sync.md)。
+Git 保存：最新已核验远程提交 fd73a3b；[PR #13](https://github.com/yaxiaodang/multimodal-ai-bootcamp/pull/13) 已创建并关联，仍为草稿、未合并 main。本次专题对齐资料随本次补齐提交保存，发布入口会推送并更新该 PR，见 [同步记录](docs/github-sync.md)。
 
 课程入口：[第五周要求](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/#week-5document-ai)。
-本周目标：理解不同文档任务的边界，依据三类文档的实际结果选择一个研究问题。材料将在第六周继续用于 Docling Pipeline。
+本周目标：理解任务边界并依三类文档选择研究问题。最困难文档按本人授权选复杂表格，Week 6 优先解决明确的网格/合并范围与字段对应，见 [交接](docs/week06-handoff.md)。
 
 ## 整体流程与分工
 
@@ -23,9 +23,13 @@ Git 保存：首次 HTTPS 推送成功，收尾提交也已上传并独立核验
 
 | 位置 | 用途 |
 | --- | --- |
+| document-inventory.csv | 三文档的来源、语言、分辨率、任务单位、风险和适用判定 |
+| task-map.md / error-analysis.md / predictions/ | 对齐专题目录的索引；完整正文与原始结果仍保留在 docs/reports/runs |
+| docs/metric-choice.md / docs/week06-handoff.md | 本人指标理由、按授权选定的例会交接与未来成功标准 |
+| reports/course-audit.md | 第五周完成情况与 Week 6–7 跨周待办 |
 | samples/ | 三份自制 PDF、页面 PNG 预览、制作来源与字体许可 |
 | configs/document-manifest.json | 输入路径、制作方法、版本、页码、文件与预览哈希、依赖与字体信息 |
-| docs/task-map.md | 根据对话整理的任务地图概念草稿，实际工具与判定规则待本人确认 |
+| docs/task-map.md | 对话与实际结果整理的任务地图，指标边界另有说明 |
 | docs/manual-expectations.md | 人工预期结构，独立于工具输出 |
 | docs/research-direction.md | 本人选择 A；Codex 整理的运行前问题、假设和判断规则 |
 | configs/layout.json / reports/layout-comparison.md | 只追加 -layout 的配置与已完成的 11 项评价、P1/P2 对照 |
@@ -58,7 +62,7 @@ Git 保存：首次 HTTPS 推送成功，收尾提交也已上传并独立核验
 
 本人已选择 A，运行前问题与规则见 [方向记录](docs/research-direction.md)。本轮流程：同样的三份输入 → 只追加 `-layout` → 新建目录保存结果 → 先看物理排版，再按原 11 项检查逻辑顺序与结构。配置包含运行前假设，随本轮配置快照保存；提取程序不需要改动。
 
-本人已执行以下命令，完成 [布局对照运行](runs/baseline-20261025T113919-b11603/)，无需重复运行。两轮的实际提取与 11 项评价均已完成，本人已给出独立总结，当前在已登录的 VS Code 终端运行下方发布入口，上传新增收尾文档并创建草稿 PR；例会展示草案已准备。命令保留供复现：
+本人已执行以下命令，完成 [布局对照运行](runs/baseline-20261025T113919-b11603/)，无需重复运行。两轮的实际提取与 11 项评价均已完成，本人已给出独立总结，当前在已登录的 VS Code 终端运行下方发布入口，推送专题对齐补充并更新已有 PR #13。无需重跑提取；例会材料与下一周交接已准备。命令保留供复现：
 
 ```bash
 .venv/bin/python week05/scripts/run_baseline.py --config week05/configs/layout.json
@@ -114,7 +118,7 @@ python week05/scripts/run_baseline.py --prepare-only
 .venv/bin/python week05/scripts/publish_github.py
 ```
 
-作用：在已登录 GitHub 的 VS Code 内置终端推送已提交的第五周分支、核对远程提交并创建或复用指向 main 的草稿 PR。它不运行学习实验、不提交工作区文件，也不自动合并。PR 正文见 [草案](reports/pull-request.md)，例会材料见 [展示草案](reports/meeting-notes.md)；认证和失败处理见 [同步说明](docs/github-sync.md)。
+作用：在已登录 GitHub 的 VS Code 内置终端推送已提交的第五周分支、核对远程提交并创建或更新指向 main 的同一个草稿 PR。它不运行学习实验、不提交工作区文件，也不自动合并。PR 正文见 [草案](reports/pull-request.md)，例会材料见 [展示草案](reports/meeting-notes.md)；认证和失败处理见 [同步说明](docs/github-sync.md)。
 
 ## 材料生成程序的作用与复现
 
@@ -154,10 +158,13 @@ python week05/scripts/prepare_documents.py --output-dir /tmp/week05-materials-re
 - [x] 本人选择 A：版面/表格；Codex 整理运行前研究问题与假设。
 - [x] 本人运行布局对照并完成逐项观察，Codex 依据原规则整理 11 项评价与证据。
 - [x] 本人独立说明布局改善及阅读顺序/公式的限制，Codex 补充证据范围。
-- [ ] 本人选择后续首要问题，完成最终自评与例会准备。
-- [x] 更新根目录 learning-log.md，记录当前基线的 AI 使用与人工核验来源；整周最终自评待研究方向与探索完成。
+- [x] 本人授权 Codex 选复杂表格及 Week 6 首要 Pipeline 问题；本人确认维持当前自评，例会材料已准备。
+- [x] 按专题补齐 document-inventory.csv、指标理由、原始 prediction 索引与提交入口。
+- [ ] 实际例会演练未记录；跨环境复现未验证，均不伪造为完成。
+- [x] 更新根目录 learning-log.md，记录当前基线的 AI 使用与人工核验来源；本人确认时长未统计，自评维持已跑通/可解释。
 - [x] 首次阶段成果已同步 GitHub，远程核验提交 51dd75c。
 - [x] 收尾文档已推送，远程核验提交 a87d468。
-- [ ] 发布入口修复并创建草稿 PR；实际合并另行处理。
+- [x] 发布修复已推送，远程核验 fd73a3b，[草稿 PR #13](https://github.com/yaxiaodang/multimodal-ai-bootcamp/pull/13) 已创建并关联。
+- [x] 专题补充与 PR 更新入口已准备；发布时核验最新提交并更新同一 PR，实际合并另行处理。
 
 若当前材料未观察到三类错误，先如实记录，再增加有针对性的合法样本或页码；不得把预想风险写成已经发生的错误。三份教学文档不构成通用 Benchmark。
