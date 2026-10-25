@@ -1,6 +1,6 @@
 # Week 05｜Document AI 任务地图
 
-当前阶段：数字 PDF 四项与扫描件三项共 7/11 项已记录。本人确认扫描件找不到编号、日期或表格，属于无 OCR 的工具范围限制；剩余复杂表格 4 项待评价，原始文件未修改。
+当前阶段：9/11 项已记录。本人确认复杂表格未表达网格、合并与多级表头，纸张第二季度数值归属不清；原文 12/60 仍在，Codex 分别归纳 T1 结构未表达、T2 部分正确。剩余 T3 符号含义与 T4 主要区域顺序待评价，原始文件未修改。
 
 Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub 同步因当前环境缺少可用认证而未成功，当前成果仅本地保存。
 
@@ -52,7 +52,7 @@ Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub
 
 概念辨析记录见 [任务地图](docs/task-map.md)，运行前事实见 [人工预期](docs/manual-expectations.md)，检查范围见 [evaluation-plan.json](configs/evaluation-plan.json)。从三类维度分别观察：文字是否出现、阅读顺序是否符合原页、结构关系是否得到表达。不把程序结束当成任务正确，也不把纯文本中出现数字当成表格关系完整。
 
-当前打开 [本轮 complex_table.txt](runs/baseline-20261025T105130-507b20/complex_table.txt)，对照 [原表](samples/previews/complex_table.png)，检查 7 行 6 列、多级表头与合并关系是否得到表达，以及纸张第二季度数量 12、金额 60 能否直接与项目、季度和列名对应。已有两份文档的观察见 [对照记录](reports/comparison.md)。
+当前继续查看 [本轮 complex_table.txt](runs/baseline-20261025T105130-507b20/complex_table.txt)：检查 0、长横线及第 76 行填表说明是否保留符号差异，并判断主标题 → 表格文字 → 填表说明 → 页脚这些主要区域的相对顺序。不要因表格内部结构问题而预先判定符号和整页顺序也错误。已记录观察见 [对照记录](reports/comparison.md)。
 
 本人本次直接执行 `.venv/bin/python week05/scripts/run_baseline.py`，作用是明确使用项目解释器调用基线入口；即使提示符不显示 `(.venv)` 也不影响该命令。下方激活环境的方式同样可用，不需要为提示符再跑一遍实验。
 
