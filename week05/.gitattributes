@@ -3,3 +3,8 @@ samples/*.pdf binary
 # 原始终端输出及第三方许可保留原有空格。
 evidence/material-preparation.txt -whitespace
 samples/licenses/*.txt -whitespace
+# 工具的原始文本和日志按字节保留，包括换页符与可能存在的尾随空格。
+runs/baseline-*/*.txt -text -whitespace
+runs/baseline-*/*.log -text -whitespace
+# Python csv 的标准 CRLF 行尾有效，保留文件原样且允许该行尾形式。
+runs/baseline-*/review.csv -text whitespace=cr-at-eol

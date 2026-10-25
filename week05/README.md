@@ -1,6 +1,6 @@
 # Week 05｜Document AI 任务地图
 
-当前阶段：三份文档的核心人工观察已记录，第三份已补充主要区域顺序与没有公式。文本提取入口、固定配置和 11 项人工检查项已准备，版本与输入校验通过；下一步由本人运行基线，再对照原始输出评价。
+当前阶段：本人已于 2026-10-25 完成首次文本提取基线，三份文档均 exit=0；运行记录确认 Python 3.10.12、pdftotext 22.02.0，输入/输出与快照哈希一致。下一步由本人对照原始文本评价，11 项检查尚未评分。
 
 Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub 同步因当前环境缺少可用认证而未成功，当前成果仅本地保存。
 
@@ -51,6 +51,10 @@ Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub
 ## 当前唯一开始入口
 
 概念辨析记录见 [任务地图](docs/task-map.md)，运行前事实见 [人工预期](docs/manual-expectations.md)，检查范围见 [evaluation-plan.json](configs/evaluation-plan.json)。从三类维度分别观察：文字是否出现、阅读顺序是否符合原页、结构关系是否得到表达。不把程序结束当成任务正确，也不把纯文本中出现数字当成表格关系完整。
+
+当前从 [本轮 digital_pdf.txt](runs/baseline-20261025T105130-507b20/digital_pdf.txt) 开始人工检查双栏顺序；[运行元数据](runs/baseline-20261025T105130-507b20/run-metadata.json) 保存实际环境与退出状态。digital_pdf / scanned_pdf / complex_table 的输出分别为 1144 / 1 / 817 字节；扫描输出只有换页符，没有正文，此项事实尚未由本人填写评价。
+
+本人本次直接执行 `.venv/bin/python week05/scripts/run_baseline.py`，作用是明确使用项目解释器调用基线入口；即使提示符不显示 `(.venv)` 也不影响该命令。下方激活环境的方式同样可用，不需要为提示符再跑一遍实验。
 
 如需在 VS Code 中切换到本仓库，在 **Remote SSH 连接 Ubuntu 后的终端**运行：
 

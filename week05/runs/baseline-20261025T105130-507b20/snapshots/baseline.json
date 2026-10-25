@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "name": "pdftotext-default-v1",
+  "tool": "pdftotext",
+  "expected_version": "22.02.0",
+  "arguments": ["-f", "1", "-l", "1", "-enc", "UTF-8"],
+  "output_mode": "plain_text_default_reading_order",
+  "manifest": "configs/document-manifest.json",
+  "manual_expectations": "docs/manual-expectations.md",
+  "evaluation_plan": "configs/evaluation-plan.json",
+  "timeout_seconds_per_document": 30,
+  "note": "首次文字提取基线，不执行 OCR，不输出结构化表格或标题标签；不自动评价。"
+}
