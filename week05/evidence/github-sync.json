@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-25T16:53:34.026307+08:00",
+  "branch": "codex/week05-document-ai",
+  "fetch_url": "https://github.com/yaxiaodang/multimodal-ai-bootcamp.git",
+  "push_url": "git@github.com:yaxiaodang/multimodal-ai-bootcamp.git",
+  "https_credentials_available": false,
+  "existing_identity": "~/.ssh/id_ed25519; contents not logged",
+  "new_identity_generated": false,
+  "host_trust": "official Ed25519 host entry added after fingerprint verification; existing entries retained; strict checking passes",
+  "official_host_fingerprint": "SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU",
+  "ssh_agent": "not usable in current process; direct identity tested",
+  "direct_identity_result": "GitHub offered authentication=publickey; local public key offered; server did not accept; Permission denied (publickey)",
+  "status": "pending_user_add_or_verify_authentication_public_key_on_GitHub",
+  "push_verified": false,
+  "sources": [
+    "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints",
+    "https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account"
+  ]
+}
