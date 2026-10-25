@@ -1,6 +1,6 @@
 # Week 05｜Document AI 任务地图
 
-当前阶段：数字 PDF 的四项已记录：标题文字正确、标题层级未显式表达、双栏顺序错误、公式结构未表达。其他两份共 7 项待评价；原始文件未修改，下一步检查扫描件输出与工具能力范围。
+当前阶段：数字 PDF 四项与扫描件三项共 7/11 项已记录。本人确认扫描件找不到编号、日期或表格，属于无 OCR 的工具范围限制；剩余复杂表格 4 项待评价，原始文件未修改。
 
 Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub 同步因当前环境缺少可用认证而未成功，当前成果仅本地保存。
 
@@ -52,7 +52,7 @@ Git 保存：分支 `codex/week05-document-ai`，准备提交 `dd0522d`；GitHub
 
 概念辨析记录见 [任务地图](docs/task-map.md)，运行前事实见 [人工预期](docs/manual-expectations.md)，检查范围见 [evaluation-plan.json](configs/evaluation-plan.json)。从三类维度分别观察：文字是否出现、阅读顺序是否符合原页、结构关系是否得到表达。不把程序结束当成任务正确，也不把纯文本中出现数字当成表格关系完整。
 
-当前打开 [本轮 scanned_pdf.txt](runs/baseline-20261025T105130-507b20/scanned_pdf.txt)，检查能否找到已确认的记录编号、日期及扫描仪信息，并结合“该 PDF 无文字层、pdftotext 不执行 OCR”的工具范围解释输出。已有数字 PDF 观察见 [对照记录](reports/comparison.md)，原始环境与命令保留在 [运行元数据](runs/baseline-20261025T105130-507b20/run-metadata.json)。
+当前打开 [本轮 complex_table.txt](runs/baseline-20261025T105130-507b20/complex_table.txt)，对照 [原表](samples/previews/complex_table.png)，检查 7 行 6 列、多级表头与合并关系是否得到表达，以及纸张第二季度数量 12、金额 60 能否直接与项目、季度和列名对应。已有两份文档的观察见 [对照记录](reports/comparison.md)。
 
 本人本次直接执行 `.venv/bin/python week05/scripts/run_baseline.py`，作用是明确使用项目解释器调用基线入口；即使提示符不显示 `(.venv)` 也不影响该命令。下方激活环境的方式同样可用，不需要为提示符再跑一遍实验。
 
