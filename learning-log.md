@@ -517,7 +517,7 @@
 | --- | --- | --- | --- | --- |
 | 材料与程序准备（非学习实验） | 不适用 | 固定依赖/字体；生成检查；基线语法、帮助、输入校验与错误输入拒绝 | 通过；未代替本人运行实际提取 | [材料制作检查](week05/evidence/material-preparation.txt)、[入口准备检查](week05/evidence/baseline-preparation.txt) |
 | baseline-20261025T105130-507b20（本人执行） | 首次基线，无对照 | Python 3.10.12；pdftotext 22.02.0；默认文本策略 | 三份均 exit=0；11 项已记录：正确 3、部分正确 1、错误 1、结构未表达 3、工具不支持 3 | [运行目录](week05/runs/baseline-20261025T105130-507b20/)、[逐项评价](week05/reports/comparison.md) |
-| baseline-20261025T113919-b11603（本人执行） | 只追加 -layout | 同输入/版本/入口/原 11 项检查 | 三份均 exit=0；1305 / 1 / 1227 字节，11 项及 P1/P2 待本人评价 | [运行目录](week05/runs/baseline-20261025T113919-b11603/)、[对照记录](week05/reports/layout-comparison.md)、[完整性核对](week05/evidence/layout-run-verification.json) |
+| baseline-20261025T113919-b11603（本人执行） | 只追加 -layout | 同输入/版本/入口/原 11 项检查 | 三份均 exit=0；1305 / 1 / 1227 字节；P1 本人确认改善，D3 待澄清，其余待评价 | [运行目录](week05/runs/baseline-20261025T113919-b11603/)、[对照记录](week05/reports/layout-comparison.md)、[完整性核对](week05/evidence/layout-run-verification.json) |
 
 ### AI 使用披露
 - 使用的工具与版本：Codex，具体模型版本未单独记录。
@@ -529,7 +529,7 @@
 - 我选择的方向：本人明确选择 A：版面/表格布局对照。
 - 为什么与当前项目相关：Codex 据 E01 双栏交替与 E05 表格归属不清整理依据；本人独立理由与预测待表达。
 - 我只改变或验证什么：只追加 -layout，其余输入、版本与 11 项检查不变；物理排版、逻辑顺序、显式结构分别观察。问题、假设和补充规则由 Codex 在运行前整理，未冒充本人论证。
-- 结果与证据：本人已完成实际提取，三份正常结束；输入/参考/程序相同且仅追加 -layout 已核对，质量未判；见 [方向记录](week05/docs/research-direction.md)、[对照表](week05/reports/layout-comparison.md) 与 [准备检查](week05/evidence/layout-preparation.txt)。
+- 结果与证据：本人已完成实际提取，三份正常结束；输入/参考/程序相同且仅追加 -layout 已核对，P1 本人确认分栏更明显，D3 需区分视觉按栏阅读与文本线性顺序，其余待评价；见 [方向记录](week05/docs/research-direction.md)、[对照表](week05/reports/layout-comparison.md) 与 [准备检查](week05/evidence/layout-preparation.txt)。
 
 ### 自主阶段
 - [ ] 未形成
