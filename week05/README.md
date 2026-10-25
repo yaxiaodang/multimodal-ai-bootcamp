@@ -1,8 +1,8 @@
 # Week 05｜Document AI 任务地图
 
-当前阶段：本人完成首次基线和 A 方向布局对照，两轮各 11 项检查均已归档。-layout 改善双栏与表格的人工可读性，纸张第二季度字段归属更清楚；线性阅读顺序、独立标题级别、公式上下标、显式表格结构及扫描 OCR 的问题仍在，见 [布局对照报告](reports/layout-comparison.md)。本人已完成实验收益与限制的独立总结，后续优先问题、最终自评与例会准备待完成，本周尚未整体结束。
+当前阶段：本人完成首次基线和 A 方向布局对照，两轮各 11 项检查均已归档。-layout 改善双栏与表格的人工可读性，纸张第二季度字段归属更清楚；线性阅读顺序、独立标题级别、公式上下标、显式表格结构及扫描 OCR 的问题仍在，见 [布局对照报告](reports/layout-comparison.md)。本人已完成实验收益与限制的独立总结，后续优先问题、最终个人自评与例会演练待完成，本周尚未整体结束。
 
-Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972d2`；SSH 主机信任和账号公钥已修复，但本人忘记私钥口令；已按本人要求恢复 HTTPS 推送，待 VS Code 终端交互登录并推送，详见 [同步修复](docs/github-sync.md)。当前成果仅本地保存。
+Git 保存：首次 HTTPS 推送成功，已核验 GitHub 分支与当时本地提交 `51dd75c` 一致。[远程 Week 5](https://github.com/yaxiaodang/multimodal-ai-bootcamp/tree/codex/week05-document-ai/week05) 已可查看；新增收尾文档和草稿 PR 待发布，尚未合入 main，见 [同步记录](docs/github-sync.md)。
 
 课程入口：[第五周要求](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/#week-5document-ai)。
 本周目标：理解不同文档任务的边界，依据三类文档的实际结果选择一个研究问题。材料将在第六周继续用于 Docling Pipeline。
@@ -58,7 +58,7 @@ Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972
 
 本人已选择 A，运行前问题与规则见 [方向记录](docs/research-direction.md)。本轮流程：同样的三份输入 → 只追加 `-layout` → 新建目录保存结果 → 先看物理排版，再按原 11 项检查逻辑顺序与结构。配置包含运行前假设，随本轮配置快照保存；提取程序不需要改动。
 
-本人已执行以下命令，完成 [布局对照运行](runs/baseline-20261025T113919-b11603/)，无需重复运行。两轮的实际提取与 11 项评价均已完成，本人已给出独立总结，当前先通过 VS Code 的 HTTPS 登录完成同步，再选择 Week 6 首要问题。命令保留供复现：
+本人已执行以下命令，完成 [布局对照运行](runs/baseline-20261025T113919-b11603/)，无需重复运行。两轮的实际提取与 11 项评价均已完成，本人已给出独立总结，当前在已登录的 VS Code 终端运行下方发布入口，上传新增收尾文档并创建草稿 PR；例会展示草案已准备。命令保留供复现：
 
 ```bash
 .venv/bin/python week05/scripts/run_baseline.py --config week05/configs/layout.json
@@ -108,6 +108,14 @@ python week05/scripts/run_baseline.py --prepare-only
 
 运行后先打开新目录的 digital_pdf.txt，对照原页检查左右两栏的段落顺序，再检查 scanned_pdf.txt 与 complex_table.txt。每一项填写原始文件定位、本人判定及理由，可先在对话中表达，由 Codex 归档。
 
+## 发布收尾入口
+
+```bash
+.venv/bin/python week05/scripts/publish_github.py
+```
+
+作用：在已登录 GitHub 的 VS Code 内置终端推送已提交的第五周分支、核对远程提交并创建或复用指向 main 的草稿 PR。它不运行学习实验、不提交工作区文件，也不自动合并。PR 正文见 [草案](reports/pull-request.md)，例会材料见 [展示草案](reports/meeting-notes.md)；认证和失败处理见 [同步说明](docs/github-sync.md)。
+
 ## 材料生成程序的作用与复现
 
 程序依次绘制数字页、制作模拟扫描页、绘制复杂表格页，渲染最终 PDF 预览并写入输入清单。它只准备输入，不提取正文，不生成参考标注或评价。制作检查见 [记录](evidence/material-preparation.txt)，教学内容与许可见 [来源说明](samples/README.md)。
@@ -148,6 +156,7 @@ python week05/scripts/prepare_documents.py --output-dir /tmp/week05-materials-re
 - [x] 本人独立说明布局改善及阅读顺序/公式的限制，Codex 补充证据范围。
 - [ ] 本人选择后续首要问题，完成最终自评与例会准备。
 - [x] 更新根目录 learning-log.md，记录当前基线的 AI 使用与人工核验来源；整周最终自评待研究方向与探索完成。
-- [ ] 将本周阶段成果同步 GitHub，最终状态以提交记录为准。
+- [x] 首次阶段成果已同步 GitHub，远程核验提交 51dd75c。
+- [ ] 发布本次收尾提交并创建草稿 PR；实际合并另行处理。
 
 若当前材料未观察到三类错误，先如实记录，再增加有针对性的合法样本或页码；不得把预想风险写成已经发生的错误。三份教学文档不构成通用 Benchmark。
