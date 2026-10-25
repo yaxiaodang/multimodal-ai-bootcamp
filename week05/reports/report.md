@@ -44,4 +44,4 @@
 
 本人已选择 A：版面/表格对照。Codex 已整理 [运行前研究问题与假设](../docs/research-direction.md)，只追加 -layout，保持输入、版本、原 11 项检查不变；本人已运行并完成逐项观察，11 项结果和 Codex 整理的假设对照见 [布局对照报告](layout-comparison.md)；本人已完成实验收益与限制的独立总结。分别判断物理排版、逻辑阅读顺序与显式结构，不将三者混为一项。材料将继续用于 Week 6 Pipeline，研究问题及首要改进点待本人确定。
 
-收尾材料：[例会展示草案](meeting-notes.md)、[PR 正文](pull-request.md)。首次远程同步已核验提交 51dd75c，后续收尾提交与草稿 PR 状态见 [同步记录](../docs/github-sync.md)。
+收尾材料：[例会展示草案](meeting-notes.md)、[PR 正文](pull-request.md)。收尾远程同步已核验提交 a87d468，发布入口修复与草稿 PR 状态见 [同步记录](../docs/github-sync.md)。

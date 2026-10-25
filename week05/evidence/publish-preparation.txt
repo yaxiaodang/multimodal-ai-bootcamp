@@ -1,0 +1,5 @@
+Scope: publication helper preparation checks only. No actual push, credential lookup or GitHub API request was performed; PR #123 is a synthetic test value, not a created artifact.
+PASS: Git diagnostic retains cause and redacts credential-shaped data (mocked).
+PASS: mismatched remote commit stops before PR write (mocked, no network).
+PASS: reuses existing PR without POST; receipt and console exclude authorization (mocked).
+Real independently verified publication: a87d468297d737e306a30db1246672e1a3f9ea95. Actual PR creation remains pending VS Code execution.

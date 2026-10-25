@@ -3,6 +3,7 @@
 import argparse
 import json
 import os
+import re
 import subprocess
 from datetime import datetime
 from pathlib import Path
@@ -21,9 +22,11 @@ BODY = ROOT / 'week05/reports/pull-request.md'
 
 
 def git(*args):
-    result = subprocess.run(['git', *args], cwd=ROOT, capture_output=True, text=True)
+    result = subprocess.run(['git', *args], cwd=ROOT, capture_output=True, text=True, timeout=45)
     if result.returncode:
-        raise RuntimeError(f'Git 检查失败：{args[0]}，请查看仓库状态。')
+        detail = re.sub(r'(https?://)[^/\s@]+@', r'\1[redacted]@', result.stderr.strip())
+        detail = re.sub(r'\b(?:gh[pousr]_[A-Za-z0-9_]+|github_pat_[A-Za-z0-9_]+)', '[redacted]', detail)
+        raise RuntimeError(f'Git 检查失败：{args[0]}（exit={result.returncode}）：{detail[-1200:]}')
     return result.stdout.strip()
 
 
@@ -70,8 +73,13 @@ def github_api(token, path, payload=None):
         with urlopen(request, timeout=30) as response:
             return json.load(response)
     except HTTPError as error:
-        # 不回显请求头、认证响应或凭据；保留可操作的状态码。
-        raise RuntimeError(f'GitHub API 返回 HTTP {error.code}，分支若已推送会保留；请将此状态告知 Codex。') from None
+        # 不回显请求头或完整认证响应，仅保留去除凭据的错误消息。
+        try:
+            message = str(json.load(error).get('message', ''))
+        except (ValueError, AttributeError):
+            message = ''
+        message = message.replace(token, '[redacted]')[:300]
+        raise RuntimeError(f'GitHub API 返回 HTTP {error.code}：{message}；已推送的分支会保留。') from None
 
 
 def main():
@@ -89,18 +97,20 @@ def main():
         result = subprocess.run(['git', 'push', '-u', 'origin', BRANCH], cwd=ROOT)
         if result.returncode:
             raise RuntimeError('推送失败，请将终端错误发给 Codex。')
-        remote = git('ls-remote', '--heads', 'origin', 'refs/heads/' + BRANCH)
-        if not remote or remote.split()[0] != head:
+        print('分支推送完成。通过 GitHub API 核对远程提交……', flush=True)
+        token = github_credential()  # 仅在内存中使用，不输出、不保存。
+        remote = github_api(token, f'/repos/{REPO}/git/ref/heads/{BRANCH}')
+        if remote.get('object', {}).get('sha') != head:
             raise RuntimeError('远程提交与本地不一致，停止创建 PR。')
         receipt = {'verified_at': datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),
                    'branch': BRANCH, 'local_head': head, 'remote_head': head,
-                   'push_verified': True, 'pull_request_url': None}
+                   'push_verified': True, 'verification_method': 'GitHub Git refs API',
+                   'pull_request_url': None}
         receipt_path = Path(git('rev-parse', '--git-path', 'week05-publish-receipt.json'))
         if not receipt_path.is_absolute():
             receipt_path = ROOT / receipt_path
         receipt_path.write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         print('远程提交核对一致。准备创建或复用草稿 PR……', flush=True)
-        token = github_credential()  # 仅在内存中使用，不输出、不保存。
         query = urlencode({'state': 'open', 'head': 'yaxiaodang:' + BRANCH, 'base': 'main'})
         existing = github_api(token, f'/repos/{REPO}/pulls?' + query)
         pr = existing[0] if existing else github_api(

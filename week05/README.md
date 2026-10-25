@@ -2,7 +2,7 @@
 
 当前阶段：本人完成首次基线和 A 方向布局对照，两轮各 11 项检查均已归档。-layout 改善双栏与表格的人工可读性，纸张第二季度字段归属更清楚；线性阅读顺序、独立标题级别、公式上下标、显式表格结构及扫描 OCR 的问题仍在，见 [布局对照报告](reports/layout-comparison.md)。本人已完成实验收益与限制的独立总结，后续优先问题、最终个人自评与例会演练待完成，本周尚未整体结束。
 
-Git 保存：首次 HTTPS 推送成功，已核验 GitHub 分支与当时本地提交 `51dd75c` 一致。[远程 Week 5](https://github.com/yaxiaodang/multimodal-ai-bootcamp/tree/codex/week05-document-ai/week05) 已可查看；新增收尾文档和草稿 PR 待发布，尚未合入 main，见 [同步记录](docs/github-sync.md)。
+Git 保存：首次 HTTPS 推送成功，收尾提交也已上传并独立核验 GitHub 与当时本地提交 `a87d468` 一致。[远程 Week 5](https://github.com/yaxiaodang/multimodal-ai-bootcamp/tree/codex/week05-document-ai/week05) 已可查看；收尾文档已上传，发布入口修复及草稿 PR 待发布，尚未合入 main，见 [同步记录](docs/github-sync.md)。
 
 课程入口：[第五周要求](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/#week-5document-ai)。
 本周目标：理解不同文档任务的边界，依据三类文档的实际结果选择一个研究问题。材料将在第六周继续用于 Docling Pipeline。
@@ -157,6 +157,7 @@ python week05/scripts/prepare_documents.py --output-dir /tmp/week05-materials-re
 - [ ] 本人选择后续首要问题，完成最终自评与例会准备。
 - [x] 更新根目录 learning-log.md，记录当前基线的 AI 使用与人工核验来源；整周最终自评待研究方向与探索完成。
 - [x] 首次阶段成果已同步 GitHub，远程核验提交 51dd75c。
-- [ ] 发布本次收尾提交并创建草稿 PR；实际合并另行处理。
+- [x] 收尾文档已推送，远程核验提交 a87d468。
+- [ ] 发布入口修复并创建草稿 PR；实际合并另行处理。
 
 若当前材料未观察到三类错误，先如实记录，再增加有针对性的合法样本或页码；不得把预想风险写成已经发生的错误。三份教学文档不构成通用 Benchmark。

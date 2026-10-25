@@ -491,7 +491,7 @@
 
 ### 本周主线成果
 - 完成了：本人完成基础概念辨析，选择自制材料，观察三份文档的核心结构与关键事实，亲自运行首次基线，并完成首次基线与 A 方向布局对照的两轮逐项观察（每轮 11 项）。Codex 完成材料、环境、程序、配置、证据定位和评价归纳。
-- 尚未完成：本人选择后续首要问题、最终自评及实际例会演练；首次 HTTPS 推送已核验，新增收尾提交与草稿 PR 待发布。
+- 尚未完成：本人选择后续首要问题、最终自评及实际例会演练；收尾提交 a87d468 已核验上传，发布入口修复和草稿 PR 待发布。
 - 当前运行入口：仓库根目录执行 `.venv/bin/python week05/scripts/run_baseline.py --config week05/configs/layout.json`。作用：同一程序只追加 -layout，独立保存三份原始输出及运行证据，两轮提取和评价均已完成，当前无需重复运行。详见 [Week 5 README](week05/README.md)。
 - 预计 / 实际耗时：24 / 待本人记录小时；程序耗时见原始元数据，不能替代学习投入。
 - 算力与成本：Ubuntu VM CPU，无模型推理、付费 API 或本轮云资源调用；实际费用未单独统计。
@@ -555,5 +555,5 @@
 - 下周首先完成什么：Week 5 完成后，沿用三份固定输入建立 Week 6 Docling Pipeline；首要解决的能力或结构问题待本人确定。
 
 ### 保存状态与过程记录
-- 分支 `codex/week05-document-ai` 已通过 VS Code HTTPS 推送，Codex 核验 GitHub、跟踪分支与当时本地提交均为 `51dd75cd5c2836099745d282bfaff5ca5ab5b505`；[已上传的 Week 5](https://github.com/yaxiaodang/multimodal-ai-bootcamp/tree/codex/week05-document-ai/week05)。本次新增收尾文档与草稿 PR 还未发布；分支未合入 main，详见 [同步记录](week05/docs/github-sync.md)。
+- 分支 `codex/week05-document-ai` 已通过 VS Code HTTPS 推送，Codex 核验 GitHub、跟踪分支与当时本地提交均为 `a87d468297d737e306a30db1246672e1a3f9ea95`；[已上传的 Week 5](https://github.com/yaxiaodang/multimodal-ai-bootcamp/tree/codex/week05-document-ai/week05)。收尾文档已上传，发布入口修复与草稿 PR 尚待发布；分支未合入 main，详见 [同步记录](week05/docs/github-sync.md)。
 - 各阶段的人工作答、Codex 归纳与历史状态已保留在 [阶段过程记录](week05/docs/annotation-history.md)，当前状态以本节和阶段报告为准；原始输入、输出与运行前快照未改写。
