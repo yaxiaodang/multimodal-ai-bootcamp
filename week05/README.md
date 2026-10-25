@@ -1,6 +1,6 @@
 # Week 05｜Document AI 任务地图
 
-当前阶段：首次基线与 11 项人工检查已完成，见 [阶段报告](reports/report.md)。本人已执行 A 方向布局对照，当前 8/11 项已记录；P1/P2 可读性改善，标题层级和公式结构未改善，扫描页仍无 OCR。剩余 T1/T3/T4 待本人观察，详见 [布局对照](reports/layout-comparison.md)；本周尚未整体结束。
+当前阶段：首次基线与 11 项人工检查已完成，见 [阶段报告](reports/report.md)。本人已执行 A 方向布局对照，当前 10/11 项已记录；P1/P2 可读性改善，标题层级和公式结构未改善，扫描页仍无 OCR。T3 符号含义和 T4 主要区域顺序仍正确，仅 T1 待完整核对，详见 [布局对照](reports/layout-comparison.md)；本周尚未整体结束。
 
 Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972d2`；GitHub 同步因当前环境缺少可用认证而未成功，当前成果仅本地保存。
 
@@ -57,7 +57,7 @@ Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972
 
 本人已选择 A，运行前问题与规则见 [方向记录](docs/research-direction.md)。本轮流程：同样的三份输入 → 只追加 `-layout` → 新建目录保存结果 → 先看物理排版，再按原 11 项检查逻辑顺序与结构。配置包含运行前假设，随本轮配置快照保存；提取程序不需要改动。
 
-本人已执行以下命令，完成 [布局对照运行](runs/baseline-20261025T113919-b11603/)，无需重复运行。当前检查新目录 complex_table.txt 中 0 与长横线的含义和主要区域顺序；表格 T1 仍待完整核对。命令保留供复现：
+本人已执行以下命令，完成 [布局对照运行](runs/baseline-20261025T113919-b11603/)，无需重复运行。当前检查新目录 complex_table.txt 的逻辑行列数，以及合并关系是依靠位置推断还是有独立范围记录，完成最后的 T1。命令保留供复现：
 
 ```bash
 .venv/bin/python week05/scripts/run_baseline.py --config week05/configs/layout.json
