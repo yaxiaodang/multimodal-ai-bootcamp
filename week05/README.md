@@ -1,6 +1,6 @@
 # Week 05｜Document AI 任务地图
 
-当前阶段：首次基线与 11 项人工检查已完成，阶段结论见 [报告](reports/report.md)。复杂表格的符号说明和主要区域顺序保留，但内部结构与数据归属不明确；不能把整页都判错。本人已选择自主探索 A：只增加 `-layout` 的版面/表格对照；配置已准备，实际运行和评价待本人完成，本周尚未整体结束。
+当前阶段：首次基线与 11 项人工检查已完成，阶段结论见 [报告](reports/report.md)。复杂表格的符号说明和主要区域顺序保留，但内部结构与数据归属不明确；不能把整页都判错。本人已选择自主探索 A：只增加 `-layout` 的版面/表格对照；本人已运行，参数与完整性核对通过，11 项及补充观察待本人评价，本周尚未整体结束。
 
 Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972d2`；GitHub 同步因当前环境缺少可用认证而未成功，当前成果仅本地保存。
 
@@ -57,13 +57,13 @@ Git 保存：分支 `codex/week05-document-ai`，首次完整评价提交 `7e972
 
 本人已选择 A，运行前问题与规则见 [方向记录](docs/research-direction.md)。本轮流程：同样的三份输入 → 只追加 `-layout` → 新建目录保存结果 → 先看物理排版，再按原 11 项检查逻辑顺序与结构。配置包含运行前假设，随本轮配置快照保存；提取程序不需要改动。
 
-由本人在仓库根目录执行当前实验：
+本人已执行以下命令，完成 [布局对照运行](runs/baseline-20261025T113919-b11603/)，无需重复运行。当前先打开新目录的 digital_pdf.txt，分别观察双栏物理位置和线性文本顺序。命令保留供复现：
 
 ```bash
 .venv/bin/python week05/scripts/run_baseline.py --config week05/configs/layout.json
 ```
 
-作用：使用项目 Python 和布局对照配置，仍由同一程序调用 pdftotext，只多传 `-layout`，尝试保留页面物理排版。输出到新的 `runs/baseline-时间-标识/`，不覆盖首次基线；元数据中的 `config.name` 为 `pdftotext-layout-v1`。它不新增 OCR 或自动评分。请先把输出目录和三份状态发回，再逐项观察。
+作用：使用项目 Python 和布局对照配置，仍由同一程序调用 pdftotext，只多传 `-layout`，尝试保留页面物理排版。输出到新的 `runs/baseline-时间-标识/`，不覆盖首次基线；元数据中的 `config.name` 为 `pdftotext-layout-v1`。它不新增 OCR 或自动评分。三份均正常结束，状态与哈希已核对，接下来逐项观察内容。
 
 Codex 已完成只核对版本与输入的准备检查，见 [准备证据](evidence/layout-preparation.txt)。对照记录表见 [layout-comparison.md](reports/layout-comparison.md)。查看布局时用等宽字体并关闭自动换行；物理对齐与逐行文本顺序分开判断。
 

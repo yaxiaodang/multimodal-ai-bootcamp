@@ -18,3 +18,9 @@
 | review.csv | 11 项检查与预期；judgment、evidence_location、reason 留空，待人工评价 |
 
 人工预期原文件位于 ../docs/manual-expectations.md；本轮应依据 snapshots 中保存的版本评价，不用后来修改的预期替换历史。评价由 Codex 根据本人判断整理到 ../reports/ 或本轮 review.csv，不能修改原始 txt 制造正确结果。失败运行同样保留。
+
+## 布局对照运行
+
+本人于 2026-10-25 11:39:19（Asia/Shanghai）运行 [baseline-20261025T113919-b11603](baseline-20261025T113919-b11603/)，命令为 `.venv/bin/python week05/scripts/run_baseline.py --config week05/configs/layout.json`，作用是使用同一入口和输入，只追加 -layout，并独立保存本轮输出。运行代码 fd5b5b6；三份均 exit=0，输出 1305 / 1 / 1227 字节。输入、版本、参考与程序快照相同，输出/快照哈希匹配，见 [核对记录](../evidence/layout-run-verification.json)。
+
+当前 review.csv 的 11 项保持空白，待本人观察；[对照记录](../reports/layout-comparison.md) 单列物理排版 P1/P2。原始 txt、元数据与快照按运行时内容保存，运行前配置中的 pending 状态不代表当前未执行。

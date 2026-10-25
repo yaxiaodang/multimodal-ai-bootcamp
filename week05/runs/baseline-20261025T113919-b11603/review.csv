@@ -1,0 +1,12 @@
+check_id,document_id,dimension,expected,raw_output,judgment,evidence_location,reason
+D1,digital_pdf,文字内容,第一章 实验方法、1.1 材料与输入、1.2 处理与核对、1.3 数值示例的文字可找到；允许比较时忽略排版换行，但不改原始文本。,digital_pdf.txt,,,
+D2,digital_pdf,结构表达,第一章为一级标题，1.1/1.2/1.3 为其下二级标题；文字出现不等于角色和层级被显式表达。,digital_pdf.txt,,,
+D3,digital_pdf,阅读顺序与段落,1.1 与 1.2 各两段；先完成左栏 1.1 的两段，再进入右栏 1.2，两栏不能横向逐行交替拼接；四段定位前缀见人工预期。,digital_pdf.txt,,,
+D4,digital_pdf,公式结构,E = x_1^2 + x_2^2；两个下标分别是 1 和 2，上标均为 2，需区分字符出现和上下标关系。,digital_pdf.txt,,,
+S1,scanned_pdf,文字内容,记录编号 LAB-DEMO-005；登记日期 2026-10-24；各字段保持与值对应。,scanned_pdf.txt,,,
+S2,scanned_pdf,表格结构,含表头 4 行 4 列；列名依次为设备、数量、借出状态、归还要求。,scanned_pdf.txt,,,
+S3,scanned_pdf,单元格对应关系,设备扫描仪对应数量 1、归还要求清洁玻璃面板；文字内容与同一行关系分别说明。,scanned_pdf.txt,,,
+T1,complex_table,表格结构,底层网格含表头及合计行为 7 行 6 列；第一季度横向覆盖数量/金额，类别纵向跨两行表头。,complex_table.txt,,,
+T2,complex_table,单元格对应关系,纸张—第二季度—数量 12、金额 60，不能错配季度或列名。,complex_table.txt,,,
+T3,complex_table,数值与符号,扫描项目第二季度数量 0；合计行数量列 — 表示不适用/不统计数量，两者不可互换。,complex_table.txt,,,
+T4,complex_table,主要区域相对顺序,主标题教学项目季度费用表 → 表格 → 填表说明 → 页脚；仅判断已列区域的相对顺序，不宣称完整页面标注。,complex_table.txt,,,
