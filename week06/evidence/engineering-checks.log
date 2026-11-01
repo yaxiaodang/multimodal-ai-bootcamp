@@ -1,0 +1,20 @@
+test_changed_input_hash_is_rejected (__main__.PipelineTests) ... ok
+test_export_and_schema_check_without_pdf_parsing (__main__.PipelineTests) ... ok
+test_prepare_only_does_not_create_run_directory (__main__.PipelineTests) ... ok
+test_worker_failure_keeps_logs_and_continues (__main__.PipelineTests) ... 输出目录：/home/yaxiaodang/multimodal-ai-bootcamp/week06/tmpdvybxhp_/runs/baseline-20261101T220152-c5ddfb
+digital_pdf: failed, exit=1, 0.0003 秒
+scanned_pdf: completed, exit=0, 0.0009 秒
+complex_table: completed, exit=0, 0.0003 秒
+Markdown/JSON 为原始导出；机械检查不代表结构正确。review.csv 待本人核验。
+ok
+test_worker_timeout_keeps_logs_and_continues (__main__.PipelineTests) ... 输出目录：/home/yaxiaodang/multimodal-ai-bootcamp/week06/tmphpivtq5v/runs/baseline-20261101T220152-d96cb8
+digital_pdf: failed, exit=124, 0.0005 秒
+scanned_pdf: completed, exit=0, 0.0004 秒
+complex_table: completed, exit=0, 0.0005 秒
+Markdown/JSON 为原始导出；机械检查不代表结构正确。review.csv 待本人核验。
+ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 3.485s
+
+OK

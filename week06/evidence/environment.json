@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-11-01T22:24:33.231882+08:00",
+  "started_at": "2026-11-01T22:24:24.537415+08:00",
+  "os": "Ubuntu 22.04.5 LTS",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "executable": "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+  "packages": {
+    "pip": "26.2.2",
+    "docling": "2.145.0",
+    "docling-core": "2.105.0",
+    "docling-ibm-models": "4.0.4",
+    "docling-parse": "7.24.2",
+    "torch": "2.14.0+cpu",
+    "torchvision": "0.29.1+cpu",
+    "rapidocr": "3.10.0",
+    "onnxruntime": "1.23.2",
+    "transformers": "5.20.2"
+  },
+  "device": "cpu",
+  "torch_cuda_available": false,
+  "ocr_language": [
+    "ch"
+  ],
+  "ocr_version": "PP-OCRv6 (small detection/recognition; legacy angle classifier)",
+  "models_initialized_offline": true,
+  "learning_pdf_parsing_run": false,
+  "quality_judgments": "pending_user_review"
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "name": "docling-cpu-baseline-v1",
+  "manifest": "week06/configs/input-manifest.json",
+  "output_root": "week06/runs",
+  "device": "cpu",
+  "artifacts_path": ".cache-week06/artifacts",
+  "num_threads": 2,
+  "do_ocr": true,
+  "ocr_engine": "rapidocr",
+  "ocr_backend": "onnxruntime",
+  "ocr_languages": [
+    "ch"
+  ],
+  "force_full_page_ocr": false,
+  "do_table_structure": true,
+  "table_mode": "accurate",
+  "do_cell_matching": true,
+  "do_formula_enrichment": false,
+  "timeout_seconds_per_document": 600,
+  "references": [
+    "week05/docs/manual-expectations.md",
+    "week05/configs/evaluation-plan.json",
+    "week05/docs/week06-handoff.md",
+    "week06/docs/quality-plan.md",
+    "week06/reports/quality-review.csv"
+  ],
+  "expected_packages": {
+    "docling": "2.145.0",
+    "rapidocr": "3.10.0",
+    "onnxruntime": "1.23.2",
+    "torch": "2.14.0+cpu",
+    "torchvision": "0.29.1+cpu"
+  },
+  "layout_revision": "8f39ad3c0b4c58e9c2d2c84a38465abf757272d8"
+}

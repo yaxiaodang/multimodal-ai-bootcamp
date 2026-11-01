@@ -1,0 +1,7 @@
+# Linux CPU setup. Full resolved versions are saved in requirements-lock.txt.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.14.0+cpu
+torchvision==0.29.1+cpu
+docling==2.145.0
+rapidocr==3.10.0
+onnxruntime==1.23.2

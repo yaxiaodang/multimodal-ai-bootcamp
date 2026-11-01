@@ -1,6 +1,6 @@
 # Week 06｜Docling 文档解析 Pipeline
 
-状态（2026-11-01）：流程、固定输入清单、运行前质量检查草案和学习记录已准备；尚未安装 Docling、下载模型、实现或运行解析入口，尚无本周解析结果。独立虚拟环境由 Codex 准备；完整依赖将在进入环境准备步骤时由 Codex 安装、固定版本并核验。
+状态（2026-11-01）：本人已说明数字出现不代表季度与数量/金额对应正确，见 [概念记录](docs/learning-notes.md)。Codex 已完成独立 CPU 环境、固定依赖、模型下载及本机离线加载验证、解析入口与五项工程检查；首轮解析及内容核验待本人亲自执行，当前无本周 PDF 解析结果。
 
 课程依据：[第六周主线](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/#week-6docling-pipeline)、[学习记录模板](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/11_Learning_Log_Template/)。实现前核对 [Docling 安装说明](https://docling-project.github.io/docling/getting_started/installation/) 与 [Quickstart](https://docling-project.github.io/docling/getting_started/quickstart/)，以实际安装版本为准。
 
@@ -50,12 +50,24 @@ Docling 解析：利用 PDF 文字或 OCR 获取文字，识别版面与表格�
 - [人工核对表](reports/quality-review.csv)：待本人实际检查后填写；不是预测结果。
 - [运行目录约定](runs/README.md)：计划保存的原始产物及失败记录。
 - [环境准备证据](evidence/preparation.json)：本次实际检查情况。
+- [环境与命令说明](docs/environment.md)：所有安装、检查和实验命令的作用；本机环境见 [environment.json](evidence/environment.json)，模型来源及哈希见 [model-preparation.json](evidence/model-preparation.json)。
+- [解析配置](configs/baseline.json)、[锁定依赖](requirements-lock.txt)、[解析入口](scripts/run_pipeline.py)：CPU、2 个线程，开启中文 OCR 和准确表格解析，公式增强关闭。
 - [连续学习记录](../learning-log.md)：在 Week 06 节追加实际进展。
 
-## 当前第一步
+## 当前步骤：本人执行首轮解析
 
-先理解上面的数据流，对照第五周的 [复杂表格原页](../week05/samples/previews/complex_table.png) 和 [交接目标](../week05/docs/week06-handoff.md)，思考：哪些信息适合在 Markdown 中读，哪些关系需要检查 JSON 的单元格表示？在对话中用自己的话描述即可，由 Codex 归档，不要求研究具体函数。
+在 VS Code 的 Ubuntu 远程终端、仓库根目录执行：
 
-后续进入运行步骤时，由 Codex 提供一条已核验的实验入口及每个参数的作用。当前没有可运行的 Docling 实验命令。
+```bash
+.venv-week06/bin/python week06/scripts/run_pipeline.py
+```
+
+作用：明确使用第六周环境，依默认配置顺序处理三份固定 PDF。每次新建 `runs/baseline-时间-标识/`，按文档 ID 保存原始 `document.md`、`document.json`、日志、转换状态与机械检查；整轮保存命令、版本、配置/源码/参考快照、耗时、退出码与待本人核验的 `review.csv`。模型已下载；不需激活环境或重复安装。
+
+一份处理失败会记录原因并继续其他输入，整轮返回非零退出码。即使三份均 completed，也只说明转换和文件/格式检查通过，结构正确性仍由本人判断。程序耗时包含各文档模型加载，不等于纯推理时间或学习时长。
+
+命令结束后将终端输出发到对话中，先确认原始文件位置，再分步观察；当前不用一次填写全部检查项。第一轮观察会结合 [复杂表格原页](../week05/samples/previews/complex_table.png) 与 [交接目标](../week05/docs/week06-handoff.md) 继续学习单元格关系。
+
+准备命令 `--prepare-only` 已由 Codex 执行，校验三份输入、依赖和选项，不下载模型或解析 PDF。五项工程检查使用临时目录和故障注入；它们不是学习实验。详见 [检查日志](evidence/engineering-checks.log) 和 [离线加载记录](evidence/model-loading-check.log)。最初的 preparation.json 保留首次准备状态，当前状态以 environment.json 和本 README 为准。
 
 环境安装属于 Codex 执行的基础工作；解析、选择实验变量、判断结果与解释发现属于本人的学习活动。每完成一步再继续下一步，不预先标记学习或实验完成。
