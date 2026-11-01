@@ -1,0 +1,11 @@
+check_id,document_id,status,raw_evidence,user_observation,notes
+Q01,digital_pdf,待核验,,,
+Q02,digital_pdf,待核验,,,
+Q03,digital_pdf,待核验,,,
+Q04,scanned_pdf,待核验,,,
+Q05,scanned_pdf,待核验,,,
+Q06,complex_table,待核验,,,
+Q07,complex_table,待核验,,,
+Q08,complex_table,待核验,,,
+Q09,complex_table,待核验,,,
+Q10,digital_pdf,待核验,,,

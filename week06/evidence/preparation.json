@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-11-01T20:14:07.793098+08:00",
+  "scope": "preparation_only_not_a_learning_experiment",
+  "os": "Ubuntu 22.04.5 LTS",
+  "base_python": "3.10.12",
+  "week06_environment": ".venv-week06",
+  "environment": {
+    "python": "3.10.12",
+    "docling_installed": false
+  },
+  "git_commit_before_preparation": "a6099a9c326eafa76ad11cb1b08a6bf96e55423d",
+  "verified_input_sha256": {
+    "digital_pdf": "ea2d689402fb39152060cca87eac4174bae732826bd0de3677c64b07a645be6c",
+    "scanned_pdf": "0d5f5897edbedc71aa2156648e949d8183badf63a6f5340872bbb2228877d5f6",
+    "complex_table": "9e3511d999cf970561ab547977fde011e456bf99861a71d37817a9e660f78af2"
+  },
+  "preview_hashes_verified": true,
+  "docling_dependencies_installed": false,
+  "models_downloaded": false,
+  "pipeline_implemented": false,
+  "parsing_run": false,
+  "quality_results": "all_pending_user_review",
+  "remaining_setup": "Install and pin CPU dependencies, select Chinese OCR settings, record model artifacts before user runs experiments."
+}

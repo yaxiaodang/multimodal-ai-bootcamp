@@ -1,6 +1,7 @@
 # Python virtual environments
 .venv/
 .venv-week04/
+.venv-week06/
 venv/
 
 # Python cache
