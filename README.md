@@ -19,7 +19,7 @@
 | `week03/` | AI 辅助编程与人工验证 |
 | [week04/](week04/README.md) | 视觉语言模型：受控实验、双维度评价、五个失败案例与缓存复现 |
 | [week05/](week05/README.md) | Document AI 任务地图：分步学习入口与实验准备（实验待执行） |
-| [week06/](week06/README.md) | Docling 文档解析 Pipeline：本人已执行三份 PDF 首轮解析，内容与结构待核验 |
+| [week06/](week06/README.md) | Docling 文档解析 Pipeline：主线、10项核验与Markdown/JSON表示探索已完成 |
 | `week07/` | Dataset、Benchmark 与负责任使用 |
 | `week08/` | LoRA/PEFT 小规模微调 |
 | `week09/` | W&B 实验追踪 |

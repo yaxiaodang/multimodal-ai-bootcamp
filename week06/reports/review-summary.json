@@ -1,0 +1,20 @@
+{
+  "run": "baseline-20261105T152012-076969",
+  "reviewed_items": 10,
+  "pending_items": 0,
+  "counts": {
+    "正确": 6,
+    "部分正确": 2,
+    "错误": 1,
+    "结构未表达": 1
+  },
+  "scope": "Manual observations with disclosed Codex evidence interpretation; related checks, not independent benchmark samples; no overall accuracy",
+  "mainline_status": "completed",
+  "standard_path_status": "mainline and selected Markdown/JSON representation exploration completed; personal self-assessment, actual study time and meeting rehearsal not recorded",
+  "exploration": {
+    "selected_by": "user",
+    "direction": "representation",
+    "user_summary": "md文件和原pdf文件类似方便人们阅读，JSON文件明确表明结构关系",
+    "evidence": "same-run Markdown/JSON table spans and footer retention; no new inference"
+  }
+}

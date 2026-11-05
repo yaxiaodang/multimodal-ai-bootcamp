@@ -1,6 +1,6 @@
 # Week 06｜Docling 文档解析 Pipeline
 
-状态（2026-11-05）：本人已亲自执行首轮解析，三份 PDF 均 completed、exit=0；原始 Markdown/JSON、日志与快照保存在 [本轮目录](runs/baseline-20261105T152012-076969/)。Codex 已核对 18 个输出文件、8 份快照及三份输入的哈希，见 [完整性检查](evidence/baseline-integrity.json)。Q07 的 Markdown 与 JSON 数值对应已由本人核验；Q06 已核验网格及两处合并，其余检查继续进行；执行成功不代表解析结构正确。
+状态（2026-11-05）：三文档主线、10项人工核验及本人选择的Markdown/JSON表示探索已完成。检查计数为正确6、部分正确2、错误1、结构未表达1，不计算总体准确率。证据与限制见 [实验报告](reports/report.md)；核心知识见 [复习材料](docs/core-knowledge.md)。本人自评、实际学习时长及实际例会演练未记录。
 
 课程依据：[第六周主线](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/#week-6docling-pipeline)、[学习记录模板](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/11_Learning_Log_Template/)。实现前核对 [Docling 安装说明](https://docling-project.github.io/docling/getting_started/installation/) 与 [Quickstart](https://docling-project.github.io/docling/getting_started/quickstart/)，以实际安装版本为准。
 
@@ -46,21 +46,26 @@ Docling 解析：利用 PDF 文字或 OCR 获取文字，识别版面与表格�
 ## 文件入口
 
 - [输入清单](configs/input-manifest.json)：复用 `week05/samples/` 的原始文件，不重制、不复制出另一份输入。
-- [质量规则草案](docs/quality-plan.md)：运行前列出检查目标，结果保持待核验。
-- [人工核对表](reports/quality-review.csv)：待本人实际检查后填写；不是预测结果。
+- [运行前质量规则](docs/quality-plan.md)：保留原始检查目标；实际判定见核对表。
+- [人工核对表](reports/quality-review.csv)：10项已由本人反馈并由Codex整理，判定包含错误与限制；不是模型预测。
 - [运行目录约定](runs/README.md)：计划保存的原始产物及失败记录。
 - [环境准备证据](evidence/preparation.json)：本次实际检查情况。
 - [环境与命令说明](docs/environment.md)：所有安装、检查和实验命令的作用；本机环境见 [environment.json](evidence/environment.json)，模型来源及哈希见 [model-preparation.json](evidence/model-preparation.json)。
 - [解析配置](configs/baseline.json)、[锁定依赖](requirements-lock.txt)、[解析入口](scripts/run_pipeline.py)：CPU、2 个线程，开启中文 OCR 和准确表格解析，公式增强关闭。
 - [连续学习记录](../learning-log.md)：在 Week 06 节追加实际进展。
 
-## 当前步骤：本人核验首轮结果
+## 当前状态与复习入口
 
-首轮命令已由本人执行，无需重复。耗时：数字页 18.987 秒、扫描件 92.008 秒、复杂表格 26.4093 秒，均包含模型加载，不作为纯推理速度对比或学习时长。
+本人已完成分步和六项集中核验，不需要重复运行。首轮耗时：数字页18.987秒、扫描件92.008秒、复杂表格26.4093秒，均包含模型加载，不作为纯推理速度或学习时长。
 
-按本人加快进度的要求，剩余检查合并到 [六项集中核验包](reports/batch-review.md)，内含原页、未改写的输出和明确问题。一次回复六项后统一整理，不再按单个字段逐次追问。Q07/Q08已核验，Q09已确认Markdown与JSON的页脚导出差异；Q06补查第一季度合并范围，数字PDF和扫描件一并核验。
+- [报告](reports/report.md)：三文档差异、10项判断、失败案例及Markdown/JSON表示比较。
+- [核心知识](docs/core-knowledge.md)：数据流、任务边界、表格关系、导出范围、质量与复现证据。
+- [例会草稿](reports/meeting-notes.md)：一条命令、成功与失败案例及下一步，实际演练尚未记录。
+- [分步回答](docs/learning-notes.md) 与 [阶段日志归档](docs/annotation-history.md)：保留提示、更正及过程，不改写为全部独立答对。
 
-工作区复杂表格Markdown末尾的附加文字继续保留，原始归档不改写，见 [变化说明](reports/markdown-edit-note.md)。
+本人明确选择表示方向并总结Markdown便于人读、JSON明确结构；本轮复用已有两种导出，不新增推理、不声称预注册消融，未比较DocTags或测试下游任务。
+
+工作区复杂表格Markdown末尾的附加文字继续保留，未提交为原始结果，原始归档不改写，见 [变化说明](reports/markdown-edit-note.md)。
 
 以下命令保留供复现；本轮已运行：
 
@@ -74,7 +79,7 @@ Docling 解析：利用 PDF 文字或 OCR 获取文字，识别版面与表格�
 
 一份处理失败会记录原因并继续其他输入，整轮返回非零退出码。即使三份均 completed，也只说明转换和文件/格式检查通过，结构正确性仍由本人判断。程序耗时包含各文档模型加载，不等于纯推理时间或学习时长。
 
-本人已提交终端输出，运行记录已核对。接下来分步观察，不用一次填写全部检查项；结合原页与 [交接目标](../week05/docs/week06-handoff.md) 学习单元格关系。
+本人已提交终端输出并完成核验，历史 [集中核验包](reports/batch-review.md) 保留供复习；与 [第五周交接目标](../week05/docs/week06-handoff.md) 的对应及未解决限制见实验报告。
 
 准备命令 `--prepare-only` 已由 Codex 执行，校验三份输入、依赖和选项，不下载模型或解析 PDF。五项工程检查使用临时目录和故障注入；它们不是学习实验。详见 [检查日志](evidence/engineering-checks.log) 和 [离线加载记录](evidence/model-loading-check.log)。最初的 preparation.json 保留首次准备状态，当前状态以 environment.json 和本 README 为准。
 

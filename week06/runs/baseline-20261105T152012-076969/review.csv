@@ -1,11 +1,11 @@
 check_id,document_id,status,raw_evidence,user_observation,notes
-Q01,digital_pdf,待核验,,,
-Q02,digital_pdf,待核验,,,
-Q03,digital_pdf,待核验,,,
-Q04,scanned_pdf,待核验,,,
-Q05,scanned_pdf,待核验,,,
-Q06,complex_table,网格及两处合并已核验；其余待核验,complex_table/document.json: tables[0].data; table_cells[0] and table_cells[3]; reports/table-structure-view.json,本人确认7行6列，第二季度跨2列；在区分方向的提示后确认“上下延伸为纵向合并”，理解类别跨2行、占1列。,已核验网格、第二季度横向跨2列、类别纵向跨2行。合并方向经Codex解释后由本人确认，不记为最初独立答对；其余合并范围仍待核验。
+Q01,digital_pdf,部分正确,"digital_pdf/document.md:1,7,13,21; document.json texts[0,3,6,12]",本人确认四个标题文字对齐，均为两个#，表示相同标题层级。,标题文字和标题角色存在，但未区分章标题与小节标题层级；不把文字齐全判为层级完整。
+Q02,digital_pdf,正确,"digital_pdf/document.md:9,11,23,25; document.json texts[4,5,13,14]",本人确认1.1和1.2各保留两段正文。,仅确认段落边界；正文内空格等字符问题未作全文检查，不宣称全文OCR正确。
+Q03,digital_pdf,错误,"digital_pdf/document.md:7,13,21; document.json body.children / texts[3,6,12]",本人读到实际顺序1.1、1.3、1.2，明确判断顺序不正确。,原页预期1.1→1.2→1.3；局部段落边界保留不代表全局阅读顺序正确。
+Q04,scanned_pdf,正确,"scanned_pdf/document.md:5,9; document.json texts[2,4]",本人确认编号和日期与原页一致。,检查范围为LAB-DEMO-005、2026-10-24及字段对应，不是全文OCR准确率。
+Q05,scanned_pdf,正确,"scanned_pdf/document.md:13-17; document.json tables[0].data / table_cells[4,5,7]",本人确认含表头4行4列，扫描仪对应数量1和清洁玻璃面板。,核验了预定网格与关键一行关系，不宣称所有字符或所有扫描质量均正确。
+Q06,complex_table,正确,"complex_table/document.json: tables[0].data / table_cells[0,2,3]; reports/table-structure-view.json",本人已确认7行6列、第二季度跨2列、类别纵向跨2行；本次补充第一季度跨2列、横向合并，起始列索引为2。,跨度依据col_span=2或end_col_offset_idx(4)-start_col_offset_idx(2)，起始列索引2本身只表示从第3列起。合并方向经提示后确认；仅覆盖预先列出的核心合并，不宣称所有合并逐项核验。
 Q07,complex_table,正确,"complex_table/document.md:7,9 (original commit efb2eb1); complex_table/document.json: tables[0].data.table_cells[3,6,7,9,12,13]; reports/table-structure-view.json",本人确认Markdown中纸张第二季度数量12、金额60的行列表头对应；JSON中纸张（包）、12、60起始行索引均为2；12和60的起始列索引分别为4和5，分别对应数量和金额。,依据本人分步观察，已核验纸张—第二季度—数量12/金额60的关系，不只是数字出现。仅判本项正确，不推广为整表正确。Markdown末尾工作区附加文字未作为模型结果提交。
 Q08,complex_table,正确（零与不适用符号区分）,"complex_table/document.md:11,13,17; complex_table/document.json: tables[0].data.table_cells[23,31,33]",本人回答扫描项目第二季度数量为0；金额合计行数量列显示-，并确认两者含义不同。,本人核验数值、符号及区别；0为实际零、横线为不适用的具体语义由Codex结合原页说明补充，不冒充本人独立表述。原页长横线—在导出中变为短横线-，保留字符差异，不判为逐字完全一致。仅本项通过，不推广为整表正确。
 Q09,complex_table,部分正确（Markdown页脚未显示；JSON保留）,"complex_table/document.md:1,7,15; complex_table/document.json: texts[6], texts[7], body.children; reports/footer-view.json",本人确认主标题→表格→填表说明的相对顺序保留，Markdown未显示页脚；查看补充证据后确认“成功解析，出现在Markdown导出阶段”。,"JSON texts[6,7]保留page_footer（furniture层）；本机默认Markdown只导出body层。已确认是表示/导出范围差异，不是解析未识别。Markdown未保留完整四区域链，故本项部分正确，不因解释原因而改判全通过。"
-Q10,digital_pdf,待核验,,,
+Q10,digital_pdf,结构未表达,"digital_pdf/document.md:17; document.json pictures[0].children / texts[8,9,10]",本人确认公式在Markdown中不显示，为<!-- image -->。,Codex补充只读核对：JSON将该区域作为picture并带碎片文字，未提供可直接读取的完整上下标公式表示；不是本人独立JSON判断。本轮do_formula_enrichment=false，此项为额外观察，不扩大为Docling全面不支持公式。

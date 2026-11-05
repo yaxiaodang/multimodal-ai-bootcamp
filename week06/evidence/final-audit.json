@@ -1,0 +1,96 @@
+{
+  "run": "baseline-20261105T152012-076969",
+  "reviewed_items": 10,
+  "review_files_match": true,
+  "output_checks": [
+    {
+      "file": "digital_pdf/conversion-status.json",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "digital_pdf/document.json",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "digital_pdf/document.md",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "digital_pdf/mechanical-checks.json",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "digital_pdf/stderr.log",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "digital_pdf/stdout.log",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "scanned_pdf/conversion-status.json",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "scanned_pdf/document.json",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "scanned_pdf/document.md",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "scanned_pdf/mechanical-checks.json",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "scanned_pdf/stderr.log",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "scanned_pdf/stdout.log",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "complex_table/conversion-status.json",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "complex_table/document.json",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "complex_table/document.md",
+      "status": "archived original verified; working suffix preserved and excluded from commit"
+    },
+    {
+      "file": "complex_table/mechanical-checks.json",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "complex_table/stderr.log",
+      "status": "original hash unchanged"
+    },
+    {
+      "file": "complex_table/stdout.log",
+      "status": "original hash unchanged"
+    }
+  ],
+  "snapshots_verified": 8,
+  "summary": {
+    "正确": 6,
+    "部分正确": 2,
+    "错误": 1,
+    "结构未表达": 1
+  },
+  "selected_exploration": "Markdown/JSON representation; user selection and summary recorded",
+  "mainline_and_exploration": "completed",
+  "not_verified": [
+    "fresh-machine reproduction",
+    "formula enrichment comparison",
+    "actual study hours",
+    "personal self-assessment",
+    "meeting rehearsal"
+  ],
+  "scope": "Evidence consistency only; no parsing rerun or original output edits"
+}
