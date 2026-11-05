@@ -5,7 +5,7 @@ Q03,digital_pdf,待核验,,,
 Q04,scanned_pdf,待核验,,,
 Q05,scanned_pdf,待核验,,,
 Q06,complex_table,网格及两处合并已核验；其余待核验,complex_table/document.json: tables[0].data; table_cells[0] and table_cells[3]; reports/table-structure-view.json,本人确认7行6列，第二季度跨2列；在区分方向的提示后确认“上下延伸为纵向合并”，理解类别跨2行、占1列。,已核验网格、第二季度横向跨2列、类别纵向跨2行。合并方向经Codex解释后由本人确认，不记为最初独立答对；其余合并范围仍待核验。
-Q07,complex_table,Markdown及JSON同行已核验；列归属待核验,"complex_table/document.md:7,9; archived original commit efb2eb1",本人确认Markdown中纸张第二季度数量12、金额60的行列表头对应；随后读取JSON，确认纸张（包）、12、60的start_row_offset_idx均为2，属于同一行。,Markdown对应及JSON同行关系已由本人核验；JSON数值列与数量/金额子表头、第二季度跨列范围的对应待核验。Markdown工作区末尾附加文字不作为模型结果，见reports/markdown-edit-note.md。
+Q07,complex_table,正确,"complex_table/document.md:7,9 (original commit efb2eb1); complex_table/document.json: tables[0].data.table_cells[3,6,7,9,12,13]; reports/table-structure-view.json",本人确认Markdown中纸张第二季度数量12、金额60的行列表头对应；JSON中纸张（包）、12、60起始行索引均为2；12和60的起始列索引分别为4和5，分别对应数量和金额。,依据本人分步观察，已核验纸张—第二季度—数量12/金额60的关系，不只是数字出现。仅判本项正确，不推广为整表正确。Markdown末尾工作区附加文字未作为模型结果提交。
 Q08,complex_table,待核验,,,
 Q09,complex_table,待核验,,,
 Q10,digital_pdf,待核验,,,

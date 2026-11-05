@@ -1,6 +1,6 @@
 # Week 06｜Docling 文档解析 Pipeline
 
-状态（2026-11-05）：本人已亲自执行首轮解析，三份 PDF 均 completed、exit=0；原始 Markdown/JSON、日志与快照保存在 [本轮目录](runs/baseline-20261105T152012-076969/)。Codex 已核对 18 个输出文件、8 份快照及三份输入的哈希，见 [完整性检查](evidence/baseline-integrity.json)。Q07 的 Markdown 对应已由本人确认，其 JSON 部分和其余 9 项仍待核验；执行成功不代表解析结构正确。
+状态（2026-11-05）：本人已亲自执行首轮解析，三份 PDF 均 completed、exit=0；原始 Markdown/JSON、日志与快照保存在 [本轮目录](runs/baseline-20261105T152012-076969/)。Codex 已核对 18 个输出文件、8 份快照及三份输入的哈希，见 [完整性检查](evidence/baseline-integrity.json)。Q07 的 Markdown 与 JSON 数值对应已由本人核验；Q06 已核验网格及两处合并，其余检查继续进行；执行成功不代表解析结构正确。
 
 课程依据：[第六周主线](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/#week-6docling-pipeline)、[学习记录模板](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/11_Learning_Log_Template/)。实现前核对 [Docling 安装说明](https://docling-project.github.io/docling/getting_started/installation/) 与 [Quickstart](https://docling-project.github.io/docling/getting_started/quickstart/)，以实际安装版本为准。
 
