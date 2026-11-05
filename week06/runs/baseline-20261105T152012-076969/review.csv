@@ -5,7 +5,7 @@ Q03,digital_pdf,待核验,,,
 Q04,scanned_pdf,待核验,,,
 Q05,scanned_pdf,待核验,,,
 Q06,complex_table,待核验,,,
-Q07,complex_table,待核验,,,
+Q07,complex_table,Markdown已核验；JSON待核验,"complex_table/document.md:7,9; archived original commit efb2eb1",本人确认数量12、金额60，依据材料/纸张（包）所在行与第二季度-数量/第二季度-金额（元）两列；Markdown让对应关系明确。,本次只确认Markdown中的对应；JSON结构和合并范围未由本人核验。工作区Markdown末尾另有Pipeline附加文字，表头及纸张行未变；见markdown-edit-note.md。
 Q08,complex_table,待核验,,,
 Q09,complex_table,待核验,,,
 Q10,digital_pdf,待核验,,,

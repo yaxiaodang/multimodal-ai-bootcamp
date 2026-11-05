@@ -1,6 +1,6 @@
 # Week 06｜Docling 文档解析 Pipeline
 
-状态（2026-11-05）：本人已亲自执行首轮解析，三份 PDF 均 completed、exit=0；原始 Markdown/JSON、日志与快照保存在 [本轮目录](runs/baseline-20261105T152012-076969/)。Codex 已核对 18 个输出文件、8 份快照及三份输入的哈希，见 [完整性检查](evidence/baseline-integrity.json)。10 项内容/结构检查仍待本人完成；执行成功不代表解析结构正确。
+状态（2026-11-05）：本人已亲自执行首轮解析，三份 PDF 均 completed、exit=0；原始 Markdown/JSON、日志与快照保存在 [本轮目录](runs/baseline-20261105T152012-076969/)。Codex 已核对 18 个输出文件、8 份快照及三份输入的哈希，见 [完整性检查](evidence/baseline-integrity.json)。Q07 的 Markdown 对应已由本人确认，其 JSON 部分和其余 9 项仍待核验；执行成功不代表解析结构正确。
 
 课程依据：[第六周主线](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/#week-6docling-pipeline)、[学习记录模板](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/11_Learning_Log_Template/)。实现前核对 [Docling 安装说明](https://docling-project.github.io/docling/getting_started/installation/) 与 [Quickstart](https://docling-project.github.io/docling/getting_started/quickstart/)，以实际安装版本为准。
 
@@ -58,7 +58,7 @@ Docling 解析：利用 PDF 文字或 OCR 获取文字，识别版面与表格�
 
 首轮命令已由本人执行，无需重复。耗时：数字页 18.987 秒、扫描件 92.008 秒、复杂表格 26.4093 秒，均包含模型加载，不作为纯推理速度对比或学习时长。
 
-先打开 [复杂表格原页](../week05/samples/previews/complex_table.png) 和 [本轮原始 Markdown](runs/baseline-20261105T152012-076969/complex_table/document.md)，检查 Q07：从项目行、季度和数量/金额列确定纸张第二季度的两项值。本人在对话中给出判断与依据，由 Codex 归档；随后再查看 JSON 的单元格关系及合并范围。当前不预填本人判断。
+本人已确认 Q07 的 Markdown 对应：纸张第二季度数量 12、金额 60，依据项目行与季度下的数量/金额列。接下来查看 [JSON 字段阅读副本](reports/table-structure-view.json)，核对行列总数、单元格起止索引与合并范围；副本仅解码和摘录原始字段，不代表本人已判断 JSON 正确。工作区 Markdown 末尾有附加文字，保留改动并记录于 [变化说明](reports/markdown-edit-note.md)，原始版本仍在 efb2eb1。
 
 以下命令保留供复现；本轮已运行：
 

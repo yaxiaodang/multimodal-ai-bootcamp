@@ -1,0 +1,80 @@
+{
+  "purpose": "Decoded reading view, values copied without semantic grading; original JSON unchanged",
+  "source": "week06/runs/baseline-20261105T152012-076969/complex_table/document.json",
+  "source_sha256": "feb5e63565a5bffd7a882ae5c49f0081fdd4b5d1f7bda559b3e1756f1aff2788",
+  "table_path": "tables[0].data",
+  "num_rows": 7,
+  "num_cols": 6,
+  "cells": [
+    {
+      "source_path": "tables[0].data.table_cells[0]",
+      "text": "类别",
+      "start_row_offset_idx": 0,
+      "end_row_offset_idx": 2,
+      "start_col_offset_idx": 0,
+      "end_col_offset_idx": 1,
+      "row_span": 2,
+      "col_span": 1
+    },
+    {
+      "source_path": "tables[0].data.table_cells[3]",
+      "text": "第二季度",
+      "start_row_offset_idx": 0,
+      "end_row_offset_idx": 1,
+      "start_col_offset_idx": 4,
+      "end_col_offset_idx": 6,
+      "row_span": 1,
+      "col_span": 2
+    },
+    {
+      "source_path": "tables[0].data.table_cells[6]",
+      "text": "数量",
+      "start_row_offset_idx": 1,
+      "end_row_offset_idx": 2,
+      "start_col_offset_idx": 4,
+      "end_col_offset_idx": 5,
+      "row_span": 1,
+      "col_span": 1
+    },
+    {
+      "source_path": "tables[0].data.table_cells[7]",
+      "text": "金额（元）",
+      "start_row_offset_idx": 1,
+      "end_row_offset_idx": 2,
+      "start_col_offset_idx": 5,
+      "end_col_offset_idx": 6,
+      "row_span": 1,
+      "col_span": 1
+    },
+    {
+      "source_path": "tables[0].data.table_cells[9]",
+      "text": "纸张（包）",
+      "start_row_offset_idx": 2,
+      "end_row_offset_idx": 3,
+      "start_col_offset_idx": 1,
+      "end_col_offset_idx": 2,
+      "row_span": 1,
+      "col_span": 1
+    },
+    {
+      "source_path": "tables[0].data.table_cells[12]",
+      "text": "12",
+      "start_row_offset_idx": 2,
+      "end_row_offset_idx": 3,
+      "start_col_offset_idx": 4,
+      "end_col_offset_idx": 5,
+      "row_span": 1,
+      "col_span": 1
+    },
+    {
+      "source_path": "tables[0].data.table_cells[13]",
+      "text": "60",
+      "start_row_offset_idx": 2,
+      "end_row_offset_idx": 3,
+      "start_col_offset_idx": 5,
+      "end_col_offset_idx": 6,
+      "row_span": 1,
+      "col_span": 1
+    }
+  ]
+}
