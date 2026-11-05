@@ -1,0 +1,28 @@
+{
+  "purpose": "Decoded reading view; original JSON unchanged; user verification pending",
+  "source": "week06/runs/baseline-20261105T152012-076969/complex_table/document.json",
+  "source_sha256": "feb5e63565a5bffd7a882ae5c49f0081fdd4b5d1f7bda559b3e1756f1aff2788",
+  "footers": [
+    {
+      "source_path": "texts[6]",
+      "label": "page_footer",
+      "content_layer": "furniture",
+      "text": "自制教学材料 · 内容与数据均为虚构 · 版本 1.0"
+    },
+    {
+      "source_path": "texts[7]",
+      "label": "page_footer",
+      "content_layer": "furniture",
+      "text": "complex_table / 1"
+    }
+  ],
+  "codex_source_inspection": {
+    "package": "docling-core==2.105.0",
+    "method": "DoclingDocument.export_to_markdown",
+    "default_content_layers": [
+      "body"
+    ],
+    "actual_footer_content_layer": "furniture",
+    "scope": "Read-only inspection; no conversion rerun, no export options changed"
+  }
+}
