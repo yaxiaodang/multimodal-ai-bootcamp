@@ -53,3 +53,7 @@ Codex 据此记录 Q07 的 Markdown 对应已核验；JSON 的单元格结构与
 本人回答：“相对顺序保留，页脚没有保留”，记录为Markdown中主标题→表格→填表说明顺序保留、页脚未显示。
 
 Codex补充检查发现，原始JSON的texts[6]与texts[7]仍保留“自制教学材料 · 内容与数据均为虚构 · 版本 1.0”和“complex_table / 1”，标签page_footer，内容层furniture。本机docling-core 2.105.0的export_to_markdown默认内容层为body，因而本轮Markdown未显示页脚不等于解析未识别页脚。已提供带来源和哈希的footer-view.json，由本人继续确认。该JSON观察和源码解释由Codex完成，不冒充本人核验，不重跑或修改原始导出。
+
+## 10. 页脚原因确认与节奏调整
+
+本人回答“成功解析，出现在Markdown导出阶段”，已确认JSON保留页脚、Markdown导出范围导致未显示。Q09按预先要求仍记为部分正确，不将解释清楚原因等同于Markdown完整保留页脚。本人要求加快进度，改为六项批量核验；不再按单个字段逐次追问。自主探索建议选表示方向复用现有输出，尚待本人选择与总结。
