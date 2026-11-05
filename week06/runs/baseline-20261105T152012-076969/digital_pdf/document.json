@@ -1,0 +1,604 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.10.0",
+  "name": "digital_pdf",
+  "origin": {
+    "mimetype": "application/pdf",
+    "binary_hash": 8630668232128577132,
+    "filename": "digital_pdf.pdf"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [
+      {
+        "$ref": "#/texts/0"
+      },
+      {
+        "$ref": "#/texts/1"
+      },
+      {
+        "$ref": "#/texts/2"
+      },
+      {
+        "$ref": "#/texts/3"
+      },
+      {
+        "$ref": "#/texts/4"
+      },
+      {
+        "$ref": "#/texts/5"
+      },
+      {
+        "$ref": "#/texts/6"
+      },
+      {
+        "$ref": "#/texts/7"
+      },
+      {
+        "$ref": "#/pictures/0"
+      },
+      {
+        "$ref": "#/groups/0"
+      },
+      {
+        "$ref": "#/texts/12"
+      },
+      {
+        "$ref": "#/texts/13"
+      },
+      {
+        "$ref": "#/texts/14"
+      },
+      {
+        "$ref": "#/texts/15"
+      },
+      {
+        "$ref": "#/texts/16"
+      }
+    ],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/11"
+        }
+      ],
+      "content_layer": "body",
+      "name": "group",
+      "label": "key_value_area"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 48.0,
+            "t": 804.9015198000001,
+            "r": 201.6753,
+            "b": 785.217786144643,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            8
+          ]
+        }
+      ],
+      "orig": "\u7b2c\u4e00\u7ae0 \u5b9e\u9a8c\u65b9\u6cd5",
+      "text": "\u7b2c\u4e00\u7ae0 \u5b9e\u9a8c\u65b9\u6cd5",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 48.0,
+            "t": 772.4874560000001,
+            "r": 196.80863199999996,
+            "b": 762.4874560000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            19
+          ]
+        }
+      ],
+      "orig": "\u6587\u6863\u5904\u7406\u5b9e\u9a8c\u8bf4\u660e / \u6559\u5b66\u7248\u672c 1.0",
+      "text": "\u6587\u6863\u5904\u7406\u5b9e\u9a8c\u8bf4\u660e / \u6559\u5b66\u7248\u672c 1.0"
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 48.0,
+            "t": 722.7530818,
+            "r": 543.0,
+            "b": 692.4425546471939,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            51
+          ]
+        }
+      ],
+      "orig": "\u672c\u5b9e\u9a8c\u89c2\u5bdf\u6587\u6863\u5185\u5bb9\u4e0e\u7ed3\u6784\u5728\u8f6c\u6362\u8fc7\u7a0b\u4e2d\u5982\u4f55\u4fdd\u7559\u3002\u9875\u9762\u91c7\u7528\u53cc\u680f\u7ec4\u7ec7\uff0c\u8bf7\u7ed3\u5408\u6bb5\u843d\u8bed\u4e49\u7406\u89e3\u5404\u533a\u57df\u4e4b \u95f4\u7684\u8054\u7cfb\u3002",
+      "text": "\u672c\u5b9e\u9a8c\u89c2\u5bdf\u6587\u6863\u5185\u5bb9\u4e0e\u7ed3\u6784\u5728\u8f6c\u6362\u8fc7\u7a0b\u4e2d\u5982\u4f55\u4fdd\u7559\u3002\u9875\u9762\u91c7\u7528\u53cc\u680f\u7ec4\u7ec7\uff0c\u8bf7\u7ed3\u5408\u6bb5\u843d\u8bed\u4e49\u7406\u89e3\u5404\u533a\u57df\u4e4b \u95f4\u7684\u8054\u7cfb\u3002"
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 48.0,
+            "t": 649.286284,
+            "r": 151.62305,
+            "b": 634.286284,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            9
+          ]
+        }
+      ],
+      "orig": "1.1 \u6750\u6599\u4e0e\u8f93\u5165",
+      "text": "1.1 \u6750\u6599\u4e0e\u8f93\u5165",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 48.0,
+            "t": 613.7530818,
+            "r": 268.0,
+            "b": 563.4425546471939,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            50
+          ]
+        }
+      ],
+      "orig": "\u6559\u5b66\u5c0f\u7ec4\u51c6\u5907\u4e09\u7c7b\u6750\u6599\uff1a\u6570\u5b57\u6587\u6863\u3001\u6a21\u62df\u626b\u63cf \u4ef6\u4e0e\u590d\u6742\u8868\u683c\u6587\u6863\u3002\u6240\u6709\u6570\u636e\u5747\u4e3a\u81ea\u5236\uff0c\u4e0d\u5305 \u542b\u771f\u5b9e\u4e2a\u4eba\u4fe1\u606f\u3002",
+      "text": "\u6559\u5b66\u5c0f\u7ec4\u51c6\u5907\u4e09\u7c7b\u6750\u6599\uff1a\u6570\u5b57\u6587\u6863\u3001\u6a21\u62df\u626b\u63cf \u4ef6\u4e0e\u590d\u6742\u8868\u683c\u6587\u6863\u3002\u6240\u6709\u6570\u636e\u5747\u4e3a\u81ea\u5236\uff0c\u4e0d\u5305 \u542b\u771f\u5b9e\u4e2a\u4eba\u4fe1\u606f\u3002"
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 48.0,
+            "t": 509.75308179999996,
+            "r": 268.0,
+            "b": 459.4425546471939,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            46
+          ]
+        }
+      ],
+      "orig": "\u6bcf\u4efd\u6750\u6599\u5148\u89c2\u5bdf\u4e00\u9875\u3002\u68c0\u67e5\u65f6\u8bb0\u5f55\u6807\u9898\u3001\u6bb5\u843d \u3001\u8868\u683c\u4e0e\u516c\u5f0f\uff1b\u9875\u9762\u6ca1\u6709\u67d0\u7c7b\u5143\u7d20\u65f6\uff0c\u4e5f\u5e94\u660e \u786e\u8bf4\u660e\u3002",
+      "text": "\u6bcf\u4efd\u6750\u6599\u5148\u89c2\u5bdf\u4e00\u9875\u3002\u68c0\u67e5\u65f6\u8bb0\u5f55\u6807\u9898\u3001\u6bb5\u843d \u3001\u8868\u683c\u4e0e\u516c\u5f0f\uff1b\u9875\u9762\u6ca1\u6709\u67d0\u7c7b\u5143\u7d20\u65f6\uff0c\u4e5f\u5e94\u660e \u786e\u8bf4\u660e\u3002"
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 48.0,
+            "t": 379.28628399999997,
+            "r": 136.62305,
+            "b": 364.28628399999997,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            8
+          ]
+        }
+      ],
+      "orig": "1.3 \u6570\u503c\u793a\u4f8b",
+      "text": "1.3 \u6570\u503c\u793a\u4f8b",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 48.0,
+            "t": 342.75308179999996,
+            "r": 455.0,
+            "b": 332.4425546471939,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            37
+          ]
+        }
+      ],
+      "orig": "\u4e0b\u5f0f\u4ec5\u7528\u4e8e\u89c2\u5bdf\u4e0a\u4e0b\u6807\u7684\u4f4d\u7f6e\u5173\u7cfb\uff0c\u5176\u4e2d\u4e24\u4e2a\u5e26\u4e0b\u6807\u7684\u53d8\u91cf\u5206\u522b\u8868\u793a\u4e24\u4e2a\u8f93\u5165\u6570\u503c\u3002",
+      "text": "\u4e0b\u5f0f\u4ec5\u7528\u4e8e\u89c2\u5bdf\u4e0a\u4e0b\u6807\u7684\u4f4d\u7f6e\u5173\u7cfb\uff0c\u5176\u4e2d\u4e24\u4e2a\u5e26\u4e0b\u6807\u7684\u53d8\u91cf\u5206\u522b\u8868\u793a\u4e24\u4e2a\u8f93\u5165\u6570\u503c\u3002"
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "$ref": "#/pictures/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 190.0,
+            "t": 281.9678,
+            "r": 245.119,
+            "b": 258.4058,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            7
+          ]
+        }
+      ],
+      "orig": "E = x 1",
+      "text": "E = x 1"
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "$ref": "#/pictures/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 245.119,
+            "t": 285.5058,
+            "r": 292.9030000000001,
+            "b": 258.4058,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            7
+          ]
+        }
+      ],
+      "orig": "2 + x 2",
+      "text": "2 + x 2"
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "$ref": "#/pictures/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 292.9030000000001,
+            "t": 285.5058,
+            "r": 299.5750000000001,
+            "b": 274.4058,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "2",
+      "text": "2"
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 48.0,
+            "t": 216.75308180000002,
+            "r": 466.0,
+            "b": 206.4425546471939,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            38
+          ]
+        }
+      ],
+      "orig": "\u8bb0\u5f55\u8bf4\u660e\uff1a\u4e0d\u8981\u4ec5\u51ed\u6587\u5b57\u662f\u5426\u51fa\u73b0\u5224\u65ad\u5b8c\u6574\u6027\uff0c\u8fd8\u5e94\u6838\u5bf9\u6587\u5b57\u5728\u539f\u9875\u4e2d\u7684\u89d2\u8272\u4e0e\u5173\u7cfb\u3002",
+      "text": "\u8bb0\u5f55\u8bf4\u660e\uff1a\u4e0d\u8981\u4ec5\u51ed\u6587\u5b57\u662f\u5426\u51fa\u73b0\u5224\u65ad\u5b8c\u6574\u6027\uff0c\u8fd8\u5e94\u6838\u5bf9\u6587\u5b57\u5728\u539f\u9875\u4e2d\u7684\u89d2\u8272\u4e0e\u5173\u7cfb\u3002"
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 320.0,
+            "t": 649.286284,
+            "r": 423.623,
+            "b": 634.286284,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            9
+          ]
+        }
+      ],
+      "orig": "1.2 \u5904\u7406\u4e0e\u6838\u5bf9",
+      "text": "1.2 \u5904\u7406\u4e0e\u6838\u5bf9",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 320.0,
+            "t": 613.7530818,
+            "r": 540.0,
+            "b": 583.4425546471939,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            39
+          ]
+        }
+      ],
+      "orig": "\u5148\u6839\u636e\u539f\u59cb\u9875\u9762\u8bb0\u5f55\u9884\u671f\uff0c\u518d\u8fd0\u884c\u516c\u5f00\u5de5\u5177\u3002 \u5de5\u5177\u7ed3\u679c\u4fdd\u7559\u539f\u6837\uff0c\u4eba\u5de5\u8bc4\u4ef7\u53e6\u884c\u4fdd\u5b58\u3002",
+      "text": "\u5148\u6839\u636e\u539f\u59cb\u9875\u9762\u8bb0\u5f55\u9884\u671f\uff0c\u518d\u8fd0\u884c\u516c\u5f00\u5de5\u5177\u3002 \u5de5\u5177\u7ed3\u679c\u4fdd\u7559\u539f\u6837\uff0c\u4eba\u5de5\u8bc4\u4ef7\u53e6\u884c\u4fdd\u5b58\u3002"
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 320.0,
+            "t": 509.75308179999996,
+            "r": 540.0,
+            "b": 459.4425546471939,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            44
+          ]
+        }
+      ],
+      "orig": "\u6bd4\u8f83\u65f6\u5206\u522b\u68c0\u67e5\u6587\u5b57\u5185\u5bb9\u3001\u533a\u57df\u5173\u7cfb\u4e0e\u9605\u8bfb\u987a \u5e8f\u3002\u7a0b\u5e8f\u6b63\u5e38\u7ed3\u675f\uff0c\u5e76\u4e0d\u8868\u793a\u6240\u6709\u7ed3\u6784\u90fd\u5df2\u4fdd \u7559\u3002",
+      "text": "\u6bd4\u8f83\u65f6\u5206\u522b\u68c0\u67e5\u6587\u5b57\u5185\u5bb9\u3001\u533a\u57df\u5173\u7cfb\u4e0e\u9605\u8bfb\u987a \u5e8f\u3002\u7a0b\u5e8f\u6b63\u5e38\u7ed3\u675f\uff0c\u5e76\u4e0d\u8868\u793a\u6240\u6709\u7ed3\u6784\u90fd\u5df2\u4fdd \u7559\u3002"
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 48.0,
+            "t": 44.83789039999999,
+            "r": 235.33882880000002,
+            "b": 35.83789039999999,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            27
+          ]
+        }
+      ],
+      "orig": "\u81ea\u5236\u6559\u5b66\u6750\u6599 \u00b7 \u5185\u5bb9\u4e0e\u6570\u636e\u5747\u4e3a\u865a\u6784 \u00b7 \u7248\u672c 1.0",
+      "text": "\u81ea\u5236\u6559\u5b66\u6750\u6599 \u00b7 \u5185\u5bb9\u4e0e\u6570\u636e\u5747\u4e3a\u865a\u6784 \u00b7 \u7248\u672c 1.0"
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 415.2756,
+            "t": 44.078124799999955,
+            "r": 475.06856799999997,
+            "b": 36.078124799999955,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            15
+          ]
+        }
+      ],
+      "orig": "digital_pdf / 1",
+      "text": "digital_pdf / 1"
+    }
+  ],
+  "pictures": [
+    {
+      "self_ref": "#/pictures/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/8"
+        },
+        {
+          "$ref": "#/texts/9"
+        },
+        {
+          "$ref": "#/texts/10"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 190.63905638445144,
+            "t": 286.4978989641131,
+            "r": 299.17054171671003,
+            "b": 260.2181357547714,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    }
+  ],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {
+    "1": {
+      "size": {
+        "width": 595.2756,
+        "height": 841.8898
+      },
+      "page_no": 1
+    }
+  }
+}

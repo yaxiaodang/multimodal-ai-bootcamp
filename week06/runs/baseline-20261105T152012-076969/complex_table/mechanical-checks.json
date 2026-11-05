@@ -1,0 +1,30 @@
+{
+  "scope": "file/schema checks only; not a benchmark or semantic judgment",
+  "checks": [
+    {
+      "rule": "document.md exists and is nonempty",
+      "passed": true
+    },
+    {
+      "rule": "document.json exists and is nonempty",
+      "passed": true
+    },
+    {
+      "rule": "JSON validates as DoclingDocument",
+      "passed": true
+    },
+    {
+      "rule": "page count matches input",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "page_count": 1,
+    "text_element_count": 8,
+    "heading_role_count": 2,
+    "table_count": 1,
+    "body_child_count": 9,
+    "note": "Counts only; title hierarchy, paragraphs, reading order and cells require user review."
+  },
+  "passed": true
+}

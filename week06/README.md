@@ -1,6 +1,6 @@
 # Week 06｜Docling 文档解析 Pipeline
 
-状态（2026-11-01）：本人已说明数字出现不代表季度与数量/金额对应正确，见 [概念记录](docs/learning-notes.md)。Codex 已完成独立 CPU 环境、固定依赖、模型下载及本机离线加载验证、解析入口与五项工程检查；首轮解析及内容核验待本人亲自执行，当前无本周 PDF 解析结果。
+状态（2026-11-05）：本人已亲自执行首轮解析，三份 PDF 均 completed、exit=0；原始 Markdown/JSON、日志与快照保存在 [本轮目录](runs/baseline-20261105T152012-076969/)。Codex 已核对 18 个输出文件、8 份快照及三份输入的哈希，见 [完整性检查](evidence/baseline-integrity.json)。10 项内容/结构检查仍待本人完成；执行成功不代表解析结构正确。
 
 课程依据：[第六周主线](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/#week-6docling-pipeline)、[学习记录模板](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/11_Learning_Log_Template/)。实现前核对 [Docling 安装说明](https://docling-project.github.io/docling/getting_started/installation/) 与 [Quickstart](https://docling-project.github.io/docling/getting_started/quickstart/)，以实际安装版本为准。
 
@@ -54,7 +54,13 @@ Docling 解析：利用 PDF 文字或 OCR 获取文字，识别版面与表格�
 - [解析配置](configs/baseline.json)、[锁定依赖](requirements-lock.txt)、[解析入口](scripts/run_pipeline.py)：CPU、2 个线程，开启中文 OCR 和准确表格解析，公式增强关闭。
 - [连续学习记录](../learning-log.md)：在 Week 06 节追加实际进展。
 
-## 当前步骤：本人执行首轮解析
+## 当前步骤：本人核验首轮结果
+
+首轮命令已由本人执行，无需重复。耗时：数字页 18.987 秒、扫描件 92.008 秒、复杂表格 26.4093 秒，均包含模型加载，不作为纯推理速度对比或学习时长。
+
+先打开 [复杂表格原页](../week05/samples/previews/complex_table.png) 和 [本轮原始 Markdown](runs/baseline-20261105T152012-076969/complex_table/document.md)，检查 Q07：从项目行、季度和数量/金额列确定纸张第二季度的两项值。本人在对话中给出判断与依据，由 Codex 归档；随后再查看 JSON 的单元格关系及合并范围。当前不预填本人判断。
+
+以下命令保留供复现；本轮已运行：
 
 在 VS Code 的 Ubuntu 远程终端、仓库根目录执行：
 
@@ -66,7 +72,7 @@ Docling 解析：利用 PDF 文字或 OCR 获取文字，识别版面与表格�
 
 一份处理失败会记录原因并继续其他输入，整轮返回非零退出码。即使三份均 completed，也只说明转换和文件/格式检查通过，结构正确性仍由本人判断。程序耗时包含各文档模型加载，不等于纯推理时间或学习时长。
 
-命令结束后将终端输出发到对话中，先确认原始文件位置，再分步观察；当前不用一次填写全部检查项。第一轮观察会结合 [复杂表格原页](../week05/samples/previews/complex_table.png) 与 [交接目标](../week05/docs/week06-handoff.md) 继续学习单元格关系。
+本人已提交终端输出，运行记录已核对。接下来分步观察，不用一次填写全部检查项；结合原页与 [交接目标](../week05/docs/week06-handoff.md) 学习单元格关系。
 
 准备命令 `--prepare-only` 已由 Codex 执行，校验三份输入、依赖和选项，不下载模型或解析 PDF。五项工程检查使用临时目录和故障注入；它们不是学习实验。详见 [检查日志](evidence/engineering-checks.log) 和 [离线加载记录](evidence/model-loading-check.log)。最初的 preparation.json 保留首次准备状态，当前状态以 environment.json 和本 README 为准。
 

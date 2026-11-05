@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-11-05T15:24:09.534771+08:00",
+  "run": "week06/runs/baseline-20261105T152012-076969",
+  "run_metadata_sha256": "5be6356429daff31fd0f0a5bf32f4f2f5e64c840c6b8771e70b8e283fd5bdd00",
+  "operator": "user, confirmed by terminal output in conversation",
+  "conversion_status": "3 documents completed, exit=0",
+  "document_seconds": {
+    "digital_pdf": 18.987,
+    "scanned_pdf": 92.008,
+    "complex_table": 26.4093
+  },
+  "output_files_verified": 18,
+  "snapshots_verified": 8,
+  "input_hashes_verified": 3,
+  "mechanical_checks_passed": true,
+  "semantic_reviews": "10 pending user review",
+  "original_outputs_modified": false,
+  "scope": "integrity and run status only; not a semantic quality assessment"
+}

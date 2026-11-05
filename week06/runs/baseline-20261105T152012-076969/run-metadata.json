@@ -1,0 +1,258 @@
+{
+  "status": "completed",
+  "started_at": "2026-11-05T15:20:13.514941+08:00",
+  "timezone": "Asia/Shanghai",
+  "command": [
+    "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+    "week06/scripts/run_pipeline.py"
+  ],
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "git_commit": "f5befdf5763e7a7dbb2d81f6163213a7d29a49ae",
+  "git_status": [
+    "M week01/README.md",
+    " M week02/README.md",
+    " M week03/README.md",
+    " M week04/README.md",
+    " M week05/README.md",
+    " M week05/reports/meeting-notes.md",
+    "?? week01/reports/",
+    "?? week02/reports/",
+    "?? week03/reports/",
+    "?? week04/reports/meeting-demo.ipynb",
+    "?? week04/reports/meeting-notes.md",
+    "?? week05/reports/meeting-demo.ipynb",
+    "?? week06/runs/baseline-20261105T152012-076969/"
+  ],
+  "config": {
+    "schema_version": 1,
+    "name": "docling-cpu-baseline-v1",
+    "manifest": "week06/configs/input-manifest.json",
+    "output_root": "week06/runs",
+    "device": "cpu",
+    "artifacts_path": ".cache-week06/artifacts",
+    "num_threads": 2,
+    "do_ocr": true,
+    "ocr_engine": "rapidocr",
+    "ocr_backend": "onnxruntime",
+    "ocr_languages": [
+      "ch"
+    ],
+    "force_full_page_ocr": false,
+    "do_table_structure": true,
+    "table_mode": "accurate",
+    "do_cell_matching": true,
+    "do_formula_enrichment": false,
+    "timeout_seconds_per_document": 600,
+    "references": [
+      "week05/docs/manual-expectations.md",
+      "week05/configs/evaluation-plan.json",
+      "week05/docs/week06-handoff.md",
+      "week06/docs/quality-plan.md",
+      "week06/reports/quality-review.csv"
+    ],
+    "expected_packages": {
+      "docling": "2.145.0",
+      "rapidocr": "3.10.0",
+      "onnxruntime": "1.23.2",
+      "torch": "2.14.0+cpu",
+      "torchvision": "0.29.1+cpu"
+    },
+    "layout_revision": "8f39ad3c0b4c58e9c2d2c84a38465abf757272d8"
+  },
+  "snapshots": [
+    {
+      "source": "week06/configs/baseline.json",
+      "sha256": "a8a2eb70e9323244f9dc811a31fd01dbddf100f678fc272298eba2128cab4ea5"
+    },
+    {
+      "source": "week06/configs/input-manifest.json",
+      "sha256": "b12dd2f9f818c157e773c7056f38327d9c69562108267108d6b3fea9490e5662"
+    },
+    {
+      "source": "week06/scripts/run_pipeline.py",
+      "sha256": "fa761ef62c4514d864186f70dab0d34bb18d44a29437c7b4c3d6f4483d1a7396"
+    },
+    {
+      "source": "week05/docs/manual-expectations.md",
+      "sha256": "125bc8c723f107dfffeda3ac22e17b308ef9deaae0ae098dc0990552d2a17200"
+    },
+    {
+      "source": "week05/configs/evaluation-plan.json",
+      "sha256": "ea52f171dfc497cfb5935cdd913bdbe421645162bf72b399a2a47aa34defe123"
+    },
+    {
+      "source": "week05/docs/week06-handoff.md",
+      "sha256": "a334472128b1032d9434239a9be1eb0c3fe9b2b504dfb9af88c4445e9308a88e"
+    },
+    {
+      "source": "week06/docs/quality-plan.md",
+      "sha256": "477b1a66711e245d17e0c894b686eda99e5864820eba0f8cd5d476cda3f0f136"
+    },
+    {
+      "source": "week06/reports/quality-review.csv",
+      "sha256": "16b7e9b754d31345c5d454c1f542baef85ea0b51040f4cccfe847830a4fd8407"
+    }
+  ],
+  "documents": [
+    {
+      "id": "digital_pdf",
+      "input": "week05/samples/digital_pdf.pdf",
+      "input_sha256": "ea2d689402fb39152060cca87eac4174bae732826bd0de3677c64b07a645be6c",
+      "started_at": "2026-11-05T15:20:13.530856+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/configs/baseline.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week05/samples/digital_pdf.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/runs/baseline-20261105T152012-076969/digital_pdf"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-05T15:20:32.518414+08:00",
+      "elapsed_seconds": 18.987,
+      "output_files": [
+        {
+          "file": "digital_pdf/conversion-status.json",
+          "sha256": "44526207250830e3d587d52836099e5c8da9fc27b235354388a0e26db17f42b6",
+          "bytes": 113
+        },
+        {
+          "file": "digital_pdf/document.json",
+          "sha256": "3edf72c7a6c2a49e576c3c582257fcd15142cdebd6205059a760a5e8fe805ad2",
+          "bytes": 16078
+        },
+        {
+          "file": "digital_pdf/document.md",
+          "sha256": "ac94822dbe89852cf66c0e7768484aa41cbd6f0ffd6169a00fbe09c69eabef98",
+          "bytes": 1068
+        },
+        {
+          "file": "digital_pdf/mechanical-checks.json",
+          "sha256": "1c897cb6a61c86e5a08e24098a1b85fcec269e74f03cf8ec6eb88b540d2b3047",
+          "bytes": 706
+        },
+        {
+          "file": "digital_pdf/stderr.log",
+          "sha256": "79546cf47eff02d102a8af258e8ce9b8d4470fe8071f18d8061e4a929b72086f",
+          "bytes": 228
+        },
+        {
+          "file": "digital_pdf/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "scanned_pdf",
+      "input": "week05/samples/scanned_pdf.pdf",
+      "input_sha256": "0d5f5897edbedc71aa2156648e949d8183badf63a6f5340872bbb2228877d5f6",
+      "started_at": "2026-11-05T15:20:32.523552+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/configs/baseline.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week05/samples/scanned_pdf.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/runs/baseline-20261105T152012-076969/scanned_pdf"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-05T15:22:04.532187+08:00",
+      "elapsed_seconds": 92.008,
+      "output_files": [
+        {
+          "file": "scanned_pdf/conversion-status.json",
+          "sha256": "c74952e0997a6bd2ffa3e7f3ad105989a6fccbc56189be1e930dfa3af5e9c7ab",
+          "bytes": 113
+        },
+        {
+          "file": "scanned_pdf/document.json",
+          "sha256": "ae2b4bf0008ca3596c856dc6c6c50a2052ca734ae5221f125bcab3b7a5779248",
+          "bytes": 31991
+        },
+        {
+          "file": "scanned_pdf/document.md",
+          "sha256": "291be26252128bf30a676f4f915eacad918b78085b906648d0680eed4faeb8ed",
+          "bytes": 758
+        },
+        {
+          "file": "scanned_pdf/mechanical-checks.json",
+          "sha256": "41670c49e535f30666db7a03f01a2960cdbc5eba4e8f2c8077dcfaed43348e99",
+          "bytes": 706
+        },
+        {
+          "file": "scanned_pdf/stderr.log",
+          "sha256": "e23b9350219219b7e13a3cc94eef57be5a03cb5210060e3a880d85563492ce1f",
+          "bytes": 148
+        },
+        {
+          "file": "scanned_pdf/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "complex_table",
+      "input": "week05/samples/complex_table.pdf",
+      "input_sha256": "9e3511d999cf970561ab547977fde011e456bf99861a71d37817a9e660f78af2",
+      "started_at": "2026-11-05T15:22:04.535443+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/configs/baseline.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week05/samples/complex_table.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/runs/baseline-20261105T152012-076969/complex_table"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-05T15:22:30.945105+08:00",
+      "elapsed_seconds": 26.4093,
+      "output_files": [
+        {
+          "file": "complex_table/conversion-status.json",
+          "sha256": "421062f4cdd5cf3ce563b4c6eb6b5fe641ac8d546dca6c649ff6aecaec83f925",
+          "bytes": 114
+        },
+        {
+          "file": "complex_table/document.json",
+          "sha256": "feb5e63565a5bffd7a882ae5c49f0081fdd4b5d1f7bda559b3e1756f1aff2788",
+          "bytes": 58057
+        },
+        {
+          "file": "complex_table/document.md",
+          "sha256": "4c9cf8b6825df4f93f50e82e546771b8a0f7ef3b4ed9523f6e8bd64c40096baa",
+          "bytes": 1163
+        },
+        {
+          "file": "complex_table/mechanical-checks.json",
+          "sha256": "250a6abebbbb7f3c7293c58517c2a10d1d1e0c57d890ac64547a94e92660fcb4",
+          "bytes": 704
+        },
+        {
+          "file": "complex_table/stderr.log",
+          "sha256": "df8629b08b6cbef1392f4b10b7a903042d0dd465a43b70be501cc3bfb21f9e13",
+          "bytes": 148
+        },
+        {
+          "file": "complex_table/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "evaluation": "pending_user_review; no semantic score",
+  "timing_note": "Each PDF uses a fresh worker; elapsed includes model loading and any uncached downloads, not pure inference time.",
+  "model_preparation_sha256": "2567f630ca7eb0aa6a518e26419cab31f39e50e4419471882e9d250922aeb6ef",
+  "finished_at": "2026-11-05T15:22:30.947749+08:00"
+}
