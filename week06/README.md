@@ -4,6 +4,8 @@
 
 课程依据：[第六周主线](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/#week-6docling-pipeline)、[学习记录模板](https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/11_Learning_Log_Template/)。实现前核对 [Docling 安装说明](https://docling-project.github.io/docling/getting_started/installation/) 与 [Quickstart](https://docling-project.github.io/docling/getting_started/quickstart/)，以实际安装版本为准。
 
+例会展示入口：[精简 Notebook](reports/meeting-demo.ipynb)，配套 [约4分钟讲稿](reports/meeting-notes.md)。参考第四周样式，嵌入复杂表格和数字PDF原页，五个只读代码单元的真实输出已保存。直接打开即可查看；如需重跑展示代码，选择项目 `.venv` 内核并保留完整仓库，不需加载Docling或重新解析PDF。文档与图片嵌入检查见 [验证记录](evidence/meeting-notebook-check.json)。实际本人演练尚未记录。
+
 ## 主线任务
 
 沿用第五周的数字 PDF、扫描件、复杂表格各一份，用 Docling 导出未经修改的 Markdown 和 JSON，建立有输入校验、配置、日志、耗时与失败退出码的命令行 Pipeline，再由本人核对结构是否正确。
@@ -60,7 +62,7 @@ Docling 解析：利用 PDF 文字或 OCR 获取文字，识别版面与表格�
 
 - [报告](reports/report.md)：三文档差异、10项判断、失败案例及Markdown/JSON表示比较。
 - [核心知识](docs/core-knowledge.md)：数据流、任务边界、表格关系、导出范围、质量与复现证据。
-- [例会草稿](reports/meeting-notes.md)：一条命令、成功与失败案例及下一步，实际演练尚未记录。
+- [例会 Notebook](reports/meeting-demo.ipynb) 与 [配套讲稿](reports/meeting-notes.md)：一条命令、成功与失败案例、表示差异及下一步；图片嵌入、代码输出已保存，实际本人演练尚未记录。
 - [分步回答](docs/learning-notes.md) 与 [阶段日志归档](docs/annotation-history.md)：保留提示、更正及过程，不改写为全部独立答对。
 
 本人明确选择表示方向并总结Markdown便于人读、JSON明确结构；本轮复用已有两种导出，不新增推理、不声称预注册消融，未比较DocTags或测试下游任务。

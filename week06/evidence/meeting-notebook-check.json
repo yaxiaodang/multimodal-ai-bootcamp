@@ -1,0 +1,21 @@
+{
+  "notebook": "week06/reports/meeting-demo.ipynb",
+  "reference": "week04/reports/meeting-demo.ipynb",
+  "cells": 11,
+  "code_cells": 5,
+  "executed_without_errors": true,
+  "embedded_images": [
+    {
+      "name": "complex_table.png",
+      "sha256": "f36559cefc4cb051b3cac01bdd2a37962392b51ad8a7c9c24ac8e79e8dff0347"
+    },
+    {
+      "name": "digital_pdf.png",
+      "sha256": "c4b8d6a4362147ffb08628d7c690de3c9d3e2ebfa17c8790d2abb85fcb097a00"
+    }
+  ],
+  "html_embedded_images_verified": true,
+  "scope": "Read-only historical evidence; no model loading, PDF parsing or original output modifications",
+  "full_repository_required_for_rerun": true,
+  "presentation_rehearsal_by_user": "not recorded"
+}

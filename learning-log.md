@@ -634,7 +634,7 @@
 - 未理解项：本人本轮未再提出新问题，不能据此推断已掌握全部实现细节。
 
 ### 例会前准备
-- 成果：[报告](week06/reports/report.md)、[核心知识](week06/docs/core-knowledge.md)、[展示草稿](week06/reports/meeting-notes.md)已准备；实际演练未记录。
+- 成果：[报告](week06/reports/report.md)、[核心知识](week06/docs/core-knowledge.md)、[例会Notebook](week06/reports/meeting-demo.ipynb)及[约4分钟讲稿](week06/reports/meeting-notes.md)已准备。Notebook参考第四周样式，嵌入两张原页、保存五个只读代码单元的实际输出；未重跑模型或解析PDF。格式、输出与图片嵌入检查见[验证记录](week06/evidence/meeting-notebook-check.json)；实际本人演练未记录。
 - 成功证据：复杂表格7×6、季度/类别合并及纸张第二季度12/60的对应。
 - 失败证据：数字页顺序1.1→1.3→1.2、同级标题及公式占位；页脚用作解析/导出区别的说明案例。
 - 交流问题：怎样对阅读顺序、层级和导出范围分别评价？该提问由Codex整理供展示。
