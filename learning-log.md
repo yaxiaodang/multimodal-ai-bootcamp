@@ -644,3 +644,5 @@
 - 本人确认 Q07 的 Markdown 对应：纸张第二季度数量 12、金额 60，依据项目行和季度下的数量/金额两列，并表示 Markdown 让对应关系明确。
 - Q07 的 JSON 部分、Q06 的行列与合并范围及其余检查仍待本人核验；不将此确认写成整表正确。当前 9 项完全待核验，1 项仅 Markdown 部分已确认。
 - Codex 已同步两份 review.csv，准备带原始哈希与字段定位的 [JSON 阅读副本](week06/reports/table-structure-view.json)。发现原始 Markdown 工作区末尾新增 Pipeline，保留改动并记录于 [说明](week06/reports/markdown-edit-note.md)；已归档原始版本不改写。
+
+- JSON 核验进展：本人正确读取7行6列及第二季度跨2列，将类别误述为跨2列；Codex已解释类别为row_span=2、col_span=1（跨2行、占1列），待本人确认理解。当前Q06部分核验、Q07仅Markdown核验，其余8项待核验。

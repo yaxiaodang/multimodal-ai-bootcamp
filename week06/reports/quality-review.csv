@@ -4,7 +4,7 @@ Q02,digital_pdf,待核验,,,
 Q03,digital_pdf,待核验,,,
 Q04,scanned_pdf,待核验,,,
 Q05,scanned_pdf,待核验,,,
-Q06,complex_table,待核验,,,
+Q06,complex_table,部分已核验；跨行概念待确认,complex_table/document.json: tables[0].data; table_cells[0] and table_cells[3]; reports/table-structure-view.json,本人回答7行6列，第二季度跨2列，类别跨2列。,前两项与原始JSON一致。类别实际row_span=2、col_span=1；Codex解释为纵向跨2行、占1列，待本人确认理解。其余合并范围尚未核验，不判整项通过。
 Q07,complex_table,Markdown已核验；JSON待核验,"complex_table/document.md:7,9; archived original commit efb2eb1",本人确认数量12、金额60，依据材料/纸张（包）所在行与第二季度-数量/第二季度-金额（元）两列；Markdown让对应关系明确。,本次只确认Markdown中的对应；JSON结构和合并范围未由本人核验。工作区Markdown末尾另有Pipeline附加文字，表头及纸张行未变；见markdown-edit-note.md。
 Q08,complex_table,待核验,,,
 Q09,complex_table,待核验,,,
