@@ -17,6 +17,7 @@ class Tracker:
         self.process.cpu_percent()
         self.started = time.monotonic()
         self.artifacts = []
+        self.export_summary = {}
         # Keep the spool and artifact cache until wandb sync completes.
         os.environ['WANDB_CACHE_DIR'] = str(ROOT / '.cache-week09/artifacts')
         os.environ['WANDB_DATA_DIR'] = str(ROOT / '.cache-week09/staging')
@@ -64,6 +65,7 @@ class Tracker:
         with (self.out / 'history.jsonl').open('a') as f:
             f.write(json.dumps(record) + '\n')
         self.run.log(record)
+        self.export_summary.update(record)
 
     def training(self, row, lr):
         values = {'train/step': row['step'], 'train/loss': row['train_loss'],
@@ -98,16 +100,19 @@ class Tracker:
 
     def finish(self, metadata):
         status = metadata['status']
-        self.run.summary.update({'status': status, 'total_seconds': metadata['total_seconds'],
+        summary = {'status': status, 'total_seconds': metadata['total_seconds'],
                                  'training_seconds': metadata.get('training_seconds'),
                                  'peak_rss_mib': metadata['peak_rss_mib'],
                                  'gpu_hours': 0, 'paid_cost_cny': 0,
                                  'adapter_sha256': metadata.get('adapter_sha256'),
-                                 'reload_predictions_equal': metadata.get('reload_predictions_equal', False)})
+                                 'reload_predictions_equal': metadata.get('reload_predictions_equal', False)}
+        self.run.summary.update(summary)
+        self.export_summary.update(summary)
         self.artifact('results-' + self.run.id, 'evaluation',
                       [p for p in self.out.iterdir() if p.is_file() and p.suffix in {'.json', '.jsonl'}
                        and p.name not in {'artifact-manifest.json', 'wandb-summary.json'}], role='output')
         if (self.out / 'adapter').exists():
             self.artifact('adapter-' + self.run.id, 'model', list((self.out / 'adapter').iterdir()), role='output')
-        save(self.out / 'wandb-summary.json', dict(self.run.summary))
+        # SDK summary may contain SummarySubDict for Tables; export our plain values.
+        save(self.out / 'wandb-summary.json', self.export_summary)
         self.run.finish(exit_code=0 if status == 'complete' else 1)
