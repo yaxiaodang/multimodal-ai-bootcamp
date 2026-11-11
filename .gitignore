@@ -33,3 +33,6 @@ samples/demo.png
 week09/wandb/
 week09/.wandb-config/
 .netrc
+
+# Week12 reproducible release archives
+week12/dist/

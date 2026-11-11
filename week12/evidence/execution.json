@@ -1,0 +1,32 @@
+{
+  "started_utc": "2026-11-11T08:42:03.734313+00:00",
+  "python": "3.14.7",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "week10/scripts/verify.py"
+      ],
+      "exit_code": 0,
+      "log": "week12/evidence/week10-audit.log"
+    },
+    {
+      "argv": [
+        "python3",
+        "week11/scripts/verify.py"
+      ],
+      "exit_code": 0,
+      "log": "week12/evidence/week11-audit.log"
+    }
+  ],
+  "status": "passed",
+  "human_review": "pending",
+  "new_training": false,
+  "new_inference": false,
+  "frozen_files_checked": 412,
+  "local_links_checked": 73,
+  "pdf_pages_per_method": 24,
+  "text_test_per_method": 12,
+  "elapsed_seconds": 0.7469956060003824
+}

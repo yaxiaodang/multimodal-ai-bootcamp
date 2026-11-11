@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "path": "standard",
+  "source_commit": "5847fd1194406cd766730c48a1853b8eed0e857f",
+  "core_variable": "do_ocr",
+  "pdf_test": "week07/data/test-manifest.json",
+  "pdf_protocol": "week10/configs/protocol.json",
+  "pdf_suite": "week10/runs/suite-20261111T080142898866Z/suite.json",
+  "lora_suite": "week11/runs/suite-20261111T081647230916Z/suite.json",
+  "seed": 42,
+  "mode": "offline_archive_rescoring",
+  "new_inference": false,
+  "new_training": false,
+  "timeout_seconds_per_audit": 120,
+  "paid_cloud_budget_cny": 0,
+  "human_review": "pending",
+  "peer_reproduction": "pending"
+}

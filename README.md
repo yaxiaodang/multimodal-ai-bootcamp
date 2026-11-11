@@ -2,6 +2,16 @@
 
 本仓库用于记录多模态视觉 AI 12 周自主学习路线的代码、实验配置、原始结果、失败案例和学习总结。
 
+## 最终项目开始入口
+
+在Ubuntu远端终端、仓库根目录执行：
+
+```bash
+python3 week12/run.py
+```
+
+作用：仅用Python3.10+标准库，从已归档原始输出重算24页PDF的OCR对照、12条英文文本测试并核对LoRA证据；不联网、不下载模型、不训练。先读[Week12学习入口](week12/README.md)、[最终报告](week12/reports/final-report.md)和[Project Card](week12/project-card.md)。模型再次训练/推理的环境另见对应周；陌生同学复现与本人展示待完成。
+
 ## 学习环境
 
 - 操作系统：Ubuntu 虚拟机
@@ -25,7 +35,7 @@
 | [week09/](week09/README.md) | W&B实验追踪：CPU A/B、原生离线runs、artifact与报告；账号同步及网页Report待本人收尾 |
 | [week10/](week10/README.md) | 统一评测：24页PDF关闭OCR消融、base/A/B独立文本测试、42个错误case与成本报告；人工复核待本人 |
 | [week11/](week11/README.md) | 论文导读与最小复现：LoRA Paper Card、事前计划、CPU rank4/8新训练与合并核验；本人阅读/复核待收尾 |
-| `week12/` | Capstone、展示与自主答辩 |
+| [week12/](week12/README.md) | Capstone：设计卡、Project Card、离线重算、可复现实验包、五分钟演示与答辩材料；本人/同学收尾待做 |
 | `learning-log.md` | 12 周连续学习记录 |
 | `requirements.txt` | 项目累计 Python 依赖 |
 | `.venv/` | 本地 Python 虚拟环境，不提交 Git |

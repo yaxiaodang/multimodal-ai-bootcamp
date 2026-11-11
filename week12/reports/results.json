@@ -1,0 +1,172 @@
+{
+  "scope": "Archived predictions rescored; no new inference or training",
+  "pdf": {
+    "ocr-on": {
+      "source": "week07/runs/baseline-20261111T144702-4ebb49",
+      "overall": {
+        "n": 24,
+        "score": 0.9675590367079728,
+        "success": 1.0,
+        "reading_order": 0.7083333333333334,
+        "table_exact": 0.0,
+        "exact": null,
+        "json_valid": null,
+        "total_correct": null,
+        "currency_correct": null,
+        "total_seconds": 996.3841
+      },
+      "types": {
+        "digital": {
+          "n": 8,
+          "score": 1.0,
+          "success": 1.0,
+          "reading_order": 1.0,
+          "table_exact": null,
+          "exact": null,
+          "json_valid": null,
+          "total_correct": null,
+          "currency_correct": null,
+          "total_seconds": 119.2029
+        },
+        "scan": {
+          "n": 8,
+          "score": 0.9505494505494505,
+          "success": 1.0,
+          "reading_order": 0.41666666666666663,
+          "table_exact": null,
+          "exact": null,
+          "json_valid": null,
+          "total_correct": null,
+          "currency_correct": null,
+          "total_seconds": 680.6131
+        },
+        "table": {
+          "n": 8,
+          "score": 0.9521276595744681,
+          "success": 1.0,
+          "reading_order": null,
+          "table_exact": 0.0,
+          "exact": null,
+          "json_valid": null,
+          "total_correct": null,
+          "currency_correct": null,
+          "total_seconds": 196.56810000000002
+        }
+      }
+    },
+    "ocr-off": {
+      "source": "week10/runs/pdf/baseline-20261111T160020-0f4498",
+      "overall": {
+        "n": 24,
+        "score": 0.650709219858156,
+        "success": 0.6666666666666666,
+        "reading_order": 0.5,
+        "table_exact": 0.0,
+        "exact": null,
+        "json_valid": null,
+        "total_correct": null,
+        "currency_correct": null,
+        "total_seconds": 352.0813
+      },
+      "types": {
+        "digital": {
+          "n": 8,
+          "score": 1.0,
+          "success": 1.0,
+          "reading_order": 1.0,
+          "table_exact": null,
+          "exact": null,
+          "json_valid": null,
+          "total_correct": null,
+          "currency_correct": null,
+          "total_seconds": 116.6434
+        },
+        "scan": {
+          "n": 8,
+          "score": 0.0,
+          "success": 0.0,
+          "reading_order": 0.0,
+          "table_exact": null,
+          "exact": null,
+          "json_valid": null,
+          "total_correct": null,
+          "currency_correct": null,
+          "total_seconds": 107.2401
+        },
+        "table": {
+          "n": 8,
+          "score": 0.9521276595744681,
+          "success": 1.0,
+          "reading_order": null,
+          "table_exact": 0.0,
+          "exact": null,
+          "json_valid": null,
+          "total_correct": null,
+          "currency_correct": null,
+          "total_seconds": 128.1978
+        }
+      }
+    }
+  },
+  "text_reserved_test": {
+    "base": {
+      "exact_rate": 0.0,
+      "json_valid_rate": 0.0,
+      "total_correct_rate": 0.0,
+      "currency_correct_rate": 0.0,
+      "n": 12
+    },
+    "run-a": {
+      "exact_rate": 1.0,
+      "json_valid_rate": 1.0,
+      "total_correct_rate": 1.0,
+      "currency_correct_rate": 1.0,
+      "n": 12
+    },
+    "run-b": {
+      "exact_rate": 1.0,
+      "json_valid_rate": 1.0,
+      "total_correct_rate": 1.0,
+      "currency_correct_rate": 1.0,
+      "n": 12
+    }
+  },
+  "lora_validation": {
+    "4": {
+      "trainable_parameters": 230400,
+      "adapter_bytes": 937056,
+      "frozen_base_equal": true,
+      "reload_equal": true,
+      "merge_greedy_equal": true,
+      "after": {
+        "exact_rate": 1.0,
+        "json_valid_rate": 1.0,
+        "total_correct_rate": 1.0,
+        "currency_correct_rate": 1.0,
+        "n": 12,
+        "answer_nll": 0.0003436217946629669,
+        "seconds": 21.594910064000032
+      }
+    },
+    "8": {
+      "trainable_parameters": 460800,
+      "adapter_bytes": 1858776,
+      "frozen_base_equal": true,
+      "reload_equal": true,
+      "merge_greedy_equal": true,
+      "after": {
+        "exact_rate": 1.0,
+        "json_valid_rate": 1.0,
+        "total_correct_rate": 1.0,
+        "currency_correct_rate": 1.0,
+        "n": 12,
+        "answer_nll": 0.00024794526995990324,
+        "seconds": 21.475926841999353
+      }
+    }
+  },
+  "error_cases": 42,
+  "human_review": "pending",
+  "peer_reproduction": "pending",
+  "decision": "Keep OCR for mixed PDFs; text adapters remain teaching candidates."
+}
