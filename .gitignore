@@ -3,6 +3,8 @@
 .venv-week04/
 .venv-week06/
 .cache-week06/
+.venv-week08/
+.cache-week08/
 venv/
 
 # Python cache

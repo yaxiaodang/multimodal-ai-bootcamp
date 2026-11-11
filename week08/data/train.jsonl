@@ -1,0 +1,96 @@
+{"id": "F1000", "split": "train", "template": 0, "text": "Invoice F1000\nCurrency: USD\nSubtotal: 583.51\nTax: 10.97\nTotal: 594.48", "answer": {"total": "594.48", "currency": "USD"}}
+{"id": "F1001", "split": "train", "template": 1, "text": "Receipt F1001 | Subtotal 453.72 | Tax 6.41 | Total 460.13 EUR", "answer": {"total": "460.13", "currency": "EUR"}}
+{"id": "F1002", "split": "train", "template": 2, "text": "BILL F1002\nTax = 12.85\nFinal total = 614.51 GBP\nSubtotal = 601.66", "answer": {"total": "614.51", "currency": "GBP"}}
+{"id": "F1003", "split": "train", "template": 0, "text": "Invoice F1003\nCurrency: USD\nSubtotal: 764.81\nTax: 4.52\nTotal: 769.33", "answer": {"total": "769.33", "currency": "USD"}}
+{"id": "F1004", "split": "train", "template": 1, "text": "Receipt F1004 | Subtotal 238.94 | Tax 3.02 | Total 241.96 EUR", "answer": {"total": "241.96", "currency": "EUR"}}
+{"id": "F1005", "split": "train", "template": 2, "text": "BILL F1005\nTax = 19.42\nFinal total = 76.59 GBP\nSubtotal = 57.17", "answer": {"total": "76.59", "currency": "GBP"}}
+{"id": "F1006", "split": "train", "template": 0, "text": "Invoice F1006\nCurrency: USD\nSubtotal: 627.06\nTax: 10.26\nTotal: 637.32", "answer": {"total": "637.32", "currency": "USD"}}
+{"id": "F1007", "split": "train", "template": 1, "text": "Receipt F1007 | Subtotal 186.46 | Tax 11.77 | Total 198.23 EUR", "answer": {"total": "198.23", "currency": "EUR"}}
+{"id": "F1008", "split": "train", "template": 2, "text": "BILL F1008\nTax = 4.79\nFinal total = 480.68 GBP\nSubtotal = 475.89", "answer": {"total": "480.68", "currency": "GBP"}}
+{"id": "F1009", "split": "train", "template": 0, "text": "Invoice F1009\nCurrency: USD\nSubtotal: 357.75\nTax: 22.74\nTotal: 380.49", "answer": {"total": "380.49", "currency": "USD"}}
+{"id": "F1010", "split": "train", "template": 1, "text": "Receipt F1010 | Subtotal 257.38 | Tax 3.09 | Total 260.47 EUR", "answer": {"total": "260.47", "currency": "EUR"}}
+{"id": "F1011", "split": "train", "template": 2, "text": "BILL F1011\nTax = 3.31\nFinal total = 265.38 GBP\nSubtotal = 262.07", "answer": {"total": "265.38", "currency": "GBP"}}
+{"id": "F1012", "split": "train", "template": 0, "text": "Invoice F1012\nCurrency: USD\nSubtotal: 68.86\nTax: 19.28\nTotal: 88.14", "answer": {"total": "88.14", "currency": "USD"}}
+{"id": "F1013", "split": "train", "template": 1, "text": "Receipt F1013 | Subtotal 414.53 | Tax 3.56 | Total 418.09 EUR", "answer": {"total": "418.09", "currency": "EUR"}}
+{"id": "F1014", "split": "train", "template": 2, "text": "BILL F1014\nTax = 14.85\nFinal total = 160.13 GBP\nSubtotal = 145.28", "answer": {"total": "160.13", "currency": "GBP"}}
+{"id": "F1015", "split": "train", "template": 0, "text": "Invoice F1015\nCurrency: USD\nSubtotal: 558.06\nTax: 25.67\nTotal: 583.73", "answer": {"total": "583.73", "currency": "USD"}}
+{"id": "F1016", "split": "train", "template": 1, "text": "Receipt F1016 | Subtotal 312.24 | Tax 10.26 | Total 322.50 EUR", "answer": {"total": "322.50", "currency": "EUR"}}
+{"id": "F1017", "split": "train", "template": 2, "text": "BILL F1017\nTax = 19.86\nFinal total = 419.04 GBP\nSubtotal = 399.18", "answer": {"total": "419.04", "currency": "GBP"}}
+{"id": "F1018", "split": "train", "template": 0, "text": "Invoice F1018\nCurrency: USD\nSubtotal: 615.02\nTax: 29.35\nTotal: 644.37", "answer": {"total": "644.37", "currency": "USD"}}
+{"id": "F1019", "split": "train", "template": 1, "text": "Receipt F1019 | Subtotal 611.43 | Tax 28.11 | Total 639.54 EUR", "answer": {"total": "639.54", "currency": "EUR"}}
+{"id": "F1020", "split": "train", "template": 2, "text": "BILL F1020\nTax = 29.64\nFinal total = 204.64 GBP\nSubtotal = 175.00", "answer": {"total": "204.64", "currency": "GBP"}}
+{"id": "F1021", "split": "train", "template": 0, "text": "Invoice F1021\nCurrency: USD\nSubtotal: 266.48\nTax: 6.83\nTotal: 273.31", "answer": {"total": "273.31", "currency": "USD"}}
+{"id": "F1022", "split": "train", "template": 1, "text": "Receipt F1022 | Subtotal 219.13 | Tax 17.02 | Total 236.15 EUR", "answer": {"total": "236.15", "currency": "EUR"}}
+{"id": "F1023", "split": "train", "template": 2, "text": "BILL F1023\nTax = 7.64\nFinal total = 473.54 GBP\nSubtotal = 465.90", "answer": {"total": "473.54", "currency": "GBP"}}
+{"id": "F1024", "split": "train", "template": 0, "text": "Invoice F1024\nCurrency: USD\nSubtotal: 619.81\nTax: 20.11\nTotal: 639.92", "answer": {"total": "639.92", "currency": "USD"}}
+{"id": "F1025", "split": "train", "template": 1, "text": "Receipt F1025 | Subtotal 251.00 | Tax 28.53 | Total 279.53 EUR", "answer": {"total": "279.53", "currency": "EUR"}}
+{"id": "F1026", "split": "train", "template": 2, "text": "BILL F1026\nTax = 27.43\nFinal total = 567.91 GBP\nSubtotal = 540.48", "answer": {"total": "567.91", "currency": "GBP"}}
+{"id": "F1027", "split": "train", "template": 0, "text": "Invoice F1027\nCurrency: USD\nSubtotal: 376.09\nTax: 1.42\nTotal: 377.51", "answer": {"total": "377.51", "currency": "USD"}}
+{"id": "F1028", "split": "train", "template": 1, "text": "Receipt F1028 | Subtotal 181.88 | Tax 24.74 | Total 206.62 EUR", "answer": {"total": "206.62", "currency": "EUR"}}
+{"id": "F1029", "split": "train", "template": 2, "text": "BILL F1029\nTax = 18.41\nFinal total = 372.28 GBP\nSubtotal = 353.87", "answer": {"total": "372.28", "currency": "GBP"}}
+{"id": "F1030", "split": "train", "template": 0, "text": "Invoice F1030\nCurrency: USD\nSubtotal: 528.74\nTax: 5.92\nTotal: 534.66", "answer": {"total": "534.66", "currency": "USD"}}
+{"id": "F1031", "split": "train", "template": 1, "text": "Receipt F1031 | Subtotal 162.53 | Tax 10.94 | Total 173.47 EUR", "answer": {"total": "173.47", "currency": "EUR"}}
+{"id": "F1032", "split": "train", "template": 2, "text": "BILL F1032\nTax = 16.22\nFinal total = 56.98 GBP\nSubtotal = 40.76", "answer": {"total": "56.98", "currency": "GBP"}}
+{"id": "F1033", "split": "train", "template": 0, "text": "Invoice F1033\nCurrency: USD\nSubtotal: 499.25\nTax: 26.12\nTotal: 525.37", "answer": {"total": "525.37", "currency": "USD"}}
+{"id": "F1034", "split": "train", "template": 1, "text": "Receipt F1034 | Subtotal 87.86 | Tax 13.63 | Total 101.49 EUR", "answer": {"total": "101.49", "currency": "EUR"}}
+{"id": "F1035", "split": "train", "template": 2, "text": "BILL F1035\nTax = 26.59\nFinal total = 740.53 GBP\nSubtotal = 713.94", "answer": {"total": "740.53", "currency": "GBP"}}
+{"id": "F1036", "split": "train", "template": 0, "text": "Invoice F1036\nCurrency: USD\nSubtotal: 280.76\nTax: 20.22\nTotal: 300.98", "answer": {"total": "300.98", "currency": "USD"}}
+{"id": "F1037", "split": "train", "template": 1, "text": "Receipt F1037 | Subtotal 256.19 | Tax 18.24 | Total 274.43 EUR", "answer": {"total": "274.43", "currency": "EUR"}}
+{"id": "F1038", "split": "train", "template": 2, "text": "BILL F1038\nTax = 20.47\nFinal total = 473.08 GBP\nSubtotal = 452.61", "answer": {"total": "473.08", "currency": "GBP"}}
+{"id": "F1039", "split": "train", "template": 0, "text": "Invoice F1039\nCurrency: USD\nSubtotal: 543.34\nTax: 26.89\nTotal: 570.23", "answer": {"total": "570.23", "currency": "USD"}}
+{"id": "F1040", "split": "train", "template": 1, "text": "Receipt F1040 | Subtotal 375.11 | Tax 27.61 | Total 402.72 EUR", "answer": {"total": "402.72", "currency": "EUR"}}
+{"id": "F1041", "split": "train", "template": 2, "text": "BILL F1041\nTax = 0.67\nFinal total = 290.55 GBP\nSubtotal = 289.88", "answer": {"total": "290.55", "currency": "GBP"}}
+{"id": "F1042", "split": "train", "template": 0, "text": "Invoice F1042\nCurrency: USD\nSubtotal: 326.48\nTax: 14.17\nTotal: 340.65", "answer": {"total": "340.65", "currency": "USD"}}
+{"id": "F1043", "split": "train", "template": 1, "text": "Receipt F1043 | Subtotal 712.84 | Tax 19.59 | Total 732.43 EUR", "answer": {"total": "732.43", "currency": "EUR"}}
+{"id": "F1044", "split": "train", "template": 2, "text": "BILL F1044\nTax = 0.29\nFinal total = 353.22 GBP\nSubtotal = 352.93", "answer": {"total": "353.22", "currency": "GBP"}}
+{"id": "F1045", "split": "train", "template": 0, "text": "Invoice F1045\nCurrency: USD\nSubtotal: 274.47\nTax: 23.95\nTotal: 298.42", "answer": {"total": "298.42", "currency": "USD"}}
+{"id": "F1046", "split": "train", "template": 1, "text": "Receipt F1046 | Subtotal 206.85 | Tax 28.18 | Total 235.03 EUR", "answer": {"total": "235.03", "currency": "EUR"}}
+{"id": "F1047", "split": "train", "template": 2, "text": "BILL F1047\nTax = 7.27\nFinal total = 540.06 GBP\nSubtotal = 532.79", "answer": {"total": "540.06", "currency": "GBP"}}
+{"id": "F1048", "split": "train", "template": 0, "text": "Invoice F1048\nCurrency: USD\nSubtotal: 671.14\nTax: 24.29\nTotal: 695.43", "answer": {"total": "695.43", "currency": "USD"}}
+{"id": "F1049", "split": "train", "template": 1, "text": "Receipt F1049 | Subtotal 400.48 | Tax 4.78 | Total 405.26 EUR", "answer": {"total": "405.26", "currency": "EUR"}}
+{"id": "F1050", "split": "train", "template": 2, "text": "BILL F1050\nTax = 22.42\nFinal total = 520.76 GBP\nSubtotal = 498.34", "answer": {"total": "520.76", "currency": "GBP"}}
+{"id": "F1051", "split": "train", "template": 0, "text": "Invoice F1051\nCurrency: USD\nSubtotal: 337.72\nTax: 11.62\nTotal: 349.34", "answer": {"total": "349.34", "currency": "USD"}}
+{"id": "F1052", "split": "train", "template": 1, "text": "Receipt F1052 | Subtotal 647.75 | Tax 17.50 | Total 665.25 EUR", "answer": {"total": "665.25", "currency": "EUR"}}
+{"id": "F1053", "split": "train", "template": 2, "text": "BILL F1053\nTax = 3.09\nFinal total = 80.52 GBP\nSubtotal = 77.43", "answer": {"total": "80.52", "currency": "GBP"}}
+{"id": "F1054", "split": "train", "template": 0, "text": "Invoice F1054\nCurrency: USD\nSubtotal: 127.21\nTax: 14.32\nTotal: 141.53", "answer": {"total": "141.53", "currency": "USD"}}
+{"id": "F1055", "split": "train", "template": 1, "text": "Receipt F1055 | Subtotal 687.39 | Tax 0.90 | Total 688.29 EUR", "answer": {"total": "688.29", "currency": "EUR"}}
+{"id": "F1056", "split": "train", "template": 2, "text": "BILL F1056\nTax = 26.49\nFinal total = 183.90 GBP\nSubtotal = 157.41", "answer": {"total": "183.90", "currency": "GBP"}}
+{"id": "F1057", "split": "train", "template": 0, "text": "Invoice F1057\nCurrency: USD\nSubtotal: 360.06\nTax: 4.33\nTotal: 364.39", "answer": {"total": "364.39", "currency": "USD"}}
+{"id": "F1058", "split": "train", "template": 1, "text": "Receipt F1058 | Subtotal 243.22 | Tax 18.88 | Total 262.10 EUR", "answer": {"total": "262.10", "currency": "EUR"}}
+{"id": "F1059", "split": "train", "template": 2, "text": "BILL F1059\nTax = 21.41\nFinal total = 246.47 GBP\nSubtotal = 225.06", "answer": {"total": "246.47", "currency": "GBP"}}
+{"id": "F1060", "split": "train", "template": 0, "text": "Invoice F1060\nCurrency: USD\nSubtotal: 330.03\nTax: 2.78\nTotal: 332.81", "answer": {"total": "332.81", "currency": "USD"}}
+{"id": "F1061", "split": "train", "template": 1, "text": "Receipt F1061 | Subtotal 594.58 | Tax 27.30 | Total 621.88 EUR", "answer": {"total": "621.88", "currency": "EUR"}}
+{"id": "F1062", "split": "train", "template": 2, "text": "BILL F1062\nTax = 15.73\nFinal total = 254.85 GBP\nSubtotal = 239.12", "answer": {"total": "254.85", "currency": "GBP"}}
+{"id": "F1063", "split": "train", "template": 0, "text": "Invoice F1063\nCurrency: USD\nSubtotal: 716.58\nTax: 11.42\nTotal: 728.00", "answer": {"total": "728.00", "currency": "USD"}}
+{"id": "F1064", "split": "train", "template": 1, "text": "Receipt F1064 | Subtotal 369.94 | Tax 10.94 | Total 380.88 EUR", "answer": {"total": "380.88", "currency": "EUR"}}
+{"id": "F1065", "split": "train", "template": 2, "text": "BILL F1065\nTax = 17.70\nFinal total = 159.34 GBP\nSubtotal = 141.64", "answer": {"total": "159.34", "currency": "GBP"}}
+{"id": "F1066", "split": "train", "template": 0, "text": "Invoice F1066\nCurrency: USD\nSubtotal: 658.03\nTax: 23.54\nTotal: 681.57", "answer": {"total": "681.57", "currency": "USD"}}
+{"id": "F1067", "split": "train", "template": 1, "text": "Receipt F1067 | Subtotal 777.74 | Tax 16.12 | Total 793.86 EUR", "answer": {"total": "793.86", "currency": "EUR"}}
+{"id": "F1068", "split": "train", "template": 2, "text": "BILL F1068\nTax = 11.14\nFinal total = 248.89 GBP\nSubtotal = 237.75", "answer": {"total": "248.89", "currency": "GBP"}}
+{"id": "F1069", "split": "train", "template": 0, "text": "Invoice F1069\nCurrency: USD\nSubtotal: 434.53\nTax: 11.00\nTotal: 445.53", "answer": {"total": "445.53", "currency": "USD"}}
+{"id": "F1070", "split": "train", "template": 1, "text": "Receipt F1070 | Subtotal 314.24 | Tax 21.65 | Total 335.89 EUR", "answer": {"total": "335.89", "currency": "EUR"}}
+{"id": "F1071", "split": "train", "template": 2, "text": "BILL F1071\nTax = 9.92\nFinal total = 785.24 GBP\nSubtotal = 775.32", "answer": {"total": "785.24", "currency": "GBP"}}
+{"id": "F1072", "split": "train", "template": 0, "text": "Invoice F1072\nCurrency: USD\nSubtotal: 286.11\nTax: 13.35\nTotal: 299.46", "answer": {"total": "299.46", "currency": "USD"}}
+{"id": "F1073", "split": "train", "template": 1, "text": "Receipt F1073 | Subtotal 49.46 | Tax 14.95 | Total 64.41 EUR", "answer": {"total": "64.41", "currency": "EUR"}}
+{"id": "F1074", "split": "train", "template": 2, "text": "BILL F1074\nTax = 1.79\nFinal total = 713.36 GBP\nSubtotal = 711.57", "answer": {"total": "713.36", "currency": "GBP"}}
+{"id": "F1075", "split": "train", "template": 0, "text": "Invoice F1075\nCurrency: USD\nSubtotal: 243.85\nTax: 9.21\nTotal: 253.06", "answer": {"total": "253.06", "currency": "USD"}}
+{"id": "F1076", "split": "train", "template": 1, "text": "Receipt F1076 | Subtotal 535.28 | Tax 21.36 | Total 556.64 EUR", "answer": {"total": "556.64", "currency": "EUR"}}
+{"id": "F1077", "split": "train", "template": 2, "text": "BILL F1077\nTax = 28.75\nFinal total = 67.47 GBP\nSubtotal = 38.72", "answer": {"total": "67.47", "currency": "GBP"}}
+{"id": "F1078", "split": "train", "template": 0, "text": "Invoice F1078\nCurrency: USD\nSubtotal: 372.05\nTax: 6.74\nTotal: 378.79", "answer": {"total": "378.79", "currency": "USD"}}
+{"id": "F1079", "split": "train", "template": 1, "text": "Receipt F1079 | Subtotal 741.74 | Tax 26.34 | Total 768.08 EUR", "answer": {"total": "768.08", "currency": "EUR"}}
+{"id": "F1080", "split": "train", "template": 2, "text": "BILL F1080\nTax = 21.48\nFinal total = 677.16 GBP\nSubtotal = 655.68", "answer": {"total": "677.16", "currency": "GBP"}}
+{"id": "F1081", "split": "train", "template": 0, "text": "Invoice F1081\nCurrency: USD\nSubtotal: 91.01\nTax: 15.90\nTotal: 106.91", "answer": {"total": "106.91", "currency": "USD"}}
+{"id": "F1082", "split": "train", "template": 1, "text": "Receipt F1082 | Subtotal 403.35 | Tax 27.47 | Total 430.82 EUR", "answer": {"total": "430.82", "currency": "EUR"}}
+{"id": "F1083", "split": "train", "template": 2, "text": "BILL F1083\nTax = 10.20\nFinal total = 345.61 GBP\nSubtotal = 335.41", "answer": {"total": "345.61", "currency": "GBP"}}
+{"id": "F1084", "split": "train", "template": 0, "text": "Invoice F1084\nCurrency: USD\nSubtotal: 31.00\nTax: 24.40\nTotal: 55.40", "answer": {"total": "55.40", "currency": "USD"}}
+{"id": "F1085", "split": "train", "template": 1, "text": "Receipt F1085 | Subtotal 672.43 | Tax 1.13 | Total 673.56 EUR", "answer": {"total": "673.56", "currency": "EUR"}}
+{"id": "F1086", "split": "train", "template": 2, "text": "BILL F1086\nTax = 24.94\nFinal total = 326.13 GBP\nSubtotal = 301.19", "answer": {"total": "326.13", "currency": "GBP"}}
+{"id": "F1087", "split": "train", "template": 0, "text": "Invoice F1087\nCurrency: USD\nSubtotal: 294.43\nTax: 3.43\nTotal: 297.86", "answer": {"total": "297.86", "currency": "USD"}}
+{"id": "F1088", "split": "train", "template": 1, "text": "Receipt F1088 | Subtotal 445.04 | Tax 23.06 | Total 468.10 EUR", "answer": {"total": "468.10", "currency": "EUR"}}
+{"id": "F1089", "split": "train", "template": 2, "text": "BILL F1089\nTax = 9.03\nFinal total = 612.51 GBP\nSubtotal = 603.48", "answer": {"total": "612.51", "currency": "GBP"}}
+{"id": "F1090", "split": "train", "template": 0, "text": "Invoice F1090\nCurrency: USD\nSubtotal: 778.41\nTax: 8.63\nTotal: 787.04", "answer": {"total": "787.04", "currency": "USD"}}
+{"id": "F1091", "split": "train", "template": 1, "text": "Receipt F1091 | Subtotal 737.19 | Tax 10.08 | Total 747.27 EUR", "answer": {"total": "747.27", "currency": "EUR"}}
+{"id": "F1092", "split": "train", "template": 2, "text": "BILL F1092\nTax = 6.26\nFinal total = 422.33 GBP\nSubtotal = 416.07", "answer": {"total": "422.33", "currency": "GBP"}}
+{"id": "F1093", "split": "train", "template": 0, "text": "Invoice F1093\nCurrency: USD\nSubtotal: 641.65\nTax: 15.08\nTotal: 656.73", "answer": {"total": "656.73", "currency": "USD"}}
+{"id": "F1094", "split": "train", "template": 1, "text": "Receipt F1094 | Subtotal 656.22 | Tax 14.79 | Total 671.01 EUR", "answer": {"total": "671.01", "currency": "EUR"}}
+{"id": "F1095", "split": "train", "template": 2, "text": "BILL F1095\nTax = 21.59\nFinal total = 795.08 GBP\nSubtotal = 773.49", "answer": {"total": "795.08", "currency": "GBP"}}
