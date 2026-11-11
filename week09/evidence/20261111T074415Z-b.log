@@ -1,0 +1,44 @@
+OUTPUT week09/runs/run-b-20261111T074903Z
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/yaxiaodang/multimodal-ai-bootcamp/week09/wandb/wandb/offline-run-20261111_154904-0h6gfu6a
+wandb: View this run in the terminal with `wandb leet`
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  46%|████▋     | 126/272 [00:00<00:00, 1252.54it/s]Loading weights:  93%|█████████▎| 252/272 [00:00<00:00, 1047.66it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 1119.64it/s]
+baseline {"exact_rate": 0.0, "json_valid_rate": 0.0, "total_correct_rate": 0.0, "currency_correct_rate": 0.0, "n": 12, "answer_nll": 1.2411682322218611, "seconds": 30.831624978000036}
+STEP {"step": 20, "train_loss": 0.04601815529167652, "gradient_norm": 0.1762021780014038, "elapsed_seconds": 82.13495837899973, "validation_answer_nll": 0.03695003121487192}
+STEP {"step": 40, "train_loss": 0.0022054134169593453, "gradient_norm": 0.021475426852703094, "elapsed_seconds": 180.86578790800013, "validation_answer_nll": 0.0021435472711518002}
+STEP {"step": 60, "train_loss": 0.0006401264108717442, "gradient_norm": 0.004064628854393959, "elapsed_seconds": 270.48260776500047, "validation_answer_nll": 0.0007465537134054545}
+/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/peft/utils/save_and_load.py:372: UserWarning: Could not find a config file in HuggingFaceTB/SmolLM2-135M - will assume that the vocabulary was not modified.
+  warnings.warn(
+after {"exact_rate": 1.0, "json_valid_rate": 1.0, "total_correct_rate": 1.0, "currency_correct_rate": 1.0, "n": 12, "answer_nll": 0.0007465537134054545, "seconds": 22.59950046599988}
+reloaded {"exact_rate": 1.0, "json_valid_rate": 1.0, "total_correct_rate": 1.0, "currency_correct_rate": 1.0, "n": 12, "answer_nll": 0.0007465537134054545, "seconds": 27.636940198999582}
+wandb: 
+wandb: Run history:
+wandb:               after/answer_nll ▁
+wandb:    after/currency_correct_rate ▁
+wandb:               after/exact_rate ▁
+wandb:          after/json_valid_rate ▁
+wandb:                        after/n ▁
+wandb:                  after/seconds ▁
+wandb:       after/total_correct_rate ▁
+wandb:            baseline/answer_nll ▁
+wandb: baseline/currency_correct_rate ▁
+wandb:            baseline/exact_rate ▁
+wandb:                            +21 ...
+wandb: 
+wandb: Run summary:
+wandb:                 adapter_sha256 4626fe4dd63a41da7f86...
+wandb:               after/answer_nll 0.00075
+wandb:    after/currency_correct_rate 1
+wandb:               after/exact_rate 1
+wandb:          after/json_valid_rate 1
+wandb:                        after/n 12
+wandb:                  after/seconds 22.5995
+wandb:       after/total_correct_rate 1
+wandb:            baseline/answer_nll 1.24117
+wandb: baseline/currency_correct_rate 0
+wandb:                            +29 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/yaxiaodang/multimodal-ai-bootcamp/week09/wandb/wandb/offline-run-20261111_154904-0h6gfu6a
+wandb: Find logs at: ./week09/wandb/wandb/offline-run-20261111_154904-0h6gfu6a/logs

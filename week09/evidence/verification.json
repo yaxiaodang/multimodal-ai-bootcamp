@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "config_diff": {
+    "name": {
+      "a": "run-a",
+      "b": "run-b"
+    },
+    "learning_rate": {
+      "a": 0.001,
+      "b": 0.0005
+    }
+  },
+  "same_baseline_predictions": true,
+  "checks": [
+    {
+      "path": "week09/runs/run-a-20261111T073540Z",
+      "status": "failed",
+      "note": "SDK startup failed before run ID; retained for audit"
+    },
+    {
+      "path": "week09/runs/run-a-20261111T073611Z",
+      "status": "tracking-export-failed",
+      "note": "Training completed, summary export raised SummarySubDict TypeError; suite exit=1 retained",
+      "run_id": "hbzjq04o",
+      "native_records": {
+        "header": 1,
+        "run": 1,
+        "environment": 2,
+        "stats": 142,
+        "files": 4,
+        "telemetry": 4,
+        "metric": 3,
+        "artifact": 7,
+        "summary": 134,
+        "history": 66,
+        "exit": 1
+      },
+      "native_exit": 1,
+      "exported_training_steps": 60,
+      "artifact_hashes_verified": true
+    },
+    {
+      "path": "week09/runs/run-a-20261111T074232Z",
+      "status": "failed",
+      "run_id": "7wxgxskl",
+      "native_records": {
+        "header": 1,
+        "run": 1,
+        "environment": 2,
+        "stats": 22,
+        "files": 2,
+        "telemetry": 5,
+        "metric": 3,
+        "artifact": 4,
+        "summary": 10,
+        "history": 4,
+        "exit": 1
+      },
+      "native_exit": 1,
+      "exported_training_steps": 2,
+      "artifact_hashes_verified": true
+    },
+    {
+      "path": "week09/runs/run-a-20261111T074420Z",
+      "status": "complete",
+      "run_id": "3xryklnu",
+      "native_records": {
+        "header": 1,
+        "run": 1,
+        "environment": 2,
+        "stats": 139,
+        "files": 4,
+        "telemetry": 5,
+        "metric": 3,
+        "artifact": 7,
+        "summary": 134,
+        "history": 66,
+        "exit": 1
+      },
+      "native_exit": 0,
+      "exported_training_steps": 60,
+      "artifact_hashes_verified": true
+    },
+    {
+      "path": "week09/runs/run-b-20261111T074903Z",
+      "status": "complete",
+      "run_id": "0h6gfu6a",
+      "native_records": {
+        "header": 1,
+        "run": 1,
+        "environment": 2,
+        "stats": 180,
+        "files": 4,
+        "telemetry": 5,
+        "metric": 3,
+        "artifact": 7,
+        "summary": 134,
+        "history": 66,
+        "exit": 1
+      },
+      "native_exit": 0,
+      "exported_training_steps": 60,
+      "artifact_hashes_verified": true
+    }
+  ]
+}

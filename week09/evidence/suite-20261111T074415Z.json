@@ -1,0 +1,40 @@
+[
+  {
+    "label": "a",
+    "command": [
+      "week08/train.py",
+      "--config",
+      "week09/configs/run-a.json",
+      "--output-root",
+      "week09/runs",
+      "--wandb-mode",
+      "offline",
+      "--fail-at-step",
+      "0"
+    ],
+    "exit_code": 0,
+    "log": "week09/evidence/20261111T074415Z-a.log",
+    "directories": [
+      "week09/runs/run-a-20261111T074420Z"
+    ]
+  },
+  {
+    "label": "b",
+    "command": [
+      "week08/train.py",
+      "--config",
+      "week09/configs/run-b.json",
+      "--output-root",
+      "week09/runs",
+      "--wandb-mode",
+      "offline",
+      "--fail-at-step",
+      "0"
+    ],
+    "exit_code": 0,
+    "log": "week09/evidence/20261111T074415Z-b.log",
+    "directories": [
+      "week09/runs/run-b-20261111T074903Z"
+    ]
+  }
+]

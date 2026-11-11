@@ -791,3 +791,83 @@
 - 最有说服力的证据：原始逐条预测、60步日志、两个adapter及重加载逐字节一致、base训练前后权重哈希一致。
 - 希望交流的问题：如何最少增加开发数据，区分字段读取与模板记忆？由Codex代拟，待本人确认。
 - 下周首先完成什么：Week09先把两次可比较实验的配置、数据版本、metrics、adapter关联到W&B；当前还未接入W&B，不提前声称完成第9周。
+
+## Week 9｜W&B 实验追踪
+
+### 本周核心问题
+- 我准备回答：如何把一次实验结论与配置、训练曲线、数据版本、源码、adapter和原始结果连接成可审计链条？本节为Codex代执行的真实记录；本人阅读、人工核验和自评待完成。
+
+### 时间与任务计划
+- 选择路径：标准（目标为两组可比较runs、artifact、失败记录和Report；目前完成本地部分，云端与本人操作待收尾）。
+- 课程与官方材料：计划4小时；本人实际待填。
+- 主线项目：计划10小时；本人实际待填。
+- 评测与失败分析：计划4小时；本人实际待填。
+- 自主探索：计划4小时；选择追踪run与Git、数据、adapter的一一对应。
+- 记录与例会准备：计划2小时；本人实际待填。未将AI运行时间当成本人学习时间。
+
+### 本周主线成果
+- 完成了：在Week08原训练入口可选接入W&B SDK0.31.0，重新从相同base运行学习率A/B；保存config、逐步loss/lr/NLL、原始预测、CPU/内存/时间、四类artifact本地digest与SHA256、adapter重加载结果、曲线和[报告草稿](week09/reports/report.md)。额外执行第2步主动中断演练，保留真实SDK启动失败和AI编写的summary导出错误。
+- 尚未完成：W&B账号登录、云端同步、artifact实际:vN、W&B网页Report、人工抽查与本人实际投入/自评。见[本人收尾](week09/reports/manual-review.md)。
+- 唯一运行入口：`.venv-week08/bin/python week09/run.py`。作用：顺序执行A/B和明确标注的主动失败演练，新建结果目录与离线ID、保存日志及退出码，不覆写旧结果；当前成果已代运行，无需为了读报告再训练。
+- 预计 / 实际耗时：标准学习计划24小时 / 本人实际待填；机器耗时逐run记录在metadata.json，不等同学习时间。
+- 算力与成本：Ubuntu VM，CPU双线程FP32；GPU小时0、付费云费用0。训练循环每run上限900秒；联网仅用于依赖与GitHub，W&B保持offline。
+- 预期文件 / 实际文件：[week09入口](week09/README.md)、[冻结计划](week09/experiment-plan.md)、[配置](week09/configs/)、[原始runs](week09/runs/)、[日志](week09/evidence/)、[对比JSON](week09/reports/comparison.json)、[曲线](week09/reports/curves.png)、[核验结果](week09/evidence/verification.json)和报告；云端标识由本人同步后生成cloud-links.json。
+
+### 环境与复现信息
+- Git commit：初始接入与计划`a30ed31`；修复summary导出`4220d7c`，完整A/B使用后者。每个run的metadata记录实际commit、工作区状态与源码SHA256，snapshots保留运行时源码；最终归档提交见Git历史。
+- Python / CUDA / GPU：Python3.10.12、CPU PyTorch2.14.0+cpu、W&B0.31.0、Matplotlib3.10.9、psutil7.2.2；无CUDA训练。沿用.venv-week08及缓存，具体见[环境](week09/evidence/environment.json)、[准备与异常](week09/evidence/setup-notes.md)、[依赖锁](week09/requirements-lock.txt)。
+- 模型与revision：`HuggingFaceTB/SmolLM2-135M`，`93efa2f097d58c2a74874c7e644dbc9b0cee75a2`，Apache-2.0；任务为英语合成账单文本字段抽取，不是视觉模型微调。
+- 数据集与version / split：Week08自制虚构账单v1.0，96 train / 12 validation / 12 reserved-test；[数据卡](week08/dataset-card.md)与[freeze](week08/data/freeze.json)。reserved-test仅核对冻结哈希，未读样本内容调参；Week07的PDF测试集不参与本轮训练。
+- 随机种子：42；LoRA r8/alpha16/q_proj+v_proj、60步、batch2×累积2、相同Prompt与greedy生成。固定seed不保证跨环境逐位一致。
+- 配置文件：[A](week09/configs/run-a.json)、[B](week09/configs/run-b.json)。唯一算法差异为learning_rate（0.001/0.0005），name只是身份标签；[核验JSON](week09/evidence/verification.json)给出diff。
+- W&B project：`multimodal-ai-bootcamp-week09`；entity待本人确认。完整A ID=`3xryklnu`，完整B ID=`0h6gfu6a`；主动失败演练ID=`7wxgxskl`，summary导出失败ID=`hbzjq04o`；SDK启动失败未得到ID。运行时identity明确offline、cloud_synced=false，不把离线标识写成云端链接。
+- artifact version：本地name/digest/文件SHA256见各run的artifact-manifest.json；服务器`:vN`待同步后从API读回。Report链接：待本人创建，当前只有本地正文草稿，禁止把两者混同。
+
+### Evidence Manifest 自查
+- [x] 输入来源、license与隐私状态已记录：继承Week08，自制虚构账单，不含真实个人资料。
+- [x] 原始输出、日志、metrics、run ID、配置与artifact清单可定位；原生spool和缓存保留在本机，JSON导出和小adapter入Git。
+- [x] 本轮唯一变量和失败案例已记录，正常/失败状态均保留；不能把metadata中的训练complete误认为追踪正常退出。
+- [x] AI使用与人工核验边界已披露；本人抽查尚未完成。
+- [x] 当前结论、限制和下一步最小验证已写明。
+
+### 实验记录
+| Run | 唯一改动 | 关键配置 | 结果 | 原始证据 |
+| --- | --- | --- | --- | --- |
+| base（A/B训练前） | — | 同一base、12 validation、greedy | strict exact=0/12，JSON可解析率0；两run baseline预测相同 | 各run的baseline-predictions.json及baseline-metrics.json |
+| A / 3xryklnu | 学习率0.001 | seed42、LoRA r8、60步 | strict exact=12/12，重加载一致、追踪正常退出 | [A结果](week09/runs/run-a-20261111T074420Z/comparison.json) |
+| B / 0h6gfu6a | 仅学习率改为0.0005 | 其余同A | strict exact=12/12，答案NLL约0.0007466；不凭单seed宣布胜者；详细耗时见[实测对比](week09/reports/comparison.json) | [B结果](week09/runs/run-b-20261111T074903Z/comparison.json) |
+| SDK启动失败 | 沙箱本机socket受限 | 训练尚未开始 | 非零退出、无有效run ID；获准在沙箱外运行后恢复 | [启动日志](week09/evidence/20261111T073535Z-a.log) |
+| 首次A / hbzjq04o | 尚未修复的summary导出 | 训练/预测/重加载均完成 | SDK嵌套SummarySubDict无法JSON序列化，调度退出1；不纳入成功A/B对照，原样保留 | [失败日志](week09/evidence/20261111T073606Z-a.log)、[原始目录](week09/runs/run-a-20261111T073611Z/) |
+| failure-drill / 7wxgxskl | 第2步主动抛错 | 明确intentional-failure标签 | 预期退出1、summary=failed、artifact和SDK系统记录保留；不代表自然训练不稳定 | [演练核验](week09/evidence/failure-drill-check.json)、[日志](week09/evidence/failure-drill.log) |
+
+### AI 使用披露
+- 使用的工具与版本：Codex桌面会话（具体模型版本未另行确认），Python/W&B等版本见环境JSON。
+- AI完成或建议了什么：阅读课程/官方材料、编写追踪与命令工具、运行CPU实验、保存失败、生成报告/图表、追加本记录。详见[AI披露](week09/evidence/ai-usage.md)。
+- 我如何核验：AI自动执行冻结哈希、指标重算、单变量检查、重加载与artifact哈希核对，并读取真实W&B原生记录中的history/stats/artifact/exit。本人还需抽查预测、图表和云端标识，不将自动检查称为本人已核验。
+- 我拒绝或修改了哪些建议，为什么：不引入付费GPU，不更改冻结数据，不把旧结果伪装成实时训练，不把小验证集同分解释成稳定泛化。修正AI的summary导出错误并保留失败证据。
+
+### 自主探索方向
+- 我选择的方向：追踪，将run与Git commit/源码哈希、数据版本、adapter对应；补充中断留痕与恢复检查。
+- 为什么与当前项目相关：Week08已有多组产物，单靠目录名容易混淆代码、数据和模型。
+- 我只改变或验证什么：验证每条证据链和失败退出是否完整，不增加训练算法变量；主动中断只作工程演练，不加入A/B。
+- 结果与证据：本地artifact摘要、每文件SHA256、SDK原生记录解码、[统一核验JSON](week09/evidence/verification.json)；云端版本和报告仍待本人登录核验。
+
+### 自主阶段
+- [ ] 未形成：只有阅读或尝试。
+- [ ] 已跑通：最小任务成功（AI已代执行；本人阶段待确认）。
+- [ ] 可复现：别人可以重新运行（入口/依赖/冻结输入已提供；全新VM独立安装未实测）。
+- [ ] 可解释：能说明证据、失败和限制（讲解材料已准备，本人学习后自评）。
+- [ ] 可扩展：能提出并验证新问题（本人待评）。
+
+### 当前判断
+- 最重要的发现：W&B价值在于连接配置、历史、产物和结论；训练算对不保证实验记录收尾成功。本轮保留了这种实际失败，修复后重新完成对照。
+- 一个失败或意外：SummarySubDict不能直接序列化；离线SDK也需本机socket。
+- 排查与恢复方式：保存原始目录与非零退出，获准后重试SDK服务；导出普通指标字典，先用短中断演练验证收尾，再新建完整A/B，不改写原失败。
+- 当前限制：CPU英语文本合成小任务、单seed、12条validation，未完成独立测试和真实文档泛化验证；W&B云端尚未同步。
+- 我还不理解：待本人学习后填写，例如“为什么NLL下降而exact可能不变”；此处不代替本人反思。
+
+### 例会前准备
+- 我准备展示的成果：[几分钟讲解](week09/reports/meeting-notes.md)、A/B曲线、配置diff及artifact回查。
+- 最有说服力的证据：从报告回到原始预测、config、源码/数据/adapter哈希，并核对W&B原生退出状态。
+- 希望交流的问题：当小验证集exact同分时，需要什么证据才能支持模型选择？
+- 下周首先完成什么：先补齐W&B云端Report与人工抽查；Week10先对齐PDF解析与文本字段抽取的任务边界，再设计独立测试、多seed和错误分析，不能将adapter直接用于Docling跨任务比较。

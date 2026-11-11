@@ -1,0 +1,173 @@
+[
+  {
+    "name": "invoices-v1",
+    "type": "dataset",
+    "role": "input",
+    "digest": "280c299cf3eee3bd2d3c51f245a2554e",
+    "cloud_version": null,
+    "files": [
+      {
+        "path": "week08/data/freeze.json",
+        "sha256": "109c4ebf435f692e6b316455a6c22dff94a5ba643c57c03e5009ba9fe992029f",
+        "bytes": 726
+      },
+      {
+        "path": "week08/data/train.jsonl",
+        "sha256": "8a0569ea4679bad8ee3dab89cdd94b507fdba221cbd77fef57b98eb805a4272d",
+        "bytes": 17101
+      },
+      {
+        "path": "week08/data/validation.jsonl",
+        "sha256": "6e0beba0e9e8b4255138f639962e9075852766b1eea2f707e9fb3b6a60124308",
+        "bytes": 2191
+      },
+      {
+        "path": "week08/dataset-card.md",
+        "sha256": "2fd726ea69e30e3d597d57eae15a324575b7efaab71506f6f7832e4004b6a4d1",
+        "bytes": 2777
+      }
+    ]
+  },
+  {
+    "name": "training-source",
+    "type": "code",
+    "role": "source",
+    "digest": "9b2f0f93dc36c151456a61939c722c30",
+    "cloud_version": null,
+    "files": [
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/config.json",
+        "sha256": "e50ba0a96033a1f498e5104bfe34b4b29496be618eba3059eb63d5a2068bcd93",
+        "bytes": 589
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/snapshots/freeze.json",
+        "sha256": "109c4ebf435f692e6b316455a6c22dff94a5ba643c57c03e5009ba9fe992029f",
+        "bytes": 726
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/snapshots/post-training-plan.md",
+        "sha256": "a706e739aaf4eb2f9116935a0f6a3b54544fbb8f75cefebe2cdfb4dd199018bf",
+        "bytes": 3294
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/snapshots/prepare_data.py",
+        "sha256": "72ae4f9ee624fed5435c86ed2109adeab5e84cf17ebc776d2d4b16c2a2e288a2",
+        "bytes": 2173
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/snapshots/tracking.py",
+        "sha256": "0223d79958e80c1c717a99b250a569742984451a1850895c6d5f617074872314",
+        "bytes": 6752
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/snapshots/train.py",
+        "sha256": "61cf5bdbe759fdc0f93a6576d1f0d66c6f524477b7b77bf251071dbb10de5bd8",
+        "bytes": 12812
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/tracking-config.json",
+        "sha256": "53db613992f8fa1ecc52f45071c8e5d43a973c2f8345f2367b1c4ee2a9a83508",
+        "bytes": 1042
+      }
+    ]
+  },
+  {
+    "name": "results-3xryklnu",
+    "type": "evaluation",
+    "role": "output",
+    "digest": "17f9388e4634ae3d0fea2ba71dfbbd9d",
+    "cloud_version": null,
+    "files": [
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/after-metrics.json",
+        "sha256": "3b4352621f47cebece2d381b2d30c6659ca5c31345b33a27436fa06fa900128f",
+        "bytes": 195
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/after-predictions.json",
+        "sha256": "d4ee3239ef146697071b236981591abdaa2f6a2c5c1f42668927b9c9c661980e",
+        "bytes": 5563
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/baseline-metrics.json",
+        "sha256": "387d5e585cf185f9a32256a7dee1ff01fb7b72805044c3980ddbf1b3dccd0650",
+        "bytes": 190
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/baseline-predictions.json",
+        "sha256": "0e3a219f8eaf2e512779cfc6cf0c95323a35b66a5b0016316634c97ef42674b8",
+        "bytes": 5820
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/comparison.json",
+        "sha256": "0832424159685a1b6c03562926afe7a6c9c57ec351fe168c40bab55e2856b866",
+        "bytes": 517
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/config.json",
+        "sha256": "e50ba0a96033a1f498e5104bfe34b4b29496be618eba3059eb63d5a2068bcd93",
+        "bytes": 589
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/history.jsonl",
+        "sha256": "f2996ff9aec30202d32d6d3c083c9d7a0b1ab16ed934e2e5121d468d3f9609df",
+        "bytes": 21776
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/metadata.json",
+        "sha256": "f618968e365863be4869335ee8f5bd14ce19c72c7ed95093d4e6bd3f4794689e",
+        "bytes": 11585
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/reloaded-metrics.json",
+        "sha256": "6c1fca20c842b89adb3e0fd40a25bada898c3c82033ca1f77ae7310bb4036796",
+        "bytes": 195
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/reloaded-predictions.json",
+        "sha256": "d4ee3239ef146697071b236981591abdaa2f6a2c5c1f42668927b9c9c661980e",
+        "bytes": 5563
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/tracking-config.json",
+        "sha256": "53db613992f8fa1ecc52f45071c8e5d43a973c2f8345f2367b1c4ee2a9a83508",
+        "bytes": 1042
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/training.jsonl",
+        "sha256": "44bbdc35d0070778c11092e38feff23d53c09cbd46c0f86dd17ebd1bb01fd7f3",
+        "bytes": 7721
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/wandb-identity.json",
+        "sha256": "d915a0ceea15deccf92b873c9cff0eef4593980349c0684c20812fe63550428a",
+        "bytes": 256
+      }
+    ]
+  },
+  {
+    "name": "adapter-3xryklnu",
+    "type": "model",
+    "role": "output",
+    "digest": "077acaecb59aa195088a5c480c51c4de",
+    "cloud_version": null,
+    "files": [
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/adapter/README.md",
+        "sha256": "fa730b804cd42ab3b69420cce82e351c69b32b68e497607788cf063a8f4de48c",
+        "bytes": 5206
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/adapter/adapter_config.json",
+        "sha256": "ca99890e3356884599b51e429482e429866c23625908cb9bf352e469ed07b208",
+        "bytes": 1064
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074420Z/adapter/adapter_model.safetensors",
+        "sha256": "724d5fab646409d2b889c12920377d522021e3ece2b1c8709a8c57c1ec1d0ff2",
+        "bytes": 1858776
+      }
+    ]
+  }
+]

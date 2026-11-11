@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "seed": 20261111,
+  "files": {
+    "week08/data/train.jsonl": {
+      "sha256": "8a0569ea4679bad8ee3dab89cdd94b507fdba221cbd77fef57b98eb805a4272d",
+      "count": 96
+    },
+    "week08/data/validation.jsonl": {
+      "sha256": "6e0beba0e9e8b4255138f639962e9075852766b1eea2f707e9fb3b6a60124308",
+      "count": 12
+    },
+    "week08/data/reserved-test.jsonl": {
+      "sha256": "69dfd43762f88c1cbf6866c7445a47086d904070b589254b80b01c9c4cc9269f",
+      "count": 12
+    }
+  },
+  "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\n{text}\nAnswer:\n",
+  "generator_sha256": "72ae4f9ee624fed5435c86ed2109adeab5e84cf17ebc776d2d4b16c2a2e288a2"
+}

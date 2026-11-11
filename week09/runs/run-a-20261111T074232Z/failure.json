@@ -1,0 +1,3 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"/home/yaxiaodang/multimodal-ai-bootcamp/week08/train.py\", line 194, in run\n    raise RuntimeError(f'Intentional tracking failure drill at step {step}')\nRuntimeError: Intentional tracking failure drill at step 2\n"
+}

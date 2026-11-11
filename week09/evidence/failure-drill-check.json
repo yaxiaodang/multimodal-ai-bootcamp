@@ -1,0 +1,9 @@
+{
+  "label": "intentional-failure-drill",
+  "directory": "week09/runs/run-a-20261111T074232Z",
+  "log": "week09/evidence/failure-drill.log",
+  "exit_code": 1,
+  "native_exit_code": 1,
+  "summary_status": "failed",
+  "checks": "summary export completed and original failure retained"
+}

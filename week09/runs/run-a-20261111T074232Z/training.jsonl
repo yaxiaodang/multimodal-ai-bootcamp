@@ -1,0 +1,2 @@
+{"step": 1, "train_loss": 1.205902636051178, "gradient_norm": 0.9982104301452637, "elapsed_seconds": 4.11516281799959}
+{"step": 2, "train_loss": 1.0337538123130798, "gradient_norm": 0.8949956893920898, "elapsed_seconds": 8.15685973499967}

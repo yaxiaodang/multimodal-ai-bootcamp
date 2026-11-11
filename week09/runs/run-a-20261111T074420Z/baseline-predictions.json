@@ -1,0 +1,158 @@
+[
+  {
+    "id": "F2000",
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nInvoice F2000\nCurrency: USD\nSubtotal: 475.34\nTax: 6.62\nTotal: 481.96\nAnswer:\n",
+    "answer": {
+      "total": "481.96",
+      "currency": "USD"
+    },
+    "prediction": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "json_valid": false,
+    "total_correct": false,
+    "currency_correct": false,
+    "exact": false
+  },
+  {
+    "id": "F2001",
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nReceipt F2001 | Subtotal 670.65 | Tax 6.76 | Total 677.41 EUR\nAnswer:\n",
+    "answer": {
+      "total": "677.41",
+      "currency": "EUR"
+    },
+    "prediction": "Total: 677.41 EUR\n\n### Subtotal 677.41 EUR\n\nSubtotal 677.",
+    "json_valid": false,
+    "total_correct": false,
+    "currency_correct": false,
+    "exact": false
+  },
+  {
+    "id": "F2002",
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nBILL F2002\nTax = 27.47\nFinal total = 608.39 GBP\nSubtotal = 580.92\nAnswer:\n",
+    "answer": {
+      "total": "608.39",
+      "currency": "GBP"
+    },
+    "prediction": "Total = 608.39 GBP\n\n### 1.2.2.2.1.1.1.1.2",
+    "json_valid": false,
+    "total_correct": false,
+    "currency_correct": false,
+    "exact": false
+  },
+  {
+    "id": "F2003",
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nInvoice F2003\nCurrency: USD\nSubtotal: 3.16\nTax: 15.45\nTotal: 18.61\nAnswer:\n",
+    "answer": {
+      "total": "18.61",
+      "currency": "USD"
+    },
+    "prediction": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "json_valid": false,
+    "total_correct": false,
+    "currency_correct": false,
+    "exact": false
+  },
+  {
+    "id": "F2004",
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nReceipt F2004 | Subtotal 385.71 | Tax 25.75 | Total 411.46 EUR\nAnswer:\n",
+    "answer": {
+      "total": "411.46",
+      "currency": "EUR"
+    },
+    "prediction": "Total: 411.46 EUR\n\n### Subtotal 385.71 | Tax 25.75 | Total",
+    "json_valid": false,
+    "total_correct": false,
+    "currency_correct": false,
+    "exact": false
+  },
+  {
+    "id": "F2005",
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nBILL F2005\nTax = 25.27\nFinal total = 603.36 GBP\nSubtotal = 578.09\nAnswer:\n",
+    "answer": {
+      "total": "603.36",
+      "currency": "GBP"
+    },
+    "prediction": "Total = 603.36 GBP\n\n### 1.2.2.2.1.1.1.1.2",
+    "json_valid": false,
+    "total_correct": false,
+    "currency_correct": false,
+    "exact": false
+  },
+  {
+    "id": "F2006",
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nInvoice F2006\nCurrency: USD\nSubtotal: 29.59\nTax: 11.35\nTotal: 40.94\nAnswer:\n",
+    "answer": {
+      "total": "40.94",
+      "currency": "USD"
+    },
+    "prediction": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "json_valid": false,
+    "total_correct": false,
+    "currency_correct": false,
+    "exact": false
+  },
+  {
+    "id": "F2007",
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nReceipt F2007 | Subtotal 322.52 | Tax 0.97 | Total 323.49 EUR\nAnswer:\n",
+    "answer": {
+      "total": "323.49",
+      "currency": "EUR"
+    },
+    "prediction": "Total: 323.49 EUR\n\n### Subtotal 322.52\n\nSubtotal 322.5",
+    "json_valid": false,
+    "total_correct": false,
+    "currency_correct": false,
+    "exact": false
+  },
+  {
+    "id": "F2008",
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nBILL F2008\nTax = 10.23\nFinal total = 320.72 GBP\nSubtotal = 310.49\nAnswer:\n",
+    "answer": {
+      "total": "320.72",
+      "currency": "GBP"
+    },
+    "prediction": "Total = 320.72\n\n### 1.2.2.2.1.1.1.1.2.1",
+    "json_valid": false,
+    "total_correct": false,
+    "currency_correct": false,
+    "exact": false
+  },
+  {
+    "id": "F2009",
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nInvoice F2009\nCurrency: USD\nSubtotal: 357.64\nTax: 22.03\nTotal: 379.67\nAnswer:\n",
+    "answer": {
+      "total": "379.67",
+      "currency": "USD"
+    },
+    "prediction": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "json_valid": false,
+    "total_correct": false,
+    "currency_correct": false,
+    "exact": false
+  },
+  {
+    "id": "F2010",
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nReceipt F2010 | Subtotal 395.93 | Tax 29.92 | Total 425.85 EUR\nAnswer:\n",
+    "answer": {
+      "total": "425.85",
+      "currency": "EUR"
+    },
+    "prediction": "Total: 425.85 EUR\n\n### Subtotal 395.93 | Tax 29.92 | Total",
+    "json_valid": false,
+    "total_correct": false,
+    "currency_correct": false,
+    "exact": false
+  },
+  {
+    "id": "F2011",
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nBILL F2011\nTax = 13.24\nFinal total = 67.85 GBP\nSubtotal = 54.61\nAnswer:\n",
+    "answer": {
+      "total": "67.85",
+      "currency": "GBP"
+    },
+    "prediction": "Total = 67.85 GBP\nFinal total = 67.85 GBP\n\n### 1.2.2.",
+    "json_valid": false,
+    "total_correct": false,
+    "currency_correct": false,
+    "exact": false
+  }
+]

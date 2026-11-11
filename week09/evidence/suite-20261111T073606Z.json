@@ -1,0 +1,21 @@
+[
+  {
+    "label": "a",
+    "command": [
+      "week08/train.py",
+      "--config",
+      "week09/configs/run-a.json",
+      "--output-root",
+      "week09/runs",
+      "--wandb-mode",
+      "offline",
+      "--fail-at-step",
+      "0"
+    ],
+    "exit_code": 1,
+    "log": "week09/evidence/20261111T073606Z-a.log",
+    "directories": [
+      "week09/runs/run-a-20261111T073611Z"
+    ]
+  }
+]

@@ -22,7 +22,7 @@
 | [week06/](week06/README.md) | Docling 文档解析 Pipeline：主线、10项核验与Markdown/JSON表示探索已完成 |
 | [week07/](week07/README.md) | Dataset、Benchmark 与负责任使用：24页冻结测试集、Docling baseline、切片评测与最差五例 |
 | [week08/](week08/README.md) | LoRA/PEFT：CPU字段抽取SFT、训练前后对比、学习率对照与adapter归档 |
-| `week09/` | W&B 实验追踪 |
+| [week09/](week09/README.md) | W&B实验追踪：CPU A/B、原生离线runs、artifact与报告；账号同步及网页Report待本人收尾 |
 | `week10/` | 统一评测、消融与错误分析 |
 | `week11/` | 论文导读与最小复现 |
 | `week12/` | Capstone、展示与自主答辩 |

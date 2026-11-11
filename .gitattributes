@@ -1,0 +1,3 @@
+
+# Preserve native experiment stdout/stderr, including SDK spacing.
+week09/evidence/*.log -whitespace

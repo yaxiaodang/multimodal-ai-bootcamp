@@ -1,0 +1,27 @@
+{
+  "status": "failed",
+  "started_utc": "2026-11-11T07:35:40.345382+00:00",
+  "git_base": "a30ed31081cfb6d112940e1b973933a82ffd785a",
+  "git_status": " M week01/README.md\n M week02/README.md\n M week03/README.md\n M week04/README.md\n M week05/README.md\n M week05/reports/meeting-notes.md\n M week06/reports/meeting-demo.ipynb\n M week06/runs/baseline-20261105T152012-076969/complex_table/document.md\n?? week01/reports/\n?? week02/reports/\n?? week03/reports/\n?? week04/reports/meeting-demo.ipynb\n?? week04/reports/meeting-notes.md\n?? week05/reports/meeting-demo.ipynb\n?? week09/evidence/\n?? week09/runs/\n",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "torch": "2.14.0+cpu",
+    "transformers": "5.17.0",
+    "peft": "0.19.0",
+    "accelerate": "1.12.0",
+    "huggingface-hub": "1.32.0",
+    "tokenizers": "0.23.2",
+    "safetensors": "0.8.0"
+  },
+  "source_sha256": "61cf5bdbe759fdc0f93a6576d1f0d66c6f524477b7b77bf251071dbb10de5bd8",
+  "freeze_sha256": "109c4ebf435f692e6b316455a6c22dff94a5ba643c57c03e5009ba9fe992029f",
+  "config_sha256": "3c538235315f28482663d721ef79b648ef19f2f3da7a552930d96c5dbcd33dde",
+  "model_id": "HuggingFaceTB/SmolLM2-135M",
+  "revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "cuda_available": false,
+  "gpu_hours": 0,
+  "paid_cost_cny": 0,
+  "total_seconds": 0.9861604049997368,
+  "peak_rss_mib": 362.7734375
+}

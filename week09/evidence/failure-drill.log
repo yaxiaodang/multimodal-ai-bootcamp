@@ -1,0 +1,45 @@
+OUTPUT week09/runs/run-a-20261111T074232Z
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/yaxiaodang/multimodal-ai-bootcamp/week09/wandb/wandb/offline-run-20261111_154233-7wxgxskl
+wandb: View this run in the terminal with `wandb leet`
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  41%|████      | 112/272 [00:00<00:00, 1092.22it/s]Loading weights:  82%|████████▏ | 222/272 [00:00<00:00, 975.85it/s] Loading weights: 100%|██████████| 272/272 [00:00<00:00, 1035.88it/s]
+baseline {"exact_rate": 0.0, "json_valid_rate": 0.0, "total_correct_rate": 0.0, "currency_correct_rate": 0.0, "n": 12, "answer_nll": 1.2411682322218611, "seconds": 32.397235065999666}
+wandb: 
+wandb: Run history:
+wandb:            baseline/answer_nll ▁
+wandb: baseline/currency_correct_rate ▁
+wandb:            baseline/exact_rate ▁
+wandb:       baseline/json_valid_rate ▁
+wandb:                     baseline/n ▁
+wandb:               baseline/seconds ▁
+wandb:    baseline/total_correct_rate ▁
+wandb:       resource/elapsed_seconds ▁▅█
+wandb:   resource/host_memory_percent ▁▇█
+wandb:   resource/process_cpu_percent ▇▁█
+wandb:                             +6 ...
+wandb: 
+wandb: Run summary:
+wandb:            baseline/answer_nll 1.24117
+wandb: baseline/currency_correct_rate 0
+wandb:            baseline/exact_rate 0
+wandb:       baseline/json_valid_rate 0
+wandb:                     baseline/n 12
+wandb:               baseline/seconds 32.39724
+wandb:    baseline/total_correct_rate 0
+wandb:                      gpu_hours 0
+wandb:                  paid_cost_cny 0
+wandb:                   peak_rss_mib 1461.14453
+wandb:                            +12 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/yaxiaodang/multimodal-ai-bootcamp/week09/wandb/wandb/offline-run-20261111_154233-7wxgxskl
+wandb: Find logs at: ./week09/wandb/wandb/offline-run-20261111_154233-7wxgxskl/logs
+Traceback (most recent call last):
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/week08/train.py", line 236, in <module>
+    main()
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/week08/train.py", line 233, in main
+    run(args)
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/week08/train.py", line 194, in run
+    raise RuntimeError(f'Intentional tracking failure drill at step {step}')
+RuntimeError: Intentional tracking failure drill at step 2

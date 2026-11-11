@@ -1,0 +1,129 @@
+[
+  {
+    "name": "invoices-v1",
+    "type": "dataset",
+    "role": "input",
+    "digest": "280c299cf3eee3bd2d3c51f245a2554e",
+    "cloud_version": null,
+    "files": [
+      {
+        "path": "week08/data/freeze.json",
+        "sha256": "109c4ebf435f692e6b316455a6c22dff94a5ba643c57c03e5009ba9fe992029f",
+        "bytes": 726
+      },
+      {
+        "path": "week08/data/train.jsonl",
+        "sha256": "8a0569ea4679bad8ee3dab89cdd94b507fdba221cbd77fef57b98eb805a4272d",
+        "bytes": 17101
+      },
+      {
+        "path": "week08/data/validation.jsonl",
+        "sha256": "6e0beba0e9e8b4255138f639962e9075852766b1eea2f707e9fb3b6a60124308",
+        "bytes": 2191
+      },
+      {
+        "path": "week08/dataset-card.md",
+        "sha256": "2fd726ea69e30e3d597d57eae15a324575b7efaab71506f6f7832e4004b6a4d1",
+        "bytes": 2777
+      }
+    ]
+  },
+  {
+    "name": "training-source",
+    "type": "code",
+    "role": "source",
+    "digest": "1c39e4338eedbeae04dcd156a590486a",
+    "cloud_version": null,
+    "files": [
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/config.json",
+        "sha256": "e50ba0a96033a1f498e5104bfe34b4b29496be618eba3059eb63d5a2068bcd93",
+        "bytes": 589
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/snapshots/freeze.json",
+        "sha256": "109c4ebf435f692e6b316455a6c22dff94a5ba643c57c03e5009ba9fe992029f",
+        "bytes": 726
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/snapshots/post-training-plan.md",
+        "sha256": "a706e739aaf4eb2f9116935a0f6a3b54544fbb8f75cefebe2cdfb4dd199018bf",
+        "bytes": 3294
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/snapshots/prepare_data.py",
+        "sha256": "72ae4f9ee624fed5435c86ed2109adeab5e84cf17ebc776d2d4b16c2a2e288a2",
+        "bytes": 2173
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/snapshots/tracking.py",
+        "sha256": "0223d79958e80c1c717a99b250a569742984451a1850895c6d5f617074872314",
+        "bytes": 6752
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/snapshots/train.py",
+        "sha256": "61cf5bdbe759fdc0f93a6576d1f0d66c6f524477b7b77bf251071dbb10de5bd8",
+        "bytes": 12812
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/tracking-config.json",
+        "sha256": "4d68d3a0ba4ab99bf08a0d54725f4c1b3b21c5ebb72874d865028636179881ec",
+        "bytes": 1042
+      }
+    ]
+  },
+  {
+    "name": "results-7wxgxskl",
+    "type": "evaluation",
+    "role": "output",
+    "digest": "eb1f87e3a43bba8af0321e626058c062",
+    "cloud_version": null,
+    "files": [
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/baseline-metrics.json",
+        "sha256": "eb5b0110386836ec435b908e32f94ccff7ded75a73922189b7f58a8421cc0393",
+        "bytes": 191
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/baseline-predictions.json",
+        "sha256": "0e3a219f8eaf2e512779cfc6cf0c95323a35b66a5b0016316634c97ef42674b8",
+        "bytes": 5820
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/config.json",
+        "sha256": "e50ba0a96033a1f498e5104bfe34b4b29496be618eba3059eb63d5a2068bcd93",
+        "bytes": 589
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/failure.json",
+        "sha256": "99124cdb565ef7634297d4253f86fd3d4fa13c53df56089b1a40e42acd98f40f",
+        "bytes": 282
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/history.jsonl",
+        "sha256": "dbdb937bffd901aee585c8ee3a4c4e6519619fb438ab195365acbae49d695167",
+        "bytes": 1069
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/metadata.json",
+        "sha256": "b3a1b8bbfd7a476125d4f8eb0cc7995ffe9d2f111ffd28f0eef50485805f7860",
+        "bytes": 11318
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/tracking-config.json",
+        "sha256": "4d68d3a0ba4ab99bf08a0d54725f4c1b3b21c5ebb72874d865028636179881ec",
+        "bytes": 1042
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/training.jsonl",
+        "sha256": "2b136ffaeced9afd82e28f2c191da706cfbf89f7dcc5d954c9ffd2e3fc775caa",
+        "bytes": 239
+      },
+      {
+        "path": "week09/runs/run-a-20261111T074232Z/wandb-identity.json",
+        "sha256": "edd368a1b2e5bdf94123b0d3460c77c124c8853cea295907feb36268123ce8bb",
+        "bytes": 256
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+OUTPUT week09/runs/run-a-20261111T073540Z
+Traceback (most recent call last):
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/week08/train.py", line 236, in <module>
+    main()
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/week08/train.py", line 233, in main
+    run(args)
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/week08/train.py", line 94, in run
+    tracker = Tracker(out, cfg, metadata, args)
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/week09/tracking.py", line 32, in __init__
+    self.run = wandb.init(project=args.wandb_project, entity=args.wandb_entity,
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1558, in init
+    telemetry_recorder.reraise(e)
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/wandb/analytics/opentelemetry/opentelemetry_proxy.py", line 538, in reraise
+    raise exc
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1536, in init
+    run = wi.init(run_settings, run_config, run_printer)
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 834, in init
+    service = self._wl.ensure_service()
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/wandb/sdk/wandb_setup.py", line 389, in ensure_service
+    self._connection = service_connection.connect_to_service(
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/wandb/sdk/lib/service/service_connection.py", line 57, in connect_to_service
+    return _start_and_connect_service(asyncer, settings)
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/wandb/sdk/lib/service/service_connection.py", line 70, in _start_and_connect_service
+    proc = service_process.start(settings)
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/wandb/sdk/lib/service/service_process.py", line 33, in start
+    return _start(
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/wandb/sdk/lib/service/service_process.py", line 79, in _start
+    get_telemetry_recorder().reraise(e)
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/wandb/analytics/opentelemetry/opentelemetry_proxy.py", line 538, in reraise
+    raise exc
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/wandb/sdk/lib/service/service_process.py", line 73, in _start
+    return _launch_server(
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/wandb/sdk/lib/service/service_process.py", line 160, in _launch_server
+    token = service_port_file.poll_for_token(
+  File "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/wandb/sdk/lib/service/service_port_file.py", line 49, in poll_for_token
+    raise ServicePollForTokenError(
+wandb.sdk.lib.service.service_port_file.ServicePollForTokenError: wandb-core exited with code 1
