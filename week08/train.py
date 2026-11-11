@@ -68,7 +68,7 @@ def run(args):
     torch.use_deterministic_algorithms(True)
     set_seed(cfg['seed'])
     name = cfg['name'] + '-' + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
-    out = ROOT / 'week08/runs' / name
+    out = ROOT / args.output_root / name
     out.mkdir(parents=True, exist_ok=False)
     started = time.monotonic()
     save(out / 'config.json', cfg)
@@ -86,7 +86,12 @@ def run(args):
                 'cuda_available': torch.cuda.is_available(), 'gpu_hours': 0, 'paid_cost_cny': 0}
     save(out / 'metadata.json', metadata)
     print('OUTPUT', out.relative_to(ROOT), flush=True)
+    tracker = None
     try:
+        if args.wandb_mode:
+            sys.path.insert(0, str(ROOT))
+            from week09.tracking import Tracker
+            tracker = Tracker(out, cfg, metadata, args)
         def load(split):
             return [json.loads(line) for line in (ROOT/f'week08/data/{split}.jsonl').read_text().splitlines()]
         train, val = load('train'), load('validation')
@@ -133,6 +138,8 @@ def run(args):
             metrics = score(rows) | {'answer_nll':nll(model,encoded_val), 'seconds':time.monotonic()-t}
             save(out/f'{tag}-predictions.json',rows)
             save(out/f'{tag}-metrics.json',metrics)
+            if tracker:
+                tracker.evaluation(tag, metrics, rows)
             print(tag, json.dumps(metrics), flush=True)
             return rows, metrics
         baseline_rows, baseline = evaluate(base,'baseline')
@@ -181,6 +188,10 @@ def run(args):
                     record['validation_answer_nll']=nll(model,encoded_val)
                     print('STEP',json.dumps(record),flush=True)
                 log.write(json.dumps(record)+'\n'); log.flush()
+                if tracker:
+                    tracker.training(record, cfg['learning_rate'])
+                if args.fail_at_step == step:
+                    raise RuntimeError(f'Intentional tracking failure drill at step {step}')
         metadata['training_seconds']=time.monotonic()-train_start
         metadata['frozen_base_after_sha256']=base_hash()
         assert metadata['frozen_base_after_sha256']==frozen_weights, 'Base weights changed'
@@ -203,12 +214,19 @@ def run(args):
         metadata['total_seconds']=time.monotonic()-started
         metadata['peak_rss_mib']=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024
         save(out/'metadata.json',metadata)
+        if tracker:
+            tracker.finish(metadata)
 
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config',default='week08/configs/run-a.json')
     parser.add_argument('--verify-only',action='store_true',help='Verify frozen data hashes without loading model')
+    parser.add_argument('--output-root',default='week08/runs',help='Repository-relative directory for new results')
+    parser.add_argument('--wandb-mode',choices=['offline','online'],help='Enable Week09 tracking; default keeps Week08 unchanged')
+    parser.add_argument('--wandb-project',default='multimodal-ai-bootcamp-week09')
+    parser.add_argument('--wandb-entity',default=None,help='Account or team name for online mode')
+    parser.add_argument('--fail-at-step',type=int,default=0,help='Intentional failure drill; 0 disables it')
     args=parser.parse_args()
     if args.verify_only:
         verify_data(); print('Frozen data and generator SHA-256 verified.'); return

@@ -1,0 +1,4 @@
+-r ../week08/requirements.txt
+wandb==0.31.0
+matplotlib==3.10.9
+psutil==7.2.2

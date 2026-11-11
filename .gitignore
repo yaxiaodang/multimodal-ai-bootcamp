@@ -27,3 +27,9 @@ samples/demo.png
 # Secrets
 .env
 *.key
+
+# Week09 local W&B spool, cache and machine settings
+.cache-week09/
+week09/wandb/
+week09/.wandb-config/
+.netrc
