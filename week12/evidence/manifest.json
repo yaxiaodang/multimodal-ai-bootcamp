@@ -400,7 +400,7 @@
     "week11/scripts/build_report.py": "25c057e39fa614025171cd2c90ec90d1da35d18b15928f0bb3909946b1d2bf8f",
     "week11/scripts/check_mechanism.py": "25fdf2e043db509ced9eadc9d0b3489b7e231055914f5bfeedd1ba2397fc2c9f",
     "week11/scripts/verify.py": "f991705c2ebd3938b816c6b101903adebaab0a28b2d5001d057a62073984d13b",
-    "week12/README.md": "689dde55151d39fad46f63b5ae12357ff0424f149eeea44841285afddfb162be",
+    "week12/README.md": "8e5bc4a8dac77daa4053705cb1e65e8c9f368404334f1ad772471cde2a6b1604",
     "week12/capstone-design.md": "e99d6a636015512d025a9fd1520df12f1123100f08b7adc3cf1cf9c42cf344d7",
     "week12/configs/capstone.json": "9eead214b3364c240ae6f91bd550ba8fb675d35b84a231c300596947f296b16c",
     "week12/evidence/README.md": "387763f92103beefb57adce95bd9791f6c48b71e53923ea68648ff603215d1a8",
@@ -413,6 +413,6 @@
     "week12/reports/next-four-weeks.md": "9527376bf0fec9bfaa67e5d55cf1dd98a3322fb9ffeffca0473042a0e8fc44c0",
     "week12/reports/results.json": "44e56fa50ffca37596da3143362a006fe135bf91d25c7244996a4e2141deb2e8",
     "week12/reports/results.md": "96f83799b756b02d5851294ffdfa263dab71e12983bd6b757bbd9a645bbea685",
-    "week12/run.py": "be211da20b6a0c3da087499bab99dccfe02dc90908b509a3de4902b471cc0f70"
+    "week12/run.py": "8deeedd15b7a76b22bcec94acb56c5a25713d3c9944ef276d60031faa1e9ffac"
   }
 }

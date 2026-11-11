@@ -8,7 +8,7 @@
 python3 week12/run.py
 ```
 
-作用：核对冻结证据与原始输出，调用Week10/11独立核验，重新计算24页PDF的OCR对照与12条文本测试，检查发布文件及本周文档链接，打印结果表。只需Python 3.10或更新版本及标准库；不安装依赖，不下载模型，不训练。执行记录在[execution.json](evidence/execution.json)，两个独立核验日志在[evidence](evidence/README.md)。错误时退出2并保存原因，成功退出0。
+作用：核对冻结证据与原始输出，调用Week10/11独立核验，重新计算24页PDF的OCR对照与12条文本测试，检查发布文件及本周文档链接，打印结果表。只需Python 3.10或更新版本及标准库；不安装依赖，不下载模型，不训练。执行记录在[execution.json](evidence/execution.json)，两个独立核验日志在[evidence](evidence/README.md)。错误时退出2并保存原因，成功退出0。跨Python版本浮点求和只允许1e-12的舍入容差；样本、文本、布尔值和计数仍须严格一致。
 
 ## 先理解整体逻辑
 

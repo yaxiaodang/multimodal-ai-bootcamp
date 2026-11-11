@@ -3,6 +3,7 @@ import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
+import math
 from pathlib import Path
 import platform
 import re
@@ -21,6 +22,18 @@ def read(path):
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def same_metrics(actual, expected):
+    # Python 3.12+ improves float summation; accept rounding noise only.
+    # IDs, strings, counts, booleans, keys and list order must still agree exactly.
+    if isinstance(actual, float) and isinstance(expected, float):
+        return math.isclose(actual, expected, rel_tol=1e-12, abs_tol=1e-12)
+    if isinstance(actual, dict) and isinstance(expected, dict):
+        return actual.keys() == expected.keys() and all(same_metrics(actual[k], expected[k]) for k in actual)
+    if isinstance(actual, list) and isinstance(expected, list):
+        return len(actual) == len(expected) and all(same_metrics(a, b) for a, b in zip(actual, expected))
+    return type(actual) is type(expected) and actual == expected
 
 
 def dump(path, value):
@@ -159,7 +172,7 @@ def main():
             if proc.returncode:
                 raise ValueError(f'{label} audit failed; see audit log')
         value = results()
-        if value != read('week12/reports/results.json'):
+        if not same_metrics(value, read('week12/reports/results.json')):
             raise ValueError('Recomputed metrics differ from released results.json')
         if result_markdown(value) != (WEEK / 'reports/results.md').read_text(encoding='utf-8'):
             raise ValueError('Results table differs from raw scores')

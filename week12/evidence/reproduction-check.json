@@ -1,3 +1,67 @@
 {
-  "status": "pending"
+  "status": "passed",
+  "checked_at_utc": "2026-11-11T08:43:07.527583+00:00",
+  "tested_commit": "c6ac5980de4230bce9c8d58a000f9172bd02f58f",
+  "executor": "Codex automated execution; not peer or user review",
+  "temporary_directory": "/tmp/bootcamp-week12-l4ya2kif",
+  "environment": "Same Ubuntu VM, Python standard library; clone has no virtualenv/model cache; unpacked archive has no .git",
+  "model_retraining_or_new_inference": false,
+  "remote_clone_tested": false,
+  "package": {
+    "path": "week12/dist/capstone.tar.gz",
+    "sha256": "70bb483c2f3aeb1ed125f0fab75a84286bd04fca5c697122bf60ee24864b30a4",
+    "bytes": 13991006
+  },
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "clone",
+        "--local",
+        "--no-hardlinks",
+        "--single-branch",
+        "--branch",
+        "codex/week12-capstone",
+        "/home/yaxiaodang/multimodal-ai-bootcamp",
+        "/tmp/bootcamp-week12-l4ya2kif/fresh-clone"
+      ],
+      "cwd": "/tmp/bootcamp-week12-l4ya2kif",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 1.7582832259995484
+    },
+    {
+      "argv": [
+        "/home/yaxiaodang/miniconda3/bin/python3",
+        "week12/run.py",
+        "--package"
+      ],
+      "cwd": "/tmp/bootcamp-week12-l4ya2kif/fresh-clone",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 8.002976380999826
+    },
+    {
+      "argv": [
+        "/home/yaxiaodang/miniconda3/bin/python3",
+        "week12/run.py"
+      ],
+      "cwd": "/tmp/bootcamp-week12-l4ya2kif/unpacked",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.952006829000311
+    },
+    {
+      "argv": [
+        "/home/yaxiaodang/miniconda3/bin/python3",
+        "week12/run.py"
+      ],
+      "cwd": "/tmp/bootcamp-week12-l4ya2kif/fresh-clone",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.9261931190003452
+    }
+  ],
+  "peer_reproduction": "pending",
+  "limit": "Local fresh clone and tar extraction validate archive rescoring, not a second computer or a from-scratch model installation."
 }

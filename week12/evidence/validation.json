@@ -1,3 +1,104 @@
 {
-  "status": "pending"
+  "status": "passed",
+  "tested_commit": "c6ac5980de4230bce9c8d58a000f9172bd02f58f",
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "clone",
+        "--local",
+        "--no-hardlinks",
+        "--single-branch",
+        "--branch",
+        "codex/week12-capstone",
+        "/home/yaxiaodang/multimodal-ai-bootcamp",
+        "/tmp/bootcamp-week12-l4ya2kif/fresh-clone"
+      ],
+      "cwd": "/tmp/bootcamp-week12-l4ya2kif",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 1.7582832259995484,
+      "output": "正克隆到 '/tmp/bootcamp-week12-l4ya2kif/fresh-clone'...\n完成。\n"
+    },
+    {
+      "argv": [
+        "/home/yaxiaodang/miniconda3/bin/python3",
+        "week12/run.py",
+        "--package"
+      ],
+      "cwd": "/tmp/bootcamp-week12-l4ya2kif/fresh-clone",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 8.002976380999826,
+      "output": "# 从原始归档重算的结果\n\n本页由 `week12/run.py` 的评分函数生成；本周没有重新训练或推理。\n\n| PDF方法 | 页数 | 内容相似度 | 顺序 | 表格严格匹配 | 扫描内容相似度 |\n| --- | --- | --- | --- | --- | --- |\n| ocr-on | 24 | 0.967559 | 0.708333 | 0% | 0.950549 |\n| ocr-off | 24 | 0.650709 | 0.500000 | 0% | 0.000000 |\n\n| 英文文本方法 | 预留测试条数 | JSON严格正确率 |\n| --- | --- | --- |\n| base | 12 | 0% |\n| run-a | 12 | 100% |\n| run-b | 12 | 100% |\n\nWeek10保留42个方法×文档错误候选；本人复核、同学复现待完成。\nPDF与英文文本是两项任务；两张表不支持跨任务排名。完整证据和成本见[最终报告](final-report.md)。\n\nPASS: archived results reproduced; human and peer checks remain pending.\n"
+    },
+    {
+      "argv": [
+        "/home/yaxiaodang/miniconda3/bin/python3",
+        "week12/run.py"
+      ],
+      "cwd": "/tmp/bootcamp-week12-l4ya2kif/unpacked",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.952006829000311,
+      "output": "# 从原始归档重算的结果\n\n本页由 `week12/run.py` 的评分函数生成；本周没有重新训练或推理。\n\n| PDF方法 | 页数 | 内容相似度 | 顺序 | 表格严格匹配 | 扫描内容相似度 |\n| --- | --- | --- | --- | --- | --- |\n| ocr-on | 24 | 0.967559 | 0.708333 | 0% | 0.950549 |\n| ocr-off | 24 | 0.650709 | 0.500000 | 0% | 0.000000 |\n\n| 英文文本方法 | 预留测试条数 | JSON严格正确率 |\n| --- | --- | --- |\n| base | 12 | 0% |\n| run-a | 12 | 100% |\n| run-b | 12 | 100% |\n\nWeek10保留42个方法×文档错误候选；本人复核、同学复现待完成。\nPDF与英文文本是两项任务；两张表不支持跨任务排名。完整证据和成本见[最终报告](final-report.md)。\n\nPASS: archived results reproduced; human and peer checks remain pending.\n"
+    },
+    {
+      "argv": [
+        "/home/yaxiaodang/miniconda3/bin/python3",
+        "week12/run.py"
+      ],
+      "cwd": "/tmp/bootcamp-week12-l4ya2kif/fresh-clone",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.9261931190003452,
+      "output": "# 从原始归档重算的结果\n\n本页由 `week12/run.py` 的评分函数生成；本周没有重新训练或推理。\n\n| PDF方法 | 页数 | 内容相似度 | 顺序 | 表格严格匹配 | 扫描内容相似度 |\n| --- | --- | --- | --- | --- | --- |\n| ocr-on | 24 | 0.967559 | 0.708333 | 0% | 0.950549 |\n| ocr-off | 24 | 0.650709 | 0.500000 | 0% | 0.000000 |\n\n| 英文文本方法 | 预留测试条数 | JSON严格正确率 |\n| --- | --- | --- |\n| base | 12 | 0% |\n| run-a | 12 | 100% |\n| run-b | 12 | 100% |\n\nWeek10保留42个方法×文档错误候选；本人复核、同学复现待完成。\nPDF与英文文本是两项任务；两张表不支持跨任务排名。完整证据和成本见[最终报告](final-report.md)。\n\nPASS: archived results reproduced; human and peer checks remain pending.\n"
+    },
+    {
+      "argv": [
+        "/home/yaxiaodang/miniconda3/bin/python3",
+        "week12/run.py"
+      ],
+      "cwd": "/tmp/bootcamp-week12-l4ya2kif/unpacked",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "elapsed_seconds": 0.31030875599935825,
+      "output": "Capstone audit refused: week10 audit failed; see audit log\n"
+    },
+    {
+      "argv": [
+        "/home/yaxiaodang/miniconda3/bin/python3",
+        "week12/run.py"
+      ],
+      "cwd": "/tmp/bootcamp-week12-l4ya2kif/unpacked",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "elapsed_seconds": 0.3203444109994962,
+      "output": "Capstone audit refused: week10 audit failed; see audit log\n"
+    },
+    {
+      "argv": [
+        "/home/yaxiaodang/miniconda3/bin/python3",
+        "week12/run.py"
+      ],
+      "cwd": "/tmp/bootcamp-week12-l4ya2kif/unpacked",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "elapsed_seconds": 0.14940158200079168,
+      "output": "Capstone audit refused: Frozen evidence changed: week10/runs/suite-20261111T080142898866Z/run-a/predictions.json\n"
+    },
+    {
+      "argv": [
+        "/home/yaxiaodang/miniconda3/bin/python3",
+        "week12/run.py"
+      ],
+      "cwd": "/tmp/bootcamp-week12-l4ya2kif/unpacked",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.8623431380001421,
+      "output": "# 从原始归档重算的结果\n\n本页由 `week12/run.py` 的评分函数生成；本周没有重新训练或推理。\n\n| PDF方法 | 页数 | 内容相似度 | 顺序 | 表格严格匹配 | 扫描内容相似度 |\n| --- | --- | --- | --- | --- | --- |\n| ocr-on | 24 | 0.967559 | 0.708333 | 0% | 0.950549 |\n| ocr-off | 24 | 0.650709 | 0.500000 | 0% | 0.000000 |\n\n| 英文文本方法 | 预留测试条数 | JSON严格正确率 |\n| --- | --- | --- |\n| base | 12 | 0% |\n| run-a | 12 | 100% |\n| run-b | 12 | 100% |\n\nWeek10保留42个方法×文档错误候选；本人复核、同学复现待完成。\nPDF与英文文本是两项任务；两张表不支持跨任务排名。完整证据和成本见[最终报告](final-report.md)。\n\nPASS: archived results reproduced; human and peer checks remain pending.\n"
+    }
+  ],
+  "scanner_fixture": "Synthetic GitHub-shaped token detected without printing its value",
+  "no_original_inputs_modified": true
 }
