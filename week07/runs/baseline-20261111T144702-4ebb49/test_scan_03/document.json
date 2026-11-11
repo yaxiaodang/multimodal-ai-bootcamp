@@ -1,0 +1,255 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.10.0",
+  "name": "test_scan_03",
+  "origin": {
+    "mimetype": "application/pdf",
+    "binary_hash": 5256405051978461077,
+    "filename": "test_scan_03.pdf"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [
+      {
+        "$ref": "#/texts/0"
+      },
+      {
+        "$ref": "#/texts/1"
+      },
+      {
+        "$ref": "#/texts/2"
+      },
+      {
+        "$ref": "#/texts/3"
+      },
+      {
+        "$ref": "#/texts/4"
+      },
+      {
+        "$ref": "#/texts/5"
+      },
+      {
+        "$ref": "#/texts/6"
+      }
+    ],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 32.0,
+            "t": 807.2231333333334,
+            "r": 217.0,
+            "b": 770.2231333333334,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            10
+          ]
+        }
+      ],
+      "orig": "\u8bbe\u5907\u68c0\u67e5\u8bb0\u5f55 351",
+      "text": "\u8bbe\u5907\u68c0\u67e5\u8bb0\u5f55 351",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 41.0,
+            "t": 702.5564666666667,
+            "r": 158.33333333333331,
+            "b": 676.8898,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            7
+          ]
+        }
+      ],
+      "orig": "\u6b65\u6750\u6599\u767b\u8bb0 \u7b2c",
+      "text": "\u6b65\u6750\u6599\u767b\u8bb0 \u7b2c",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 38.666666666666664,
+            "t": 662.5564666666667,
+            "r": 271.33333333333337,
+            "b": 641.5564666666667,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            24
+          ]
+        }
+      ],
+      "orig": "\u6750\u6599\u7f16\u53f7\u4e3a TEST-351 \u672c\u6279\u6570\u91cf\u4e3a354\u3002",
+      "text": "\u6750\u6599\u7f16\u53f7\u4e3a TEST-351 \u672c\u6279\u6570\u91cf\u4e3a354\u3002"
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 41.0,
+            "t": 542.8898,
+            "r": 160.0,
+            "b": 516.5564666666667,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            9
+          ]
+        }
+      ],
+      "orig": "\u5904\u7406\u68c0\u67e5 \u7b2c\u4e8c \u6b65",
+      "text": "\u5904\u7406\u68c0\u67e5 \u7b2c\u4e8c \u6b65",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 42.0,
+            "t": 502.22313333333335,
+            "r": 268.33333333333337,
+            "b": 478.88980000000004,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            24
+          ]
+        }
+      ],
+      "orig": "\u5904\u7406\u6e29\u5ea6\u4e3a 31 \u5ea6\uff0c \uff0c\u68c0\u67e5\u65f6\u95f4\u4e3a31 \u5206\u949f\u3002",
+      "text": "\u5904\u7406\u6e29\u5ea6\u4e3a 31 \u5ea6\uff0c \uff0c\u68c0\u67e5\u65f6\u95f4\u4e3a31 \u5206\u949f\u3002"
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 46.666666666666664,
+            "t": 378.22313333333335,
+            "r": 160.33333333333331,
+            "b": 360.5564666666667,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            7
+          ]
+        }
+      ],
+      "orig": "\u7b2c\u4e09\u6b65\u7ed3\u679c\u5f52\u6863",
+      "text": "\u7b2c\u4e09\u6b65\u7ed3\u679c\u5f52\u6863",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 47.666666666666664,
+            "t": 337.22313333333335,
+            "r": 332.6666666666667,
+            "b": 326.2231333333334,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            27
+          ]
+        }
+      ],
+      "orig": "\u5f52\u6863\u6279\u6b21\u4e3aGROUP-360\uff0c\u7ed3\u679c\u4ec5\u7528\u4e8e\u865a\u6784\u6559\u5b66\u5b9e\u9a8c\u3002",
+      "text": "\u5f52\u6863\u6279\u6b21\u4e3aGROUP-360\uff0c\u7ed3\u679c\u4ec5\u7528\u4e8e\u865a\u6784\u6559\u5b66\u5b9e\u9a8c\u3002"
+    }
+  ],
+  "pictures": [],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {
+    "1": {
+      "size": {
+        "width": 595.2756,
+        "height": 841.8898
+      },
+      "page_no": 1
+    }
+  }
+}

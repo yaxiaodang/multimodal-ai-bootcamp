@@ -1,0 +1,221 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.10.0",
+  "name": "test_scan_08",
+  "origin": {
+    "mimetype": "application/pdf",
+    "binary_hash": 8746739000348505143,
+    "filename": "test_scan_08.pdf"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [
+      {
+        "$ref": "#/texts/0"
+      },
+      {
+        "$ref": "#/texts/1"
+      },
+      {
+        "$ref": "#/texts/2"
+      },
+      {
+        "$ref": "#/texts/3"
+      },
+      {
+        "$ref": "#/texts/4"
+      },
+      {
+        "$ref": "#/texts/5"
+      }
+    ],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 25.0,
+            "t": 804.8898,
+            "r": 216.66666666666666,
+            "b": 768.5564666666667,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            10
+          ]
+        }
+      ],
+      "orig": "\u8bbe\u5907\u68c0\u67e5\u8bb0\u5f55 436",
+      "text": "\u8bbe\u5907\u68c0\u67e5\u8bb0\u5f55 436"
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 35.666666666666664,
+            "t": 693.8898,
+            "r": 264.33333333333337,
+            "b": 643.8898,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            33
+          ]
+        }
+      ],
+      "orig": "\u7b2c\u4e00\u6b65\u6750\u6599\u767b\u8bb0 \u6750\u6599\u7f16\u53f7\u4e3a TEST-436\uff0c\u672c\u6279\u6570\u91cf\u4e3a 439\u3002",
+      "text": "\u7b2c\u4e00\u6b65\u6750\u6599\u767b\u8bb0 \u6750\u6599\u7f16\u53f7\u4e3a TEST-436\uff0c\u672c\u6279\u6570\u91cf\u4e3a 439\u3002"
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 41.333333333333336,
+            "t": 534.5564666666667,
+            "r": 156.0,
+            "b": 517.8898,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            8
+          ]
+        }
+      ],
+      "orig": "\u7b2c\u4e8c\u6b65 \u5904\u7406\u68c0\u67e5",
+      "text": "\u7b2c\u4e8c\u6b65 \u5904\u7406\u68c0\u67e5"
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 43.666666666666664,
+            "t": 492.88980000000004,
+            "r": 264.33333333333337,
+            "b": 483.88980000000004,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            19
+          ]
+        }
+      ],
+      "orig": "\u5904\u7406\u6e29\u5ea6\u4e3a36\u5ea6\uff0c\u68c0\u67e5\u65f6\u95f4\u4e3a26\u5206\u949f\u3002",
+      "text": "\u5904\u7406\u6e29\u5ea6\u4e3a36\u5ea6\uff0c\u68c0\u67e5\u65f6\u95f4\u4e3a26\u5206\u949f\u3002"
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 47.333333333333336,
+            "t": 373.88980000000004,
+            "r": 162.33333333333331,
+            "b": 357.88980000000004,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            7
+          ]
+        }
+      ],
+      "orig": "\u7b2c\u4e09\u6b65\u7ed3\u679c\u5f52\u6863",
+      "text": "\u7b2c\u4e09\u6b65\u7ed3\u679c\u5f52\u6863"
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 49.0,
+            "t": 333.5564666666667,
+            "r": 334.0,
+            "b": 326.88980000000004,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            27
+          ]
+        }
+      ],
+      "orig": "\u5f52\u6863\u6279\u6b21\u4e3aGROUP-445\uff0c\u7ed3\u679c\u4ec5\u7528\u4e8e\u865a\u6784\u6559\u5b66\u5b9e\u9a8c\u3002",
+      "text": "\u5f52\u6863\u6279\u6b21\u4e3aGROUP-445\uff0c\u7ed3\u679c\u4ec5\u7528\u4e8e\u865a\u6784\u6559\u5b66\u5b9e\u9a8c\u3002"
+    }
+  ],
+  "pictures": [],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {
+    "1": {
+      "size": {
+        "width": 595.2756,
+        "height": 841.8898
+      },
+      "page_no": 1
+    }
+  }
+}

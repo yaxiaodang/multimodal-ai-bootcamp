@@ -1,0 +1,9 @@
+test_body_order_and_table_anchors (__main__.EvaluationTests) ... ok
+test_freeze_detects_tamper (__main__.EvaluationTests) ... ok
+test_hand_calculated_edit (__main__.EvaluationTests) ... ok
+test_merge_structure_not_just_numbers (__main__.EvaluationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.003s
+
+OK

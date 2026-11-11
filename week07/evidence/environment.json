@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-11-11T14:51:12.175668+08:00",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "git_head_before_week07_commit": "520122efffaed0b2bc2352c1b420f298bd37798d",
+  "execution": "Codex executed preparation and inference on user Ubuntu VM",
+  "generation_environment": {
+    "python_executable": ".venv/bin/python",
+    "reportlab": "4.4.10",
+    "Pillow": "11.3.0"
+  },
+  "inference_environment_lock": "week06/requirements-lock.txt",
+  "models": "week06/evidence/model-preparation.json",
+  "code_snapshot": "each run snapshots/week06/scripts/run_pipeline.py",
+  "note": "No learning hours or personal review inferred from automation"
+}

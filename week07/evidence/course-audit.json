@@ -1,0 +1,67 @@
+{
+  "course_url": "https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/",
+  "week": 7,
+  "test_count": 24,
+  "requirements": [
+    {
+      "requirement": "固定20–50个测试样例，不训练/调Prompt",
+      "evidence": [
+        "week07/data/test-manifest.json",
+        "week07/data/freeze.json"
+      ],
+      "status": "24 test frozen before inference; full run done"
+    },
+    {
+      "requirement": "dataset card：来源、split、license、偏差限制",
+      "evidence": [
+        "week07/dataset-card.md"
+      ],
+      "status": "written; human reference review pending"
+    },
+    {
+      "requirement": "Week06 baseline、主/辅助指标",
+      "evidence": [
+        "week07/configs/baseline.json",
+        "week07/configs/evaluation.json"
+      ],
+      "status": "24/24 converted; primary and auxiliary metrics saved"
+    },
+    {
+      "requirement": "总体和类型切片结果",
+      "evidence": [
+        "week07/reports/benchmark-report.md"
+      ],
+      "status": "overall/type/layout/scan_quality results saved"
+    },
+    {
+      "requirement": "最差五例与泄漏检查",
+      "evidence": [
+        "week07/scripts/evaluate.py",
+        "week07/reports/manual-review.md"
+      ],
+      "status": "worst five located and explained; precise duplicates checked; template bias disclosed; user visual review pending"
+    },
+    {
+      "requirement": "选择一次探索：数据分布",
+      "evidence": [
+        "week07/configs/evaluation.json",
+        "week07/reports/benchmark-report.md"
+      ],
+      "status": "distribution slices complete; no test tuning or causal claim"
+    },
+    {
+      "requirement": "学习记录按模板追加",
+      "evidence": [
+        "learning-log.md"
+      ],
+      "status": "appended with all template sections; personal hours and self-assessment pending"
+    },
+    {
+      "requirement": "保存GitHub仓库",
+      "evidence": [
+        "week07/reports/github-sync.md"
+      ],
+      "status": "ready for commit/push; final verification in delivery message"
+    }
+  ]
+}

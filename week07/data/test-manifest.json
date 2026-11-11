@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "version": "1.0",
+  "path_base": "repository_root",
+  "documents": [
+    {
+      "id": "test_digital_01",
+      "path": "week07/data/test/test_digital_01.pdf",
+      "sha256": "bab08957c549d3986d9dc422f56a1e4cf2871a508e722601a7c7785823f1320f",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "digital",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_digital_01.json",
+      "reference_sha256": "0fae51e4ba611ec9d51f59facd8e7feeaa3e52a70e3238293f780d086abe4670",
+      "layout": "single_column",
+      "scan_quality": null
+    },
+    {
+      "id": "test_digital_02",
+      "path": "week07/data/test/test_digital_02.pdf",
+      "sha256": "32b5310f2cd6a201c519dcd1e133d02e313ea5cb3a53899071cb5d6cbcd1a5e0",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "digital",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_digital_02.json",
+      "reference_sha256": "f01edf2fb00d29bec841a11cb22c77c93dbc52cd5ea43180d4eb0e096434ea7f",
+      "layout": "two_column",
+      "scan_quality": null
+    },
+    {
+      "id": "test_digital_03",
+      "path": "week07/data/test/test_digital_03.pdf",
+      "sha256": "3228c59e978c19a94972020cf361d04fa721b2adf1599587217778ec10a06885",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "digital",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_digital_03.json",
+      "reference_sha256": "c74fd4f8a8178c1d2864fd10c771a16881ee8e504f884418bdbf9e8834f61e16",
+      "layout": "single_column",
+      "scan_quality": null
+    },
+    {
+      "id": "test_digital_04",
+      "path": "week07/data/test/test_digital_04.pdf",
+      "sha256": "c45d5ac1d1c303ea3675dd330d41b95bd4987fa051426c859e2cb4535e6ad8dd",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "digital",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_digital_04.json",
+      "reference_sha256": "a991e6fb9f69614e5760ba0327dcfb067eba6f520e399f60521b018a1fe61a13",
+      "layout": "two_column",
+      "scan_quality": null
+    },
+    {
+      "id": "test_digital_05",
+      "path": "week07/data/test/test_digital_05.pdf",
+      "sha256": "2a9e469d6b2495b255e7158fa999e4beedd8d436192a1de4646770ab4113807a",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "digital",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_digital_05.json",
+      "reference_sha256": "6b0184ed4e973bd9c6f5ced3910ad145daa20f206fe80ca6368c257cab96ef8c",
+      "layout": "single_column",
+      "scan_quality": null
+    },
+    {
+      "id": "test_digital_06",
+      "path": "week07/data/test/test_digital_06.pdf",
+      "sha256": "d3be2b65adf0ec2f1c77d7081ab280246db19f12e9663ca1231751b82b98ac0b",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "digital",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_digital_06.json",
+      "reference_sha256": "2c63710f9883e01564ebce0545fffa378137ed61942296e6335108487cc2666f",
+      "layout": "two_column",
+      "scan_quality": null
+    },
+    {
+      "id": "test_digital_07",
+      "path": "week07/data/test/test_digital_07.pdf",
+      "sha256": "f592c427e0afbfdbc5b77ee0defed444791be93a4915989e62fb61f80c2a7367",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "digital",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_digital_07.json",
+      "reference_sha256": "15ec17292b338927b96abd32bb97d19336420b98bde0ebd8bf249df637838a96",
+      "layout": "single_column",
+      "scan_quality": null
+    },
+    {
+      "id": "test_digital_08",
+      "path": "week07/data/test/test_digital_08.pdf",
+      "sha256": "ed5dc7381570a2198c0f90b9eefe829d4b1b629aaaa3665e95fc987984eda473",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "digital",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_digital_08.json",
+      "reference_sha256": "3606dc086b81a5183f7dffc4962cc7997af2b68410196a0ae37dc6ccbd6b1f51",
+      "layout": "two_column",
+      "scan_quality": null
+    },
+    {
+      "id": "test_scan_01",
+      "path": "week07/data/test/test_scan_01.pdf",
+      "sha256": "9dca0bb56f4ae9b1a5e03a18e0c3ff4451ab2fd80e666f8261457c4314540514",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "scan",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_scan_01.json",
+      "reference_sha256": "2e0303241a78eaa2ec95bfd17dea8f2fd7214a1a5102fb2a3b8a81423c689bf5",
+      "layout": "single_column",
+      "scan_quality": 0
+    },
+    {
+      "id": "test_scan_02",
+      "path": "week07/data/test/test_scan_02.pdf",
+      "sha256": "f4e8dc385c86ccdeb501bdd4957aab793c259fb24a05814bed567d6805c709b5",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "scan",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_scan_02.json",
+      "reference_sha256": "435ad3f16c1d6f0c23c9d9f2e45bc797ca5c4de2839b18265bdb419b1fc3975e",
+      "layout": "single_column",
+      "scan_quality": 1
+    },
+    {
+      "id": "test_scan_03",
+      "path": "week07/data/test/test_scan_03.pdf",
+      "sha256": "0820834a5105749e3ba808720a8a76324bbbce8f11a83b2248f2808b8ebeaf95",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "scan",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_scan_03.json",
+      "reference_sha256": "d311dba6dda4ba5ffa9f2d3b399e26b60486f1fb27f8139b8acd8b911e234b0d",
+      "layout": "single_column",
+      "scan_quality": 2
+    },
+    {
+      "id": "test_scan_04",
+      "path": "week07/data/test/test_scan_04.pdf",
+      "sha256": "a7c2b613c9ee4031e63b42aa9d83fdcd4631f9df9b34484632b9ec8a756f7780",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "scan",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_scan_04.json",
+      "reference_sha256": "039210cfd9949e6cdf07e14ef2a943fa422929787d25478637ff524b0ccf5903",
+      "layout": "single_column",
+      "scan_quality": 3
+    },
+    {
+      "id": "test_scan_05",
+      "path": "week07/data/test/test_scan_05.pdf",
+      "sha256": "d574ca663dc8f6a3bf7dd2b1f47b2a9380d83261cbfb7e2f7edd25a38b23cde8",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "scan",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_scan_05.json",
+      "reference_sha256": "abc9ef347ee9781a341765c643360bd347998619800ceae78230438b15dacad4",
+      "layout": "single_column",
+      "scan_quality": 0
+    },
+    {
+      "id": "test_scan_06",
+      "path": "week07/data/test/test_scan_06.pdf",
+      "sha256": "3ff493ed05c4b327d97900ab7ebed02e7410dd86685806d8369a87153e682636",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "scan",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_scan_06.json",
+      "reference_sha256": "36e7c1d9bf80daaf178ba8d951a1c3b4ab76d5b1160b7f99666d7ade7c7b3423",
+      "layout": "single_column",
+      "scan_quality": 1
+    },
+    {
+      "id": "test_scan_07",
+      "path": "week07/data/test/test_scan_07.pdf",
+      "sha256": "eb8ff3936b63f0431618646931fae8a5842fc969b0a3ef712412b09392e3d4dd",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "scan",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_scan_07.json",
+      "reference_sha256": "4d73d77c8bc331bd7ba7598c2ea74e67fb3fef57919d325b6b9c5077f43aaceb",
+      "layout": "single_column",
+      "scan_quality": 2
+    },
+    {
+      "id": "test_scan_08",
+      "path": "week07/data/test/test_scan_08.pdf",
+      "sha256": "9e1a8762e34cd452336180ecad2ea8d21ea75398181219d27962a8c752d3f437",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "scan",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_scan_08.json",
+      "reference_sha256": "ecd27ed5ca789fcff8495759e71bd05ddf6330ce4a053df2411d7fb75bad7dd3",
+      "layout": "single_column",
+      "scan_quality": 3
+    },
+    {
+      "id": "test_table_01",
+      "path": "week07/data/test/test_table_01.pdf",
+      "sha256": "fd05e17b2e0d029cc086e8083b32ae364de13bba7521af160ac0e5ee98c818ac",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "table",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_table_01.json",
+      "reference_sha256": "a4004f656e8a59a05f026a5afa5655970b391bd2e03c6cf0994a0735b5866938",
+      "layout": "table",
+      "scan_quality": null
+    },
+    {
+      "id": "test_table_02",
+      "path": "week07/data/test/test_table_02.pdf",
+      "sha256": "77fd9304146438840db85064c09e5209ee923daab293685836e7e10bafe124e7",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "table",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_table_02.json",
+      "reference_sha256": "2d6193b2b565acc2d13ca93b802036c1e70e9eb506e3d67f453e01a4a01aaf35",
+      "layout": "table",
+      "scan_quality": null
+    },
+    {
+      "id": "test_table_03",
+      "path": "week07/data/test/test_table_03.pdf",
+      "sha256": "32d251e2afcbe3932411f07e4fdd2f86c7a107414252ad6eb5f709e10c4c216f",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "table",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_table_03.json",
+      "reference_sha256": "d1ae650258a233818d375256cb14d182dd8b841dd93f80ae7e032d747ac3a74e",
+      "layout": "table",
+      "scan_quality": null
+    },
+    {
+      "id": "test_table_04",
+      "path": "week07/data/test/test_table_04.pdf",
+      "sha256": "7c7e104949b72712f788ce83830e7eab12eb1798332a45cb9ff14da6c82fbea8",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "table",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_table_04.json",
+      "reference_sha256": "de66196bb26eb06eb387bb46d6fb203433d664cf82805a07e1c918e330a39505",
+      "layout": "table",
+      "scan_quality": null
+    },
+    {
+      "id": "test_table_05",
+      "path": "week07/data/test/test_table_05.pdf",
+      "sha256": "ceb06da4c0f95c1c70a8ca463abb771572c3f4b6e1e4be79d70c3a08be441dd5",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "table",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_table_05.json",
+      "reference_sha256": "4527dd99d23b517ff799a286b590a93e1554d36a683ec7c15a6a07d069469022",
+      "layout": "table",
+      "scan_quality": null
+    },
+    {
+      "id": "test_table_06",
+      "path": "week07/data/test/test_table_06.pdf",
+      "sha256": "16a3de511c6f8e2f7e70ae27296b2abf5e892f53cfff1622eba81964ddd902eb",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "table",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_table_06.json",
+      "reference_sha256": "757d3fe387ea43592fd8541c815a317d430ee319983f61b23a2536e1deab3b73",
+      "layout": "table",
+      "scan_quality": null
+    },
+    {
+      "id": "test_table_07",
+      "path": "week07/data/test/test_table_07.pdf",
+      "sha256": "e21635d7cfdab1a8aa0478d1c37b2b82adc8c495d3957f0998a29c500e8f5fda",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "table",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_table_07.json",
+      "reference_sha256": "63cf143954f72a57d23d65b0a8c5ae88c9d5f0ad4197c229379e0f5cb926fc9b",
+      "layout": "table",
+      "scan_quality": null
+    },
+    {
+      "id": "test_table_08",
+      "path": "week07/data/test/test_table_08.pdf",
+      "sha256": "119adc50ba4584f088bf0ef176b08692ba45a879ee3606e56bf2015fb1017581",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "table",
+      "split": "test",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/test_table_08.json",
+      "reference_sha256": "0a5f2fd092c031abd1e1e7b03222082d230db13f43015ebb50c91f50c89e9c1a",
+      "layout": "table",
+      "scan_quality": null
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "documents": [
+    {
+      "id": "test_digital_01",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_digital_02",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_digital_03",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_digital_04",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_digital_05",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_digital_06",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_digital_07",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_digital_08",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_scan_01",
+      "pages": 1,
+      "has_embedded_text_fonts": false
+    },
+    {
+      "id": "test_scan_02",
+      "pages": 1,
+      "has_embedded_text_fonts": false
+    },
+    {
+      "id": "test_scan_03",
+      "pages": 1,
+      "has_embedded_text_fonts": false
+    },
+    {
+      "id": "test_scan_04",
+      "pages": 1,
+      "has_embedded_text_fonts": false
+    },
+    {
+      "id": "test_scan_05",
+      "pages": 1,
+      "has_embedded_text_fonts": false
+    },
+    {
+      "id": "test_scan_06",
+      "pages": 1,
+      "has_embedded_text_fonts": false
+    },
+    {
+      "id": "test_scan_07",
+      "pages": 1,
+      "has_embedded_text_fonts": false
+    },
+    {
+      "id": "test_scan_08",
+      "pages": 1,
+      "has_embedded_text_fonts": false
+    },
+    {
+      "id": "test_table_01",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_table_02",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_table_03",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_table_04",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_table_05",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_table_06",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_table_07",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "test_table_08",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "dev_digital_91",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    },
+    {
+      "id": "dev_scan_91",
+      "pages": 1,
+      "has_embedded_text_fonts": false
+    },
+    {
+      "id": "dev_table_91",
+      "pages": 1,
+      "has_embedded_text_fonts": true
+    }
+  ],
+  "representative_visual_inspection_by": "Codex",
+  "inspected_ids": [
+    "test_digital_02",
+    "test_scan_04",
+    "test_table_01"
+  ],
+  "human_reference_review": "pending",
+  "precise_duplicate_check": "evaluate.py --verify-only",
+  "additional_visual_inspection_by_Codex": [
+    "test_scan_01",
+    "test_scan_02",
+    "test_scan_03",
+    "test_scan_07",
+    "test_scan_08",
+    "test_table_05"
+  ]
+}

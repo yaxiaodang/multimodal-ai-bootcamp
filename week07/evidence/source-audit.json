@@ -1,0 +1,25 @@
+{
+  "checked_on": "2026-11-11",
+  "sources": [
+    {
+      "url": "https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/00_12_Week_Bootcamp/",
+      "used_for": "Week7 core deliverables; freeze20-50, card, baseline, slices, worst5 and leakage"
+    },
+    {
+      "url": "https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/11_Learning_Log_Template/",
+      "used_for": "append weekly record structure, factual AI/human attribution"
+    },
+    {
+      "url": "https://huggingface.co/docs/hub/datasets-cards",
+      "used_for": "document source, bias, uses and metadata"
+    },
+    {
+      "url": "https://github.com/opendatalab/OmniDocBench",
+      "used_for": "understand multidimensional evaluation; no official benchmark execution"
+    }
+  ],
+  "unavailable": [
+    "https://multimodal-vision-ai.github.io/multimodal-document-ai-learning-center/learning/07_Doc_AI/"
+  ],
+  "fallback": "Used reachable original Week7 route and primary benchmark/dataset-card docs; no claim of having completed unavailable tutorial."
+}

@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "primary": "macro normalized character edit similarity = mean(1 - Levenshtein(reference,prediction)/max(lengths,1)); failure=0",
+  "normalization": "Unicode NFKC, casefold, retain Unicode alphanumeric characters only; preserve sequence",
+  "prediction": "Docling JSON body tree order; texts plus unique table cell anchors sorted row,column; exclude furniture not in body",
+  "auxiliary": ["conversion success rate", "heading marker pairwise reading order (missing marker = wrong pair)", "table grid and merged span exact match", "per-document wall time including model load"],
+  "aggregation": "macro per page; all 24 test pages included, failed pages score zero; slice by type/layout/scan_quality",
+  "worst_five": "ascending primary score then id; fixed before inference",
+  "human_review": "independent visual review of worst five plus one best, pending user",
+  "policy": "No test-based prompt/parameter changes. New tuned methods use dev. Test results inspected for diagnosis only. Synthetic templates overlap dev/test; not independent real-world generalization."
+}

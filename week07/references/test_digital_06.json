@@ -1,0 +1,20 @@
+{
+  "id": "test_digital_06",
+  "blocks": [
+    "实验流程记录 202",
+    "第一步 材料登记",
+    "材料编号为 TEST-202，本批数量为 205。",
+    "第二步 处理检查",
+    "处理温度为 22 度，检查时间为 32 分钟。",
+    "第三步 结果归档",
+    "归档批次为 GROUP-211，结果仅用于虚构教学实验。"
+  ],
+  "reading_order": [
+    "第一步 材料登记",
+    "第二步 处理检查",
+    "第三步 结果归档"
+  ],
+  "table_grid": null,
+  "table_spans": [],
+  "annotation_source": "generator specification; human review pending"
+}

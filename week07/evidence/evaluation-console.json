@@ -1,0 +1,105 @@
+{
+  "overall": {
+    "n": 24,
+    "score": 0.9675590367079732,
+    "success_rate": 1.0,
+    "reading_order": 0.7083333333333335,
+    "table_exact": 0.0,
+    "total_seconds": 996.3841000000001
+  },
+  "slices": {
+    "type": {
+      "digital": {
+        "n": 8,
+        "score": 1.0,
+        "success_rate": 1.0,
+        "reading_order": 1.0,
+        "table_exact": null,
+        "total_seconds": 119.20290000000001
+      },
+      "scan": {
+        "n": 8,
+        "score": 0.9505494505494506,
+        "success_rate": 1.0,
+        "reading_order": 0.41666666666666663,
+        "table_exact": null,
+        "total_seconds": 680.6131
+      },
+      "table": {
+        "n": 8,
+        "score": 0.952127659574468,
+        "success_rate": 1.0,
+        "reading_order": null,
+        "table_exact": 0.0,
+        "total_seconds": 196.5681
+      }
+    },
+    "layout": {
+      "single_column": {
+        "n": 12,
+        "score": 0.9670329670329672,
+        "success_rate": 1.0,
+        "reading_order": 0.611111111111111,
+        "table_exact": null,
+        "total_seconds": 744.5371
+      },
+      "table": {
+        "n": 8,
+        "score": 0.952127659574468,
+        "success_rate": 1.0,
+        "reading_order": null,
+        "table_exact": 0.0,
+        "total_seconds": 196.5681
+      },
+      "two_column": {
+        "n": 4,
+        "score": 1.0,
+        "success_rate": 1.0,
+        "reading_order": 1.0,
+        "table_exact": null,
+        "total_seconds": 55.2789
+      }
+    },
+    "scan_quality": {
+      "0": {
+        "n": 2,
+        "score": 0.9560439560439561,
+        "success_rate": 1.0,
+        "reading_order": 0.3333333333333333,
+        "table_exact": null,
+        "total_seconds": 207.3569
+      },
+      "1": {
+        "n": 2,
+        "score": 0.945054945054945,
+        "success_rate": 1.0,
+        "reading_order": 0.3333333333333333,
+        "table_exact": null,
+        "total_seconds": 199.223
+      },
+      "2": {
+        "n": 2,
+        "score": 0.9010989010989011,
+        "success_rate": 1.0,
+        "reading_order": 0.0,
+        "table_exact": null,
+        "total_seconds": 172.8927
+      },
+      "3": {
+        "n": 2,
+        "score": 1.0,
+        "success_rate": 1.0,
+        "reading_order": 1.0,
+        "table_exact": null,
+        "total_seconds": 101.1405
+      }
+    }
+  },
+  "worst_five": [
+    "test_scan_03",
+    "test_scan_07",
+    "test_table_05",
+    "test_scan_01",
+    "test_scan_02"
+  ]
+}

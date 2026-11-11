@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "version": "1.0",
+  "path_base": "repository_root",
+  "documents": [
+    {
+      "id": "dev_digital_91",
+      "path": "week07/data/dev/dev_digital_91.pdf",
+      "sha256": "58e4600b410ee6afcd8aee7cdb1df7ff57ff81a7f238f0a290ef766af484a3a5",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "digital",
+      "split": "dev",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/dev_digital_91.json",
+      "reference_sha256": "c77573b8d16b4842b1ee10a9563af37af462e4e631fbc27757a11897bce072dc",
+      "layout": "single_column",
+      "scan_quality": null
+    },
+    {
+      "id": "dev_scan_91",
+      "path": "week07/data/dev/dev_scan_91.pdf",
+      "sha256": "aac429b608c59de41043b522c35c79c96eff653a35202b3755e29a250d499f87",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "scan",
+      "split": "dev",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/dev_scan_91.json",
+      "reference_sha256": "969160aab19764a108d1ec1faeb424bc206563cdae50942bbe1e8d4972bf7957",
+      "layout": "single_column",
+      "scan_quality": 0
+    },
+    {
+      "id": "dev_table_91",
+      "path": "week07/data/dev/dev_table_91.pdf",
+      "sha256": "3b108ca14bef5a214731adbef3c85fc0b1daa6196a4859e317157b95f1da0ce9",
+      "pages": [
+        1
+      ],
+      "page_count": 1,
+      "type": "table",
+      "split": "dev",
+      "source": "new fictional synthetic teaching document CC0-1.0",
+      "reference": "week07/references/dev_table_91.json",
+      "reference_sha256": "4e73697a4e214c3280d889a3ea74bb643c26eabc1a346d151b6b5cb6b850a5c8",
+      "layout": "table",
+      "scan_quality": null
+    }
+  ]
+}
