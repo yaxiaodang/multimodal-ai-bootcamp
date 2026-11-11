@@ -1,0 +1,10 @@
+OUTPUT week08/runs/run-b-20261111T072140Z
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  38%|███▊      | 104/272 [00:00<00:00, 1006.88it/s]Loading weights:  81%|████████  | 219/272 [00:00<00:00, 1085.70it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 1088.04it/s]
+baseline {"exact_rate": 0.0, "json_valid_rate": 0.0, "total_correct_rate": 0.0, "currency_correct_rate": 0.0, "n": 12, "answer_nll": 1.2411682322218611, "seconds": 33.250405718000366}
+STEP {"step": 20, "train_loss": 0.04601815529167652, "gradient_norm": 0.1762021780014038, "elapsed_seconds": 66.87840902500011, "validation_answer_nll": 0.03695003121487192}
+STEP {"step": 40, "train_loss": 0.0022054134169593453, "gradient_norm": 0.021475426852703094, "elapsed_seconds": 136.13290866599982, "validation_answer_nll": 0.0021435472711518002}
+STEP {"step": 60, "train_loss": 0.0006401264108717442, "gradient_norm": 0.004064628854393959, "elapsed_seconds": 205.35197536199985, "validation_answer_nll": 0.0007465537134054545}
+/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/peft/utils/save_and_load.py:372: UserWarning: Could not find a config file in HuggingFaceTB/SmolLM2-135M - will assume that the vocabulary was not modified.
+  warnings.warn(
+after {"exact_rate": 1.0, "json_valid_rate": 1.0, "total_correct_rate": 1.0, "currency_correct_rate": 1.0, "n": 12, "answer_nll": 0.0007465537134054545, "seconds": 21.54401041400024}
+reloaded {"exact_rate": 1.0, "json_valid_rate": 1.0, "total_correct_rate": 1.0, "currency_correct_rate": 1.0, "n": 12, "answer_nll": 0.0007465537134054545, "seconds": 24.312159342000086}

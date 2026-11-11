@@ -1,0 +1,18 @@
+{
+  "config_differences": {
+    "name": [
+      "run-a",
+      "run-b"
+    ],
+    "learning_rate": [
+      0.001,
+      0.0005
+    ]
+  },
+  "baseline_predictions_identical": true,
+  "base_weight_hash_identical_across_runs": true,
+  "base_weights_unchanged_in_both": true,
+  "adapter_reload_predictions_identical_in_both": true,
+  "source_hash_identical": true,
+  "note": "name is an output label; only training hyperparameter changed is learning_rate. A has network probe overhead; B uses HF_HUB_OFFLINE=1."
+}

@@ -715,3 +715,79 @@
 - 最有说服力的证据：同一页的PDF、生成参考、原始JSON/MD、分数与输入/输出哈希能够互相定位；用户观察待补。
 - 希望交流的问题：模板共享条件下，怎样设计更独立的新测试集？字符相似度高为何仍可能丢失标题结构？由Codex整理，待本人选择。
 - 下周首先完成：另备训练/验证材料，只在dev选择方法；保持本周24页test不参与训练、Prompt和超参数调整。
+
+
+## Week 8｜LoRA/PEFT 小规模微调
+
+### 本周核心问题
+- 我准备回答：有限CPU算力下，怎样得到可保存、可重加载、前后公平比较且不过度宣称效果的adapter？本节由Codex根据真实实验代整理，本人阅读与自评尚待完成。
+
+### 时间与任务计划
+- 选择路径：最小路径，补足公平对比与一次学习率探索；虚拟机只有CPU，缩为135M英语文本字段抽取，不直接训练多模态模型。
+- 课程与官方材料：计划1小时。
+- 主线项目：计划4小时。
+- 评测与失败分析：计划2小时。
+- 自主探索：计划1小时。
+- 记录与例会准备：计划1小时。共9小时，是学习预算，不是已经投入的本人时长。
+
+### 本周主线成果
+- 完成了：合法合成数据冻结、训练前base baseline、两次真实60步PEFT LoRA、同验证集前后对比、逐条预测、loss日志、adapter保存/重加载、权重冻结核验与报告。主线见[Week08 README](week08/README.md)，结论见[训练报告](week08/training-report.md)。
+- 尚未完成：本人官方材料阅读、原始样例抽查、实际学习时长和自评；全新机器独立复现未验证。详细步骤集中于[收尾清单](week08/reports/manual-review.md)。
+- 唯一运行入口：仓库根目录执行 `HF_HUB_OFFLINE=1 .venv-week08/bin/python week08/train.py --config week08/configs/run-a.json`；作用：本地缓存加载→保存base验证预测→训练→评价→保存并重加载adapter；建立新目录。安装/下载及每条命令用途见README。
+- 预计/实际耗时：本人计划9小时 / 本人实际待填写；机器A训练203.90s、B训练209.92s，全流程分别307.68s/291.04s，不等于本人学习用时。
+- 算力与成本：CPU FP32、2线程，GPU 0h、付费0元；训练上限每run 900s，峰值RSS见报告。
+- 预期文件/实际文件：训练代码、[计划](week08/post-training-plan.md)、[配置](week08/configs/)、[数据卡](week08/dataset-card.md)、[依赖快照](week08/requirements-lock.txt)、[runs](week08/runs/)、[报告](week08/training-report.md)均已保存。
+
+### 环境与复现信息
+- Git commit：运行代码与训练前计划基底 `8c5972295bdd675061dadd7deeca53bfd0a606af`，分支 `codex/week08-lora`；本周结果归档提交见该分支历史。原有旧周修改保留，不混入本周提交；每run的snapshots、metadata保留源码哈希及工作区状态。
+- Python / CUDA / GPU：Python3.10.12，torch 2.14.0+cpu，CUDA不可用、无GPU；Transformers 5.17.0、PEFT 0.19.0、Accelerate 1.12.0。Ubuntu / VS Code Remote SSH；当前专用venv复用既有Python3.10依赖，其他机器独立安装流程见README。
+- 模型与revision：`HuggingFaceTB/SmolLM2-135M@93efa2f097d58c2a74874c7e644dbc9b0cee75a2`，Apache-2.0，英语纯文本base，不使用chat template。
+- 数据集与version / split：本仓库虚构账单文本v1.0，CC0-1.0；96 train / 12 validation / 12 reserved-test；后者不运行模型。Week07 test未参与训练/参数选择，完整性核验通过。
+- 随机种子：数据20261111，训练42。
+- 配置文件：[A](week08/configs/run-a.json)、[B](week08/configs/run-b.json)；r8、alpha16、q/v、batch2×accum2、60steps、FP32；A/B只改学习率。
+
+### Evidence Manifest 自查
+- [x] 输入来源、license与隐私状态已记录：新合成无个人数据，模型卡与数据卡可定位。
+- [x] 原始输出、日志、metrics与adapter可定位：[runs](week08/runs/)，两个run均真实完成。
+- [x] 本轮唯一训练变量和失败案例已记录：学习率0.001/0.0005；baseline失败、准备错误和远程探测警告保留。
+- [ ] AI使用已披露，自动核验完成；本人人工字段抽查尚待完成。
+- [x] 当前结论、限制和下一步最小验证已写明：仅同模板合成文本，模板/币种混杂，后续需独立组合开发数据。
+
+### 实验记录
+| Run | 唯一改动 | 关键配置 | 结果 | 原始证据 |
+| --- | --- | --- | --- | --- |
+| Base | 无adapter | 同12条validation，greedy，32新token | 严格字段0/12；JSON0/12；NLL 1.24116823 | [baseline](week08/runs/run-a-20261111T071605Z/baseline-predictions.json) |
+| A | 添加LoRA并训练 | lr0.001，r8/alpha16，60步，seed42 | 严格字段12/12；NLL 0.00024795 | [A](week08/runs/run-a-20261111T071605Z/comparison.json) |
+| B | 相对A仅lr改0.0005 | 其他训练/评测参数相同 | 严格字段12/12；NLL 0.00074655 | [B](week08/runs/run-b-20261111T072140Z/comparison.json) |
+
+### AI 使用披露
+- 使用的工具与版本：Codex（当前会话，具体模型版本未暴露）、Python/PyTorch/Transformers/PEFT；版本见metadata。
+- AI完成或建议了什么：任务缩小、训练前计划、数据/代码、执行、自动检查、失败分析与文档；未替本人完成阅读、学习用时和自评。
+- 我如何核验：Codex已完成严格JSON手算测试、数据哈希/跨split检查、base冻结哈希、原始预测重算、adapter重加载一致性；本人最后按收尾清单核查原文与字段，尚未勾选完成。
+- 我拒绝或修改了哪些建议，为什么：实现选择为缩小到CPU文本任务，未强行套用Qwen多模态/QLoRA；发现数据偏差后保留冻结v1、补充限制，不事后改数据追求更好结论。这是AI执行决策，不冒充本人独立意见。
+
+### 自主探索方向
+- 我选择的方向：参数，只改变learning_rate。
+- 为什么与当前项目相关：先理解短程训练更新幅度和生成结果的关系，为Week09可比较runs做准备。
+- 我只改变或验证什么：A=0.001，B=0.0005，数据、base、seed、LoRA参数、步数、Prompt和评价完全相同；name只是输出标签，B关闭无关联网探测。
+- 结果与证据：[跨run核验](week08/evidence/run-comparison-audit.json)确认baseline逐字节相同和base权重不变；生成指标及NLL见上表。一轮seed不能据此宣布某学习率更好；总时间差受联网开销影响。
+
+### 自主阶段
+- [ ] 未形成：已有真实运行，非只有阅读。
+- [x] 已跑通：AI代执行的最小真实训练与评价闭环完成。
+- [ ] 可复现：当前环境重加载和证据齐全，全新环境/本人独立重训尚未验证。
+- [ ] 可解释：报告已写明证据/偏差/限制，本人是否能独立讲清待自评。
+- [ ] 可扩展：一次学习率探索已运行，尚未检验新模板/真实文档泛化，本人掌握情况待自评。
+
+### 当前判断
+- 最重要的发现：少量adapter训练能明显改变这个同模板教学任务的输出形式；基座已有正确金额片段，严格JSON得分提升不等于所有字段知识从零学得。
+- 一个失败或意外：base反复生成代码围栏或标题，不遵守JSON；数据模板与币种完全相关，存在捷径。准备时还遇到系统Python3.14与PyTorch3.10 ABI不匹配，已恢复。
+- 排查与恢复方式：先修正解释器，再固定模型revision/数据；保留原始console。对照原始预测解释0分，重加载adapter核对全12条；不改预测或冻结数据。
+- 当前限制：小样本、一次seed、同模板且币种混杂、非视觉任务、未测OCR噪声/真实账单/独立测试；12/12只代表这些样例。尚无跨机器复现或生产收益证明。
+- 我还不理解：本人待填写；建议核对“参考答案NLL下降为何不必然意味着自由生成正确”，这只是AI提示的问题。
+
+### 例会前准备
+- 我准备展示的成果：[三分钟讲稿](week08/reports/meeting-notes.md)、报告前后对照、F2001格式失败案例、adapter配置与参数比例。
+- 最有说服力的证据：原始逐条预测、60步日志、两个adapter及重加载逐字节一致、base训练前后权重哈希一致。
+- 希望交流的问题：如何最少增加开发数据，区分字段读取与模板记忆？由Codex代拟，待本人确认。
+- 下周首先完成什么：Week09先把两次可比较实验的配置、数据版本、metrics、adapter关联到W&B；当前还未接入W&B，不提前声称完成第9周。

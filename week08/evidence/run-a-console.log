@@ -1,0 +1,23 @@
+OUTPUT week08/runs/run-a-20261111T071605Z
+'[Errno 1] Operation not permitted' thrown while requesting HEAD https://huggingface.co/HuggingFaceTB/SmolLM2-135M/resolve/main/adapter_config.json
+Retrying in 1s [Retry 1/5].
+'[Errno 1] Operation not permitted' thrown while requesting HEAD https://huggingface.co/HuggingFaceTB/SmolLM2-135M/resolve/main/adapter_config.json
+Retrying in 2s [Retry 2/5].
+'[Errno 1] Operation not permitted' thrown while requesting HEAD https://huggingface.co/HuggingFaceTB/SmolLM2-135M/resolve/main/adapter_config.json
+Retrying in 4s [Retry 3/5].
+'[Errno 1] Operation not permitted' thrown while requesting HEAD https://huggingface.co/HuggingFaceTB/SmolLM2-135M/resolve/main/adapter_config.json
+Retrying in 8s [Retry 4/5].
+'[Errno 1] Operation not permitted' thrown while requesting HEAD https://huggingface.co/HuggingFaceTB/SmolLM2-135M/resolve/main/adapter_config.json
+Retrying in 8s [Retry 5/5].
+'[Errno 1] Operation not permitted' thrown while requesting HEAD https://huggingface.co/HuggingFaceTB/SmolLM2-135M/resolve/main/adapter_config.json
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  35%|███▍      | 94/272 [00:00<00:00, 925.36it/s]Loading weights:  73%|███████▎  | 199/272 [00:00<00:00, 978.30it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 1001.76it/s]
+baseline {"exact_rate": 0.0, "json_valid_rate": 0.0, "total_correct_rate": 0.0, "currency_correct_rate": 0.0, "n": 12, "answer_nll": 1.2411682322218611, "seconds": 34.682885178000106}
+STEP {"step": 20, "train_loss": 0.005728668998926878, "gradient_norm": 0.0699939951300621, "elapsed_seconds": 64.08266442900003, "validation_answer_nll": 0.005224001669400447}
+STEP {"step": 40, "train_loss": 0.0004440228221938014, "gradient_norm": 0.002991741057485342, "elapsed_seconds": 131.075476513, "validation_answer_nll": 0.0004542268878729964}
+STEP {"step": 60, "train_loss": 0.00022865187202114612, "gradient_norm": 0.001357190660201013, "elapsed_seconds": 199.39378109100016, "validation_answer_nll": 0.00024794526995990324}
+/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/peft/utils/other.py:1419: UserWarning: Unable to fetch remote file due to the following error [Errno 1] Operation not permitted - silently ignoring the lookup for the file config.json in HuggingFaceTB/SmolLM2-135M.
+  warnings.warn(
+/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/peft/utils/save_and_load.py:372: UserWarning: Could not find a config file in HuggingFaceTB/SmolLM2-135M - will assume that the vocabulary was not modified.
+  warnings.warn(
+after {"exact_rate": 1.0, "json_valid_rate": 1.0, "total_correct_rate": 1.0, "currency_correct_rate": 1.0, "n": 12, "answer_nll": 0.00024794526995990324, "seconds": 21.589971886000058}
+reloaded {"exact_rate": 1.0, "json_valid_rate": 1.0, "total_correct_rate": 1.0, "currency_correct_rate": 1.0, "n": 12, "answer_nll": 0.00024794526995990324, "seconds": 21.276922782999918}

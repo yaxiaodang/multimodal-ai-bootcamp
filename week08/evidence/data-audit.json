@@ -1,0 +1,15 @@
+{
+  "split_counts": {
+    "train": 96,
+    "validation": 12,
+    "reserved-test": 12
+  },
+  "exact_text_overlap_train_validation": 0,
+  "total_value_overlap_train_validation": 0,
+  "template_currency_confound": {
+    "0": "USD",
+    "1": "EUR",
+    "2": "GBP"
+  },
+  "note": "Shared templates and perfect template-currency correlation limit generalization claims. Reserved-test inspected only for integrity and split counts, never model evaluation."
+}

@@ -21,7 +21,7 @@
 | [week05/](week05/README.md) | Document AI 任务地图：分步学习入口与实验准备（实验待执行） |
 | [week06/](week06/README.md) | Docling 文档解析 Pipeline：主线、10项核验与Markdown/JSON表示探索已完成 |
 | [week07/](week07/README.md) | Dataset、Benchmark 与负责任使用：24页冻结测试集、Docling baseline、切片评测与最差五例 |
-| `week08/` | LoRA/PEFT 小规模微调 |
+| [week08/](week08/README.md) | LoRA/PEFT：CPU字段抽取SFT、训练前后对比、学习率对照与adapter归档 |
 | `week09/` | W&B 实验追踪 |
 | `week10/` | 统一评测、消融与错误分析 |
 | `week11/` | 论文导读与最小复现 |
