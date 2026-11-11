@@ -1,0 +1,2 @@
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  33%|███▎      | 89/272 [00:00<00:00, 873.18it/s]Loading weights:  67%|██████▋   | 183/272 [00:00<00:00, 901.41it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 910.17it/s]
+run-a {'exact_rate': 1.0, 'json_valid_rate': 1.0, 'total_correct_rate': 1.0, 'currency_correct_rate': 1.0, 'n': 12}

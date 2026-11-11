@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-11-01T22:13:51.469326+08:00",
+  "scope": "model_files_only_no_pdf_parsing",
+  "sources": [
+    {
+      "repo_id": "docling-project/docling-layout-heron",
+      "revision_requested": "main",
+      "resolved_revision": "8f39ad3c0b4c58e9c2d2c84a38465abf757272d8",
+      "license": "apache-2.0",
+      "model_card_url": "https://huggingface.co/docling-project/docling-layout-heron/blob/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8/README.md"
+    },
+    {
+      "repo_id": "docling-project/docling-models",
+      "revision_requested": "v2.3.0",
+      "resolved_revision": "fc0f2d45e2218ea24bce5045f58a389aed16dc23",
+      "license": "cdla-permissive-2.0",
+      "model_card_url": "https://huggingface.co/docling-project/docling-models/blob/fc0f2d45e2218ea24bce5045f58a389aed16dc23/README.md"
+    }
+  ],
+  "ocr": {
+    "engine": "RapidOCR",
+    "backend": "onnxruntime",
+    "language": [
+      "ch"
+    ],
+    "source": "Docling 2.145.0 RapidOcrModel.download_models + RapidOCR registry",
+    "note": "OCR artifact URLs are recorded in the preparation log and OCR source evidence."
+  },
+  "files": [
+    {
+      "path": ".cache-week06/artifacts/RapidOcr/PP-OCRv6_det_small.onnx",
+      "bytes": 9929594,
+      "sha256": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f"
+    },
+    {
+      "path": ".cache-week06/artifacts/RapidOcr/PP-OCRv6_rec_small.onnx",
+      "bytes": 21234383,
+      "sha256": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884"
+    },
+    {
+      "path": ".cache-week06/artifacts/RapidOcr/ch_ppocr_mobile_v2.0_cls_mobile.onnx",
+      "bytes": 585532,
+      "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c"
+    },
+    {
+      "path": ".cache-week06/artifacts/docling-project--docling-layout-heron/README.md",
+      "bytes": 3219,
+      "sha256": "175700839bc7808eac6af1d0c23e4f483606ab2276fe01122f4093e61a1a65b6"
+    },
+    {
+      "path": ".cache-week06/artifacts/docling-project--docling-layout-heron/config.json",
+      "bytes": 3268,
+      "sha256": "fdea30805ce2f5666b147fca941dcdd27ad468e27d6ed21902207d3da056a97d"
+    },
+    {
+      "path": ".cache-week06/artifacts/docling-project--docling-layout-heron/model.safetensors",
+      "bytes": 171658996,
+      "sha256": "00333a43451945aaf89db8ca9c0a17e75d1537c17db60fdb91aa95f4c7929e0c"
+    },
+    {
+      "path": ".cache-week06/artifacts/docling-project--docling-layout-heron/preprocessor_config.json",
+      "bytes": 444,
+      "sha256": "cd38cd59999e7a95d68e487fbe5132df3d4e5c32a0836add57e6126ba0c4eaf1"
+    },
+    {
+      "path": ".cache-week06/artifacts/docling-project--docling-models/README.md",
+      "bytes": 3413,
+      "sha256": "d17f233378eff1240b623b36da76ee8b40afcca05d505949713bf03f7e00822a"
+    },
+    {
+      "path": ".cache-week06/artifacts/docling-project--docling-models/model_artifacts/tableformer/accurate/tableformer_accurate.safetensors",
+      "bytes": 212758388,
+      "sha256": "2a7d6c924b3cd12fb99a09280ca9c33a89c5d60b93253617d2e088c1a40374d9"
+    },
+    {
+      "path": ".cache-week06/artifacts/docling-project--docling-models/model_artifacts/tableformer/accurate/tm_config.json",
+      "bytes": 7060,
+      "sha256": "984e122ceb8ccf84d84c9d2882f6f2302a44b4f1e577babd6289892c36f3cffd"
+    }
+  ],
+  "pipeline_initialized": true,
+  "pdf_parsing_run": false,
+  "initialization_checked_at": "2026-11-01T22:24:33.229604+08:00",
+  "initialization_elapsed_seconds": 8.6922,
+  "offline_initialization": true
+}

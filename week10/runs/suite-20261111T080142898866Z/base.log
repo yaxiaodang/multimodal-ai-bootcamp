@@ -1,0 +1,2 @@
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  29%|██▉       | 80/272 [00:00<00:00, 770.91it/s]Loading weights:  58%|█████▊    | 158/272 [00:00<00:00, 647.28it/s]Loading weights:  82%|████████▏ | 224/272 [00:00<00:00, 639.64it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 559.99it/s]
+base {'exact_rate': 0.0, 'json_valid_rate': 0.0, 'total_correct_rate': 0.0, 'currency_correct_rate': 0.0, 'n': 12}

@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "protocol_sha256": "23fe0eee490d2e771c3a02413a025dc8d8726ed74e0f971f7f74a66f056ab618",
+  "commands": [
+    {
+      "label": "base",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/bin/python",
+        "week10/scripts/evaluate_text.py",
+        "--model",
+        "base",
+        "--output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/suite-20261111T080142898866Z/base"
+      ],
+      "log": "week10/runs/suite-20261111T080142898866Z/base.log",
+      "exit_code": 0
+    },
+    {
+      "label": "run-a",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/bin/python",
+        "week10/scripts/evaluate_text.py",
+        "--model",
+        "run-a",
+        "--output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/suite-20261111T080142898866Z/run-a"
+      ],
+      "log": "week10/runs/suite-20261111T080142898866Z/run-a.log",
+      "exit_code": 0
+    },
+    {
+      "label": "run-b",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/bin/python",
+        "week10/scripts/evaluate_text.py",
+        "--model",
+        "run-b",
+        "--output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/suite-20261111T080142898866Z/run-b"
+      ],
+      "log": "week10/runs/suite-20261111T080142898866Z/run-b.log",
+      "exit_code": 0
+    }
+  ],
+  "text": {
+    "base": "week10/runs/suite-20261111T080142898866Z/base",
+    "run-a": "week10/runs/suite-20261111T080142898866Z/run-a",
+    "run-b": "week10/runs/suite-20261111T080142898866Z/run-b"
+  },
+  "pdf_no_ocr": "week10/runs/pdf/baseline-20261111T160020-0f4498"
+}

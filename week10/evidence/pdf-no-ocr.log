@@ -1,0 +1,26 @@
+输出目录：/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498
+test_digital_01: completed, exit=0, 14.4257 秒
+test_digital_02: completed, exit=0, 12.7531 秒
+test_digital_03: completed, exit=0, 12.4282 秒
+test_digital_04: completed, exit=0, 13.0054 秒
+test_digital_05: completed, exit=0, 13.1802 秒
+test_digital_06: completed, exit=0, 13.2936 秒
+test_digital_07: completed, exit=0, 21.6037 秒
+test_digital_08: completed, exit=0, 15.9535 秒
+test_scan_01: failed, exit=0, 14.3475 秒
+test_scan_02: failed, exit=0, 18.4483 秒
+test_scan_03: failed, exit=0, 13.2741 秒
+test_scan_04: failed, exit=0, 13.0581 秒
+test_scan_05: failed, exit=0, 11.2115 秒
+test_scan_06: failed, exit=0, 11.7608 秒
+test_scan_07: failed, exit=0, 12.6021 秒
+test_scan_08: failed, exit=0, 12.5377 秒
+test_table_01: completed, exit=0, 16.6529 秒
+test_table_02: completed, exit=0, 17.1728 秒
+test_table_03: completed, exit=0, 16.2205 秒
+test_table_04: completed, exit=0, 15.5576 秒
+test_table_05: completed, exit=0, 15.628 秒
+test_table_06: completed, exit=0, 15.661 秒
+test_table_07: completed, exit=0, 15.4844 秒
+test_table_08: completed, exit=0, 15.8206 秒
+Markdown/JSON 为原始导出；机械检查不代表结构正确。review.csv 待本人核验。

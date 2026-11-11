@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "checks": {
+    "pdf-baseline": {
+      "n": 24,
+      "score": 0.9675590367079732
+    },
+    "pdf-no-ocr": {
+      "n": 24,
+      "score": 0.6507092198581562
+    },
+    "base": {
+      "exact_rate": 0.0,
+      "json_valid_rate": 0.0,
+      "total_correct_rate": 0.0,
+      "currency_correct_rate": 0.0,
+      "n": 12
+    },
+    "run-a": {
+      "exact_rate": 1.0,
+      "json_valid_rate": 1.0,
+      "total_correct_rate": 1.0,
+      "currency_correct_rate": 1.0,
+      "n": 12
+    },
+    "run-b": {
+      "exact_rate": 1.0,
+      "json_valid_rate": 1.0,
+      "total_correct_rate": 1.0,
+      "currency_correct_rate": 1.0,
+      "n": 12
+    }
+  },
+  "authenticated_files": 323,
+  "error_cases": 42,
+  "manual_review": "pending_user",
+  "cloud_report": "not_created"
+}

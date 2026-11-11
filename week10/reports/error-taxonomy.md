@@ -1,0 +1,50 @@
+# 错误分类与原始证据
+
+以下为自动候选分类，尚未由本人目视确认。一个case是一个方法在一个文档上的失败；同一文档的跨方法错误会重复计数。内容差异可能来自顺序或OCR，不能仅凭编辑差异断定原因。
+
+共 42 个错误case，涉及 28 个任务内唯一文档；PDF部分涉及 16 个唯一文档。保留全部失败，不为凑20例制造样本。
+
+| Case | 候选症状 | 原始证据 |
+| --- | --- | --- |
+| pdf-baseline/test_scan_01 | content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_scan_01/document.json) / [PDF](../../week07/data/test/test_scan_01.pdf) / [参考](../../week07/references/test_scan_01.json) |
+| pdf-baseline/test_scan_02 | content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_scan_02/document.json) / [PDF](../../week07/data/test/test_scan_02.pdf) / [参考](../../week07/references/test_scan_02.json) |
+| pdf-baseline/test_scan_03 | content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_scan_03/document.json) / [PDF](../../week07/data/test/test_scan_03.pdf) / [参考](../../week07/references/test_scan_03.json) |
+| pdf-baseline/test_scan_05 | content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_scan_05/document.json) / [PDF](../../week07/data/test/test_scan_05.pdf) / [参考](../../week07/references/test_scan_05.json) |
+| pdf-baseline/test_scan_06 | content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_scan_06/document.json) / [PDF](../../week07/data/test/test_scan_06.pdf) / [参考](../../week07/references/test_scan_06.json) |
+| pdf-baseline/test_scan_07 | content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_scan_07/document.json) / [PDF](../../week07/data/test/test_scan_07.pdf) / [参考](../../week07/references/test_scan_07.json) |
+| pdf-baseline/test_table_01 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_table_01/document.json) / [PDF](../../week07/data/test/test_table_01.pdf) / [参考](../../week07/references/test_table_01.json) |
+| pdf-baseline/test_table_02 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_table_02/document.json) / [PDF](../../week07/data/test/test_table_02.pdf) / [参考](../../week07/references/test_table_02.json) |
+| pdf-baseline/test_table_03 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_table_03/document.json) / [PDF](../../week07/data/test/test_table_03.pdf) / [参考](../../week07/references/test_table_03.json) |
+| pdf-baseline/test_table_04 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_table_04/document.json) / [PDF](../../week07/data/test/test_table_04.pdf) / [参考](../../week07/references/test_table_04.json) |
+| pdf-baseline/test_table_05 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_table_05/document.json) / [PDF](../../week07/data/test/test_table_05.pdf) / [参考](../../week07/references/test_table_05.json) |
+| pdf-baseline/test_table_06 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_table_06/document.json) / [PDF](../../week07/data/test/test_table_06.pdf) / [参考](../../week07/references/test_table_06.json) |
+| pdf-baseline/test_table_07 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_table_07/document.json) / [PDF](../../week07/data/test/test_table_07.pdf) / [参考](../../week07/references/test_table_07.json) |
+| pdf-baseline/test_table_08 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week07/runs/baseline-20261111T144702-4ebb49/test_table_08/document.json) / [PDF](../../week07/data/test/test_table_08.pdf) / [参考](../../week07/references/test_table_08.json) |
+| pdf-no-ocr/test_scan_01 | pipeline_output_failure, empty_output, content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_01/document.json) / [PDF](../../week07/data/test/test_scan_01.pdf) / [参考](../../week07/references/test_scan_01.json) |
+| pdf-no-ocr/test_scan_02 | pipeline_output_failure, empty_output, content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_02/document.json) / [PDF](../../week07/data/test/test_scan_02.pdf) / [参考](../../week07/references/test_scan_02.json) |
+| pdf-no-ocr/test_scan_03 | pipeline_output_failure, empty_output, content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_03/document.json) / [PDF](../../week07/data/test/test_scan_03.pdf) / [参考](../../week07/references/test_scan_03.json) |
+| pdf-no-ocr/test_scan_04 | pipeline_output_failure, empty_output, content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_04/document.json) / [PDF](../../week07/data/test/test_scan_04.pdf) / [参考](../../week07/references/test_scan_04.json) |
+| pdf-no-ocr/test_scan_05 | pipeline_output_failure, empty_output, content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_05/document.json) / [PDF](../../week07/data/test/test_scan_05.pdf) / [参考](../../week07/references/test_scan_05.json) |
+| pdf-no-ocr/test_scan_06 | pipeline_output_failure, empty_output, content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_06/document.json) / [PDF](../../week07/data/test/test_scan_06.pdf) / [参考](../../week07/references/test_scan_06.json) |
+| pdf-no-ocr/test_scan_07 | pipeline_output_failure, empty_output, content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_07/document.json) / [PDF](../../week07/data/test/test_scan_07.pdf) / [参考](../../week07/references/test_scan_07.json) |
+| pdf-no-ocr/test_scan_08 | pipeline_output_failure, empty_output, content_sequence_mismatch, reading_order_or_missing_marker | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_08/document.json) / [PDF](../../week07/data/test/test_scan_08.pdf) / [参考](../../week07/references/test_scan_08.json) |
+| pdf-no-ocr/test_table_01 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_01/document.json) / [PDF](../../week07/data/test/test_table_01.pdf) / [参考](../../week07/references/test_table_01.json) |
+| pdf-no-ocr/test_table_02 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_02/document.json) / [PDF](../../week07/data/test/test_table_02.pdf) / [参考](../../week07/references/test_table_02.json) |
+| pdf-no-ocr/test_table_03 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_03/document.json) / [PDF](../../week07/data/test/test_table_03.pdf) / [参考](../../week07/references/test_table_03.json) |
+| pdf-no-ocr/test_table_04 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_04/document.json) / [PDF](../../week07/data/test/test_table_04.pdf) / [参考](../../week07/references/test_table_04.json) |
+| pdf-no-ocr/test_table_05 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_05/document.json) / [PDF](../../week07/data/test/test_table_05.pdf) / [参考](../../week07/references/test_table_05.json) |
+| pdf-no-ocr/test_table_06 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_06/document.json) / [PDF](../../week07/data/test/test_table_06.pdf) / [参考](../../week07/references/test_table_06.json) |
+| pdf-no-ocr/test_table_07 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_07/document.json) / [PDF](../../week07/data/test/test_table_07.pdf) / [参考](../../week07/references/test_table_07.json) |
+| pdf-no-ocr/test_table_08 | content_sequence_mismatch, table_grid_or_span_mismatch | [输出](../../week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_08/document.json) / [PDF](../../week07/data/test/test_table_08.pdf) / [参考](../../week07/references/test_table_08.json) |
+| base/F3000 | invalid_json | [输出](../../week10/runs/suite-20261111T080142898866Z/base/predictions.json) |
+| base/F3001 | invalid_json | [输出](../../week10/runs/suite-20261111T080142898866Z/base/predictions.json) |
+| base/F3002 | invalid_json | [输出](../../week10/runs/suite-20261111T080142898866Z/base/predictions.json) |
+| base/F3003 | invalid_json | [输出](../../week10/runs/suite-20261111T080142898866Z/base/predictions.json) |
+| base/F3004 | invalid_json | [输出](../../week10/runs/suite-20261111T080142898866Z/base/predictions.json) |
+| base/F3005 | invalid_json | [输出](../../week10/runs/suite-20261111T080142898866Z/base/predictions.json) |
+| base/F3006 | invalid_json | [输出](../../week10/runs/suite-20261111T080142898866Z/base/predictions.json) |
+| base/F3007 | invalid_json | [输出](../../week10/runs/suite-20261111T080142898866Z/base/predictions.json) |
+| base/F3008 | invalid_json | [输出](../../week10/runs/suite-20261111T080142898866Z/base/predictions.json) |
+| base/F3009 | invalid_json | [输出](../../week10/runs/suite-20261111T080142898866Z/base/predictions.json) |
+| base/F3010 | invalid_json | [输出](../../week10/runs/suite-20261111T080142898866Z/base/predictions.json) |
+| base/F3011 | invalid_json | [输出](../../week10/runs/suite-20261111T080142898866Z/base/predictions.json) |

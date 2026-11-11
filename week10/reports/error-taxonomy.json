@@ -1,0 +1,1195 @@
+[
+  {
+    "case_id": "pdf-baseline/test_scan_01",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_scan_01",
+    "labels": [
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0.9230769230769231,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_scan_01/document.json",
+    "input": "week07/data/test/test_scan_01.pdf",
+    "reference_file": "week07/references/test_scan_01.json",
+    "edits": [
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "317"
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "第"
+      },
+      {
+        "op": "delete",
+        "reference": "317第一",
+        "prediction": ""
+      },
+      {
+        "op": "replace",
+        "reference": "，",
+        "prediction": " "
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": " "
+      },
+      {
+        "op": "replace",
+        "reference": "，",
+        "prediction": " "
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-baseline/test_scan_02",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_scan_02",
+    "labels": [
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0.945054945054945,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_scan_02/document.json",
+    "input": "week07/data/test/test_scan_02.pdf",
+    "reference_file": "week07/references/test_scan_02.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "第一步 ",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": " 第 步"
+      },
+      {
+        "op": "replace",
+        "reference": "，",
+        "prediction": " "
+      },
+      {
+        "op": "delete",
+        "reference": "。",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": " "
+      },
+      {
+        "op": "replace",
+        "reference": "，",
+        "prediction": " "
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-baseline/test_scan_03",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_scan_03",
+    "labels": [
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0.9010989010989011,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_scan_03/document.json",
+    "input": "week07/data/test/test_scan_03.pdf",
+    "reference_file": "week07/references/test_scan_03.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "第一",
+        "prediction": ""
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": " 第"
+      },
+      {
+        "op": "replace",
+        "reference": "，",
+        "prediction": " "
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      },
+      {
+        "op": "delete",
+        "reference": "第二步 ",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": " 第二 步"
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": " ，"
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-baseline/test_scan_05",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_scan_05",
+    "labels": [
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0.989010989010989,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_scan_05/document.json",
+    "input": "week07/data/test/test_scan_05.pdf",
+    "reference_file": "week07/references/test_scan_05.json",
+    "edits": [
+      {
+        "op": "replace",
+        "reference": "一",
+        "prediction": " "
+      },
+      {
+        "op": "replace",
+        "reference": "，",
+        "prediction": " "
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": " "
+      },
+      {
+        "op": "replace",
+        "reference": "，",
+        "prediction": " "
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-baseline/test_scan_06",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_scan_06",
+    "labels": [
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0.945054945054945,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_scan_06/document.json",
+    "input": "week07/data/test/test_scan_06.pdf",
+    "reference_file": "week07/references/test_scan_06.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "第一步 ",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": " 第 步"
+      },
+      {
+        "op": "replace",
+        "reference": "，",
+        "prediction": " "
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": " "
+      },
+      {
+        "op": "replace",
+        "reference": "，",
+        "prediction": " "
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-baseline/test_scan_07",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_scan_07",
+    "labels": [
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0.9010989010989011,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_scan_07/document.json",
+    "input": "week07/data/test/test_scan_07.pdf",
+    "reference_file": "week07/references/test_scan_07.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "第一",
+        "prediction": ""
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": " 第"
+      },
+      {
+        "op": "replace",
+        "reference": "，",
+        "prediction": " "
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      },
+      {
+        "op": "delete",
+        "reference": "第二步 ",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": " 第二 步"
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "， "
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      },
+      {
+        "op": "delete",
+        "reference": " ",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-baseline/test_table_01",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_table_01",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_table_01/document.json",
+    "input": "week07/data/test/test_table_01.pdf",
+    "reference_file": "week07/references/test_table_01.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-baseline/test_table_02",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_table_02",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_table_02/document.json",
+    "input": "week07/data/test/test_table_02.pdf",
+    "reference_file": "week07/references/test_table_02.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-baseline/test_table_03",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_table_03",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_table_03/document.json",
+    "input": "week07/data/test/test_table_03.pdf",
+    "reference_file": "week07/references/test_table_03.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-baseline/test_table_04",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_table_04",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_table_04/document.json",
+    "input": "week07/data/test/test_table_04.pdf",
+    "reference_file": "week07/references/test_table_04.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-baseline/test_table_05",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_table_05",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9148936170212766,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_table_05/document.json",
+    "input": "week07/data/test/test_table_05.pdf",
+    "reference_file": "week07/references/test_table_05.json",
+    "edits": [
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "上期本期"
+      },
+      {
+        "op": "delete",
+        "reference": "上期本期",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-baseline/test_table_06",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_table_06",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_table_06/document.json",
+    "input": "week07/data/test/test_table_06.pdf",
+    "reference_file": "week07/references/test_table_06.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-baseline/test_table_07",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_table_07",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_table_07/document.json",
+    "input": "week07/data/test/test_table_07.pdf",
+    "reference_file": "week07/references/test_table_07.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-baseline/test_table_08",
+    "task": "pdf",
+    "method": "pdf-baseline",
+    "id": "test_table_08",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week07/runs/baseline-20261111T144702-4ebb49/test_table_08/document.json",
+    "input": "week07/data/test/test_table_08.pdf",
+    "reference_file": "week07/references/test_table_08.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_scan_01",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_scan_01",
+    "labels": [
+      "pipeline_output_failure",
+      "empty_output",
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_01/document.json",
+    "input": "week07/data/test/test_scan_01.pdf",
+    "reference_file": "week07/references/test_scan_01.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "设备检查记录 317第一步 材料登记材料编号为 TEST-317，本批数量为 320。第二步 处理检查处理温度为 37 度，检查时间为 27 分钟。第三步 结果归档归档批次为 GROUP-326，结果仅用于虚构教学实验。",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_scan_02",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_scan_02",
+    "labels": [
+      "pipeline_output_failure",
+      "empty_output",
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_02/document.json",
+    "input": "week07/data/test/test_scan_02.pdf",
+    "reference_file": "week07/references/test_scan_02.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "设备检查记录 334第一步 材料登记材料编号为 TEST-334，本批数量为 337。第二步 处理检查处理温度为 34 度，检查时间为 14 分钟。第三步 结果归档归档批次为 GROUP-343，结果仅用于虚构教学实验。",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_scan_03",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_scan_03",
+    "labels": [
+      "pipeline_output_failure",
+      "empty_output",
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_03/document.json",
+    "input": "week07/data/test/test_scan_03.pdf",
+    "reference_file": "week07/references/test_scan_03.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "设备检查记录 351第一步 材料登记材料编号为 TEST-351，本批数量为 354。第二步 处理检查处理温度为 31 度，检查时间为 31 分钟。第三步 结果归档归档批次为 GROUP-360，结果仅用于虚构教学实验。",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_scan_04",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_scan_04",
+    "labels": [
+      "pipeline_output_failure",
+      "empty_output",
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_04/document.json",
+    "input": "week07/data/test/test_scan_04.pdf",
+    "reference_file": "week07/references/test_scan_04.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "设备检查记录 368第一步 材料登记材料编号为 TEST-368，本批数量为 371。第二步 处理检查处理温度为 28 度，检查时间为 18 分钟。第三步 结果归档归档批次为 GROUP-377，结果仅用于虚构教学实验。",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_scan_05",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_scan_05",
+    "labels": [
+      "pipeline_output_failure",
+      "empty_output",
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_05/document.json",
+    "input": "week07/data/test/test_scan_05.pdf",
+    "reference_file": "week07/references/test_scan_05.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "设备检查记录 385第一步 材料登记材料编号为 TEST-385，本批数量为 388。第二步 处理检查处理温度为 25 度，检查时间为 35 分钟。第三步 结果归档归档批次为 GROUP-394，结果仅用于虚构教学实验。",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_scan_06",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_scan_06",
+    "labels": [
+      "pipeline_output_failure",
+      "empty_output",
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_06/document.json",
+    "input": "week07/data/test/test_scan_06.pdf",
+    "reference_file": "week07/references/test_scan_06.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "设备检查记录 402第一步 材料登记材料编号为 TEST-402，本批数量为 405。第二步 处理检查处理温度为 22 度，检查时间为 22 分钟。第三步 结果归档归档批次为 GROUP-411，结果仅用于虚构教学实验。",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_scan_07",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_scan_07",
+    "labels": [
+      "pipeline_output_failure",
+      "empty_output",
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_07/document.json",
+    "input": "week07/data/test/test_scan_07.pdf",
+    "reference_file": "week07/references/test_scan_07.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "设备检查记录 419第一步 材料登记材料编号为 TEST-419，本批数量为 422。第二步 处理检查处理温度为 39 度，检查时间为 39 分钟。第三步 结果归档归档批次为 GROUP-428，结果仅用于虚构教学实验。",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_scan_08",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_scan_08",
+    "labels": [
+      "pipeline_output_failure",
+      "empty_output",
+      "content_sequence_mismatch",
+      "reading_order_or_missing_marker"
+    ],
+    "score": 0,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_08/document.json",
+    "input": "week07/data/test/test_scan_08.pdf",
+    "reference_file": "week07/references/test_scan_08.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "设备检查记录 436第一步 材料登记材料编号为 TEST-436，本批数量为 439。第二步 处理检查处理温度为 36 度，检查时间为 26 分钟。第三步 结果归档归档批次为 GROUP-445，结果仅用于虚构教学实验。",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_table_01",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_table_01",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_01/document.json",
+    "input": "week07/data/test/test_table_01.pdf",
+    "reference_file": "week07/references/test_table_01.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_table_02",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_table_02",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_02/document.json",
+    "input": "week07/data/test/test_table_02.pdf",
+    "reference_file": "week07/references/test_table_02.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_table_03",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_table_03",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_03/document.json",
+    "input": "week07/data/test/test_table_03.pdf",
+    "reference_file": "week07/references/test_table_03.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_table_04",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_table_04",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_04/document.json",
+    "input": "week07/data/test/test_table_04.pdf",
+    "reference_file": "week07/references/test_table_04.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_table_05",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_table_05",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9148936170212766,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_05/document.json",
+    "input": "week07/data/test/test_table_05.pdf",
+    "reference_file": "week07/references/test_table_05.json",
+    "edits": [
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "上期本期"
+      },
+      {
+        "op": "delete",
+        "reference": "上期本期",
+        "prediction": ""
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_table_06",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_table_06",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_06/document.json",
+    "input": "week07/data/test/test_table_06.pdf",
+    "reference_file": "week07/references/test_table_06.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_table_07",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_table_07",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_07/document.json",
+    "input": "week07/data/test/test_table_07.pdf",
+    "reference_file": "week07/references/test_table_07.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "pdf-no-ocr/test_table_08",
+    "task": "pdf",
+    "method": "pdf-no-ocr",
+    "id": "test_table_08",
+    "labels": [
+      "content_sequence_mismatch",
+      "table_grid_or_span_mismatch"
+    ],
+    "score": 0.9574468085106383,
+    "raw": "week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_08/document.json",
+    "input": "week07/data/test/test_table_08.pdf",
+    "reference_file": "week07/references/test_table_08.json",
+    "edits": [
+      {
+        "op": "delete",
+        "reference": "项目",
+        "prediction": ""
+      },
+      {
+        "op": "insert",
+        "reference": "",
+        "prediction": "项目"
+      }
+    ],
+    "review_status": "pending_user",
+    "causal_claim": "candidate symptoms only; visual review required"
+  },
+  {
+    "case_id": "base/F3000",
+    "task": "text",
+    "method": "base",
+    "id": "F3000",
+    "labels": [
+      "invalid_json"
+    ],
+    "raw": "week10/runs/suite-20261111T080142898866Z/base/predictions.json",
+    "prediction": "\n```\n\n## 1.2.2.2.1.1.1.1.2.1.1.2.2.",
+    "reference": {
+      "total": "689.63",
+      "currency": "USD"
+    },
+    "review_status": "pending_user"
+  },
+  {
+    "case_id": "base/F3001",
+    "task": "text",
+    "method": "base",
+    "id": "F3001",
+    "labels": [
+      "invalid_json"
+    ],
+    "raw": "week10/runs/suite-20261111T080142898866Z/base/predictions.json",
+    "prediction": "Total: 773.02 EUR\n\n### Subtotal 758.09\n\nSubtotal 758.0",
+    "reference": {
+      "total": "773.02",
+      "currency": "EUR"
+    },
+    "review_status": "pending_user"
+  },
+  {
+    "case_id": "base/F3002",
+    "task": "text",
+    "method": "base",
+    "id": "F3002",
+    "labels": [
+      "invalid_json"
+    ],
+    "raw": "week10/runs/suite-20261111T080142898866Z/base/predictions.json",
+    "prediction": "BILL F3002\nTax = 10.15\nFinal total = 233.53 GBP\nSubtotal",
+    "reference": {
+      "total": "233.53",
+      "currency": "GBP"
+    },
+    "review_status": "pending_user"
+  },
+  {
+    "case_id": "base/F3003",
+    "task": "text",
+    "method": "base",
+    "id": "F3003",
+    "labels": [
+      "invalid_json"
+    ],
+    "raw": "week10/runs/suite-20261111T080142898866Z/base/predictions.json",
+    "prediction": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "reference": {
+      "total": "748.52",
+      "currency": "USD"
+    },
+    "review_status": "pending_user"
+  },
+  {
+    "case_id": "base/F3004",
+    "task": "text",
+    "method": "base",
+    "id": "F3004",
+    "labels": [
+      "invalid_json"
+    ],
+    "raw": "week10/runs/suite-20261111T080142898866Z/base/predictions.json",
+    "prediction": "Total: 204.70 EUR\n\n### Subtotal 197.35\n\nSubtotal 197.3",
+    "reference": {
+      "total": "204.70",
+      "currency": "EUR"
+    },
+    "review_status": "pending_user"
+  },
+  {
+    "case_id": "base/F3005",
+    "task": "text",
+    "method": "base",
+    "id": "F3005",
+    "labels": [
+      "invalid_json"
+    ],
+    "raw": "week10/runs/suite-20261111T080142898866Z/base/predictions.json",
+    "prediction": "BILL F3005\nTax = 13.16\nFinal total = 173.13 GBP\nSubtotal",
+    "reference": {
+      "total": "173.13",
+      "currency": "GBP"
+    },
+    "review_status": "pending_user"
+  },
+  {
+    "case_id": "base/F3006",
+    "task": "text",
+    "method": "base",
+    "id": "F3006",
+    "labels": [
+      "invalid_json"
+    ],
+    "raw": "week10/runs/suite-20261111T080142898866Z/base/predictions.json",
+    "prediction": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "reference": {
+      "total": "647.01",
+      "currency": "USD"
+    },
+    "review_status": "pending_user"
+  },
+  {
+    "case_id": "base/F3007",
+    "task": "text",
+    "method": "base",
+    "id": "F3007",
+    "labels": [
+      "invalid_json"
+    ],
+    "raw": "week10/runs/suite-20261111T080142898866Z/base/predictions.json",
+    "prediction": "Total: 248.77 EUR\n\n### Subtotal 240.48\n\nSubtotal 240.4",
+    "reference": {
+      "total": "248.77",
+      "currency": "EUR"
+    },
+    "review_status": "pending_user"
+  },
+  {
+    "case_id": "base/F3008",
+    "task": "text",
+    "method": "base",
+    "id": "F3008",
+    "labels": [
+      "invalid_json"
+    ],
+    "raw": "week10/runs/suite-20261111T080142898866Z/base/predictions.json",
+    "prediction": "BILL F3008\nTax = 8.57\nFinal total = 590.11 GBP\nSubtotal =",
+    "reference": {
+      "total": "590.11",
+      "currency": "GBP"
+    },
+    "review_status": "pending_user"
+  },
+  {
+    "case_id": "base/F3009",
+    "task": "text",
+    "method": "base",
+    "id": "F3009",
+    "labels": [
+      "invalid_json"
+    ],
+    "raw": "week10/runs/suite-20261111T080142898866Z/base/predictions.json",
+    "prediction": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "reference": {
+      "total": "352.07",
+      "currency": "USD"
+    },
+    "review_status": "pending_user"
+  },
+  {
+    "case_id": "base/F3010",
+    "task": "text",
+    "method": "base",
+    "id": "F3010",
+    "labels": [
+      "invalid_json"
+    ],
+    "raw": "week10/runs/suite-20261111T080142898866Z/base/predictions.json",
+    "prediction": "Total: 748.53 EUR\n\n### Subtotal 737.47\n\nSubtotal 737.4",
+    "reference": {
+      "total": "748.53",
+      "currency": "EUR"
+    },
+    "review_status": "pending_user"
+  },
+  {
+    "case_id": "base/F3011",
+    "task": "text",
+    "method": "base",
+    "id": "F3011",
+    "labels": [
+      "invalid_json"
+    ],
+    "raw": "week10/runs/suite-20261111T080142898866Z/base/predictions.json",
+    "prediction": "BILL F3011\nTax = 15.98\nFinal total = 241.93 GBP\nSubtotal",
+    "reference": {
+      "total": "241.93",
+      "currency": "GBP"
+    },
+    "review_status": "pending_user"
+  }
+]

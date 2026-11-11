@@ -1,0 +1,24 @@
+{
+  "pdf": {
+    "command": [
+      ".venv-week06/bin/python",
+      "week06/scripts/run_pipeline.py",
+      "--config",
+      "week10/configs/pdf-no-ocr.json"
+    ],
+    "exit_code": 1,
+    "log": "week10/evidence/pdf-no-ocr.log",
+    "note": "All 24 processed; 8 no-OCR scan pages failed mechanical checks (empty output) despite worker exit=0. Expected negative ablation, not an incomplete run."
+  },
+  "text": {
+    "command": [
+      ".venv-week08/bin/python",
+      "week10/run.py",
+      "--pdf-run",
+      "week10/runs/pdf/baseline-20261111T160020-0f4498"
+    ],
+    "exit_code": 0,
+    "suite": "week10/runs/suite-20261111T080142898866Z/suite.json",
+    "note": "Text evaluations ran while independent PDF job finished; report generation authenticated complete PDF receipts afterward. Final runner now checks reused PDF completion before starting text."
+  }
+}

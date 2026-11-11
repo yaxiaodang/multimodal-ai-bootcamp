@@ -1,0 +1,1339 @@
+{
+  "status": "failed",
+  "started_at": "2026-11-11T16:00:20.756326+08:00",
+  "timezone": "Asia/Shanghai",
+  "command": [
+    "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+    "week06/scripts/run_pipeline.py",
+    "--config",
+    "week10/configs/pdf-no-ocr.json"
+  ],
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "git_commit": "8d665218fbc8c4b89e51841b3e8f64d13c70a81c",
+  "git_status": [
+    "M week01/README.md",
+    " M week02/README.md",
+    " M week03/README.md",
+    " M week04/README.md",
+    " M week05/README.md",
+    " M week05/reports/meeting-notes.md",
+    " M week06/reports/meeting-demo.ipynb",
+    " M week06/runs/baseline-20261105T152012-076969/complex_table/document.md",
+    "?? week01/reports/",
+    "?? week02/reports/",
+    "?? week03/reports/",
+    "?? week04/reports/meeting-demo.ipynb",
+    "?? week04/reports/meeting-notes.md",
+    "?? week05/reports/meeting-demo.ipynb",
+    "?? week10/"
+  ],
+  "config": {
+    "schema_version": 1,
+    "name": "pdf-no-ocr",
+    "manifest": "week07/data/test-manifest.json",
+    "output_root": "week10/runs/pdf",
+    "device": "cpu",
+    "artifacts_path": ".cache-week06/artifacts",
+    "num_threads": 2,
+    "do_ocr": false,
+    "ocr_engine": "rapidocr",
+    "ocr_backend": "onnxruntime",
+    "ocr_languages": [
+      "ch"
+    ],
+    "force_full_page_ocr": false,
+    "do_table_structure": true,
+    "table_mode": "accurate",
+    "do_cell_matching": true,
+    "do_formula_enrichment": false,
+    "timeout_seconds_per_document": 600,
+    "references": [
+      "week07/configs/evaluation.json",
+      "week07/data/freeze.json"
+    ],
+    "expected_packages": {
+      "docling": "2.145.0",
+      "rapidocr": "3.10.0",
+      "onnxruntime": "1.23.2",
+      "torch": "2.14.0+cpu",
+      "torchvision": "0.29.1+cpu"
+    },
+    "layout_revision": "8f39ad3c0b4c58e9c2d2c84a38465abf757272d8"
+  },
+  "snapshots": [
+    {
+      "source": "week10/configs/pdf-no-ocr.json",
+      "sha256": "b4422ae42d1e11c67adcdde0e86fbed01bccd75b524fa93ab26c35014c61a7f4"
+    },
+    {
+      "source": "week07/data/test-manifest.json",
+      "sha256": "98b872b4f8405fa5fca742c94c89d732ce88475023ddfa8f49f50248125c5c57"
+    },
+    {
+      "source": "week06/scripts/run_pipeline.py",
+      "sha256": "fa761ef62c4514d864186f70dab0d34bb18d44a29437c7b4c3d6f4483d1a7396"
+    },
+    {
+      "source": "week07/configs/evaluation.json",
+      "sha256": "45c9dc06b19b7e62056da13078d2e661cc1150070fa920244a571caa3236a65e"
+    },
+    {
+      "source": "week07/data/freeze.json",
+      "sha256": "693827a96866299573f42041a77248f2e3c84380b8334664374f436823bb2dd4"
+    }
+  ],
+  "documents": [
+    {
+      "id": "test_digital_01",
+      "input": "week07/data/test/test_digital_01.pdf",
+      "input_sha256": "bab08957c549d3986d9dc422f56a1e4cf2871a508e722601a7c7785823f1320f",
+      "started_at": "2026-11-11T16:00:20.776781+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_digital_01.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_digital_01"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:00:35.203015+08:00",
+      "elapsed_seconds": 14.4257,
+      "output_files": [
+        {
+          "file": "test_digital_01/conversion-status.json",
+          "sha256": "8fe3671273e17fc6cebe5e17871c2a0efdf97da01fc4851b18ff53e4d45e3520",
+          "bytes": 113
+        },
+        {
+          "file": "test_digital_01/document.json",
+          "sha256": "dc2b12e7afd5d7a4f32e76629562c6d5553bace57c65240e3647baf87fa77fe4",
+          "bytes": 5870
+        },
+        {
+          "file": "test_digital_01/document.md",
+          "sha256": "4934faea232e2db1e7b4aaf00fa243144acbe22ea1521f9fedd91ad8417e9c07",
+          "bytes": 278
+        },
+        {
+          "file": "test_digital_01/mechanical-checks.json",
+          "sha256": "dbdb11c29bf5efcb2a3541505aa9c8de2f931498e0a084f7578491d9dea2dbfa",
+          "bytes": 704
+        },
+        {
+          "file": "test_digital_01/stderr.log",
+          "sha256": "8f1b41f67e1a630b5ce2d44fa34fcccac908daa1be71a44218ff5c62a1faab71",
+          "bytes": 148
+        },
+        {
+          "file": "test_digital_01/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_digital_02",
+      "input": "week07/data/test/test_digital_02.pdf",
+      "input_sha256": "32b5310f2cd6a201c519dcd1e133d02e313ea5cb3a53899071cb5d6cbcd1a5e0",
+      "started_at": "2026-11-11T16:00:35.205610+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_digital_02.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_digital_02"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:00:47.959011+08:00",
+      "elapsed_seconds": 12.7531,
+      "output_files": [
+        {
+          "file": "test_digital_02/conversion-status.json",
+          "sha256": "a137b92ec6bf86820420a8231d03681732f235696df1ed7592b0900013ea597a",
+          "bytes": 113
+        },
+        {
+          "file": "test_digital_02/document.json",
+          "sha256": "573366bf2a7bb049edced562ae2faab26b600170ba92c365ed30cc144a0c4a50",
+          "bytes": 6456
+        },
+        {
+          "file": "test_digital_02/document.md",
+          "sha256": "7ca8795354b5b367eeb281eda5451e5e5bc37a1406e94178136a1d545542c892",
+          "bytes": 282
+        },
+        {
+          "file": "test_digital_02/mechanical-checks.json",
+          "sha256": "a5c30dcc913749eb4063632c86a35b15d85378fb9f42bebec516c3ef733c798f",
+          "bytes": 704
+        },
+        {
+          "file": "test_digital_02/stderr.log",
+          "sha256": "47fa52e352d9f764f8c7a6875b7c0f63ae23492ab7223b1a5c12ad5d8bfaf3f0",
+          "bytes": 228
+        },
+        {
+          "file": "test_digital_02/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_digital_03",
+      "input": "week07/data/test/test_digital_03.pdf",
+      "input_sha256": "3228c59e978c19a94972020cf361d04fa721b2adf1599587217778ec10a06885",
+      "started_at": "2026-11-11T16:00:47.962894+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_digital_03.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_digital_03"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:01:00.392497+08:00",
+      "elapsed_seconds": 12.4282,
+      "output_files": [
+        {
+          "file": "test_digital_03/conversion-status.json",
+          "sha256": "1e94be2ce436d7c01d567bb668a8e88a08e4bf5efd9216b4a6d50919a5de875b",
+          "bytes": 113
+        },
+        {
+          "file": "test_digital_03/document.json",
+          "sha256": "9a699b6dcabcd2b31b12dfcee764c47d55e21564d9e8e5b272b3b84df0fb5102",
+          "bytes": 5869
+        },
+        {
+          "file": "test_digital_03/document.md",
+          "sha256": "e155b8d22a015ca19d1143014d6aae7612018f22b80a8c17682ae235dafd05ca",
+          "bytes": 278
+        },
+        {
+          "file": "test_digital_03/mechanical-checks.json",
+          "sha256": "dbdb11c29bf5efcb2a3541505aa9c8de2f931498e0a084f7578491d9dea2dbfa",
+          "bytes": 704
+        },
+        {
+          "file": "test_digital_03/stderr.log",
+          "sha256": "19e5bd0d9f9b27dc2c232c09c0749d39824ad00b6721f562de6f14e101dc2dce",
+          "bytes": 228
+        },
+        {
+          "file": "test_digital_03/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_digital_04",
+      "input": "week07/data/test/test_digital_04.pdf",
+      "input_sha256": "c45d5ac1d1c303ea3675dd330d41b95bd4987fa051426c859e2cb4535e6ad8dd",
+      "started_at": "2026-11-11T16:01:00.396555+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_digital_04.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_digital_04"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:01:13.402744+08:00",
+      "elapsed_seconds": 13.0054,
+      "output_files": [
+        {
+          "file": "test_digital_04/conversion-status.json",
+          "sha256": "d8fbb142804481371523becefd0dfb32647e366a109fb0ddefa7a193d2a780cd",
+          "bytes": 113
+        },
+        {
+          "file": "test_digital_04/document.json",
+          "sha256": "3cf858a6846adb942cfe8306330784552bc5b335709545c4e52e800c44e18d0d",
+          "bytes": 7027
+        },
+        {
+          "file": "test_digital_04/document.md",
+          "sha256": "d59c867a4e16d68c51a4549ee6cd99c8849bcd6fdbade99a8e629030bc62a63c",
+          "bytes": 283
+        },
+        {
+          "file": "test_digital_04/mechanical-checks.json",
+          "sha256": "77ea7c724f98a57ea06cf0f170fdfbef6fe4211c696d066fd3ac556b7f75a10a",
+          "bytes": 704
+        },
+        {
+          "file": "test_digital_04/stderr.log",
+          "sha256": "cc6992647699828daac0b5811a5dd1a640cea8c180cf41ec9c555397b869e8e4",
+          "bytes": 148
+        },
+        {
+          "file": "test_digital_04/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_digital_05",
+      "input": "week07/data/test/test_digital_05.pdf",
+      "input_sha256": "2a9e469d6b2495b255e7158fa999e4beedd8d436192a1de4646770ab4113807a",
+      "started_at": "2026-11-11T16:01:13.405269+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_digital_05.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_digital_05"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:01:26.586310+08:00",
+      "elapsed_seconds": 13.1802,
+      "output_files": [
+        {
+          "file": "test_digital_05/conversion-status.json",
+          "sha256": "bc6727ddaf2ffd26764dae1b91881d656beea8772f3d829cfc94e1eb88da2cc6",
+          "bytes": 112
+        },
+        {
+          "file": "test_digital_05/document.json",
+          "sha256": "c2e390b52673546a48646a7f43c17f1559e4bbbc0b204df0c59c744dbc9b7dd8",
+          "bytes": 5869
+        },
+        {
+          "file": "test_digital_05/document.md",
+          "sha256": "0dd92e31fb4ae55cd9e10890301adaa1b7022a5a3b98408ea0f44c708ae9ff35",
+          "bytes": 278
+        },
+        {
+          "file": "test_digital_05/mechanical-checks.json",
+          "sha256": "dbdb11c29bf5efcb2a3541505aa9c8de2f931498e0a084f7578491d9dea2dbfa",
+          "bytes": 704
+        },
+        {
+          "file": "test_digital_05/stderr.log",
+          "sha256": "3dc98828f567e5ea551a5182e74f35b7a58b03826b705c55a84ccfed762897ee",
+          "bytes": 148
+        },
+        {
+          "file": "test_digital_05/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_digital_06",
+      "input": "week07/data/test/test_digital_06.pdf",
+      "input_sha256": "d3be2b65adf0ec2f1c77d7081ab280246db19f12e9663ca1231751b82b98ac0b",
+      "started_at": "2026-11-11T16:01:26.589072+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_digital_06.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_digital_06"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:01:39.883616+08:00",
+      "elapsed_seconds": 13.2936,
+      "output_files": [
+        {
+          "file": "test_digital_06/conversion-status.json",
+          "sha256": "39e7347c241cb47bdda4e54194e920e1c47fcb044923ed75c3325cd49b64ed1a",
+          "bytes": 113
+        },
+        {
+          "file": "test_digital_06/document.json",
+          "sha256": "d89b63cc5df24f76d15245946ab645e630aff03d17a7a5d04f389305ee99d705",
+          "bytes": 6998
+        },
+        {
+          "file": "test_digital_06/document.md",
+          "sha256": "c0159c349d9d5db22983ff6b2ebf7ea0b220078a617bc074675376aabb6bcafa",
+          "bytes": 280
+        },
+        {
+          "file": "test_digital_06/mechanical-checks.json",
+          "sha256": "1959d79e537a35777378c4bb6c665be3b0201c7f755b107f3aefdb58af692dce",
+          "bytes": 704
+        },
+        {
+          "file": "test_digital_06/stderr.log",
+          "sha256": "1d0d54fbb65494971341454dce4b726146a06b0efec1eea887b7db8a6239df29",
+          "bytes": 147
+        },
+        {
+          "file": "test_digital_06/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_digital_07",
+      "input": "week07/data/test/test_digital_07.pdf",
+      "input_sha256": "f592c427e0afbfdbc5b77ee0defed444791be93a4915989e62fb61f80c2a7367",
+      "started_at": "2026-11-11T16:01:39.886348+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_digital_07.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_digital_07"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:02:01.490634+08:00",
+      "elapsed_seconds": 21.6037,
+      "output_files": [
+        {
+          "file": "test_digital_07/conversion-status.json",
+          "sha256": "04f9110b796d7dea5146fcb5852c8f2f6c1332d863d1f11b17830fe32fd81df3",
+          "bytes": 113
+        },
+        {
+          "file": "test_digital_07/document.json",
+          "sha256": "492f4c3084e33f82cd55ae85c1ae907f0de32130c766320ebacb632578c20928",
+          "bytes": 5869
+        },
+        {
+          "file": "test_digital_07/document.md",
+          "sha256": "938ab4159c07e9ed4ff76d1df17cf3fe615044b2aef36c67bc0631dfe314fe2f",
+          "bytes": 278
+        },
+        {
+          "file": "test_digital_07/mechanical-checks.json",
+          "sha256": "dbdb11c29bf5efcb2a3541505aa9c8de2f931498e0a084f7578491d9dea2dbfa",
+          "bytes": 704
+        },
+        {
+          "file": "test_digital_07/stderr.log",
+          "sha256": "c1e2c3552f5987422bf2a6af5a683984ad0f55795d4289ceea0a198183efe35b",
+          "bytes": 309
+        },
+        {
+          "file": "test_digital_07/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_digital_08",
+      "input": "week07/data/test/test_digital_08.pdf",
+      "input_sha256": "ed5dc7381570a2198c0f90b9eefe829d4b1b629aaaa3665e95fc987984eda473",
+      "started_at": "2026-11-11T16:02:01.494766+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_digital_08.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_digital_08"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:02:17.449491+08:00",
+      "elapsed_seconds": 15.9535,
+      "output_files": [
+        {
+          "file": "test_digital_08/conversion-status.json",
+          "sha256": "21d14c88cf79c1ae1078104d5f8dc05c9055b508fed3b40c8e2a819cc98d64be",
+          "bytes": 113
+        },
+        {
+          "file": "test_digital_08/document.json",
+          "sha256": "1a05c173b58f0cdc4a284c847173d922b7d088e7896b2ebd3e86660ba882b422",
+          "bytes": 6999
+        },
+        {
+          "file": "test_digital_08/document.md",
+          "sha256": "7d0c444f0b8a647c10b365da6010dc43a102181afdf7b7ffdb89f6ecb1727a5e",
+          "bytes": 280
+        },
+        {
+          "file": "test_digital_08/mechanical-checks.json",
+          "sha256": "1959d79e537a35777378c4bb6c665be3b0201c7f755b107f3aefdb58af692dce",
+          "bytes": 704
+        },
+        {
+          "file": "test_digital_08/stderr.log",
+          "sha256": "2d1e9a1ed86439721727bf2b7699cd20080fced17a5c67041156855d8ce2eeff",
+          "bytes": 315
+        },
+        {
+          "file": "test_digital_08/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_scan_01",
+      "input": "week07/data/test/test_scan_01.pdf",
+      "input_sha256": "9dca0bb56f4ae9b1a5e03a18e0c3ff4451ab2fd80e666f8261457c4314540514",
+      "started_at": "2026-11-11T16:02:17.453433+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_scan_01.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_01"
+      ],
+      "status": "failed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:02:31.801999+08:00",
+      "elapsed_seconds": 14.3475,
+      "output_files": [
+        {
+          "file": "test_scan_01/conversion-status.json",
+          "sha256": "816a26379ac0a9236f6e45d2015254e02774c960857ebd14d997f0d9146f747e",
+          "bytes": 112
+        },
+        {
+          "file": "test_scan_01/document.json",
+          "sha256": "fc230b16c6a5b8bd93a38957cc751cb6cffe3daad558d300aba1b897e4f77c46",
+          "bytes": 756
+        },
+        {
+          "file": "test_scan_01/document.md",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "test_scan_01/mechanical-checks.json",
+          "sha256": "6ac7415a9f2de8bd18189d2f319fd40293564e37e6469944da562bfb04b6f349",
+          "bytes": 706
+        },
+        {
+          "file": "test_scan_01/stderr.log",
+          "sha256": "c27e410684d7490e25df2674e0b45efb85f5669fe13fc87249dad59590bae936",
+          "bytes": 228
+        },
+        {
+          "file": "test_scan_01/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_scan_02",
+      "input": "week07/data/test/test_scan_02.pdf",
+      "input_sha256": "f4e8dc385c86ccdeb501bdd4957aab793c259fb24a05814bed567d6805c709b5",
+      "started_at": "2026-11-11T16:02:31.806742+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_scan_02.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_02"
+      ],
+      "status": "failed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:02:50.256657+08:00",
+      "elapsed_seconds": 18.4483,
+      "output_files": [
+        {
+          "file": "test_scan_02/conversion-status.json",
+          "sha256": "6daa56cf9ee74b452781eb780a359be375aed495290c9fd2ae7ab0fd6f6df9e9",
+          "bytes": 112
+        },
+        {
+          "file": "test_scan_02/document.json",
+          "sha256": "2f12dbe7c5577d58f366c32b05393a79ef94eaa971b8536bdfda24b3634c7615",
+          "bytes": 757
+        },
+        {
+          "file": "test_scan_02/document.md",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "test_scan_02/mechanical-checks.json",
+          "sha256": "6ac7415a9f2de8bd18189d2f319fd40293564e37e6469944da562bfb04b6f349",
+          "bytes": 706
+        },
+        {
+          "file": "test_scan_02/stderr.log",
+          "sha256": "7833941a6a0dededd360ff903f6e4758f63cfe6488f6180b369436ec5887db29",
+          "bytes": 313
+        },
+        {
+          "file": "test_scan_02/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_scan_03",
+      "input": "week07/data/test/test_scan_03.pdf",
+      "input_sha256": "0820834a5105749e3ba808720a8a76324bbbce8f11a83b2248f2808b8ebeaf95",
+      "started_at": "2026-11-11T16:02:50.264012+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_scan_03.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_03"
+      ],
+      "status": "failed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:03:03.540374+08:00",
+      "elapsed_seconds": 13.2741,
+      "output_files": [
+        {
+          "file": "test_scan_03/conversion-status.json",
+          "sha256": "a19075136159b5ffd73e27581bc7643d92c7dc1b93edaab35c501b51655459b1",
+          "bytes": 113
+        },
+        {
+          "file": "test_scan_03/document.json",
+          "sha256": "6589d9800e372391c21a98d96947e834e6e9f92225dc5dbe46f6becd0c9956a4",
+          "bytes": 756
+        },
+        {
+          "file": "test_scan_03/document.md",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "test_scan_03/mechanical-checks.json",
+          "sha256": "6ac7415a9f2de8bd18189d2f319fd40293564e37e6469944da562bfb04b6f349",
+          "bytes": 706
+        },
+        {
+          "file": "test_scan_03/stderr.log",
+          "sha256": "41a33ca2c83829b8fb959fda7acd7ab1fb50f1773b80f1e94fda50fcaef32e7e",
+          "bytes": 228
+        },
+        {
+          "file": "test_scan_03/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_scan_04",
+      "input": "week07/data/test/test_scan_04.pdf",
+      "input_sha256": "a7c2b613c9ee4031e63b42aa9d83fdcd4631f9df9b34484632b9ec8a756f7780",
+      "started_at": "2026-11-11T16:03:03.543785+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_scan_04.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_04"
+      ],
+      "status": "failed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:03:16.602948+08:00",
+      "elapsed_seconds": 13.0581,
+      "output_files": [
+        {
+          "file": "test_scan_04/conversion-status.json",
+          "sha256": "37aa5a9a8c154ed1dd26581d5a244a715984d59b02835a6e3768bf5afe403ae5",
+          "bytes": 113
+        },
+        {
+          "file": "test_scan_04/document.json",
+          "sha256": "9ae8ae3747c2583e2afc10eaf4f7a72c6125e09a58d8224d570cc75ee609248b",
+          "bytes": 756
+        },
+        {
+          "file": "test_scan_04/document.md",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "test_scan_04/mechanical-checks.json",
+          "sha256": "6ac7415a9f2de8bd18189d2f319fd40293564e37e6469944da562bfb04b6f349",
+          "bytes": 706
+        },
+        {
+          "file": "test_scan_04/stderr.log",
+          "sha256": "50ec0287145f0e3cef65eab917d77387d3105105e51621cd4c7dbd86ce2dae9f",
+          "bytes": 232
+        },
+        {
+          "file": "test_scan_04/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_scan_05",
+      "input": "week07/data/test/test_scan_05.pdf",
+      "input_sha256": "d574ca663dc8f6a3bf7dd2b1f47b2a9380d83261cbfb7e2f7edd25a38b23cde8",
+      "started_at": "2026-11-11T16:03:16.605339+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_scan_05.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_05"
+      ],
+      "status": "failed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:03:27.817504+08:00",
+      "elapsed_seconds": 11.2115,
+      "output_files": [
+        {
+          "file": "test_scan_05/conversion-status.json",
+          "sha256": "09e1cbae7efcec5c51c8954354483d3cd9d76569a8c0b9f306ab2248e199b73f",
+          "bytes": 112
+        },
+        {
+          "file": "test_scan_05/document.json",
+          "sha256": "76d303de1c42179f23f8a5ede69f8c76cb9dd5109433fcfaf0b6230fd77786a7",
+          "bytes": 756
+        },
+        {
+          "file": "test_scan_05/document.md",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "test_scan_05/mechanical-checks.json",
+          "sha256": "6ac7415a9f2de8bd18189d2f319fd40293564e37e6469944da562bfb04b6f349",
+          "bytes": 706
+        },
+        {
+          "file": "test_scan_05/stderr.log",
+          "sha256": "7fb5901bfb38422a010c957f67f0cea0b6c59a805365908046d6edb37c6c887c",
+          "bytes": 148
+        },
+        {
+          "file": "test_scan_05/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_scan_06",
+      "input": "week07/data/test/test_scan_06.pdf",
+      "input_sha256": "3ff493ed05c4b327d97900ab7ebed02e7410dd86685806d8369a87153e682636",
+      "started_at": "2026-11-11T16:03:27.819458+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_scan_06.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_06"
+      ],
+      "status": "failed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:03:39.581392+08:00",
+      "elapsed_seconds": 11.7608,
+      "output_files": [
+        {
+          "file": "test_scan_06/conversion-status.json",
+          "sha256": "66d4d62b0328a53f6e62f607ed8ac6e9519f587a26d769cf7ccc2757e5a34d12",
+          "bytes": 113
+        },
+        {
+          "file": "test_scan_06/document.json",
+          "sha256": "a99df7c5e7e7ec13180023f0a8ae7c5f3788f835d76a26ff0a0feac18b880cf1",
+          "bytes": 756
+        },
+        {
+          "file": "test_scan_06/document.md",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "test_scan_06/mechanical-checks.json",
+          "sha256": "6ac7415a9f2de8bd18189d2f319fd40293564e37e6469944da562bfb04b6f349",
+          "bytes": 706
+        },
+        {
+          "file": "test_scan_06/stderr.log",
+          "sha256": "3bf841ddd3206770e2dee73d1ef72d20ca5a516ff661802336f7f5e1fe17b96e",
+          "bytes": 148
+        },
+        {
+          "file": "test_scan_06/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_scan_07",
+      "input": "week07/data/test/test_scan_07.pdf",
+      "input_sha256": "eb8ff3936b63f0431618646931fae8a5842fc969b0a3ef712412b09392e3d4dd",
+      "started_at": "2026-11-11T16:03:39.582989+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_scan_07.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_07"
+      ],
+      "status": "failed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:03:52.185721+08:00",
+      "elapsed_seconds": 12.6021,
+      "output_files": [
+        {
+          "file": "test_scan_07/conversion-status.json",
+          "sha256": "9e4421f8490c6400034bd9db5413cf61938c80f74a28cdbfbac261f151e37df6",
+          "bytes": 113
+        },
+        {
+          "file": "test_scan_07/document.json",
+          "sha256": "4415c805088bf0c30c83b6873d3f00ddae56c05c8d41ba155928c5ebac4ff5f3",
+          "bytes": 756
+        },
+        {
+          "file": "test_scan_07/document.md",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "test_scan_07/mechanical-checks.json",
+          "sha256": "6ac7415a9f2de8bd18189d2f319fd40293564e37e6469944da562bfb04b6f349",
+          "bytes": 706
+        },
+        {
+          "file": "test_scan_07/stderr.log",
+          "sha256": "64c8b72ab387fc9458ab14470fc0aba1d3a373b468a84fef6e0b9e6cfd543825",
+          "bytes": 232
+        },
+        {
+          "file": "test_scan_07/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_scan_08",
+      "input": "week07/data/test/test_scan_08.pdf",
+      "input_sha256": "9e1a8762e34cd452336180ecad2ea8d21ea75398181219d27962a8c752d3f437",
+      "started_at": "2026-11-11T16:03:52.192018+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_scan_08.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_scan_08"
+      ],
+      "status": "failed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:04:04.735700+08:00",
+      "elapsed_seconds": 12.5377,
+      "output_files": [
+        {
+          "file": "test_scan_08/conversion-status.json",
+          "sha256": "f454a7cbec647cbea6e4e26b24017db1c131979eef89b1e253bf92d1a2f8b4bd",
+          "bytes": 114
+        },
+        {
+          "file": "test_scan_08/document.json",
+          "sha256": "e99c017ffa3c51b0a2bdcbb92e8c6f2838f5eb3e030d786a96433fe752c4dbb1",
+          "bytes": 756
+        },
+        {
+          "file": "test_scan_08/document.md",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "test_scan_08/mechanical-checks.json",
+          "sha256": "6ac7415a9f2de8bd18189d2f319fd40293564e37e6469944da562bfb04b6f349",
+          "bytes": 706
+        },
+        {
+          "file": "test_scan_08/stderr.log",
+          "sha256": "69ded65a9c67b0b949ca337d69440f3c19270f30000f7e47d2eb4e9dc04720cf",
+          "bytes": 236
+        },
+        {
+          "file": "test_scan_08/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_table_01",
+      "input": "week07/data/test/test_table_01.pdf",
+      "input_sha256": "fd05e17b2e0d029cc086e8083b32ae364de13bba7521af160ac0e5ee98c818ac",
+      "started_at": "2026-11-11T16:04:04.738732+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_table_01.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_01"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:04:21.393618+08:00",
+      "elapsed_seconds": 16.6529,
+      "output_files": [
+        {
+          "file": "test_table_01/conversion-status.json",
+          "sha256": "7e9aee7ccfedda8f4f2d8695052823b8b664ba5c0d908c233fe8eb50f1b4f331",
+          "bytes": 113
+        },
+        {
+          "file": "test_table_01/document.json",
+          "sha256": "fe974d88084a8c34d05b51005483b141f6996277a55da47530495cb66f6a3da1",
+          "bytes": 38038
+        },
+        {
+          "file": "test_table_01/document.md",
+          "sha256": "b7fdf7b94979128db12417321e395117978e3713bb489855a062a35017e2fb03",
+          "bytes": 391
+        },
+        {
+          "file": "test_table_01/mechanical-checks.json",
+          "sha256": "572f3e247ae82b50d47ed1112016d53e9b5de2c9d80d944e96bf051aeadb3774",
+          "bytes": 704
+        },
+        {
+          "file": "test_table_01/stderr.log",
+          "sha256": "35871a13285a64f48221172bf5eab0aef9706df36b1891afac84cc3884001944",
+          "bytes": 234
+        },
+        {
+          "file": "test_table_01/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_table_02",
+      "input": "week07/data/test/test_table_02.pdf",
+      "input_sha256": "77fd9304146438840db85064c09e5209ee923daab293685836e7e10bafe124e7",
+      "started_at": "2026-11-11T16:04:21.397166+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_table_02.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_02"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:04:38.570937+08:00",
+      "elapsed_seconds": 17.1728,
+      "output_files": [
+        {
+          "file": "test_table_02/conversion-status.json",
+          "sha256": "55a2c495db5f2596afd23b8e8a07334cd0661965bdf0b6d403bf4efc83091f02",
+          "bytes": 114
+        },
+        {
+          "file": "test_table_02/document.json",
+          "sha256": "b5d87003cefde869447542b2b4bf4f381b4e853eefa54dbfc8b9c5eba034d0e4",
+          "bytes": 38038
+        },
+        {
+          "file": "test_table_02/document.md",
+          "sha256": "289ec7082f6005b803a749838a83bc2740e956b9b0a5c3ad96d814a87aecd0f9",
+          "bytes": 391
+        },
+        {
+          "file": "test_table_02/mechanical-checks.json",
+          "sha256": "572f3e247ae82b50d47ed1112016d53e9b5de2c9d80d944e96bf051aeadb3774",
+          "bytes": 704
+        },
+        {
+          "file": "test_table_02/stderr.log",
+          "sha256": "c726a30165e38db7b7a06fa4ce2e5186f28ffc88fb52905a16fd7fbaac55b6c1",
+          "bytes": 148
+        },
+        {
+          "file": "test_table_02/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_table_03",
+      "input": "week07/data/test/test_table_03.pdf",
+      "input_sha256": "32d251e2afcbe3932411f07e4fdd2f86c7a107414252ad6eb5f709e10c4c216f",
+      "started_at": "2026-11-11T16:04:38.573653+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_table_03.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_03"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:04:54.795092+08:00",
+      "elapsed_seconds": 16.2205,
+      "output_files": [
+        {
+          "file": "test_table_03/conversion-status.json",
+          "sha256": "e6df1e9053e93de75d78df1aa6e7bec0a9062b0991f35d2eafaf03fba9fe2573",
+          "bytes": 112
+        },
+        {
+          "file": "test_table_03/document.json",
+          "sha256": "ee2b59ea3f285a80271cf3725dbff60cb8adc33b0476eb318517d00c78abe17b",
+          "bytes": 38039
+        },
+        {
+          "file": "test_table_03/document.md",
+          "sha256": "dc5c7e4368c29aee79dfa027911e476603fcc60dca06f2fdd5dbe52c99537259",
+          "bytes": 391
+        },
+        {
+          "file": "test_table_03/mechanical-checks.json",
+          "sha256": "572f3e247ae82b50d47ed1112016d53e9b5de2c9d80d944e96bf051aeadb3774",
+          "bytes": 704
+        },
+        {
+          "file": "test_table_03/stderr.log",
+          "sha256": "d58729d9dca83aec50efbe36044489d7a02f75140fac1860c69f028e018bf4d6",
+          "bytes": 148
+        },
+        {
+          "file": "test_table_03/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_table_04",
+      "input": "week07/data/test/test_table_04.pdf",
+      "input_sha256": "7c7e104949b72712f788ce83830e7eab12eb1798332a45cb9ff14da6c82fbea8",
+      "started_at": "2026-11-11T16:04:54.800669+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_table_04.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_04"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:05:10.360313+08:00",
+      "elapsed_seconds": 15.5576,
+      "output_files": [
+        {
+          "file": "test_table_04/conversion-status.json",
+          "sha256": "cedd4465f896f63a39eba41cc4766a843c83b31cd6c26d7019947d232555f0aa",
+          "bytes": 114
+        },
+        {
+          "file": "test_table_04/document.json",
+          "sha256": "a13e8ec25f3fc797e42ec6373a57169d0ad640606a04204274e6c4f7f3d5a7c9",
+          "bytes": 38039
+        },
+        {
+          "file": "test_table_04/document.md",
+          "sha256": "b661027f45b8a792b99f9449a0dd4eb668c69b018ca5f1dcb0d9958cd679c62a",
+          "bytes": 391
+        },
+        {
+          "file": "test_table_04/mechanical-checks.json",
+          "sha256": "572f3e247ae82b50d47ed1112016d53e9b5de2c9d80d944e96bf051aeadb3774",
+          "bytes": 704
+        },
+        {
+          "file": "test_table_04/stderr.log",
+          "sha256": "99b336b11b6e1703b71e9c07d5ce318c4137750e54dba2070f3f6da8c9c99d29",
+          "bytes": 148
+        },
+        {
+          "file": "test_table_04/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_table_05",
+      "input": "week07/data/test/test_table_05.pdf",
+      "input_sha256": "ceb06da4c0f95c1c70a8ca463abb771572c3f4b6e1e4be79d70c3a08be441dd5",
+      "started_at": "2026-11-11T16:05:10.362895+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_table_05.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_05"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:05:25.991749+08:00",
+      "elapsed_seconds": 15.628,
+      "output_files": [
+        {
+          "file": "test_table_05/conversion-status.json",
+          "sha256": "74c3146a5c2183d7e4b29235284441f01db08648888bb722cc0a458fb4c484f7",
+          "bytes": 114
+        },
+        {
+          "file": "test_table_05/document.json",
+          "sha256": "fafccf9f117d22496a597446cf4d118a8cfdc721d34453a84b5a727ea43c2b83",
+          "bytes": 37806
+        },
+        {
+          "file": "test_table_05/document.md",
+          "sha256": "de4c40f6318c4f1127eab5122a3e2456896f8a92eb872e14a4514a8803c84f3f",
+          "bytes": 375
+        },
+        {
+          "file": "test_table_05/mechanical-checks.json",
+          "sha256": "572f3e247ae82b50d47ed1112016d53e9b5de2c9d80d944e96bf051aeadb3774",
+          "bytes": 704
+        },
+        {
+          "file": "test_table_05/stderr.log",
+          "sha256": "774248a9e9ccef533f5178d61797a19141cb46e09f4b143ee775add168ac6cff",
+          "bytes": 148
+        },
+        {
+          "file": "test_table_05/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_table_06",
+      "input": "week07/data/test/test_table_06.pdf",
+      "input_sha256": "16a3de511c6f8e2f7e70ae27296b2abf5e892f53cfff1622eba81964ddd902eb",
+      "started_at": "2026-11-11T16:05:25.994510+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_table_06.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_06"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:05:41.656461+08:00",
+      "elapsed_seconds": 15.661,
+      "output_files": [
+        {
+          "file": "test_table_06/conversion-status.json",
+          "sha256": "416e6149a2b2eb345a43831cb975ff58cdf1a5564bf57c9c99063bf1ebe4ad27",
+          "bytes": 114
+        },
+        {
+          "file": "test_table_06/document.json",
+          "sha256": "a689030713b332f782fea1db618a57fe6e3ab845ab0007b6bbd90bd6caa5a78e",
+          "bytes": 38040
+        },
+        {
+          "file": "test_table_06/document.md",
+          "sha256": "99c4849c7273c604a7cb0f04352834768608f96f5f44f01cc8318668afdc3901",
+          "bytes": 391
+        },
+        {
+          "file": "test_table_06/mechanical-checks.json",
+          "sha256": "572f3e247ae82b50d47ed1112016d53e9b5de2c9d80d944e96bf051aeadb3774",
+          "bytes": 704
+        },
+        {
+          "file": "test_table_06/stderr.log",
+          "sha256": "9f6ef360ded31636b4962bf0d8177f38c9abdd901eee835dbfc9630828f36824",
+          "bytes": 148
+        },
+        {
+          "file": "test_table_06/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_table_07",
+      "input": "week07/data/test/test_table_07.pdf",
+      "input_sha256": "e21635d7cfdab1a8aa0478d1c37b2b82adc8c495d3957f0998a29c500e8f5fda",
+      "started_at": "2026-11-11T16:05:41.659054+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_table_07.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_07"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:05:57.144570+08:00",
+      "elapsed_seconds": 15.4844,
+      "output_files": [
+        {
+          "file": "test_table_07/conversion-status.json",
+          "sha256": "8778aef2f9b89526f08bbfc59db46d631ef7eaa80650d4fd4c35f428983dc89a",
+          "bytes": 114
+        },
+        {
+          "file": "test_table_07/document.json",
+          "sha256": "4a534d18e210b604067b13ecf22eaf9237dbf1657e6253763e3091b05f93aabf",
+          "bytes": 38038
+        },
+        {
+          "file": "test_table_07/document.md",
+          "sha256": "b4c8a1bb82c22b1d48d1444e9824641be648f4d39c30ae79e5bc6231a54b7945",
+          "bytes": 391
+        },
+        {
+          "file": "test_table_07/mechanical-checks.json",
+          "sha256": "572f3e247ae82b50d47ed1112016d53e9b5de2c9d80d944e96bf051aeadb3774",
+          "bytes": 704
+        },
+        {
+          "file": "test_table_07/stderr.log",
+          "sha256": "f89c294e05d9358656704fdd2de0c32229adec43273910802cacb0bd67e22c85",
+          "bytes": 148
+        },
+        {
+          "file": "test_table_07/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "id": "test_table_08",
+      "input": "week07/data/test/test_table_08.pdf",
+      "input_sha256": "119adc50ba4584f088bf0ef176b08692ba45a879ee3606e56bf2015fb1017581",
+      "started_at": "2026-11-11T16:05:57.149348+08:00",
+      "command": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week06/bin/python",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week06/scripts/run_pipeline.py",
+        "--config",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/configs/pdf-no-ocr.json",
+        "--worker-input",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week07/data/test/test_table_08.pdf",
+        "--worker-output",
+        "/home/yaxiaodang/multimodal-ai-bootcamp/week10/runs/pdf/baseline-20261111T160020-0f4498/test_table_08"
+      ],
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": "2026-11-11T16:06:12.971048+08:00",
+      "elapsed_seconds": 15.8206,
+      "output_files": [
+        {
+          "file": "test_table_08/conversion-status.json",
+          "sha256": "f2a6f880f3ba0be6ca36ee04f424244ff5dfcd6fbeb51ef78a736de9d3a2f899",
+          "bytes": 114
+        },
+        {
+          "file": "test_table_08/document.json",
+          "sha256": "0fd6728ac62797b2d30b97a2d17644bff2ae1b777003af91fc60069303142100",
+          "bytes": 38039
+        },
+        {
+          "file": "test_table_08/document.md",
+          "sha256": "2ad9196da4f5df3f963e91c0b99dd6f9a70e62c8b1c88bc635099011798a2fbc",
+          "bytes": 391
+        },
+        {
+          "file": "test_table_08/mechanical-checks.json",
+          "sha256": "572f3e247ae82b50d47ed1112016d53e9b5de2c9d80d944e96bf051aeadb3774",
+          "bytes": 704
+        },
+        {
+          "file": "test_table_08/stderr.log",
+          "sha256": "a0bd0b02d0ce04fad1e9fe8bf61d2119905e847f756bc0d2dab44c158ebd7760",
+          "bytes": 148
+        },
+        {
+          "file": "test_table_08/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "evaluation": "pending_user_review; no semantic score",
+  "timing_note": "Each PDF uses a fresh worker; elapsed includes model loading and any uncached downloads, not pure inference time.",
+  "model_preparation_sha256": "2567f630ca7eb0aa6a518e26419cab31f39e50e4419471882e9d250922aeb6ef",
+  "finished_at": "2026-11-11T16:06:12.973507+08:00"
+}

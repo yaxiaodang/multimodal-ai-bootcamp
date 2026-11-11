@@ -1,0 +1,58 @@
+{
+  "overall": {
+    "exact_rate": 0.0,
+    "json_valid_rate": 0.0,
+    "total_correct_rate": 0.0,
+    "currency_correct_rate": 0.0,
+    "n": 12,
+    "score": null,
+    "success": null,
+    "reading_order": null,
+    "table_exact": null,
+    "exact": 0.0,
+    "json_valid": 0.0,
+    "total_correct": 0.0,
+    "currency_correct": 0.0,
+    "total_seconds": 32.81970916099817
+  },
+  "slices": {
+    "template": {
+      "0": {
+        "n": 4,
+        "score": null,
+        "success": null,
+        "reading_order": null,
+        "table_exact": null,
+        "exact": 0.0,
+        "json_valid": 0.0,
+        "total_correct": 0.0,
+        "currency_correct": 0.0,
+        "total_seconds": 11.14340256899959
+      },
+      "1": {
+        "n": 4,
+        "score": null,
+        "success": null,
+        "reading_order": null,
+        "table_exact": null,
+        "exact": 0.0,
+        "json_valid": 0.0,
+        "total_correct": 0.0,
+        "currency_correct": 0.0,
+        "total_seconds": 10.983388933998867
+      },
+      "2": {
+        "n": 4,
+        "score": null,
+        "success": null,
+        "reading_order": null,
+        "table_exact": null,
+        "exact": 0.0,
+        "json_valid": 0.0,
+        "total_correct": 0.0,
+        "currency_correct": 0.0,
+        "total_seconds": 10.692917657999715
+      }
+    }
+  }
+}

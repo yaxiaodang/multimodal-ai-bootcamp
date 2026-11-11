@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "frozen_at": "2026-11-11T08:00:11.971311+00:00",
+  "seed": 42,
+  "threads": 2,
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 32
+  },
+  "text_runs": {
+    "base": null,
+    "run-a": "week09/runs/run-a-20261111T074420Z",
+    "run-b": "week09/runs/run-b-20261111T074903Z"
+  },
+  "text_split": "week08/data/reserved-test.jsonl",
+  "pdf_baseline": "week07/runs/baseline-20261111T144702-4ebb49",
+  "pdf_ablation": "week10/configs/pdf-no-ocr.json",
+  "pdf_primary": "Week07 macro normalized character edit similarity",
+  "text_primary": "Week08 parsed JSON object exact rate; extra keys fail",
+  "selection": "Diagnostic only; no test-driven hyperparameter changes. Keep PDF OCR. No production adoption based solely on 12 synthetic text test cases. A/B comparison changes learning_rate only; adapter ablation changes enabled adapter only.",
+  "error_policy": "PDF case = method/document with score<1 or order<1 or table_exact=false; retain ALL cases. Distinguish case count from unique document count. Automatic candidate labels; manual review pending.",
+  "bootstrap": {
+    "seed": 42,
+    "resamples": 2000,
+    "unit": "document; paired for differences",
+    "interval": "percentile 2.5/97.5; descriptive on synthetic sample"
+  },
+  "budget": "CPU only, no paid cloud; PDF <=600 seconds/page, text subprocess <=600 seconds/model; no training",
+  "files": {
+    "week07/data/freeze.json": "693827a96866299573f42041a77248f2e3c84380b8334664374f436823bb2dd4",
+    "week08/data/freeze.json": "109c4ebf435f692e6b316455a6c22dff94a5ba643c57c03e5009ba9fe992029f",
+    "week10/configs/pdf-baseline.json": "a88d873b724ff4a802a291bc8176565e326f42be48a1f95b8910535d1a3fd4ac",
+    "week10/configs/pdf-no-ocr.json": "b4422ae42d1e11c67adcdde0e86fbed01bccd75b524fa93ab26c35014c61a7f4",
+    "week09/configs/run-a.json": "3c538235315f28482663d721ef79b648ef19f2f3da7a552930d96c5dbcd33dde",
+    "week09/configs/run-b.json": "6fd7549162e0877b6a36d91c9ddcf3e7501f461dbf6f2f4c080ddde8a5650606",
+    "week09/runs/run-a-20261111T074420Z/adapter/adapter_model.safetensors": "724d5fab646409d2b889c12920377d522021e3ece2b1c8709a8c57c1ec1d0ff2",
+    "week09/runs/run-a-20261111T074420Z/adapter/adapter_config.json": "ca99890e3356884599b51e429482e429866c23625908cb9bf352e469ed07b208",
+    "week09/runs/run-a-20261111T074420Z/config.json": "e50ba0a96033a1f498e5104bfe34b4b29496be618eba3059eb63d5a2068bcd93",
+    "week09/runs/run-b-20261111T074903Z/adapter/adapter_model.safetensors": "4626fe4dd63a41da7f86e29a182daee125e759bc069802435c096432cdd2b51b",
+    "week09/runs/run-b-20261111T074903Z/adapter/adapter_config.json": "ca99890e3356884599b51e429482e429866c23625908cb9bf352e469ed07b208",
+    "week09/runs/run-b-20261111T074903Z/config.json": "6fd7549162e0877b6a36d91c9ddcf3e7501f461dbf6f2f4c080ddde8a5650606"
+  }
+}

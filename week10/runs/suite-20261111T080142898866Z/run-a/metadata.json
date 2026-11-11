@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "model": "run-a",
+  "started_utc": "2026-11-11T08:02:22.889378+00:00",
+  "protocol_sha256": "23fe0eee490d2e771c3a02413a025dc8d8726ed74e0f971f7f74a66f056ab618",
+  "source_sha256": {
+    "week10/scripts/evaluate_text.py": "70f6d16e4b129d06aa0d1c4fe9b5016e115174b4b019b554249e0758d798d7cf",
+    "week10/scripts/common.py": "e620ecaa91e566e60b9b60154b595c6327b4293f44f17a848c7ff819fbb11fd0"
+  },
+  "git_commit": "8d665218fbc8c4b89e51841b3e8f64d13c70a81c",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "gpu_hours": 0,
+  "paid_cost_cny": 0,
+  "training": false,
+  "model_source": "week09/runs/run-a-20261111T074420Z",
+  "wandb_project": "multimodal-ai-bootcamp-week09",
+  "evaluation_wandb_run": null,
+  "cloud_report_url": null,
+  "packages": {
+    "torch": "2.14.0+cpu",
+    "transformers": "5.17.0",
+    "peft": "0.19.0",
+    "tokenizers": "0.23.2",
+    "safetensors": "0.8.0"
+  },
+  "model_id": "HuggingFaceTB/SmolLM2-135M",
+  "revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "training_wandb_identity": {
+    "project": "multimodal-ai-bootcamp-week09",
+    "entity": null,
+    "run_id": "3xryklnu",
+    "mode": "offline",
+    "url": null,
+    "offline_directory": "week09/wandb/wandb/offline-run-20261111_154420-3xryklnu",
+    "cloud_synced": false,
+    "report_url": null
+  },
+  "training_artifacts": "week09/runs/run-a-20261111T074420Z/artifact-manifest.json",
+  "load_seconds": 5.985186677999991,
+  "predictions_sha256": "699a932f5b7231ee975727c09d9a4f8c8fed07d8042b5380e3da9972424f61ba",
+  "total_seconds": 24.41489663199991,
+  "peak_rss_mib": 1152.2890625
+}

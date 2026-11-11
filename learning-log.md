@@ -871,3 +871,84 @@
 - 最有说服力的证据：从报告回到原始预测、config、源码/数据/adapter哈希，并核对W&B原生退出状态。
 - 希望交流的问题：当小验证集exact同分时，需要什么证据才能支持模型选择？
 - 下周首先完成什么：先补齐W&B云端Report与人工抽查；Week10先对齐PDF解析与文本字段抽取的任务边界，再设计独立测试、多seed和错误分析，不能将adapter直接用于Docling跨任务比较。
+
+
+## Week 10｜统一评测、消融与错误分析
+
+### 本周核心问题
+- 我准备回答：效果变化是否来自方法本身，而非数据、指标或选择性汇报？如何结合错误与成本决定是否采用？
+
+### 时间与任务计划
+- 选择路径：标准路径，并补充切片/描述性bootstrap；两个历史任务不一致，分任务统一评测，不伪造跨任务公平比较。
+- 课程与官方材料：计划4小时，实际待本人填写。
+- 主线项目：计划10小时，实际待本人填写。
+- 评测与失败分析：计划4小时，实际待本人填写。
+- 自主探索：计划4小时，选择成本，实际待本人填写。
+- 记录与例会准备：计划2小时，实际待本人填写。
+
+### 本周主线成果
+- 完成了：运行前冻结协议；Week07 24页PDF原基线认证重算与关闭OCR消融；Week09 base/A/B首次在12条reserved-test统一推理；总体/切片/成本、配对bootstrap、42个真实错误case及原始证据；生成报告、图、人工复核空表和命令解释。
+- 尚未完成：本人阅读、人工抽查、实际学习时间、自主阶段确认；W&B云端同步及Report。课程“Week09 runs直接评Week07 test”的字面项因任务/标签不同不适用，未声称完成。
+- 唯一运行入口：`.venv-week08/bin/python week10/run.py`（从仓库根目录）；作用：新建suite，执行无OCR解析与base/A/B测试，不训练。轻量核验入口`python3 week10/scripts/verify.py`：作用为核对归档哈希并重算评分，不加载模型。
+- 预计 / 实际耗时：计划24小时 / 本人实际待填写；AI代执行PDF无OCR累计352.1秒，文本base/A/B加载与评测约39.0/24.4/23.5秒，另有阅读、编码和核验时间；不可当作本人学习时长。
+- 算力与成本：Ubuntu VM CPU、2线程、float32；GPU小时0，新增付费云费用0；电费与硬件成本未测。PDF历史内存未采样，文本峰值约1152MiB。
+- 预期文件 / 实际文件：[计划](week10/experiment-plan.md)、[协议](week10/configs/protocol.json)、[源代码与命令说明](week10/README.md)、[原始runs](week10/runs/)、[报告](week10/reports/evaluation-report.md)、[错误](week10/reports/error-taxonomy.json)、[核验](week10/evidence/verification.json)均已生成。
+
+### 环境与复现信息
+- Git commit：运行时父提交`8d665218fbc8c4b89e51841b3e8f64d13c70a81c`（完整值与各metadata一致）；本周交付分支`codex/week10-evaluation`。源码及输入/输出SHA256见[manifest](week10/evidence/manifest.json)，交付commit由Git历史定位，避免自引用。
+- Python / CUDA / GPU：实际推理环境Python3.10.12；系统轻量核验Python版本以终端为准；CPU推理，无GPU调用。PDF和文本依赖分别复用Week06与Week09固定环境，文本版本见各metadata；未独立重装全新VM。
+- 模型与revision：SmolLM2-135M `93efa2f097d58c2a74874c7e644dbc9b0cee75a2`；A/B固定Week09已归档adapter SHA；Docling布局模型及组件版本继承Week07配置和Week06模型准备记录。
+- 数据集与version / split：Week07 v1.0冻结24 test页；Week08 v1.0的96 train/12 validation保持不变，12 reserved-test本轮首次消费。自制虚构、无真实隐私，许可及模板偏差见两周Dataset Card。不得再用本轮test调参后当未见数据汇报。
+- 随机种子：推理42，greedy，无重新训练；bootstrap42/2000次。
+- 配置文件：[protocol.json](week10/configs/protocol.json)、[PDF无OCR](week10/configs/pdf-no-ocr.json)、Week09 A/B训练配置。
+- W&B project：`multimodal-ai-bootcamp-week09`；训练离线run ID：A=`3xryklnu`、B=`0h6gfu6a`；本周新增评测run ID无（本地JSON评测）。
+- Artifact version：本地digest/文件SHA见Week09两run的artifact-manifest.json；云端`:vN`待同步。Report链接：未创建，待本人登录后补真实链接，不能将本地报告冒充云端Report。
+
+### Evidence Manifest 自查
+- [x] 输入来源、license与隐私状态已记录，并核验冻结哈希。
+- [x] 原始输出、日志或metrics可定位。
+- [x] 本轮唯一变量和失败案例已记录。
+- [ ] AI使用已披露，自动核验完成；本人人工核验尚待最后完成，不能勾为完成。
+- [x] 当前结论、限制和下一步最小验证已写明。
+
+### 实验记录
+
+| Run | 唯一改动 | 关键配置 | 结果 | 原始证据 |
+| --- | --- | --- | --- | --- |
+| PDF baseline | 复用Week07原输出重算 | 24页，OCR开启，原指标 | 内容0.967559，顺序0.708333，表格strict=0/8；历史总996.4秒 | [原始基线](week07/runs/baseline-20261111T144702-4ebb49/)、[比较JSON](week10/reports/comparison.json) |
+| PDF no-OCR | 只关闭OCR | 其余算法条件同baseline | 内容0.650709，8扫描页质量失败计0；表格strict=0/8；总352.1秒，历史对照不能作严格加速比 | [本轮PDF](week10/runs/pdf/baseline-20261111T160020-0f4498/) |
+| Text base | 无adapter | 12 reserved-test，相同Prompt/greedy/32token | JSON exact=0/12 | [逐条预测](week10/runs/suite-20261111T080142898866Z/base/predictions.json) |
+| Text A | 启用已训练A adapter | 训练历史lr=0.001，其余冻结 | JSON exact=12/12 | [逐条预测](week10/runs/suite-20261111T080142898866Z/run-a/predictions.json) |
+| Text B | 相对A只改历史训练lr | lr=0.0005，其余同A | JSON exact=12/12，不宣布A/B胜者 | [逐条预测](week10/runs/suite-20261111T080142898866Z/run-b/predictions.json) |
+
+### AI 使用披露
+- 使用的工具与版本：Codex桌面会话，具体模型版本未另行确认；Python/PyTorch/Transformers/PEFT版本见原始metadata。
+- AI完成或建议了什么：核对任务边界、冻结协议、编写评测、执行CPU实验、保存原始失败、生成报告与自动核验。见[披露](week10/evidence/ai-usage.md)。
+- 我如何核验：AI执行SHA256认证、可手算评分测试、原始预测复算和单变量检查；本人尚需对照原页抽样。轻量核验对跨Python版本浮点累计使用1e-12容差，未更改指标或预测。
+- 我拒绝或修改了哪些建议，为什么：不把两类任务强拼排行榜；不将空输出改为成功；不凭12条全对推断真实泛化或为A/B排名；不编造人工确认/云端链接。
+
+### 自主探索方向
+- 我选择的方向：成本，附加分组与描述性配对置信区间。
+- 为什么与当前项目相关：OCR耗时和adapter效果要和维护、资源一起判断。
+- 我只改变或验证什么：PDF消融只关OCR；已有A/B模型仅进行固定推理，不改Prompt或重训。bootstrap按相同文档索引配对重采样，未声称覆盖训练seed随机性。
+- 结果与证据：[报告成本与切片表](week10/reports/evaluation-report.md)、各metadata。历史PDFbaseline与本轮负载不同，不支持严格加速比；文本12条全对导致bootstrap退化为[1,1]，不代表真实总体必然100%。
+
+### 自主阶段
+- [ ] 未形成：只有阅读或尝试。
+- [ ] 已跑通：AI已代执行，个人阶段待本人确认。
+- [ ] 可复现：入口/固定依赖/数据/原始证据已提供，全新VM独立安装未实测。
+- [ ] 可解释：本人学习并复核后填写。
+- [ ] 可扩展：本人提出并验证新问题后填写。
+
+### 当前判断
+- 最重要的发现：PDF内容分高仍可全部表格结构strict失败；总体数值不足以取代结构和案例检查。两个文本adapter同分，不支持宣布胜者。
+- 一个失败或意外：无OCR扫描页子进程exit=0，但空Markdown未通过既有机械检查，Pipeline标failed；全部保留计0。另有跨Python浮点求和末位差异导致最初严格相等核验失败，已修复比较容差。
+- 排查与恢复方式：检查原始stdout/stderr与mechanical-checks，不修改预测；完整负面运行允许汇总，缺页和未结束仍拒绝。修复核验后重建派生报告/manifest并重新验证。
+- 当前限制：两个历史任务不同；合成共享模板、12条文本测试、单训练seed、无生产泛化证据；人工参考检查与W&B云Report未完成，PDF内存未测、计时无受控重复。
+- 我还不理解：待本人填写，例如“为什么bootstrap全对区间[1,1]不能证明真实世界全对”。
+
+### 例会前准备
+- 我准备展示的成果：[讲解提纲](week10/reports/meeting-notes.md)、两个任务的实测表、关闭OCR失败和表格结构错误。
+- 最有说服力的证据：从总体结果回到固定协议、逐条预测、原PDF/参考和错误case，再运行自动核验。
+- 希望交流的问题：应该如何设计与真实任务一致、独立于模板的数据，才能支持采用模型？
+- 下周首先完成什么：先做本周人工复核，再选择与当前文档结构/评测直接相关的一篇论文，预注册Week11最小复现；不继续用已看test调参。

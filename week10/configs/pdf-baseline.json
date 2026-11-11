@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "name": "pdf-baseline",
+  "manifest": "week07/data/test-manifest.json",
+  "output_root": "week10/runs/pdf",
+  "device": "cpu",
+  "artifacts_path": ".cache-week06/artifacts",
+  "num_threads": 2,
+  "do_ocr": true,
+  "ocr_engine": "rapidocr",
+  "ocr_backend": "onnxruntime",
+  "ocr_languages": [
+    "ch"
+  ],
+  "force_full_page_ocr": false,
+  "do_table_structure": true,
+  "table_mode": "accurate",
+  "do_cell_matching": true,
+  "do_formula_enrichment": false,
+  "timeout_seconds_per_document": 600,
+  "references": [
+    "week07/configs/evaluation.json",
+    "week07/data/freeze.json"
+  ],
+  "expected_packages": {
+    "docling": "2.145.0",
+    "rapidocr": "3.10.0",
+    "onnxruntime": "1.23.2",
+    "torch": "2.14.0+cpu",
+    "torchvision": "0.29.1+cpu"
+  },
+  "layout_revision": "8f39ad3c0b4c58e9c2d2c84a38465abf757272d8"
+}

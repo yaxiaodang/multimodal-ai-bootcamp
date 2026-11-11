@@ -1,0 +1,230 @@
+[
+  {
+    "id": "F3000",
+    "split": "reserved-test",
+    "template": 0,
+    "text": "Invoice F3000\nCurrency: USD\nSubtotal: 688.63\nTax: 1.00\nTotal: 689.63",
+    "answer": {
+      "total": "689.63",
+      "currency": "USD"
+    },
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nInvoice F3000\nCurrency: USD\nSubtotal: 688.63\nTax: 1.00\nTotal: 689.63\nAnswer:\n",
+    "prediction": "{\"total\":\"689.63\",\"currency\":\"USD\"}",
+    "seconds": 1.2575508820000323,
+    "input_tokens": 66,
+    "output_tokens": 15,
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F3001",
+    "split": "reserved-test",
+    "template": 1,
+    "text": "Receipt F3001 | Subtotal 758.09 | Tax 14.93 | Total 773.02 EUR",
+    "answer": {
+      "total": "773.02",
+      "currency": "EUR"
+    },
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nReceipt F3001 | Subtotal 758.09 | Tax 14.93 | Total 773.02 EUR\nAnswer:\n",
+    "prediction": "{\"total\":\"773.02\",\"currency\":\"EUR\"}",
+    "seconds": 1.317947885000649,
+    "input_tokens": 61,
+    "output_tokens": 16,
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F3002",
+    "split": "reserved-test",
+    "template": 2,
+    "text": "BILL F3002\nTax = 10.15\nFinal total = 233.53 GBP\nSubtotal = 223.38",
+    "answer": {
+      "total": "233.53",
+      "currency": "GBP"
+    },
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nBILL F3002\nTax = 10.15\nFinal total = 233.53 GBP\nSubtotal = 223.38\nAnswer:\n",
+    "prediction": "{\"total\":\"233.53\",\"currency\":\"GBP\"}",
+    "seconds": 1.3440957450002315,
+    "input_tokens": 65,
+    "output_tokens": 16,
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F3003",
+    "split": "reserved-test",
+    "template": 0,
+    "text": "Invoice F3003\nCurrency: USD\nSubtotal: 732.31\nTax: 16.21\nTotal: 748.52",
+    "answer": {
+      "total": "748.52",
+      "currency": "USD"
+    },
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nInvoice F3003\nCurrency: USD\nSubtotal: 732.31\nTax: 16.21\nTotal: 748.52\nAnswer:\n",
+    "prediction": "{\"total\":\"748.52\",\"currency\":\"USD\"}",
+    "seconds": 1.4452032270000927,
+    "input_tokens": 67,
+    "output_tokens": 15,
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F3004",
+    "split": "reserved-test",
+    "template": 1,
+    "text": "Receipt F3004 | Subtotal 197.35 | Tax 7.35 | Total 204.70 EUR",
+    "answer": {
+      "total": "204.70",
+      "currency": "EUR"
+    },
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nReceipt F3004 | Subtotal 197.35 | Tax 7.35 | Total 204.70 EUR\nAnswer:\n",
+    "prediction": "{\"total\":\"204.70\",\"currency\":\"EUR\"}",
+    "seconds": 1.414958361000572,
+    "input_tokens": 60,
+    "output_tokens": 16,
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F3005",
+    "split": "reserved-test",
+    "template": 2,
+    "text": "BILL F3005\nTax = 13.16\nFinal total = 173.13 GBP\nSubtotal = 159.97",
+    "answer": {
+      "total": "173.13",
+      "currency": "GBP"
+    },
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nBILL F3005\nTax = 13.16\nFinal total = 173.13 GBP\nSubtotal = 159.97\nAnswer:\n",
+    "prediction": "{\"total\":\"173.13\",\"currency\":\"GBP\"}",
+    "seconds": 1.3810707490001732,
+    "input_tokens": 65,
+    "output_tokens": 16,
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F3006",
+    "split": "reserved-test",
+    "template": 0,
+    "text": "Invoice F3006\nCurrency: USD\nSubtotal: 637.67\nTax: 9.34\nTotal: 647.01",
+    "answer": {
+      "total": "647.01",
+      "currency": "USD"
+    },
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nInvoice F3006\nCurrency: USD\nSubtotal: 637.67\nTax: 9.34\nTotal: 647.01\nAnswer:\n",
+    "prediction": "{\"total\":\"647.01\",\"currency\":\"USD\"}",
+    "seconds": 1.2179066769995188,
+    "input_tokens": 66,
+    "output_tokens": 15,
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F3007",
+    "split": "reserved-test",
+    "template": 1,
+    "text": "Receipt F3007 | Subtotal 240.48 | Tax 8.29 | Total 248.77 EUR",
+    "answer": {
+      "total": "248.77",
+      "currency": "EUR"
+    },
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nReceipt F3007 | Subtotal 240.48 | Tax 8.29 | Total 248.77 EUR\nAnswer:\n",
+    "prediction": "{\"total\":\"248.77\",\"currency\":\"EUR\"}",
+    "seconds": 1.2639619620003941,
+    "input_tokens": 60,
+    "output_tokens": 16,
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F3008",
+    "split": "reserved-test",
+    "template": 2,
+    "text": "BILL F3008\nTax = 8.57\nFinal total = 590.11 GBP\nSubtotal = 581.54",
+    "answer": {
+      "total": "590.11",
+      "currency": "GBP"
+    },
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nBILL F3008\nTax = 8.57\nFinal total = 590.11 GBP\nSubtotal = 581.54\nAnswer:\n",
+    "prediction": "{\"total\":\"590.11\",\"currency\":\"GBP\"}",
+    "seconds": 1.3064226769993184,
+    "input_tokens": 64,
+    "output_tokens": 16,
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F3009",
+    "split": "reserved-test",
+    "template": 0,
+    "text": "Invoice F3009\nCurrency: USD\nSubtotal: 348.32\nTax: 3.75\nTotal: 352.07",
+    "answer": {
+      "total": "352.07",
+      "currency": "USD"
+    },
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nInvoice F3009\nCurrency: USD\nSubtotal: 348.32\nTax: 3.75\nTotal: 352.07\nAnswer:\n",
+    "prediction": "{\"total\":\"352.07\",\"currency\":\"USD\"}",
+    "seconds": 1.2204543439993358,
+    "input_tokens": 66,
+    "output_tokens": 15,
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F3010",
+    "split": "reserved-test",
+    "template": 1,
+    "text": "Receipt F3010 | Subtotal 737.47 | Tax 11.06 | Total 748.53 EUR",
+    "answer": {
+      "total": "748.53",
+      "currency": "EUR"
+    },
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nReceipt F3010 | Subtotal 737.47 | Tax 11.06 | Total 748.53 EUR\nAnswer:\n",
+    "prediction": "{\"total\":\"748.53\",\"currency\":\"EUR\"}",
+    "seconds": 1.2815274430004138,
+    "input_tokens": 61,
+    "output_tokens": 16,
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F3011",
+    "split": "reserved-test",
+    "template": 2,
+    "text": "BILL F3011\nTax = 15.98\nFinal total = 241.93 GBP\nSubtotal = 225.95",
+    "answer": {
+      "total": "241.93",
+      "currency": "GBP"
+    },
+    "prompt": "Extract the final total and currency. Return only JSON with string keys total and currency.\nDocument:\nBILL F3011\nTax = 15.98\nFinal total = 241.93 GBP\nSubtotal = 225.95\nAnswer:\n",
+    "prediction": "{\"total\":\"241.93\",\"currency\":\"GBP\"}",
+    "seconds": 1.3275220569994417,
+    "input_tokens": 65,
+    "output_tokens": 16,
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  }
+]
