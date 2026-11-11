@@ -1,0 +1,9 @@
+{
+  "exact_rate": 1.0,
+  "json_valid_rate": 1.0,
+  "total_correct_rate": 1.0,
+  "currency_correct_rate": 1.0,
+  "n": 12,
+  "answer_nll": 0.00024794526995990324,
+  "seconds": 21.475926841999353
+}

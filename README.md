@@ -24,7 +24,7 @@
 | [week08/](week08/README.md) | LoRA/PEFT：CPU字段抽取SFT、训练前后对比、学习率对照与adapter归档 |
 | [week09/](week09/README.md) | W&B实验追踪：CPU A/B、原生离线runs、artifact与报告；账号同步及网页Report待本人收尾 |
 | [week10/](week10/README.md) | 统一评测：24页PDF关闭OCR消融、base/A/B独立文本测试、42个错误case与成本报告；人工复核待本人 |
-| `week11/` | 论文导读与最小复现 |
+| [week11/](week11/README.md) | 论文导读与最小复现：LoRA Paper Card、事前计划、CPU rank4/8新训练与合并核验；本人阅读/复核待收尾 |
 | `week12/` | Capstone、展示与自主答辩 |
 | `learning-log.md` | 12 周连续学习记录 |
 | `requirements.txt` | 项目累计 Python 依赖 |

@@ -1,0 +1,12 @@
+{"id": "F2000", "split": "validation", "template": 0, "text": "Invoice F2000\nCurrency: USD\nSubtotal: 475.34\nTax: 6.62\nTotal: 481.96", "answer": {"total": "481.96", "currency": "USD"}}
+{"id": "F2001", "split": "validation", "template": 1, "text": "Receipt F2001 | Subtotal 670.65 | Tax 6.76 | Total 677.41 EUR", "answer": {"total": "677.41", "currency": "EUR"}}
+{"id": "F2002", "split": "validation", "template": 2, "text": "BILL F2002\nTax = 27.47\nFinal total = 608.39 GBP\nSubtotal = 580.92", "answer": {"total": "608.39", "currency": "GBP"}}
+{"id": "F2003", "split": "validation", "template": 0, "text": "Invoice F2003\nCurrency: USD\nSubtotal: 3.16\nTax: 15.45\nTotal: 18.61", "answer": {"total": "18.61", "currency": "USD"}}
+{"id": "F2004", "split": "validation", "template": 1, "text": "Receipt F2004 | Subtotal 385.71 | Tax 25.75 | Total 411.46 EUR", "answer": {"total": "411.46", "currency": "EUR"}}
+{"id": "F2005", "split": "validation", "template": 2, "text": "BILL F2005\nTax = 25.27\nFinal total = 603.36 GBP\nSubtotal = 578.09", "answer": {"total": "603.36", "currency": "GBP"}}
+{"id": "F2006", "split": "validation", "template": 0, "text": "Invoice F2006\nCurrency: USD\nSubtotal: 29.59\nTax: 11.35\nTotal: 40.94", "answer": {"total": "40.94", "currency": "USD"}}
+{"id": "F2007", "split": "validation", "template": 1, "text": "Receipt F2007 | Subtotal 322.52 | Tax 0.97 | Total 323.49 EUR", "answer": {"total": "323.49", "currency": "EUR"}}
+{"id": "F2008", "split": "validation", "template": 2, "text": "BILL F2008\nTax = 10.23\nFinal total = 320.72 GBP\nSubtotal = 310.49", "answer": {"total": "320.72", "currency": "GBP"}}
+{"id": "F2009", "split": "validation", "template": 0, "text": "Invoice F2009\nCurrency: USD\nSubtotal: 357.64\nTax: 22.03\nTotal: 379.67", "answer": {"total": "379.67", "currency": "USD"}}
+{"id": "F2010", "split": "validation", "template": 1, "text": "Receipt F2010 | Subtotal 395.93 | Tax 29.92 | Total 425.85 EUR", "answer": {"total": "425.85", "currency": "EUR"}}
+{"id": "F2011", "split": "validation", "template": 2, "text": "BILL F2011\nTax = 13.24\nFinal total = 67.85 GBP\nSubtotal = 54.61", "answer": {"total": "67.85", "currency": "GBP"}}

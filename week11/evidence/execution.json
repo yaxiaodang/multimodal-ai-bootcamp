@@ -1,0 +1,65 @@
+{
+  "suite": "week11/runs/suite-20261111T081647230916Z/suite.json",
+  "preregistered_commit": "863c77f9bfa6fa67a20ec88a566d1015d7067d79",
+  "suite_wall_seconds": 664.765983,
+  "human_learning_hours": null,
+  "device": "cpu",
+  "gpu_hours": 0,
+  "paid_cost_cny": 0,
+  "commands": [
+    {
+      "argv": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/bin/python",
+        "week08/train.py",
+        "--config",
+        "week11/configs/rank-4.json",
+        "--output-root",
+        "week11/runs/suite-20261111T081647230916Z/rank-4"
+      ],
+      "log": "week11/runs/suite-20261111T081647230916Z/rank-4-train.log",
+      "timeout_seconds": 1200,
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/bin/python",
+        "week11/scripts/check_mechanism.py",
+        "--run",
+        "week11/runs/suite-20261111T081647230916Z/rank-4/rank-4-20261111T081652Z"
+      ],
+      "log": "week11/runs/suite-20261111T081647230916Z/rank-4-mechanism.log",
+      "timeout_seconds": 300,
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/bin/python",
+        "week08/train.py",
+        "--config",
+        "week11/configs/rank-8.json",
+        "--output-root",
+        "week11/runs/suite-20261111T081647230916Z/rank-8"
+      ],
+      "log": "week11/runs/suite-20261111T081647230916Z/rank-8-train.log",
+      "timeout_seconds": 1200,
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/bin/python",
+        "week11/scripts/check_mechanism.py",
+        "--run",
+        "week11/runs/suite-20261111T081647230916Z/rank-8/rank-8-20261111T082223Z"
+      ],
+      "log": "week11/runs/suite-20261111T081647230916Z/rank-8-mechanism.log",
+      "timeout_seconds": 300,
+      "exit_code": 0
+    }
+  ],
+  "tests": {
+    "week08_metric_boundary_tests": "2 passed",
+    "new_real_training_runs": 2,
+    "real_adapter_mechanism_checks": 2
+  },
+  "all_local_criteria_passed": true
+}

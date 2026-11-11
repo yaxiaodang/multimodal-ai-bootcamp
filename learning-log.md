@@ -952,3 +952,80 @@
 - 最有说服力的证据：从总体结果回到固定协议、逐条预测、原PDF/参考和错误case，再运行自动核验。
 - 希望交流的问题：应该如何设计与真实任务一致、独立于模板的数据，才能支持采用模型？
 - 下周首先完成什么：先做本周人工复核，再选择与当前文档结构/评测直接相关的一篇论文，预注册Week11最小复现；不继续用已看test调参。
+
+## Week 11｜论文导读与最小复现
+
+### 本周核心问题
+- 我准备回答：LoRA的低秩更新机制，在现有CPU与文档文字字段抽取任务上能否部分验证？本节是Codex代执行记录；本人阅读、理解、复核和自评待完成。
+
+### 时间与任务计划
+- 选择路径：标准（Paper Card、事前计划、真实小规模复现、差异分析），并完成一次rank4/8探索；只验证有限主张。
+- 课程与官方材料：计划4小时；本人实际待填。
+- 主线项目：计划10小时；本人实际待填。
+- 评测与失败分析：计划4小时；本人实际待填。
+- 自主探索：计划4小时；固定alpha下rank4/8对照。
+- 记录与例会准备：计划2小时；本人实际待填。未把AI机器运行时间当作本人学习时间。
+
+### 本周主线成果
+- 完成了：[LoRA Paper Card](week11/paper-card.md)、实验前提交的[复现计划](week11/experiment-plan.md)、[rank4/8配置](week11/configs/)、两次新CPU训练、初始化/冻结/delta公式/合并核验、原始预测及adapter、[复现报告](week11/reports/reproduction-report.md)和[五句话讲稿](week11/reports/meeting-notes.md)。
+- 尚未完成：本人独立读原文、抽样人工核验、实际学习时间、自评与例会讲解；见[收尾清单](week11/reports/manual-review.md)。未执行原论文完整benchmark、全参数微调或新的独立最终测试。
+- 唯一运行入口：`.venv-week08/bin/python week11/run.py`。作用：先核对已提交的固定计划与输入，顺序新训练r4/r8，验证真实adapter及合并性质，生成新suite和报告。轻量入口`python3 week11/run.py --check-archive`用于只核对已归档证据，不训练、不联网。
+- 预计 / 实际耗时：学习计划24小时 / 本人实际待填；机器训练时间见各metadata.json，整套墙钟时间664.77秒（约11.1分钟），起止时间见suite.json。
+- 算力与成本：Ubuntu虚拟机、CPU双线程FP32；GPU小时0、付费云费用0；复用已缓存模型和既有环境，无新增依赖。每run训练循环900秒、训练脚本1200秒、机制核验300秒上限。
+- 预期文件 / 实际文件：Paper Card、计划、配置、脚本、原始runs、机制核验、报告均在[week11入口](week11/README.md)定位；SHA manifest与自动核验在[证据目录](week11/evidence/)。
+
+### 环境与复现信息
+- Git commit：新实验前的计划/配置/源码提交`863c77f9bfa6fa67a20ec88a566d1015d7067d79`；suite记载同一提交并保留输入快照。最终归档提交见本周分支Git历史。
+- Python / CUDA / GPU：Python3.10.12，torch2.14.0+cpu，transformers5.17.0，PEFT0.19.0；CPU，无CUDA训练。详见[环境与来源](week11/evidence/environment-and-sources.json)。全新机器重新安装尚未验证。
+- 模型与revision：`HuggingFaceTB/SmolLM2-135M@93efa2f097d58c2a74874c7e644dbc9b0cee75a2`，Apache-2.0。论文固定`arXiv:2106.09685v2`；官方参考代码commit `c4593f060e6a368d7bb5af5273b8e42810cdef90`，MIT。实际使用PEFT，未安装或复制loralib。
+- 数据集与version / split：Week08虚构英文账单v1，96 train / 12 validation；[数据卡](week08/dataset-card.md)、[冻结SHA](week08/data/freeze.json)。reserved-test只校验文件哈希、不做本周推理，Week10已使用它的事实保留；validation已有历史结果，不宣称未见测试。
+- 随机种子：42；60步、q_proj/v_proj、alpha16、dropout0、lr0.001、batch2×累积2，greedy生成，使用最终固定checkpoint。
+- 配置文件：[rank4](week11/configs/rank-4.json)、[rank8](week11/configs/rank-8.json)。仅rank和身份标签不同；alpha/r从4变2是参数化的伴随变化，不能分离纯容量效应。
+
+### Evidence Manifest 自查
+- [x] 输入来源、license与隐私状态已记录：公开固定模型、自制虚构CC0数据，不含真实隐私。
+- [x] 原始输出、日志与metrics可定位；结果清单及SHA见manifest，逐条预测与adapter见runs。
+- [x] 本轮唯一变量和失败案例已记录：baseline格式失败保留，成功标准事前固定；有历史r8知识的偏差已披露。
+- [x] AI使用与人工核验已披露：AI自动检查已执行，本人人工复核明确待做。
+- [x] 当前结论、限制和下一步最小验证已写明：仅机制/本地迁移证据，不推断真实文档泛化或最优rank。
+
+### 实验记录
+| Run | 唯一改动 | 关键配置 | 结果 | 原始证据 |
+| --- | --- | --- | --- | --- |
+| baseline（两run各自训练前） | — | 固定base、12 validation、greedy | strict exact=0/12，JSON合法率0，答案NLL=1.241168 | 各run的baseline-predictions.json / baseline-metrics.json |
+| rank4 | 添加r4低秩支路 | alpha16、seed42、60步 | strict exact=12/12；230,400可训练参数（0.171%）；训练203.53秒；基座哈希不变、重加载一致 | [r4原始运行](week11/runs/suite-20261111T081647230916Z/rank-4/rank-4-20261111T081652Z/) |
+| rank8 | 仅r由4变8（alpha固定） | 其余同r4 | strict exact=12/12；460,800可训练参数（0.341%）；训练209.70秒；不据同分判定等效 | [r8原始运行](week11/runs/suite-20261111T081647230916Z/rank-8/rank-8-20261111T082223Z/) |
+| 初始化/合并检查 | 不再训练，只做机制验证 | 12个Prompt全位置logits，atol/rtol均1e-4 | 两run初始化最大差0；合并最大绝对差r4=1.1826e-4、r8=9.0599e-5，均满足含相对项容差，12条greedy逐条一致；60层delta公式一致 | 各run的mechanism.json / merged-predictions.json |
+
+
+### AI 使用披露
+- 使用的工具与版本：Codex桌面会话，具体模型版本未另行确认；Python/训练依赖版本见环境JSON。
+- AI完成或建议了什么：核对课程/原文/官方代码、写卡片和计划、代执行真实新训练与检查、生成报告/日志并归档GitHub；没有代替本人阅读或填写理解。
+- 我如何核验：AI执行数据SHA、指标边界测试、原始评分重算、60步日志完整性、全基座哈希、adapter重加载、初始化、60层delta及合并logits/生成核验。本人尚需按清单抽样核对，不把机器检查当作本人已审核。
+- 我拒绝或修改了哪些建议，为什么：以下为AI执行中的取舍，本人意见待填：缩小原论文范围适配CPU；不用旧test重新证明泛化；不把过去已知r8结果包装成盲法研究；不把参数量节省推为同倍总内存节省；不把合并一致当实测零延迟。原文A Gaussian与作者/PEFT默认A Kaiming差异原样披露。
+
+### 自主探索方向
+- 我选择的方向：参数预算与rank，在固定alpha下比较r4/r8。
+- 为什么与当前项目相关：Week08/09使用r8，需要知道缩小adapter预算是否仍可完成当前教学任务。
+- 我只改变或验证什么：只改变rank配置；不增加steps或选择最好checkpoint。另做合并检查来验证机制，不加入新的训练变量。
+- 结果与证据：[实测对照](week11/reports/comparison.json)、[原始suite](week11/runs/)、各run的mechanism.json；同分不等于通过等效性检验，单seed也不足以判断普遍优劣。
+
+### 自主阶段
+- [ ] 未形成：已有真实新运行，非只有阅读。
+- [x] 已跑通：AI代执行的小规模实验与机制核验闭环完成。
+- [ ] 可复现：当前环境已核验、保存配置/快照/adapter；全新机器及本人独立运行尚待验证。
+- [ ] 可解释：报告区分论文事实、作者解释、本地观察与猜想；本人能否独立说明待自评。
+- [ ] 可扩展：已做rank探索，本人是否能独立提出和验证新问题待自评。
+
+### 当前判断
+- 最重要的发现：低秩适配的任务效果、基座冻结和可合并性应分别用原始预测、权重哈希及数值检查支撑；不能只凭一项准确率宣布论文复现。
+- 一个失败或意外：训练前模型JSON格式失败；原文A Gaussian与官方Linear/PEFT默认A Kaiming不同，阅读原文还需核对实际实现。
+- 排查与恢复方式：保存baseline原文输出、固定作者代码commit；逐条检查与严格JSON评分相符；初始化差异写入报告，不悄悄修改已有训练实现。沙箱Git只读与联网限制经受审批环境解决，未更换数据或训练配置。
+- 当前限制：同模板12条validation、单seed、已有历史结果、模板/币种相关、无新最终测试、无全参训练/视觉输入/测速对照；合并数值一致不证明实际加速。没有ACM认证或跨机器复现。
+- 我还不理解：本人待填；建议说明“alpha固定时，改rank为什么也会改变缩放？”（AI建议，非本人已提出的问题）。
+
+### 例会前准备
+- 我准备展示的成果：[五句话讲稿](week11/reports/meeting-notes.md)、一页Paper Card、本地rank表和一个原始格式失败案例。
+- 最有说服力的证据：实验前Git计划、每run训练前预测、完整基座前后哈希、保存adapter重加载以及合并前后12条logits/greedy核验。
+- 希望交流的问题：如何以最小新增开发数据区分格式学习、模板记忆与字段读取？由AI代拟，待本人确认。
+- 下周首先完成什么：Week12整理Capstone问题、唯一核心变量、证据/限制和一条复现入口；本人先补齐人工抽查，再汇总各周，不提前标记最终答辩完成。

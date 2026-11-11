@@ -1,0 +1,146 @@
+[
+  {
+    "id": "F2000",
+    "answer": {
+      "total": "481.96",
+      "currency": "USD"
+    },
+    "prediction": "{\"total\":\"481.96\",\"currency\":\"USD\"}",
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F2001",
+    "answer": {
+      "total": "677.41",
+      "currency": "EUR"
+    },
+    "prediction": "{\"total\":\"677.41\",\"currency\":\"EUR\"}",
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F2002",
+    "answer": {
+      "total": "608.39",
+      "currency": "GBP"
+    },
+    "prediction": "{\"total\":\"608.39\",\"currency\":\"GBP\"}",
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F2003",
+    "answer": {
+      "total": "18.61",
+      "currency": "USD"
+    },
+    "prediction": "{\"total\":\"18.61\",\"currency\":\"USD\"}",
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F2004",
+    "answer": {
+      "total": "411.46",
+      "currency": "EUR"
+    },
+    "prediction": "{\"total\":\"411.46\",\"currency\":\"EUR\"}",
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F2005",
+    "answer": {
+      "total": "603.36",
+      "currency": "GBP"
+    },
+    "prediction": "{\"total\":\"603.36\",\"currency\":\"GBP\"}",
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F2006",
+    "answer": {
+      "total": "40.94",
+      "currency": "USD"
+    },
+    "prediction": "{\"total\":\"40.94\",\"currency\":\"USD\"}",
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F2007",
+    "answer": {
+      "total": "323.49",
+      "currency": "EUR"
+    },
+    "prediction": "{\"total\":\"323.49\",\"currency\":\"EUR\"}",
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F2008",
+    "answer": {
+      "total": "320.72",
+      "currency": "GBP"
+    },
+    "prediction": "{\"total\":\"320.72\",\"currency\":\"GBP\"}",
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F2009",
+    "answer": {
+      "total": "379.67",
+      "currency": "USD"
+    },
+    "prediction": "{\"total\":\"379.67\",\"currency\":\"USD\"}",
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F2010",
+    "answer": {
+      "total": "425.85",
+      "currency": "EUR"
+    },
+    "prediction": "{\"total\":\"425.85\",\"currency\":\"EUR\"}",
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  },
+  {
+    "id": "F2011",
+    "answer": {
+      "total": "67.85",
+      "currency": "GBP"
+    },
+    "prediction": "{\"total\":\"67.85\",\"currency\":\"GBP\"}",
+    "json_valid": true,
+    "total_correct": true,
+    "currency_correct": true,
+    "exact": true
+  }
+]

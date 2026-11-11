@@ -1,0 +1,314 @@
+[
+  {
+    "rank": "4",
+    "id": "F2000",
+    "baseline": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "after": "{\"total\":\"481.96\",\"currency\":\"USD\"}",
+    "reference": {
+      "total": "481.96",
+      "currency": "USD"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "4",
+    "id": "F2001",
+    "baseline": "Total: 677.41 EUR\n\n### Subtotal 677.41 EUR\n\nSubtotal 677.",
+    "after": "{\"total\":\"677.41\",\"currency\":\"EUR\"}",
+    "reference": {
+      "total": "677.41",
+      "currency": "EUR"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "4",
+    "id": "F2002",
+    "baseline": "Total = 608.39 GBP\n\n### 1.2.2.2.1.1.1.1.2",
+    "after": "{\"total\":\"608.39\",\"currency\":\"GBP\"}",
+    "reference": {
+      "total": "608.39",
+      "currency": "GBP"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "4",
+    "id": "F2003",
+    "baseline": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "after": "{\"total\":\"18.61\",\"currency\":\"USD\"}",
+    "reference": {
+      "total": "18.61",
+      "currency": "USD"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "4",
+    "id": "F2004",
+    "baseline": "Total: 411.46 EUR\n\n### Subtotal 385.71 | Tax 25.75 | Total",
+    "after": "{\"total\":\"411.46\",\"currency\":\"EUR\"}",
+    "reference": {
+      "total": "411.46",
+      "currency": "EUR"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "4",
+    "id": "F2005",
+    "baseline": "Total = 603.36 GBP\n\n### 1.2.2.2.1.1.1.1.2",
+    "after": "{\"total\":\"603.36\",\"currency\":\"GBP\"}",
+    "reference": {
+      "total": "603.36",
+      "currency": "GBP"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "4",
+    "id": "F2006",
+    "baseline": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "after": "{\"total\":\"40.94\",\"currency\":\"USD\"}",
+    "reference": {
+      "total": "40.94",
+      "currency": "USD"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "4",
+    "id": "F2007",
+    "baseline": "Total: 323.49 EUR\n\n### Subtotal 322.52\n\nSubtotal 322.5",
+    "after": "{\"total\":\"323.49\",\"currency\":\"EUR\"}",
+    "reference": {
+      "total": "323.49",
+      "currency": "EUR"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "4",
+    "id": "F2008",
+    "baseline": "Total = 320.72\n\n### 1.2.2.2.1.1.1.1.2.1",
+    "after": "{\"total\":\"320.72\",\"currency\":\"GBP\"}",
+    "reference": {
+      "total": "320.72",
+      "currency": "GBP"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "4",
+    "id": "F2009",
+    "baseline": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "after": "{\"total\":\"379.67\",\"currency\":\"USD\"}",
+    "reference": {
+      "total": "379.67",
+      "currency": "USD"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "4",
+    "id": "F2010",
+    "baseline": "Total: 425.85 EUR\n\n### Subtotal 395.93 | Tax 29.92 | Total",
+    "after": "{\"total\":\"425.85\",\"currency\":\"EUR\"}",
+    "reference": {
+      "total": "425.85",
+      "currency": "EUR"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "4",
+    "id": "F2011",
+    "baseline": "Total = 67.85 GBP\nFinal total = 67.85 GBP\n\n### 1.2.2.",
+    "after": "{\"total\":\"67.85\",\"currency\":\"GBP\"}",
+    "reference": {
+      "total": "67.85",
+      "currency": "GBP"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "8",
+    "id": "F2000",
+    "baseline": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "after": "{\"total\":\"481.96\",\"currency\":\"USD\"}",
+    "reference": {
+      "total": "481.96",
+      "currency": "USD"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "8",
+    "id": "F2001",
+    "baseline": "Total: 677.41 EUR\n\n### Subtotal 677.41 EUR\n\nSubtotal 677.",
+    "after": "{\"total\":\"677.41\",\"currency\":\"EUR\"}",
+    "reference": {
+      "total": "677.41",
+      "currency": "EUR"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "8",
+    "id": "F2002",
+    "baseline": "Total = 608.39 GBP\n\n### 1.2.2.2.1.1.1.1.2",
+    "after": "{\"total\":\"608.39\",\"currency\":\"GBP\"}",
+    "reference": {
+      "total": "608.39",
+      "currency": "GBP"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "8",
+    "id": "F2003",
+    "baseline": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "after": "{\"total\":\"18.61\",\"currency\":\"USD\"}",
+    "reference": {
+      "total": "18.61",
+      "currency": "USD"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "8",
+    "id": "F2004",
+    "baseline": "Total: 411.46 EUR\n\n### Subtotal 385.71 | Tax 25.75 | Total",
+    "after": "{\"total\":\"411.46\",\"currency\":\"EUR\"}",
+    "reference": {
+      "total": "411.46",
+      "currency": "EUR"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "8",
+    "id": "F2005",
+    "baseline": "Total = 603.36 GBP\n\n### 1.2.2.2.1.1.1.1.2",
+    "after": "{\"total\":\"603.36\",\"currency\":\"GBP\"}",
+    "reference": {
+      "total": "603.36",
+      "currency": "GBP"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "8",
+    "id": "F2006",
+    "baseline": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "after": "{\"total\":\"40.94\",\"currency\":\"USD\"}",
+    "reference": {
+      "total": "40.94",
+      "currency": "USD"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "8",
+    "id": "F2007",
+    "baseline": "Total: 323.49 EUR\n\n### Subtotal 322.52\n\nSubtotal 322.5",
+    "after": "{\"total\":\"323.49\",\"currency\":\"EUR\"}",
+    "reference": {
+      "total": "323.49",
+      "currency": "EUR"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "8",
+    "id": "F2008",
+    "baseline": "Total = 320.72\n\n### 1.2.2.2.1.1.1.1.2.1",
+    "after": "{\"total\":\"320.72\",\"currency\":\"GBP\"}",
+    "reference": {
+      "total": "320.72",
+      "currency": "GBP"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "8",
+    "id": "F2009",
+    "baseline": "\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```",
+    "after": "{\"total\":\"379.67\",\"currency\":\"USD\"}",
+    "reference": {
+      "total": "379.67",
+      "currency": "USD"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "8",
+    "id": "F2010",
+    "baseline": "Total: 425.85 EUR\n\n### Subtotal 395.93 | Tax 29.92 | Total",
+    "after": "{\"total\":\"425.85\",\"currency\":\"EUR\"}",
+    "reference": {
+      "total": "425.85",
+      "currency": "EUR"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  },
+  {
+    "rank": "8",
+    "id": "F2011",
+    "baseline": "Total = 67.85 GBP\nFinal total = 67.85 GBP\n\n### 1.2.2.",
+    "after": "{\"total\":\"67.85\",\"currency\":\"GBP\"}",
+    "reference": {
+      "total": "67.85",
+      "currency": "GBP"
+    },
+    "baseline_exact": false,
+    "after_exact": true,
+    "human_review": "pending"
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "files_checked": 73,
+  "suite": "week11/runs/suite-20261111T081647230916Z/suite.json",
+  "recomputed_metrics": {
+    "4": {
+      "baseline": {
+        "exact_rate": 0.0,
+        "json_valid_rate": 0.0,
+        "total_correct_rate": 0.0,
+        "currency_correct_rate": 0.0,
+        "n": 12
+      },
+      "after": {
+        "exact_rate": 1.0,
+        "json_valid_rate": 1.0,
+        "total_correct_rate": 1.0,
+        "currency_correct_rate": 1.0,
+        "n": 12
+      },
+      "reloaded": {
+        "exact_rate": 1.0,
+        "json_valid_rate": 1.0,
+        "total_correct_rate": 1.0,
+        "currency_correct_rate": 1.0,
+        "n": 12
+      },
+      "merged": {
+        "exact_rate": 1.0,
+        "json_valid_rate": 1.0,
+        "total_correct_rate": 1.0,
+        "currency_correct_rate": 1.0,
+        "n": 12
+      }
+    },
+    "8": {
+      "baseline": {
+        "exact_rate": 0.0,
+        "json_valid_rate": 0.0,
+        "total_correct_rate": 0.0,
+        "currency_correct_rate": 0.0,
+        "n": 12
+      },
+      "after": {
+        "exact_rate": 1.0,
+        "json_valid_rate": 1.0,
+        "total_correct_rate": 1.0,
+        "currency_correct_rate": 1.0,
+        "n": 12
+      },
+      "reloaded": {
+        "exact_rate": 1.0,
+        "json_valid_rate": 1.0,
+        "total_correct_rate": 1.0,
+        "currency_correct_rate": 1.0,
+        "n": 12
+      },
+      "merged": {
+        "exact_rate": 1.0,
+        "json_valid_rate": 1.0,
+        "total_correct_rate": 1.0,
+        "currency_correct_rate": 1.0,
+        "n": 12
+      }
+    }
+  },
+  "note": "Automated audit; human review remains pending. Does not re-run model forwards."
+}

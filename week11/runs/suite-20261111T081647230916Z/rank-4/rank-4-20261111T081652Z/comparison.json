@@ -1,0 +1,22 @@
+{
+  "baseline": {
+    "exact_rate": 0.0,
+    "json_valid_rate": 0.0,
+    "total_correct_rate": 0.0,
+    "currency_correct_rate": 0.0,
+    "n": 12,
+    "answer_nll": 1.2411682322218611,
+    "seconds": 36.13378318700052
+  },
+  "after": {
+    "exact_rate": 1.0,
+    "json_valid_rate": 1.0,
+    "total_correct_rate": 1.0,
+    "currency_correct_rate": 1.0,
+    "n": 12,
+    "answer_nll": 0.0003436217946629669,
+    "seconds": 21.594910064000032
+  },
+  "delta_exact_rate": 1.0,
+  "delta_answer_nll": -1.240824610427198
+}

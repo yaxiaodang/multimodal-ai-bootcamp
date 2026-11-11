@@ -1,0 +1,1014 @@
+{
+  "initialization": {
+    "allclose": true,
+    "max_abs_diff": 0.0,
+    "per_prompt_max_abs_diff": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "atol": 0.0001,
+    "rtol": 0.0001,
+    "n_prompts": 12,
+    "all_B_zero": true,
+    "all_A_nonzero": true,
+    "A_initialization": "PEFT default Kaiming uniform (paper uses Gaussian)"
+  },
+  "layers": [
+    {
+      "name": "base_model.model.model.layers.0.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.0.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.1.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.1.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.2.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.2.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.3.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.3.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.4.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.4.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.5.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.5.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.6.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.6.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.7.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.7.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.8.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.8.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.9.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.9.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.10.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.10.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.11.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.11.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.12.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.12.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.13.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.13.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.14.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.14.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.15.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.15.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.16.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.16.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.17.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.17.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.18.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.18.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.19.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.19.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.20.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.20.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.21.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.21.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.22.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.22.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.23.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.23.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.24.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.24.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.25.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.25.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.26.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.26.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.27.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.27.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.28.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.28.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.29.self_attn.q_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        576,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    },
+    {
+      "name": "base_model.model.model.layers.29.self_attn.v_proj",
+      "A_shape": [
+        4,
+        576
+      ],
+      "B_shape": [
+        192,
+        4
+      ],
+      "rank_bound": 4,
+      "scaling": 4.0,
+      "delta_nonzero": true,
+      "formula_max_abs_diff": 0.0,
+      "formula_equal": true
+    }
+  ],
+  "merge": {
+    "allclose": true,
+    "max_abs_diff": 0.000118255615234375,
+    "per_prompt_max_abs_diff": [
+      7.677078247070312e-05,
+      7.128715515136719e-05,
+      8.58306884765625e-05,
+      7.152557373046875e-05,
+      8.487701416015625e-05,
+      7.2479248046875e-05,
+      7.915496826171875e-05,
+      8.344650268554688e-05,
+      6.4849853515625e-05,
+      0.000118255615234375,
+      7.390975952148438e-05,
+      6.866455078125e-05
+    ],
+    "atol": 0.0001,
+    "rtol": 0.0001,
+    "n_prompts": 12,
+    "no_lora_parameters_remaining": true,
+    "greedy_predictions_equal": true
+  },
+  "adapter_sha256": "35735b81e4c128f2b71ac8a75805187a4a3c8269f183f7f69a31a5c8630b62b3",
+  "seconds": 34.47258785699978,
+  "passed": true
+}

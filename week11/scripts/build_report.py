@@ -1,12 +1,25 @@
 """Build a local report from one explicitly selected Week11 suite."""
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT))
-from week08.train import save
+from week08.train import digest, save
+
+
+def fenced(value, language='text'):
+    # Generated text can itself contain Markdown fences; keep it literal.
+    ticks='`'*max(3, max((len(x) for x in re.findall(r'`+',value)),default=0)+1)
+    return f'{ticks}{language}\n{value}\n{ticks}'
+
+
+def refresh_manifest():
+    excluded={'week11/evidence/manifest.json','week11/evidence/verification.json','week11/reports/manual-review.md'}
+    files={str(p.relative_to(ROOT)):digest(p) for p in sorted((ROOT/'week11').rglob('*')) if p.is_file() and '__pycache__' not in p.parts and str(p.relative_to(ROOT)) not in excluded}
+    save(ROOT/'week11/evidence/manifest.json',{'algorithm':'sha256','files':files,'mutable_human_review':'week11/reports/manual-review.md','excluded_generated':['week11/evidence/manifest.json','week11/evidence/verification.json']})
 
 
 def build(path):
@@ -36,9 +49,10 @@ def build(path):
             if not a['exact'] or not b['exact']:
                 candidates.append({'rank':rank,'id':a['id'],'baseline':a['prediction'],'after':b['prediction'],'reference':a['answer'],'baseline_exact':a['exact'],'after_exact':b['exact'],'human_review':'pending'})
         for a,b in list(zip(before,after))[:2]:
-            case_lines.extend([f"### rank{rank} / {a['id']}","",'参考：`'+json.dumps(a['answer'],ensure_ascii=False)+'`',"",'训练前：',"```text",a['prediction'],"```",'训练后：',"```json",b['prediction'],"```",""])
+            case_lines.extend([f"### rank{rank} / {a['id']}","",'输入Prompt：',fenced(a['prompt']),'参考：`'+json.dumps(a['answer'],ensure_ascii=False)+'`',"",'训练前：',fenced(a['prediction']),'训练后：',fenced(b['prediction'],'json'),""])
     save(ROOT/'week11/reports/error-candidates.json',candidates)
     (ROOT/'week11/reports/cases.md').write_text('# 原始预测摘录（自动选取，每run前两条）\n\n完整错误候选见[JSON](error-candidates.json)，人工复核未完成。\n\n'+'\n'.join(case_lines))
+    rank_interpretation=('两run在这12条上同分，无法区分生成准确率；这不是等效性证明。' if r4['after']['exact_rate']==r8['after']['exact_rate'] else '两run在这12条上有差异，但单seed不足以判断普遍优劣。')
     state='全部达到' if all(criteria.values()) else '部分未达到，按预定标准保留负面结果'
     text=f'''# Week11 reproduction report
 
@@ -87,7 +101,8 @@ RSS由每个训练子进程记录，含模型/框架/optimizer；不是GPU显存
 ## 失败、负面证据与解释
 
 - [原始案例](cases.md)保留训练前的格式失败；[错误候选](error-candidates.json)包含所有baseline或训练后不匹配的run×样本，人工栏待本人。没有为凑数生成失败预测。
-- r4训练后strict exact={r4['after']['exact_rate']:.1%}，r8={r8['after']['exact_rate']:.1%}。若同分，只表示此12条上无法区分；若不同，也不能从单seed判定rank普遍优劣。
+- r4训练后strict exact={r4['after']['exact_rate']:.1%}，r8={r8['after']['exact_rate']:.1%}。{rank_interpretation}
+- 参数量减半不等于总体内存减半：本次r4峰值RSS={r4['peak_rss_mib']:.1f}MiB，r8={r8['peak_rss_mib']:.1f}MiB；单次进程记录不能证明更低rank稳定节省总内存，也没有分析差异原因。
 - 事实：参数量呈1:2；本地是否改善与合并核验由上表直接支持。解释：结果与低秩支路能承担该局部适配相符。推测：模板记忆和格式学习可能贡献很大，需要新开发数据验证。
 - 已知负面条件：币种与模板完全相关；validation过去已多次使用；更低NLL不代表greedy正确。未进行新独立最终测试，不把Week10的旧test改名复用。
 - 机制检查通过也不足以证明权重更新的“最优内在秩”。BA的秩上界来自参数形状，未从中声称测得任务真实内在维度。
@@ -101,6 +116,7 @@ RSS由每个训练子进程记录，含模型/框架/optimizer；不是GPU显存
 输入SHA、源码/计划快照、模型revision、配置、训练日志和小adapter见suite；[唯一入口](../README.md)含所有命令作用。[AI披露](../evidence/ai-usage.md)区分机器核验与本人核验。当前VM已真实运行，未声称全新机器复现或ACM徽章认证。最后由本人按[收尾清单](manual-review.md)抽查原文、样例、理解并填写学习时间。
 '''
     (ROOT/'week11/reports/reproduction-report.md').write_text(text)
+    refresh_manifest()
     print(json.dumps(summary,indent=2))
 
 

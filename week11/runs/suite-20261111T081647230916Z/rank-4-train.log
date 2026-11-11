@@ -1,0 +1,10 @@
+OUTPUT week11/runs/suite-20261111T081647230916Z/rank-4/rank-4-20261111T081652Z
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  34%|███▍      | 93/272 [00:00<00:00, 902.22it/s]Loading weights:  68%|██████▊   | 184/272 [00:00<00:00, 841.57it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 875.14it/s]
+baseline {"exact_rate": 0.0, "json_valid_rate": 0.0, "total_correct_rate": 0.0, "currency_correct_rate": 0.0, "n": 12, "answer_nll": 1.2411682322218611, "seconds": 36.13378318700052}
+STEP {"step": 20, "train_loss": 0.004871910670772195, "gradient_norm": 0.11126459389925003, "elapsed_seconds": 63.67959711599997, "validation_answer_nll": 0.004090115329804453}
+STEP {"step": 40, "train_loss": 0.0005369496066123247, "gradient_norm": 0.009258884005248547, "elapsed_seconds": 132.42951631800042, "validation_answer_nll": 0.0006822831938169091}
+STEP {"step": 60, "train_loss": 0.00020956125808879733, "gradient_norm": 0.0017523231217637658, "elapsed_seconds": 198.99110460599968, "validation_answer_nll": 0.0003436217946629669}
+/home/yaxiaodang/multimodal-ai-bootcamp/.venv-week08/lib/python3.10/site-packages/peft/utils/save_and_load.py:372: UserWarning: Could not find a config file in HuggingFaceTB/SmolLM2-135M - will assume that the vocabulary was not modified.
+  warnings.warn(
+after {"exact_rate": 1.0, "json_valid_rate": 1.0, "total_correct_rate": 1.0, "currency_correct_rate": 1.0, "n": 12, "answer_nll": 0.0003436217946629669, "seconds": 21.594910064000032}
+reloaded {"exact_rate": 1.0, "json_valid_rate": 1.0, "total_correct_rate": 1.0, "currency_correct_rate": 1.0, "n": 12, "answer_nll": 0.0003436217946629669, "seconds": 21.654572437999377}

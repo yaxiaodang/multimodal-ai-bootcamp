@@ -1,0 +1,58 @@
+{
+  "recorded_utc": "2026-11-11T08:19:46.304498+00:00",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "torch": "2.14.0+cpu",
+    "transformers": "5.17.0",
+    "peft": "0.19.0",
+    "accelerate": "1.12.0",
+    "huggingface-hub": "1.32.0",
+    "tokenizers": "0.23.2",
+    "safetensors": "0.8.0"
+  },
+  "device": "cpu",
+  "new_dependencies_installed": false,
+  "new_model_downloaded": false,
+  "local_peft_layer_sha256": "57bf5a9fb1af9231b5d81111d0b5096fea00ac6fb8404f21e98afe8ec4273d0d",
+  "licenses": {
+    "base_model": "Apache-2.0; pinned model card",
+    "synthetic_data": "CC0-1.0; Week08 dataset card",
+    "official_reference_code": "MIT; no code copied or installed"
+  },
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "official_lora_commit": "c4593f060e6a368d7bb5af5273b8e42810cdef90",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2106.09685v2",
+      "used_sections": [
+        "4.1",
+        "5",
+        "7.2"
+      ],
+      "access": "web tool read"
+    },
+    {
+      "url": "https://github.com/microsoft/LoRA/blob/c4593f060e6a368d7bb5af5273b8e42810cdef90/loralib/layers.py",
+      "used_sections": [
+        "Linear.__init__",
+        "Linear.reset_parameters",
+        "Linear.train",
+        "Linear.forward"
+      ],
+      "access": "web tool read; git ls-remote verified HEAD"
+    },
+    {
+      "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M/blob/93efa2f097d58c2a74874c7e644dbc9b0cee75a2/README.md",
+      "access": "web tool read"
+    },
+    {
+      "url": "https://neurips.cc/public/guides/PaperChecklist",
+      "access": "web tool read"
+    },
+    {
+      "url": "https://www.acm.org/publications/policies/artifact-review-and-badging-current",
+      "access": "403; not used as read evidence"
+    }
+  ]
+}
