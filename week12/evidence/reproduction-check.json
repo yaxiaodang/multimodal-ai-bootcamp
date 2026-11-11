@@ -1,16 +1,16 @@
 {
   "status": "passed",
-  "checked_at_utc": "2026-11-11T08:43:07.527583+00:00",
-  "tested_commit": "c6ac5980de4230bce9c8d58a000f9172bd02f58f",
+  "checked_at_utc": "2026-11-11T08:44:57.421135+00:00",
+  "tested_commit": "570704cd1ac17f17ed95fe05e69a12fe6ca4bc2c",
   "executor": "Codex automated execution; not peer or user review",
-  "temporary_directory": "/tmp/bootcamp-week12-l4ya2kif",
+  "temporary_directory": "/tmp/bootcamp-week12-uu3mbpbo",
   "environment": "Same Ubuntu VM, Python standard library; clone has no virtualenv/model cache; unpacked archive has no .git",
   "model_retraining_or_new_inference": false,
   "remote_clone_tested": false,
   "package": {
     "path": "week12/dist/capstone.tar.gz",
-    "sha256": "70bb483c2f3aeb1ed125f0fab75a84286bd04fca5c697122bf60ee24864b30a4",
-    "bytes": 13991006
+    "sha256": "ceec83d746087be9c542d96b541c221387258a9dc0e35d94982d95939def5517",
+    "bytes": 13992419
   },
   "checks": [
     {
@@ -23,12 +23,12 @@
         "--branch",
         "codex/week12-capstone",
         "/home/yaxiaodang/multimodal-ai-bootcamp",
-        "/tmp/bootcamp-week12-l4ya2kif/fresh-clone"
+        "/tmp/bootcamp-week12-uu3mbpbo/fresh-clone"
       ],
-      "cwd": "/tmp/bootcamp-week12-l4ya2kif",
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo",
       "exit_code": 0,
       "expected_exit": 0,
-      "elapsed_seconds": 1.7582832259995484
+      "elapsed_seconds": 0.48539473399978306
     },
     {
       "argv": [
@@ -36,30 +36,40 @@
         "week12/run.py",
         "--package"
       ],
-      "cwd": "/tmp/bootcamp-week12-l4ya2kif/fresh-clone",
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo/fresh-clone",
       "exit_code": 0,
       "expected_exit": 0,
-      "elapsed_seconds": 8.002976380999826
+      "elapsed_seconds": 7.349110301999644
     },
     {
       "argv": [
         "/home/yaxiaodang/miniconda3/bin/python3",
         "week12/run.py"
       ],
-      "cwd": "/tmp/bootcamp-week12-l4ya2kif/unpacked",
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo/unpacked",
       "exit_code": 0,
       "expected_exit": 0,
-      "elapsed_seconds": 0.952006829000311
+      "elapsed_seconds": 0.7796297159993628
     },
     {
       "argv": [
         "/home/yaxiaodang/miniconda3/bin/python3",
         "week12/run.py"
       ],
-      "cwd": "/tmp/bootcamp-week12-l4ya2kif/fresh-clone",
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo/fresh-clone",
       "exit_code": 0,
       "expected_exit": 0,
-      "elapsed_seconds": 0.9261931190003452
+      "elapsed_seconds": 0.7826924860000872
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "week12/run.py"
+      ],
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo/unpacked",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.8265546610000456
     }
   ],
   "peer_reproduction": "pending",

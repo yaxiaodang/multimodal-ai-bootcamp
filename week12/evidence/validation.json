@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "tested_commit": "c6ac5980de4230bce9c8d58a000f9172bd02f58f",
+  "tested_commit": "570704cd1ac17f17ed95fe05e69a12fe6ca4bc2c",
   "checks": [
     {
       "argv": [
@@ -12,13 +12,13 @@
         "--branch",
         "codex/week12-capstone",
         "/home/yaxiaodang/multimodal-ai-bootcamp",
-        "/tmp/bootcamp-week12-l4ya2kif/fresh-clone"
+        "/tmp/bootcamp-week12-uu3mbpbo/fresh-clone"
       ],
-      "cwd": "/tmp/bootcamp-week12-l4ya2kif",
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo",
       "exit_code": 0,
       "expected_exit": 0,
-      "elapsed_seconds": 1.7582832259995484,
-      "output": "正克隆到 '/tmp/bootcamp-week12-l4ya2kif/fresh-clone'...\n完成。\n"
+      "elapsed_seconds": 0.48539473399978306,
+      "output": "正克隆到 '/tmp/bootcamp-week12-uu3mbpbo/fresh-clone'...\n完成。\n"
     },
     {
       "argv": [
@@ -26,10 +26,10 @@
         "week12/run.py",
         "--package"
       ],
-      "cwd": "/tmp/bootcamp-week12-l4ya2kif/fresh-clone",
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo/fresh-clone",
       "exit_code": 0,
       "expected_exit": 0,
-      "elapsed_seconds": 8.002976380999826,
+      "elapsed_seconds": 7.349110301999644,
       "output": "# 从原始归档重算的结果\n\n本页由 `week12/run.py` 的评分函数生成；本周没有重新训练或推理。\n\n| PDF方法 | 页数 | 内容相似度 | 顺序 | 表格严格匹配 | 扫描内容相似度 |\n| --- | --- | --- | --- | --- | --- |\n| ocr-on | 24 | 0.967559 | 0.708333 | 0% | 0.950549 |\n| ocr-off | 24 | 0.650709 | 0.500000 | 0% | 0.000000 |\n\n| 英文文本方法 | 预留测试条数 | JSON严格正确率 |\n| --- | --- | --- |\n| base | 12 | 0% |\n| run-a | 12 | 100% |\n| run-b | 12 | 100% |\n\nWeek10保留42个方法×文档错误候选；本人复核、同学复现待完成。\nPDF与英文文本是两项任务；两张表不支持跨任务排名。完整证据和成本见[最终报告](final-report.md)。\n\nPASS: archived results reproduced; human and peer checks remain pending.\n"
     },
     {
@@ -37,10 +37,10 @@
         "/home/yaxiaodang/miniconda3/bin/python3",
         "week12/run.py"
       ],
-      "cwd": "/tmp/bootcamp-week12-l4ya2kif/unpacked",
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo/unpacked",
       "exit_code": 0,
       "expected_exit": 0,
-      "elapsed_seconds": 0.952006829000311,
+      "elapsed_seconds": 0.7796297159993628,
       "output": "# 从原始归档重算的结果\n\n本页由 `week12/run.py` 的评分函数生成；本周没有重新训练或推理。\n\n| PDF方法 | 页数 | 内容相似度 | 顺序 | 表格严格匹配 | 扫描内容相似度 |\n| --- | --- | --- | --- | --- | --- |\n| ocr-on | 24 | 0.967559 | 0.708333 | 0% | 0.950549 |\n| ocr-off | 24 | 0.650709 | 0.500000 | 0% | 0.000000 |\n\n| 英文文本方法 | 预留测试条数 | JSON严格正确率 |\n| --- | --- | --- |\n| base | 12 | 0% |\n| run-a | 12 | 100% |\n| run-b | 12 | 100% |\n\nWeek10保留42个方法×文档错误候选；本人复核、同学复现待完成。\nPDF与英文文本是两项任务；两张表不支持跨任务排名。完整证据和成本见[最终报告](final-report.md)。\n\nPASS: archived results reproduced; human and peer checks remain pending.\n"
     },
     {
@@ -48,10 +48,21 @@
         "/home/yaxiaodang/miniconda3/bin/python3",
         "week12/run.py"
       ],
-      "cwd": "/tmp/bootcamp-week12-l4ya2kif/fresh-clone",
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo/fresh-clone",
       "exit_code": 0,
       "expected_exit": 0,
-      "elapsed_seconds": 0.9261931190003452,
+      "elapsed_seconds": 0.7826924860000872,
+      "output": "# 从原始归档重算的结果\n\n本页由 `week12/run.py` 的评分函数生成；本周没有重新训练或推理。\n\n| PDF方法 | 页数 | 内容相似度 | 顺序 | 表格严格匹配 | 扫描内容相似度 |\n| --- | --- | --- | --- | --- | --- |\n| ocr-on | 24 | 0.967559 | 0.708333 | 0% | 0.950549 |\n| ocr-off | 24 | 0.650709 | 0.500000 | 0% | 0.000000 |\n\n| 英文文本方法 | 预留测试条数 | JSON严格正确率 |\n| --- | --- | --- |\n| base | 12 | 0% |\n| run-a | 12 | 100% |\n| run-b | 12 | 100% |\n\nWeek10保留42个方法×文档错误候选；本人复核、同学复现待完成。\nPDF与英文文本是两项任务；两张表不支持跨任务排名。完整证据和成本见[最终报告](final-report.md)。\n\nPASS: archived results reproduced; human and peer checks remain pending.\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "week12/run.py"
+      ],
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo/unpacked",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.8265546610000456,
       "output": "# 从原始归档重算的结果\n\n本页由 `week12/run.py` 的评分函数生成；本周没有重新训练或推理。\n\n| PDF方法 | 页数 | 内容相似度 | 顺序 | 表格严格匹配 | 扫描内容相似度 |\n| --- | --- | --- | --- | --- | --- |\n| ocr-on | 24 | 0.967559 | 0.708333 | 0% | 0.950549 |\n| ocr-off | 24 | 0.650709 | 0.500000 | 0% | 0.000000 |\n\n| 英文文本方法 | 预留测试条数 | JSON严格正确率 |\n| --- | --- | --- |\n| base | 12 | 0% |\n| run-a | 12 | 100% |\n| run-b | 12 | 100% |\n\nWeek10保留42个方法×文档错误候选；本人复核、同学复现待完成。\nPDF与英文文本是两项任务；两张表不支持跨任务排名。完整证据和成本见[最终报告](final-report.md)。\n\nPASS: archived results reproduced; human and peer checks remain pending.\n"
     },
     {
@@ -59,10 +70,10 @@
         "/home/yaxiaodang/miniconda3/bin/python3",
         "week12/run.py"
       ],
-      "cwd": "/tmp/bootcamp-week12-l4ya2kif/unpacked",
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo/unpacked",
       "exit_code": 2,
       "expected_exit": 2,
-      "elapsed_seconds": 0.31030875599935825,
+      "elapsed_seconds": 0.2573281079994558,
       "output": "Capstone audit refused: week10 audit failed; see audit log\n"
     },
     {
@@ -70,10 +81,10 @@
         "/home/yaxiaodang/miniconda3/bin/python3",
         "week12/run.py"
       ],
-      "cwd": "/tmp/bootcamp-week12-l4ya2kif/unpacked",
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo/unpacked",
       "exit_code": 2,
       "expected_exit": 2,
-      "elapsed_seconds": 0.3203444109994962,
+      "elapsed_seconds": 0.25641522299974895,
       "output": "Capstone audit refused: week10 audit failed; see audit log\n"
     },
     {
@@ -81,10 +92,10 @@
         "/home/yaxiaodang/miniconda3/bin/python3",
         "week12/run.py"
       ],
-      "cwd": "/tmp/bootcamp-week12-l4ya2kif/unpacked",
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo/unpacked",
       "exit_code": 2,
       "expected_exit": 2,
-      "elapsed_seconds": 0.14940158200079168,
+      "elapsed_seconds": 0.14606596300018282,
       "output": "Capstone audit refused: Frozen evidence changed: week10/runs/suite-20261111T080142898866Z/run-a/predictions.json\n"
     },
     {
@@ -92,13 +103,27 @@
         "/home/yaxiaodang/miniconda3/bin/python3",
         "week12/run.py"
       ],
-      "cwd": "/tmp/bootcamp-week12-l4ya2kif/unpacked",
+      "cwd": "/tmp/bootcamp-week12-uu3mbpbo/unpacked",
       "exit_code": 0,
       "expected_exit": 0,
-      "elapsed_seconds": 0.8623431380001421,
+      "elapsed_seconds": 0.8443622149998191,
       "output": "# 从原始归档重算的结果\n\n本页由 `week12/run.py` 的评分函数生成；本周没有重新训练或推理。\n\n| PDF方法 | 页数 | 内容相似度 | 顺序 | 表格严格匹配 | 扫描内容相似度 |\n| --- | --- | --- | --- | --- | --- |\n| ocr-on | 24 | 0.967559 | 0.708333 | 0% | 0.950549 |\n| ocr-off | 24 | 0.650709 | 0.500000 | 0% | 0.000000 |\n\n| 英文文本方法 | 预留测试条数 | JSON严格正确率 |\n| --- | --- | --- |\n| base | 12 | 0% |\n| run-a | 12 | 100% |\n| run-b | 12 | 100% |\n\nWeek10保留42个方法×文档错误候选；本人复核、同学复现待完成。\nPDF与英文文本是两项任务；两张表不支持跨任务排名。完整证据和成本见[最终报告](final-report.md)。\n\nPASS: archived results reproduced; human and peer checks remain pending.\n"
     }
   ],
   "scanner_fixture": "Synthetic GitHub-shaped token detected without printing its value",
-  "no_original_inputs_modified": true
+  "no_original_inputs_modified": true,
+  "compatibility": {
+    "python_versions": [
+      "3.10.12",
+      "3.14.7"
+    ],
+    "initial_failure": "Python 3.10 exact floating sum comparison differed from Python 3.14; refused as designed, then comparison fixed for rounding only.",
+    "fix": "Float rel_tol/abs_tol 1e-12; strings, IDs, counts and booleans stay exact",
+    "boundary_checks": [
+      "0.1+0.2 vs 0.3 accepted",
+      "0.97 vs 0.96 rejected",
+      "12 vs 13 rejected",
+      "True vs integer 1 rejected"
+    ]
+  }
 }
